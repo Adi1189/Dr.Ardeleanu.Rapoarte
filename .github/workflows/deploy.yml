@@ -1,0 +1,49 @@
+name: Deploy site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gasesc folderul site-ului
+        run: |
+          set -e
+          INDEX=$(find . -maxdepth 3 -name index.html -not -path './.git/*' -not -path './_site/*' | head -1)
+          if [ -z "$INDEX" ]; then echo "NU am gasit index.html"; ls -la; exit 1; fi
+          SITE_DIR=$(dirname "$INDEX")
+          echo "Folderul site-ului este: $SITE_DIR"
+          mkdir -p _site
+          rsync -a --exclude _site --exclude .git "$SITE_DIR"/ _site/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Regenerez datele
+        run: |
+          if [ -f _site/scripts/build-manifest.mjs ]; then
+            (cd _site && node scripts/build-manifest.mjs)
+          else
+            echo "build-manifest lipseste — folosesc index.html ca atare"
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

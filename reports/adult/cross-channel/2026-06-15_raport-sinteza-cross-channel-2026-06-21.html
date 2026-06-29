@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="cross-channel">
+<meta name="report:cadence" content="weekly">
+<meta name="report:date" content="2026-06-15">
+<meta name="report:period" content="15–21 iun 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinteză Cross-Channel · 15–21 iunie 2026 · Dr. Ardeleanu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --burgundy:#7B1C16; --olive:#B5BD5C; --terracotta:#dd7e6b;
+    --amber:#C9A227; --yellow:#FBE483; --wheat:#F2DAB7; --cream:#F5EDE3;
+    --alert:#FF0300; --text:#222222; --white:#fff; --muted:#7c6f63;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Poppins',sans-serif;color:var(--text);background:#ece4d8;line-height:1.55;padding:32px 16px}
+  .wrap{max-width:1120px;margin:0 auto}
+  .card{background:var(--white);border-radius:18px;padding:34px 38px;margin-bottom:22px;box-shadow:0 8px 30px rgba(123,28,22,.07)}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--burgundy);line-height:1.15}
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#7B1C16 0%,#5d130f 100%);color:var(--white);border-radius:18px;padding:42px 40px;margin-bottom:22px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;background:rgba(201,162,39,.13)}
+  .hero .pill{display:inline-block;background:var(--yellow);color:var(--burgundy);font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:30px;margin-bottom:16px}
+  .hero h1{color:var(--white);font-size:36px;font-weight:800;margin-bottom:8px;position:relative;z-index:1}
+  .hero .sub{color:var(--yellow);font-weight:600;font-size:19px;font-family:'Poppins'}
+  .hero .meta{margin-top:14px;font-size:13px;color:rgba(255,255,255,.78);font-weight:300;max-width:760px;position:relative;z-index:1}
+  .hero .chnls{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;position:relative;z-index:1}
+  .hero .chnls span{font-size:11.5px;font-weight:600;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:20px;letter-spacing:.5px}
+  .logo{font-family:'Playfair Display';font-weight:800;font-size:15px;letter-spacing:.5px;margin-bottom:18px;color:rgba(255,255,255,.92)}
+  .logo b{color:var(--yellow)}
+  /* SECTION */
+  .sec-tag{display:inline-block;background:var(--burgundy);color:var(--white);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:5px 13px;border-radius:20px;margin-bottom:14px}
+  h2{font-size:25px;margin-bottom:6px}
+  .lead{color:var(--muted);font-size:14px;margin-bottom:20px;max-width:820px}
+  /* CONCLUSIONS */
+  .concl{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid #eee3d4}
+  .concl:last-child{border-bottom:none}
+  .concl .num{flex:none;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#7B1C16,#5d130f);color:var(--yellow);font-weight:800;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display';font-size:22px}
+  .concl .cbody h3{font-family:'Poppins';font-weight:700;font-size:16px;color:var(--burgundy);margin-bottom:4px}
+  .concl .cbody p{font-size:13.8px;color:#4a4239}
+  .concl .cbody b{color:var(--burgundy)}
+  /* MATRIX */
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  thead th{background:var(--burgundy);color:var(--white);font-weight:600;text-align:left;padding:11px 12px;font-size:11.5px;letter-spacing:.3px;vertical-align:top}
+  tbody td{padding:11px 12px;border-bottom:1px solid #eee3d4;vertical-align:top}
+  tbody tr:nth-child(even){background:#fbf7f0}
+  .plat{font-weight:700;color:var(--burgundy);white-space:nowrap}
+  .us-pos{font-weight:600}
+  .pos-win{color:#5c6322}
+  .pos-mid{color:#8a6d12}
+  .pos-gap{color:#9c3a2b}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .dot.win{background:var(--olive)} .dot.mid{background:var(--amber)} .dot.gap{background:var(--terracotta)}
+  /* RANK TABLE */
+  .rt thead th.num,.rt tbody td.num{text-align:right}
+  .rt tbody td.num{font-variant-numeric:tabular-nums}
+  tr.us td{background:var(--yellow)!important;font-weight:700}
+  /* CALLOUT */
+  .callout{border-radius:14px;padding:22px 26px;margin:18px 0}
+  .callout.burg{background:var(--burgundy);color:#fff}
+  .callout.burg h3{color:var(--yellow);font-size:18px;margin-bottom:8px}
+  .callout.burg p{font-size:13.8px;color:rgba(255,255,255,.92)}
+  .callout.olive{background:var(--olive);color:#2c3010}
+  .callout.olive h3{color:#34390f;font-size:18px;margin-bottom:8px}
+  .callout.olive p{font-size:13.8px;color:#34390f}
+  .callout.cream{background:var(--cream);border-left:4px solid var(--amber)}
+  .callout.cream h3{font-size:17px;margin-bottom:6px}
+  .callout.cream p{font-size:13.8px;color:#4a4239}
+  /* GRID PATTERNS */
+  .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+  .pat{background:var(--cream);border-radius:14px;padding:18px 20px}
+  .pat .icon{font-size:13px;font-weight:700;color:var(--white);background:var(--burgundy);display:inline-block;padding:3px 10px;border-radius:20px;font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:8px}
+  .pat h4{font-family:'Poppins';font-size:14.5px;color:var(--burgundy);font-weight:700;margin-bottom:5px}
+  .pat p{font-size:13px;color:#4a4239}
+  .pat.alert{background:#fbe7e3;border:1px solid #f0c4bb}
+  .pat.alert .icon{background:var(--alert)}
+  .pat.opp{background:#eef2d8;border:1px solid #d6df9f}
+  .pat.opp .icon{background:#6f7726}
+  /* RECS */
+  .rec{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #eee3d4}
+  .rec:last-child{border-bottom:none}
+  .rec .n{flex:none;width:36px;height:36px;border-radius:9px;background:var(--burgundy);color:var(--white);font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display';font-size:17px}
+  .rec .rc h4{font-size:15px;color:var(--burgundy);font-family:'Poppins';font-weight:600;margin-bottom:3px}
+  .rec .rc p{font-size:13.5px;color:#4a4239}
+  .rec .rc .ch{margin-top:5px}
+  .rec .rc .ch span{font-size:10.5px;font-weight:600;background:var(--wheat);color:var(--burgundy);padding:2px 9px;border-radius:14px;margin-right:5px;display:inline-block}
+  .prio{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:12px;margin-left:8px}
+  .prio.p1{background:var(--alert);color:#fff} .prio.p2{background:var(--amber);color:#fff}
+  /* FOOTER */
+  .foot{font-size:12px;color:var(--muted);background:var(--cream);border-radius:14px;padding:22px 26px}
+  .foot b{color:var(--burgundy)}
+  .foot ul{list-style:none;margin-top:6px}
+  .foot li{padding:2px 0 2px 16px;position:relative}
+  .foot li::before{content:"•";position:absolute;left:2px;color:var(--amber)}
+  .din{text-align:center;color:var(--muted);font-size:12px;margin-top:20px;letter-spacing:1px}
+  @media(max-width:720px){.pgrid{grid-template-columns:1fr}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="logo">Dr. <b>Ardeleanu</b> · DENTAL CLINICS</div>
+    <div class="pill">Sinteză Cross-Channel · Săpt. 25</div>
+    <h1>Inteligență competitivă · 4 platforme</h1>
+    <div class="sub">15 – 21 iunie 2026</div>
+    <div class="meta">Imagine consolidată din rapoartele săptămânale TikTok, Facebook, Instagram și YouTube. 13 competitori monitorizați + contul propriu. Surse: API/profil cu cont logat (organic), Meta Ads Library, Google Ads Transparency Center, TikTok Commercial Content Library.</div>
+    <div class="chnls"><span>▶ TikTok</span><span>f Facebook</span><span>◎ Instagram</span><span>▶ YouTube</span></div>
+  </div>
+
+  <!-- PE SCURT: 4 CONCLUZII -->
+  <div class="card">
+    <span class="sec-tag">Pe scurt</span>
+    <h2>4 concluzii care contează</h2>
+    <p class="lead">Tiparele care apar pe mai multe platforme deodată — acolo unde se câștigă sau se pierde săptămâna asta.</p>
+
+    <div class="concl">
+      <div class="num">1</div>
+      <div class="cbody">
+        <h3>Pe organic câștigăm cu personalitate. Pe paid suntem în urmă cu o generație de format.</h3>
+        <p>Același clip „turbina pe modul Silent" a fost <b>#1 pe TikTok</b> (cel mai bun engagement al nostru) și <b>#1 Short pe YouTube</b> în toată piața (1.243 vizionări, peste tot educaționalul premium). Pe Instagram, „Mamăăă… ce frumoși sunt!" (41 likes) a bătut tot, iar noi avem <b>cel mai bun engagement raportat la followeri</b> din piață (4,2K → 13–41 likes; Life Dental Spa cu 80K face 2–6). <b>Dar</b> pe Meta paid suntem 100% imagine statică pe preț, în timp ce DentEstet, Regina Maria și Dental Blue au trecut decisiv pe video/reel plătit. E gap-ul #1 al săptămânii.</p>
+      </div>
+    </div>
+
+    <div class="concl">
+      <div class="num">2</div>
+      <div class="cbody">
+        <h3>Levierul de reach pe care nu îl folosește nimeni: format de trend + audio trending.</h3>
+        <p>Pe TikTok, Instagram și YouTube Shorts deopotrivă, <b>toți</b> competitorii folosesc „sunet original" — nimeni nu atinge audio-urile virale. Iar formatul scurt-relatable bate volumul brut: Regina Maria a făcut cu <b>un singur clip POV de 10s</b> (5.781 views) cât toate cele 9 ale DentEstet. Singura care joacă acest joc, Dr. Alexandra Mircea, face <b>~352.000 views/săptămână</b> din 4 clipuri. Teren liber pentru noi pe toate platformele video.</p>
+      </div>
+    </div>
+
+    <div class="concl">
+      <div class="num">3</div>
+      <div class="cbody">
+        <h3>Presiune teritorială convergentă pe Slobozia / Ialomița și Târgoviște.</h3>
+        <p><b>Dental Blue e cel mai important competitor al săptămânii:</b> s-a extins (deschidere Buzău, 16 iun), a lansat 3 reclame video noi chiar în interval, strategie video-educativ „fără durere / fără frică", fix pe terenul nostru. Plus <b>JC Dent</b> (7 reele noi în jurul Dr. Constandache, Slobozia) și <b>Elidadent</b> care împinge agresiv pe Târgoviște (#dentisttargoviste + brand personal de fondator pe TikTok). Clinicile noastre locale sunt atacate simultan.</p>
+      </div>
+    </div>
+
+    <div class="concl">
+      <div class="num">4</div>
+      <div class="cbody">
+        <h3>Pediatrie: două bătălii cu rezultat opus. Plus o poziție de autoritate tocmai câștigată.</h3>
+        <p>Pe <b>Facebook paid pierdem</b>: DentEstet 4 KIDS rulează video cu ofertă cifrată (Rise &amp; Smile, -50% periaj, -30% ortho), noi avem doar organic „soft", fără ofertă. Dar pe <b>Instagram organic spațiul pediatric e complet liber</b> — nimeni nu împinge kids organic. Separat, lansarea <b>Training Center / CARE Forum</b> ne urcă în liga „autoritate profesională" unde joacă DentEstet (ITI, RASPERINI) — suntem cap la cap, e cel mai bun atu de poziționare.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLOU COMPARATIV -->
+  <div class="card">
+    <span class="sec-tag">Tablou comparativ</span>
+    <h2>Poziția noastră, platformă cu platformă</h2>
+    <p class="lead"><span class="dot win"></span>câștigăm &nbsp; <span class="dot mid"></span>la egalitate / mediu &nbsp; <span class="dot gap"></span>gap de închis</p>
+    <table>
+      <thead>
+        <tr><th style="width:13%">Platformă</th><th style="width:29%">Poziția noastră</th><th style="width:33%">Mișcarea cheie a competiției</th><th style="width:25%">Tendința de format</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="plat">▶ TikTok</td>
+          <td class="us-pos pos-mid"><span class="dot mid"></span>Locul 6 · 3 clipuri / 2.529 views. Cel mai mare cont (6.673 followeri), dar reach mediu.</td>
+          <td>Elidadent #1 reach (Gala, 8.271). Regina Maria: 1 POV = 5.781. Dr. Alexandra Mircea ~352K (alt sport). 0 reclame TikTok în piață.</td>
+          <td>100% sunet original. Reach vine din <b>format de trend</b> (POV, umor), nu din audio.</td>
+        </tr>
+        <tr>
+          <td class="plat">f Facebook</td>
+          <td class="us-pos pos-gap"><span class="dot gap"></span>Organic bun &amp; divers; <b>paid 100% imagine statică pe preț</b>, 0 creative nou în interval.</td>
+          <td>Premium au trecut pe <b>video paid</b>. Regina Maria ~140 reclame + abonament 29 lei/lună + Oral-B×eMAG. Dental Blue: 3 reclame noi + expansiune Buzău.</td>
+          <td>Video/reel domină paid-ul premium. Imaginea statică = doar mid-market și noi.</td>
+        </tr>
+        <tr>
+          <td class="plat">◎ Instagram</td>
+          <td class="us-pos pos-win"><span class="dot win"></span><b>Cel mai bun engagement/follower din piață.</b> 4 postări, „Mamăăă…" 41 likes.</td>
+          <td>DentEstet cel mai conectat (colab @galaxy_jannet 61 likes; autoritate + PR + influenceri). Pediatric organic = <b>nimeni</b>.</td>
+          <td>Reels „medic-explainer" saturat. Reach real din <b>emoție + colaborări</b>. Audio: tot original.</td>
+        </tr>
+        <tr>
+          <td class="plat">▶ YouTube</td>
+          <td class="us-pos pos-win"><span class="dot win"></span><b>#1 la Shorts:</b> 5 Shorts, „turbina" = 1.243 views (top piață). 2 din top 5 cu doar 912 abonați.</td>
+          <td>Premium pe long-form de autoritate (views mici, 5–18). Regina Maria semnal expansiune („medici observatori"). Avem 10 video ads vs ~200 DentEstet.</td>
+          <td>Polarizare: premium = long-form; noi + Life = Shorts. Nimeni nu face ambele.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RANKING ORGANIC VIDEO -->
+  <div class="card">
+    <span class="sec-tag">Volume organice video</span>
+    <h2>Activitate video pe TikTok &amp; YouTube Shorts</h2>
+    <p class="lead">Cele două platforme unde formatul scurt decide reach-ul. Highlight: contul nostru.</p>
+    <table class="rt">
+      <thead>
+        <tr><th>Brand</th><th class="num">TikTok (clipuri / views)</th><th class="num">YT Shorts</th><th class="num">YT Long-form</th><th>Audio</th></tr>
+      </thead>
+      <tbody>
+        <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td class="num">3 / 2.529</td><td class="num">5 🏆</td><td class="num">0</td><td>original</td></tr>
+        <tr><td>DENT ESTET</td><td class="num">9 / 6.846</td><td class="num">0</td><td class="num">2</td><td>original</td></tr>
+        <tr><td>Regina Maria Dental</td><td class="num">1 / 5.781</td><td class="num">1</td><td class="num">2</td><td>original</td></tr>
+        <tr><td>Life Dental Spa</td><td class="num">3 / 1.435</td><td class="num">4</td><td class="num">0</td><td>original</td></tr>
+        <tr><td>Elidadent</td><td class="num">4 / 12.086</td><td class="num">0</td><td class="num">0</td><td>original</td></tr>
+        <tr><td>Dental Blue International</td><td class="num">0</td><td class="num">— (fără canal)</td><td class="num">—</td><td>—</td></tr>
+        <tr><td>Dr. Alexandra Mircea <span style="font-size:10px;color:#9c3a2b;font-weight:700">(brand personal, T2)</span></td><td class="num">4 / ~352.000</td><td class="num">indisp.</td><td class="num">indisp.</td><td>original (format trend)</td></tr>
+      </tbody>
+    </table>
+    <div class="callout cream">
+      <h3>Citire rapidă</h3>
+      <p>Suntem <b>#1 pe YouTube Shorts</b> și ocupăm 2 din top 5 cu cei mai puțini abonați — eficiență de conținut peste medie. Pe TikTok suntem la mijloc, dar cu cel mai mare cont. Constanta pe ambele: clipul nostru de <b>umor/BTS</b> a câștigat detașat. Nimeni, nici măcar liderii, nu folosește audio de trend — golul nostru de exploatat.</p>
+    </div>
+  </div>
+
+  <!-- TIPARE CROSS-CHANNEL -->
+  <div class="card">
+    <span class="sec-tag">Tipare cross-channel</span>
+    <h2>Ce se repetă pe mai multe platforme</h2>
+    <div class="pgrid">
+      <div class="pat">
+        <span class="icon">Punctul nostru forte</span>
+        <h4>Personalitate &gt; producție</h4>
+        <p>Umor/BTS și emoția autentică ne câștigă peste tot: „turbina" (TikTok #1 + YT Short #1), „Mamăăă…" (IG 41 likes), testimonial (FB 44 reacții). Educaționalul lustruit al premium-urilor performează modest.</p>
+      </div>
+      <div class="pat opp">
+        <span class="icon">Oportunitate</span>
+        <h4>Audio de trend — gol total</h4>
+        <p>TikTok + IG + YT Shorts: toți pe „sunet original". Un singur clip pe audio trending + hook în primele 2–3s poate depăși organic-ul „rece" al competitorilor mari.</p>
+      </div>
+      <div class="pat alert">
+        <span class="icon">Amenințare #1</span>
+        <h4>Gap-ul de video pe paid</h4>
+        <p>Meta paid: noi 100% imagine statică pe preț, 0 creative nou. DentEstet, Regina Maria, Dental Blue rulează toți video/reel plătit. Cel mai mare gap competitiv al săptămânii.</p>
+      </div>
+      <div class="pat alert">
+        <span class="icon">Amenințare locală</span>
+        <h4>Presiune pe Slobozia &amp; Târgoviște</h4>
+        <p>Dental Blue (expansiune Buzău + 3 reclame noi, anti-anxietate) și JC Dent (7 reele noi) atacă Slobozia/Ialomița. Elidadent împinge Târgoviște cu brand personal de fondator.</p>
+      </div>
+      <div class="pat opp">
+        <span class="icon">Oportunitate</span>
+        <h4>Pediatric pe Instagram = liber</h4>
+        <p>Pe IG organic niciun competitor nu împinge kids. Dental Safari poate ocupa teren fără concurență — invers față de Facebook, unde 4 KIDS domină cu ofertă cifrată.</p>
+      </div>
+      <div class="pat">
+        <span class="icon">Atu de poziționare</span>
+        <h4>Autoritate: Training Center</h4>
+        <p>CARE Forum / Training Center (19 sept) ne urcă în liga DentEstet (ITI, RASPERINI), pe vocea noastră. Cap la cap pe IG; semnal puternic, de transformat în serie.</p>
+      </div>
+    </div>
+    <div class="callout burg">
+      <h3>Modele de business pe care piața le testează, iar noi nu</h3>
+      <p>Regina Maria împinge <b>abonamentul dental</b> (de la 29 lei/lună, comunicat și organic pe IG) și <b>co-branding</b> (Oral-B × eMAG). Prețuri de pornire transparente la implant: Regina Maria 3.550–3.850 lei, Life 2.097 lei. Noi comunicăm „rate de la 325 lei/lună" — bun, dar fără ancoră de preț total vizibilă.</p>
+    </div>
+  </div>
+
+  <!-- PLAN UNIC -->
+  <div class="card">
+    <span class="sec-tag">Planul săptămânii</span>
+    <h2>Ce facem noi — un singur plan, toate canalele</h2>
+    <p class="lead">Prioritizat. Fiecare acțiune e marcată cu platformele pe care rulează.</p>
+
+    <div class="rec">
+      <div class="n">1</div>
+      <div class="rc">
+        <h4>Lansează cel puțin un creative VIDEO în Meta paid <span class="prio p1">Prioritate 1</span></h4>
+        <p>Gap-ul #1 al săptămânii. Refolosește reel-ul Dental Safari sau filmul Training Center și pune buget de test în spate. Nu mai lansa niciun creative 100% static pe preț.</p>
+        <div class="ch"><span>Facebook</span><span>Instagram</span></div>
+      </div>
+    </div>
+
+    <div class="rec">
+      <div class="n">2</div>
+      <div class="rc">
+        <h4>Apără Slobozia / Ialomița cu o campanie geo dedicată <span class="prio p1">Prioritate 1</span></h4>
+        <p>Dental Blue (expansiune + 3 reclame noi) și JC Dent (7 reele) atacă fix terenul nostru. Campanie geo-targetată cu unghi „fără durere + plan clar de tratament" — le contrăm exact mesajul — și buget separat pe regiune.</p>
+        <div class="ch"><span>Facebook</span></div>
+      </div>
+    </div>
+
+    <div class="rec">
+      <div class="n">3</div>
+      <div class="rc">
+        <h4>Produ 2 piese video „personalitate" pe audio TRENDING <span class="prio p2">Prioritate 2</span></h4>
+        <p>Una umor/BTS (continuă seria „turbina"), una reacție emoțională a pacientului la oglindă, fără voiceover medical. Hook în primele 2–3 secunde, 9:16, 15–25s. Exploatează simultan punctul nostru forte (personalitate) și golul nimănui (audio de trend).</p>
+        <div class="ch"><span>TikTok</span><span>Instagram Reels</span><span>YouTube Shorts</span></div>
+      </div>
+    </div>
+
+    <div class="rec">
+      <div class="n">4</div>
+      <div class="rc">
+        <h4>Ofertă cifrată Dental Safari + ocupă IG-ul pediatric liber <span class="prio p2">Prioritate 2</span></h4>
+        <p>Răspuns direct la Rise &amp; Smile: pachet „prima vizită a copilului" cu preț clar + creative video în paid pe Facebook. În paralel, un reel ludic Dental Safari pe Instagram, unde nimeni nu împinge kids organic acum.</p>
+        <div class="ch"><span>Facebook (paid)</span><span>Instagram (organic)</span></div>
+      </div>
+    </div>
+
+    <div class="rec">
+      <div class="n">5</div>
+      <div class="rc">
+        <h4>Transformă Training Center într-o serie cross-channel <span class="prio p2">Prioritate 2</span></h4>
+        <p>Reels/Shorts scurte: „ce vei învăța", „cine predă", „de ce contează pentru pacientul tău", postate și de pe @drvirginiaardeleanu pentru reach. Ne consolidează autoritatea pe terenul DentEstet, pe vocea noastră „excelență la prețuri accesibile".</p>
+        <div class="ch"><span>Instagram</span><span>YouTube</span><span>Facebook</span><span>TikTok</span></div>
+      </div>
+    </div>
+
+    <div class="callout olive">
+      <h3>Firul roșu al planului</h3>
+      <p>Mizăm pe ce câștigăm deja (personalitate, emoție, autoritate Training Center), închidem gap-ul critic (video pe paid), ne apărăm teritoriul (Slobozia) și ocupăm cele două spații libere ale săptămânii (audio de trend pe video + pediatric organic pe Instagram). O singură direcție, patru platforme.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="foot">
+    <b>Surse &amp; verificare (consolidat din cele 4 rapoarte de canal)</b>
+    <ul>
+      <li><b>TikTok:</b> date organice din API-ul oficial per profil (cont logat) — confidence ridicat; reclame din TikTok Commercial Content Library (RO, acoperire parțială) — 0 găsite, absența nu confirmă absența.</li>
+      <li><b>Facebook:</b> reclame din Meta Ads Library (oficial) — confidence ridicat; organic din cont logat (Claude in Chrome) — confidence mediu (Facebook obfuschează datele exacte).</li>
+      <li><b>Instagram:</b> doar organic, fiecare postare verificată direct cu dată + likes + permalink — confidence ridicat. Corecție de handle semnalată: Elidadent IG este <b>clinicaelidadent</b>, nu elidadent (de actualizat în competitors.json).</li>
+      <li><b>YouTube:</b> raport parțial — cheia YouTube Data API v3 lipsește, date din scraping public — confidence mediu; reclame video din Google Ads Transparency Center (cifra Regina Maria supraestimată, acoperă toată rețeaua de spitale).</li>
+      <li>Competitori fără cont pe platforma respectivă sau inactivi în fereastră sunt marcați ca atare (ex. Dental Blue fără YouTube; Elidadent inactiv pe YouTube; Dr. Malama / Dentrust inactivi pe TikTok).</li>
+      <li>Perioadă: 15–21 iunie 2026 (luni–duminică, Săpt. 25). Sinteză generată din: competitor-weekly-tiktok, -facebook, -instagram, -youtube (v1.0).</li>
+    </ul>
+  </div>
+
+  <div class="din">DIN 2017 · Dr. Ardeleanu Dental Clinics · clinicileardeleanu.ro · 031 99 63</div>
+
+</div>
+</body>
+</html>

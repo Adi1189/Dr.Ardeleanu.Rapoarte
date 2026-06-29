@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="tiktok">
+<meta name="report:cadence" content="weekly">
+<meta name="report:date" content="2026-05-25">
+<meta name="report:period" content="25–31 mai 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok — Raport Săptămânal · 25–31 Mai 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+  :root {
+    --burgundy: #7B1C16;
+    --cream: #F5EDE3;
+    --wheat: #F2DAB7;
+    --olive: #B5BD5C;
+    --gold: #C9A227;
+    --yellow: #FBE483;
+    --text: #222222;
+    --white: #FFFFFF;
+    --tiktok: #010101;
+    --tiktok-pink: #FE2C55;
+    --tiktok-cyan: #25F4EE;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Poppins',sans-serif; background:#f0ebe4; color:var(--text); font-size:14px; line-height:1.6; }
+
+  /* HEADER */
+  .report-header { background:var(--tiktok); color:var(--white); padding:36px 48px 28px; position:relative; overflow:hidden; }
+  .report-header::before { content:''; position:absolute; right:-40px; top:-40px; width:200px; height:200px; border-radius:50%; border:3px solid var(--tiktok-cyan); opacity:0.3; }
+  .report-header::after { content:''; position:absolute; right:30px; bottom:-60px; width:150px; height:150px; border-radius:50%; border:3px solid var(--tiktok-pink); opacity:0.2; }
+  .header-brand { font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--tiktok-cyan); margin-bottom:8px; }
+  .header-title { font-size:28px; font-weight:800; color:var(--white); margin-bottom:4px; }
+  .header-subtitle { font-size:14px; font-weight:300; color:rgba(255,255,255,0.6); margin-bottom:16px; }
+  .header-meta { display:flex; gap:20px; flex-wrap:wrap; margin-top:16px; }
+  .header-meta-item { background:rgba(255,255,255,0.1); border-radius:10px; padding:8px 16px; font-size:12px; font-weight:500; border-left:3px solid var(--tiktok-pink); }
+  .header-meta-item span { color:var(--tiktok-cyan); font-weight:800; display:block; font-size:20px; }
+  .din2017 { font-size:10px; letter-spacing:2px; color:rgba(255,255,255,0.3); text-transform:uppercase; margin-top:16px; }
+
+  .container { max-width:1100px; margin:0 auto; padding:32px 24px; }
+  .section-title { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--burgundy); border-left:4px solid var(--burgundy); padding-left:12px; margin-bottom:20px; margin-top:40px; }
+
+  /* SUMMARY */
+  .summary-box { background:var(--tiktok); border-radius:16px; padding:28px 32px; margin-bottom:8px; color:var(--white); }
+  .summary-box h3 { font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--tiktok-cyan); margin-bottom:16px; }
+  .summary-item { display:flex; gap:12px; align-items:flex-start; margin-bottom:10px; font-size:14px; line-height:1.5; }
+  .summary-dot { width:8px; height:8px; border-radius:50%; background:var(--tiktok-pink); margin-top:6px; flex-shrink:0; }
+
+  /* ALERT */
+  .alert-banner { background:var(--yellow); border-radius:12px; padding:14px 20px; margin-bottom:24px; font-size:13px; font-weight:600; color:var(--text); display:flex; gap:10px; align-items:center; border-left:4px solid var(--tiktok-pink); }
+
+  /* VOLUMES TABLE */
+  .volumes-table { width:100%; border-collapse:collapse; background:var(--white); border-radius:14px; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,0.07); margin-bottom:8px; }
+  .volumes-table thead { background:var(--tiktok); color:var(--white); }
+  .volumes-table thead th { padding:12px 16px; font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; text-align:center; }
+  .volumes-table thead th:first-child { text-align:left; }
+  .volumes-table tbody tr:nth-child(even) { background:var(--cream); }
+  .volumes-table tbody tr.highlight-row { background:var(--wheat) !important; font-weight:600; }
+  .volumes-table tbody tr.highlight-row td:first-child { border-left:4px solid var(--burgundy); }
+  .volumes-table td { padding:12px 16px; font-size:13px; text-align:center; border-bottom:1px solid rgba(0,0,0,0.05); }
+  .volumes-table td:first-child { text-align:left; font-weight:600; }
+  .volumes-table .tier2-sep td { background:#f5f5f5; font-size:11px; color:#888; font-style:italic; text-align:center; }
+  .badge-hot { color:var(--tiktok-pink); font-weight:700; }
+  .badge-ok { color:var(--olive); font-weight:700; }
+  .badge-no { color:#bbb; }
+  .rank-badge { display:inline-block; background:var(--tiktok); color:var(--white); border-radius:50%; width:24px; height:24px; line-height:24px; text-align:center; font-size:12px; font-weight:700; }
+  .rank-badge.gold { background:var(--gold); color:var(--text); }
+  .rank-badge.us { background:var(--wheat); color:var(--burgundy); }
+  .us-pill { background:var(--burgundy); color:var(--white); font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 8px; border-radius:20px; margin-left:8px; }
+
+  /* COMPETITOR CARDS */
+  .competitor-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px; margin-bottom:8px; }
+  .competitor-card { background:var(--white); border-radius:16px; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,0.07); }
+  .competitor-card.us-card { border:2px solid var(--burgundy); }
+  .card-header { padding:18px 20px 14px; border-bottom:1px solid var(--cream); display:flex; justify-content:space-between; align-items:flex-start; }
+  .card-header-left h4 { font-size:16px; font-weight:700; color:var(--burgundy); margin-bottom:2px; }
+  .card-header-left a { font-size:11px; color:var(--tiktok-pink); text-decoration:none; }
+  .card-stats { font-size:11px; font-weight:600; text-align:right; }
+  .card-stats span { display:block; font-size:18px; font-weight:800; color:var(--tiktok); }
+  .card-stats .likes { font-size:12px; color:var(--tiktok-pink); font-weight:600; }
+  .card-body { padding:16px 20px; }
+  .card-section { margin-bottom:16px; }
+  .card-section-title { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; display:flex; align-items:center; gap:6px; }
+  .card-section-title::after { content:''; flex:1; height:1px; background:var(--wheat); }
+
+  /* VIDEO ITEMS */
+  .video-item { background:var(--cream); border-radius:10px; padding:12px 14px; margin-bottom:8px; border-left:3px solid var(--tiktok-pink); }
+  .video-item.no-data { border-left-color:#ddd; background:#f9f9f9; color:#999; font-style:italic; font-size:12px; }
+  .video-item.best { border-left-color:var(--gold); background:var(--wheat); }
+  .video-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:4px; }
+  .video-date { font-size:11px; font-weight:600; color:var(--burgundy); }
+  .video-format { font-size:10px; background:var(--tiktok); color:var(--white); padding:2px 7px; border-radius:10px; font-weight:500; }
+  .video-views { font-size:14px; font-weight:800; color:var(--tiktok-pink); }
+  .video-caption { font-size:12px; line-height:1.5; color:var(--text); margin-bottom:4px; }
+  .video-audio { font-size:11px; color:#666; margin-bottom:3px; }
+  .audio-badge { display:inline-block; background:var(--tiktok-cyan); color:var(--tiktok); border-radius:6px; padding:1px 6px; font-size:10px; font-weight:700; margin-left:4px; }
+  .audio-badge.original { background:var(--wheat); color:var(--burgundy); }
+  .video-engagement { display:flex; gap:12px; font-size:11px; font-weight:600; }
+  .eng-likes { color:var(--tiktok-pink); }
+  .eng-comments { color:var(--olive); }
+  .eng-shares { color:var(--gold); }
+  .video-link { font-size:10px; color:#0077b5; }
+
+  .observations { background:var(--tiktok); color:var(--white); border-radius:10px; padding:12px 14px; font-size:12px; line-height:1.6; margin-top:10px; }
+  .observations strong { color:var(--tiktok-cyan); }
+
+  /* ANALYSIS */
+  .analysis-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:8px; }
+  @media (max-width:700px) { .analysis-grid { grid-template-columns:1fr; } }
+  .analysis-card { background:var(--white); border-radius:14px; padding:20px 22px; box-shadow:0 2px 12px rgba(0,0,0,0.06); }
+  .analysis-card h4 { font-size:13px; font-weight:700; color:var(--burgundy); margin-bottom:14px; }
+  .analysis-card ul { list-style:none; padding:0; }
+  .analysis-card ul li { padding:6px 0; border-bottom:1px solid var(--cream); font-size:12px; display:flex; gap:8px; align-items:flex-start; }
+  .analysis-card ul li:last-child { border-bottom:none; }
+  .li-dot { color:var(--tiktok-pink); font-weight:700; flex-shrink:0; }
+
+  /* TREND BARS */
+  .trend-bar-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; font-size:12px; }
+  .trend-label { width:160px; flex-shrink:0; font-weight:500; }
+  .trend-bar-bg { flex:1; background:var(--cream); border-radius:4px; height:10px; overflow:hidden; }
+  .trend-bar-fill { height:100%; border-radius:4px; background:var(--tiktok-pink); }
+  .trend-count { width:60px; text-align:right; font-weight:700; color:var(--tiktok-pink); font-size:11px; }
+
+  /* TOP 5 */
+  .top5-list { list-style:none; padding:0; }
+  .top5-item { display:flex; gap:14px; align-items:flex-start; padding:12px 16px; background:var(--white); border-radius:12px; margin-bottom:8px; box-shadow:0 1px 8px rgba(0,0,0,0.05); }
+  .top5-num { font-size:24px; font-weight:800; color:var(--tiktok-pink); width:32px; flex-shrink:0; line-height:1; }
+  .top5-num.gold-num { color:var(--gold); }
+  .top5-content h5 { font-size:13px; font-weight:700; color:var(--tiktok); margin-bottom:2px; }
+  .top5-content .views-big { font-size:18px; font-weight:800; color:var(--tiktok-pink); }
+  .top5-content p { font-size:12px; color:#666; }
+
+  /* AUDIO TABLE */
+  .audio-table { width:100%; border-collapse:collapse; background:var(--white); border-radius:12px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,0.06); margin-bottom:8px; }
+  .audio-table th { background:var(--tiktok); color:var(--white); padding:10px 14px; font-size:11px; letter-spacing:1px; text-transform:uppercase; text-align:left; }
+  .audio-table td { padding:10px 14px; font-size:12px; border-bottom:1px solid var(--cream); }
+  .audio-table tr:last-child td { border-bottom:none; }
+  .audio-table tr:nth-child(even) { background:var(--cream); }
+  .trend-pill { background:var(--tiktok-pink); color:var(--white); border-radius:6px; padding:2px 8px; font-size:10px; font-weight:700; }
+  .original-pill { background:var(--wheat); color:var(--burgundy); border-radius:6px; padding:2px 8px; font-size:10px; font-weight:700; }
+
+  /* ACTION PLAN */
+  .action-plan { background:var(--tiktok); border-radius:16px; padding:28px 32px; color:var(--white); }
+  .action-plan h3 { font-size:14px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--tiktok-cyan); margin-bottom:20px; }
+  .action-items { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+  .action-item { background:rgba(255,255,255,0.08); border-radius:12px; padding:16px; border-top:3px solid var(--tiktok-pink); }
+  .action-number { font-size:24px; font-weight:800; color:var(--tiktok-pink); line-height:1; margin-bottom:6px; }
+  .action-title { font-weight:700; font-size:13px; margin-bottom:6px; }
+  .action-desc { font-size:11px; color:rgba(255,255,255,0.7); line-height:1.5; }
+
+  /* FOOTER */
+  .report-footer { background:var(--cream); border-top:2px solid var(--wheat); padding:20px 48px; font-size:11px; color:#888; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-top:40px; }
+  .footer-item strong { color:var(--burgundy); }
+
+  /* PEDIATRIC SECTION */
+  .pediatric-box { background:var(--olive); border-radius:16px; padding:24px 28px; color:var(--white); margin-bottom:8px; }
+  .pediatric-box h3 { font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); margin-bottom:14px; }
+  .pediatric-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:600px) { .pediatric-grid { grid-template-columns:1fr; } }
+  .pediatric-card { background:rgba(255,255,255,0.18); border-radius:12px; padding:14px 16px; font-size:12px; }
+  .pediatric-card h5 { font-weight:700; font-size:13px; margin-bottom:6px; color:var(--yellow); }
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+
+<!-- HEADER -->
+<div class="report-header">
+  <div class="header-brand">Dr. Ardeleanu Dental Clinics · Intelligence Report</div>
+  <div class="header-title">🎵 TikTok — Raport Săptămânal</div>
+  <div class="header-subtitle">Săptămâna 25 – 31 Mai 2026 · Săpt. 22/2026</div>
+  <div class="header-meta">
+    <div class="header-meta-item">Profile active<span>4</span></div>
+    <div class="header-meta-item">Video-uri în săpt.<span>10</span></div>
+    <div class="header-meta-item">Views totale est.<span>~45K</span></div>
+    <div class="header-meta-item">Best video<span>14.8K</span></div>
+    <div class="header-meta-item">Reclame TikTok<span>1 activ</span></div>
+  </div>
+  <div class="din2017">Clinicile Dentare Dr. Ardeleanu · Din 2017 · Surse: TikTok.com + TikTok Ad Library verificată</div>
+</div>
+
+<div class="container">
+
+  <!-- ALERT -->
+  <div class="alert-banner">
+    🚨 <span>Video-ul săptămânii în piața dentară RO: Regina Maria Dental — "Recrutăm medici observatori" — <strong>12.2K views, 139 shares</strong> cu audio trending "Humor Jazzy Funk". Cel mai distribuit video din piață. Dr. Ardeleanu — 2 video-uri publicate, ambele sub 1.5K views.</span>
+  </div>
+
+  <!-- PE SCURT -->
+  <div class="section-title">▶ Pe Scurt</div>
+  <div class="summary-box">
+    <h3>Semnale strategice · 25–31 Mai 2026</h3>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Regina Maria Dental domină săptămâna</strong> cu cel mai viral video: "Recrutăm medici observatori" — 12.2K views, 288 likes, 139 shares în doar 2 zile. Audio trending "Humor Jazzy Funk" (muzică funky) + format POV/umor ortodont cu 14.8K views. Cel mai bun conținut al săptămânii în piața dentară.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Dr. Ardeleanu</strong> a publicat 2 video-uri în săptămână (seria "Tu cauți pe Google" ep.1 și ep.2) — ambele educaționale, format talking head asistentă, audio original, ~1.3K views fiecare. Serie bună ca concept dar cu reach organic limitat.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>DENT ESTET</strong> — 3 video-uri, toate educaționale cu medici specialiști (endodonție Brașov, estetică Sibiu, microscop dentar) — views mici (400–900), 0 audio trending. Conținut de calitate dar fără reach.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Life Dental Spa</strong> — complet inactiv din septembrie 2024. Cont abandonat cu 6.867 followers și 50.5K aprecieri acumulate — o moștenire valoroasă nefolosită.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>DentEstet4Kids</strong> — inactiv din iunie 2025. <strong>Elidadent</strong> — cont TikTok inexistent. Concurența pediatrică pe TikTok e practic <strong>liberă</strong> — Dental Safari nu are cont activ nici ea.</div></div>
+  </div>
+
+  <!-- VOLUME TABLE -->
+  <div class="section-title">▶ Volumele Săptămânii</div>
+  <table class="volumes-table">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Followers</th>
+        <th>Total likes profil</th>
+        <th>Video-uri săpt.</th>
+        <th>Views totale săpt.</th>
+        <th>Avg views/video</th>
+        <th>Best video</th>
+        <th>Rang</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-row">
+        <td>Dr. Ardeleanu <span class="us-pill">NOI</span></td>
+        <td>6.657</td>
+        <td>55.5K</td>
+        <td class="badge-ok">2</td>
+        <td>2.586</td>
+        <td>1.293</td>
+        <td>1.310</td>
+        <td><span class="rank-badge us">3</span></td>
+      </tr>
+      <tr>
+        <td>DENT ESTET</td>
+        <td>5.163</td>
+        <td>42.6K</td>
+        <td class="badge-ok">3</td>
+        <td>~1.700</td>
+        <td>~567</td>
+        <td>895</td>
+        <td><span class="rank-badge">4</span></td>
+      </tr>
+      <tr>
+        <td>Regina Maria Dental</td>
+        <td>5.448</td>
+        <td>24.8K</td>
+        <td class="badge-hot">5+</td>
+        <td>~31K</td>
+        <td>~6.200</td>
+        <td class="badge-hot">14.8K</td>
+        <td><span class="rank-badge gold">1</span></td>
+      </tr>
+      <tr>
+        <td>Life Dental Spa</td>
+        <td>6.867</td>
+        <td>50.5K</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">—</td>
+        <td class="badge-no">Inactiv sept. 2024</td>
+        <td><span class="rank-badge">5</span></td>
+      </tr>
+      <tr>
+        <td>DENT ESTET 4 KIDS</td>
+        <td>3.270</td>
+        <td>12.8K</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">—</td>
+        <td class="badge-no">Inactiv iun. 2025</td>
+        <td><span class="rank-badge">5</span></td>
+      </tr>
+      <tr class="tier2-sep">
+        <td colspan="8">— Tier 2 TikTok — Elidadent: cont inexistent · Saviem, Dental Blue, JC Dent, Dr. Malama, Ark Med, Dentrust: fără TikTok —</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px; color:#888; margin-top:4px; margin-bottom:16px;">* Regina Maria: estimare bazată pe 14.8K (video POV) + 12.2K (recrutare) + altele ~1-3K fiecare. Rang 2 acordat Dr. Ardeleanu față de DENT ESTET pentru views/video superioare.</p>
+
+  <!-- COMPETITOR CARDS -->
+  <div class="section-title">▶ Activitate Profil cu Profil — Tier 1</div>
+  <div class="competitor-grid">
+
+    <!-- DR. ARDELEANU -->
+    <div class="competitor-card us-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>Dr. Ardeleanu <span class="us-pill">NOI</span></h4>
+          <a href="https://www.tiktok.com/@dr.ardeleanu" target="_blank">@dr.ardeleanu</a>
+        </div>
+        <div class="card-stats">Followers<span>6.657</span><span class="likes">❤️ 55.5K</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Video-uri organice (2 în săpt.)</div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">26 mai (5 zile în urmă)</span>
+              <span class="video-format">Talking head</span>
+              <span class="video-views">1.276 views</span>
+            </div>
+            <div class="video-caption">„Tu cauți pe Google… noi îți răspundem. 🦷 Ep.2 — Sângerarea gingiilor e normală? De ce doare noaptea? Pot exista probleme chiar dacă nu doare nimic?" Asistentă în recepție clinică, subtitluri.</div>
+            <div class="video-audio">🎵 <strong>original sound - Dr. Ardeleanu</strong> <span class="audio-badge original">ORIGINAL</span></div>
+            <div class="video-engagement"><span class="eng-likes">❤️ 17</span><span class="eng-comments">💬 1</span><span class="eng-shares">↗ 0</span></div>
+            <div class="video-link">Durată: 51s · CapCut</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">25 mai (6 zile în urmă)</span>
+              <span class="video-format">Talking head</span>
+              <span class="video-views">1.310 views</span>
+            </div>
+            <div class="video-caption">„Tu cauți pe Google… noi îți răspundem. 🦷 Ep.1 — Cât rezistă o plombă? Ce faci dacă ți s-a ciobit un dinte? Albirea de pe internet poate afecta smalțul?" Asistentă în recepție.</div>
+            <div class="video-audio">🎵 <strong>original sound - Dr. Ardeleanu</strong> <span class="audio-badge original">ORIGINAL</span></div>
+            <div class="video-engagement"><span class="eng-likes">❤️ 14</span><span class="eng-comments">💬 2</span><span class="eng-shares">↗ 0</span></div>
+            <div class="video-link">Durată: 52s · CapCut · #dental #toothfairy #stoma #storytime #viral #smile</div>
+          </div>
+
+          <div class="video-item no-data" style="margin-top:8px;">
+            📌 Video fixat: <strong>1.3M views</strong> — talking head medic endodont + carie mare ("Wow! Este o carie imensă!") — cel mai performant video din istoricul profilului.
+          </div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">Reclame TikTok</div>
+          <div class="video-item no-data"><strong>0 reclame TikTok active</strong> pentru Dr. Ardeleanu (verificat în TikTok Ad Library — mai 2026, România).</div>
+        </div>
+
+        <div class="observations">
+          <strong>➜ Observații:</strong> Seria "Tu cauți pe Google" e un concept bun — răspundem la întrebările reale ale pacienților. Problema: audio original + talking head simplu = reach organic limitat. 0 shares pe ambele video-uri. Fără un audio trending sau un hook puternic în primele 3 secunde, algoritmul TikTok nu distribuie organic. Video-ul fixat cu 1.3M views (carie spectaculoasă) ne arată că conținut <strong>vizual impactant</strong> funcționează mult mai bine decât talking head.
+        </div>
+      </div>
+    </div>
+
+    <!-- DENT ESTET -->
+    <div class="competitor-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>DENT ESTET</h4>
+          <a href="https://www.tiktok.com/@dentestetclinic" target="_blank">@dentestetclinic</a>
+        </div>
+        <div class="card-stats">Followers<span>5.163</span><span class="likes">❤️ 42.6K</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Video-uri organice (3 în săpt.)</div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">27 mai (4 zile în urmă)</span>
+              <span class="video-format">Talking head medic</span>
+              <span class="video-views">895 views</span>
+            </div>
+            <div class="video-caption">„Tratamentele de canal la microscop — rată de succes 90–95% de la prima intervenție." Dr. Andreea Stan, Endodonție, apariție la @medikatv. Link YouTube full video.</div>
+            <div class="video-audio">🎵 <strong>sunet original - DENT ESTET</strong> <span class="audio-badge original">ORIGINAL</span></div>
+            <div class="video-engagement"><span class="eng-likes">❤️ 6</span><span class="eng-comments">💬 0</span><span class="eng-shares">↗ 1</span></div>
+            <div class="video-link">Durată: 34s · #DENTESTET #Endodontie #TratamentDeCanal #DentalTok</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">26 mai (5 zile în urmă)</span>
+              <span class="video-format">Talking head medic</span>
+              <span class="video-views">406 views</span>
+            </div>
+            <div class="video-caption">„Estetica dentară personalizată — nu perfecțiune artificială, ci un zâmbet echilibrat, autentic și firesc." Dr. Vlad Glodeanu, Sibiu. Programare cu număr de telefon.</div>
+            <div class="video-audio">🎵 <strong>sunet original - DENT ESTET</strong> <span class="audio-badge original">ORIGINAL</span></div>
+            <div class="video-engagement"><span class="eng-likes">❤️ 7</span><span class="eng-comments">💬 0</span><span class="eng-shares">↗ 0</span></div>
+            <div class="video-link">Durată: 64s · #HollywoodSmile #SmileDesign #FateteDentare · Sibiu</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">26 mai (5 zile în urmă)</span>
+              <span class="video-format">Talking head medic</span>
+              <span class="video-views">1.186 views</span>
+            </div>
+            <div class="video-caption">„Sensibilitatea după obturație — temporară, parte din procesul de adaptare." Dr. Diana Hîrjanu, Brașov. Programare cu adresă și telefon.</div>
+            <div class="video-audio">🎵 <strong>sunet original - DENT ESTET</strong> <span class="audio-badge original">ORIGINAL</span></div>
+            <div class="video-engagement"><span class="eng-likes">❤️ 11</span><span class="eng-comments">💬 0</span><span class="eng-shares">↗ 2</span></div>
+            <div class="video-link">Durată: 60s · #DENTESTET #Brasov · Brașov</div>
+          </div>
+        </div>
+
+        <div class="observations">
+          <strong>➜ Observații:</strong> DENT ESTET postează consecvent (3/săpt.) dar toate video-urile sunt în același format: talking head medic specialist + audio original + hashtag-uri de specialitate. Pattern-ul este identic de la un video la altul — fără variație de format. 0 audio trending, 0 shares semnificative. Sunt disciplinați pe frecvență dar ignoră complet mecanicile TikTok de reach. Avantajul nostru: dacă adoptăm 1-2 audio trending/săptămână, îi depășim instant.
+          <br><br>⚠️ <strong style="color:var(--tiktok-pink)">ATENȚIE PAID:</strong> <strong>DENT ESTET CLINIC SA</strong> rulează o reclamă TikTok Ads activă (first shown 05/05, last shown 05/30/2026) cu <strong>10K–100K unique users seen</strong>. Reclamă pediatrică (DentEstet4Kids) — medic în uniformă 4Kids, mesaj "după erupția primului dinte...". 33 secunde. Investiție paid semnificativă în segmentul pediatric.
+        </div>
+      </div>
+    </div>
+
+    <!-- REGINA MARIA DENTAL -->
+    <div class="competitor-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>Regina Maria Dental Clinics</h4>
+          <a href="https://www.tiktok.com/@reginamariadentalclinics" target="_blank">@reginamariadentalclinics</a>
+        </div>
+        <div class="card-stats">Followers<span>5.448</span><span class="likes">❤️ 24.8K</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Video-uri organice (5+ în săpt.)</div>
+
+          <div class="video-item best">
+            <div class="video-meta">
+              <span class="video-date">29 mai (2 zile în urmă) 🔥 BEST</span>
+              <span class="video-format">Employer branding</span>
+              <span class="video-views">12.200 views</span>
+            </div>
+            <div class="video-caption">„Deschidem programul pentru medici observatori la nivel național! Căutăm medici stomatologi debutanți... trimite CV la recrutare@reginamaria.ro" Video cu medic în clinică, subtitluri grafice.</div>
+            <div class="video-audio">🎵 <strong>诙谐杂趣 Humor Jazzy Funk - 深沉 DIIPSILENCE</strong> <span class="audio-badge">TRENDING</span></div>
+            <div class="video-engagement"><span class="eng-likes">❤️ 288</span><span class="eng-comments">💬 8</span><span class="eng-shares">↗ 139</span></div>
+            <div class="video-link">Durată: 50s · #stomatologie #dentistry #reginamariadental #medic #dentistsoftiktok</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">26 mai (5 zile în urmă)</span>
+              <span class="video-format">POV / Umor</span>
+              <span class="video-views">14.800 views</span>
+            </div>
+            <div class="video-caption">„POV: îți face un tatuaj de fiecare dată când dinții pacientului stau drepți fără retainer 👀" Medic ortodont cu umor, 6 secunde, extrem de shareabil.</div>
+            <div class="video-audio">🎵 <strong>original sound - ⃟</strong> <span class="audio-badge original">ORIGINAL</span></div>
+            <div class="video-engagement"><span class="eng-likes">❤️ 39</span><span class="eng-comments">💬 0</span><span class="eng-shares">↗ 4</span></div>
+            <div class="video-link">Durată: 6s · #stomatolog #gutiera #aparatdentar #amuzant #fyp</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">~26–27 mai</span>
+              <span class="video-format">Employer branding</span>
+              <span class="video-views">1.178 views</span>
+            </div>
+            <div class="video-caption">„Stomatologie pentru cei mici la Academia Spațială — unde copiii nu vin la dentist, ci pornesc într-o misiune?" Dr. Adina Baloș, pediatric.</div>
+            <div class="video-audio">🎵 Audio neidentificat</div>
+            <div class="video-engagement"><span class="eng-likes">❤️ —</span></div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-meta">
+              <span class="video-date">~26–28 mai</span>
+              <span class="video-format">Leadership medical</span>
+              <span class="video-views">1.388 views</span>
+            </div>
+            <div class="video-caption">„Regina Maria Dental Pallady a împlinit un an!" — Echipă în uniformă verde, celebrare aniversare clinică.</div>
+            <div class="video-audio">🎵 Audio neidentificat</div>
+          </div>
+        </div>
+
+        <div class="observations">
+          <strong>➜ Observații:</strong> Regina Maria Dental înțelege TikTok mult mai bine decât ceilalți. Trei factori cheie: (1) <strong>variație de formate</strong> — POV umor 6s + employer branding 50s + pediatric; (2) <strong>audio trending</strong> pe video-ul de recrutare; (3) <strong>shareabilitate</strong> — 139 shares pe videoclipul de recrutare e excepțional pentru piața dentară RO. Video-ul POV cu ortodontul e un exemplu perfect de hook viral. Cel mai sofisticat creator TikTok din piața dentară RO săptămâna aceasta.
+        </div>
+      </div>
+    </div>
+
+    <!-- LIFE DENTAL SPA -->
+    <div class="competitor-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>Life Dental Spa</h4>
+          <a href="https://www.tiktok.com/@lifedentalspa" target="_blank">@lifedentalspa</a>
+        </div>
+        <div class="card-stats">Followers<span>6.867</span><span class="likes">❤️ 50.5K</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Video-uri organice (0 în săpt.)</div>
+          <div class="video-item no-data">Complet inactiv. Ultimul video publicat: <strong>5 septembrie 2024</strong>. De atunci — 9 luni de inactivitate totală. Profilul are 6.867 followers și 50.5K aprecieri acumulate anterior — un cont valoros abandonat.</div>
+        </div>
+        <div class="observations">
+          <strong>➜ Observații:</strong> Life Dental Spa a abandonat TikTok complet. Cu 6.867 followers (cei mai mulți din piață) și 50.5K aprecieri, contul e o resursă dormantă enormă. Dacă reactivează, au un avantaj competitiv imediat. Deocamdată — fără activitate și fără amenințare.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /competitor-grid -->
+
+  <!-- PEDIATRIC FOCUS -->
+  <!-- TIKTOK ADS COMPETITIVE -->
+  <div class="section-title">▶ TikTok Ads Library — Piața Dentară RO (Mai 2026)</div>
+  <div class="summary-box">
+    <h3>Date verificate · TikTok Commercial Content Library · Perioadă: 1–31 Mai 2026 · Țara: România</h3>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>DENT ESTET CLINIC SA</strong> — 1 reclamă TikTok activă confirmată. First shown: 05/05/2026, Last shown: 05/30/2026. <strong>10K–100K unique users seen</strong>. Reclamă pediatrică (DentEstet4Kids) cu mesaj "după erupția primului dinte..." — 33 secunde, medic în uniformă 4Kids. Singurul competitor din lista noastră cu TikTok Ads activ.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>drmaxim.ro</strong> — advertiser terț (nu e în lista noastră de competitori) dar extrem de activ: 7+ reclame active în mai 2026, multiple campanii cu <strong>10K–100K users seen</strong> fiecare. Cel mai agresiv advertiser dentar pe TikTok în România în această perioadă. De monitorizat.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>dentista_copiilor</strong> — advertiser pediatric terț, 1 reclamă activă 05/26–05/30/2026, <strong>10K–100K users seen</strong>. Posibil concurent direct pentru Dental Safari. De identificat cine e.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Regina Maria Dental, Life Dental Spa, Dr. Ardeleanu</strong> — <strong>0 reclame TikTok active</strong> în mai 2026. Niciun dintre principalii competitori nu investește în TikTok Ads în afară de DENT ESTET.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div>💡 <strong>Oportunitate paid:</strong> Piața TikTok Ads dentară RO e practic neocupată de branduri mari. Lansarea primei campanii TikTok Ads Dr. Ardeleanu ar fi primul mover în categoria "clinici premium" — alături de DENT ESTET, dar cu targeting mai precis.</div></div>
+  </div>
+
+  <div class="section-title">▶ TikTok Pediatric — Focus (Dental Safari vs. Competitori)</div>
+  <div class="pediatric-box">
+    <h3>🦒 Segmentul Pediatric pe TikTok — Săpt. 25–31 Mai 2026</h3>
+    <div class="pediatric-grid">
+      <div class="pediatric-card">
+        <h5>Dental Safari (Dr. Ardeleanu)</h5>
+        <p>Nu există cont TikTok dedicat Dental Safari. @dr.ardeleanu a postat un video pediatric săptămâna trecută (sigilare dentară — 1.174 views), dar fără branding Dental Safari explicit.</p>
+        <p style="margin-top:8px; color:var(--yellow); font-weight:600;">Oportunitate: crearea unui cont @dentalsafari.ro ar ocupa o nișă 100% liberă.</p>
+      </div>
+      <div class="pediatric-card">
+        <h5>DENT ESTET 4 KIDS</h5>
+        <p>Cont existent (@dentestet4kids.clinic, 3.270 followers) dar <strong>inactiv din iunie 2025</strong>. Ultimul video: educație despre dinții de lapte. Abandonat complet.</p>
+      </div>
+      <div class="pediatric-card">
+        <h5>Elidadent for KIDS</h5>
+        <p>Contul @clinicaelidadent — <strong>nu există</strong> (404). Nicio prezență TikTok.</p>
+      </div>
+      <div class="pediatric-card">
+        <h5>Regina Maria Dental Pediatric</h5>
+        <p>Postează pediatric pe contul principal (@reginamariadentalclinics) — "Stomatologie pentru cei mici la Academia Spațială" (Dr. Adina Baloș, 1.178 views). Nu au cont dedicat.</p>
+        <p style="margin-top:8px; color:var(--yellow); font-weight:600;">Cel mai activ în pediatric săptămâna aceasta.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRENDURI AUDIO -->
+  <div class="section-title">▶ Trenduri Audio Detectate în Piața Dentară</div>
+  <table class="audio-table">
+    <thead>
+      <tr>
+        <th>Audio</th>
+        <th>Folosit de</th>
+        <th>Status</th>
+        <th>Views video</th>
+        <th>Recomandare</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>诙谐杂趣 Humor Jazzy Funk - DIIPSILENCE</strong></td>
+        <td>Regina Maria Dental</td>
+        <td><span class="trend-pill">TRENDING</span></td>
+        <td style="color:var(--tiktok-pink); font-weight:700;">12.200</td>
+        <td>✅ Folosiți imediat — format employer branding sau "zi în clinică"</td>
+      </tr>
+      <tr>
+        <td><strong>original sound - ⃟</strong> (POV ortodont)</td>
+        <td>Regina Maria Dental</td>
+        <td><span class="original-pill">ORIGINAL</span></td>
+        <td>14.800</td>
+        <td>⚠️ Audio original al lor — nu putem folosi, dar formatul POV 6s e replicabil</td>
+      </tr>
+      <tr>
+        <td><strong>original sound - Dr. Ardeleanu</strong></td>
+        <td>Dr. Ardeleanu (× 2)</td>
+        <td><span class="original-pill">ORIGINAL</span></td>
+        <td>~1.300</td>
+        <td>🔄 Funcționează pentru audiența existentă dar nu generează reach nou</td>
+      </tr>
+      <tr>
+        <td><strong>sunet original - DENT ESTET</strong> (× 3)</td>
+        <td>DENT ESTET</td>
+        <td><span class="original-pill">ORIGINAL</span></td>
+        <td>~400–1.200</td>
+        <td>❌ Reach blocat — fără trending audio, fără distribuire organică</td>
+      </tr>
+      <tr>
+        <td><strong>Originalton - kurdmaverickofficial</strong></td>
+        <td>Life Dental Spa (2024)</td>
+        <td><span class="original-pill">ARHIVAT</span></td>
+        <td>1.917 (2024)</td>
+        <td>— Cont inactiv, date istorice</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- TOP 5 -->
+  <div class="section-title">▶ Top 5 Video-uri din Piața Dentară — Săptămâna Aceasta</div>
+  <ul class="top5-list">
+    <li class="top5-item">
+      <div class="top5-num gold-num">1</div>
+      <div class="top5-content">
+        <h5>Regina Maria Dental — "POV: ortodont tatuaj retainer"</h5>
+        <span class="views-big">14.800 views</span>
+        <p>Format: POV 6 secunde · Hook instant · Umor medical · Audio original · #fyp · 39 likes, 4 shares</p>
+        <p style="color:var(--tiktok-pink); font-size:11px;">Pattern: video scurt + umor profesional + hashtag #fyp = reach organic</p>
+      </div>
+    </li>
+    <li class="top5-item">
+      <div class="top5-num">2</div>
+      <div class="top5-content">
+        <h5>Regina Maria Dental — "Recrutăm medici observatori"</h5>
+        <span class="views-big">12.200 views</span>
+        <p>Format: Employer branding 50s · Audio TRENDING "Humor Jazzy Funk" · 288 likes, 139 shares · CTA recrutare@reginamaria.ro</p>
+        <p style="color:var(--tiktok-pink); font-size:11px;">Pattern: audio trending + subiect relevant (carieră medicală) = viral în nișă</p>
+      </div>
+    </li>
+    <li class="top5-item">
+      <div class="top5-num">3</div>
+      <div class="top5-content">
+        <h5>Dr. Ardeleanu — "Tu cauți pe Google ep.1"</h5>
+        <span class="views-big">1.310 views</span>
+        <p>Format: Talking head 52s · Audio original · 14 likes, 2 comments · Seria educațională</p>
+      </div>
+    </li>
+    <li class="top5-item">
+      <div class="top5-num">4</div>
+      <div class="top5-content">
+        <h5>Dr. Ardeleanu — "Tu cauți pe Google ep.2"</h5>
+        <span class="views-big">1.276 views</span>
+        <p>Format: Talking head 51s · Audio original · 17 likes, 1 comment</p>
+      </div>
+    </li>
+    <li class="top5-item">
+      <div class="top5-num">5</div>
+      <div class="top5-content">
+        <h5>DENT ESTET — "Sensibilitate după obturație" (Brașov)</h5>
+        <span class="views-big">1.186 views</span>
+        <p>Format: Talking head 60s · Audio original · Dr. Diana Hîrjanu · 11 likes, 2 shares</p>
+      </div>
+    </li>
+  </ul>
+
+  <!-- ANALIZA FORMATE -->
+  <div class="section-title">▶ Distribuție Formate &amp; Frecvență</div>
+  <div class="analysis-grid">
+    <div class="analysis-card">
+      <h4>📊 Formate video săptămâna aceasta (Tier 1)</h4>
+      <div class="trend-bar-row">
+        <span class="trend-label">Talking head medic</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:100%"></div></div>
+        <span class="trend-count">7 video-uri</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">POV / Umor</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:14%"></div></div>
+        <span class="trend-count">1 video</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">Employer branding</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:28%"></div></div>
+        <span class="trend-count">2 video-uri</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">Before/After</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:0%"></div></div>
+        <span class="trend-count">0</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">Trend audio / dans</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:0%"></div></div>
+        <span class="trend-count">0</span>
+      </div>
+      <p style="font-size:11px; color:#888; margin-top:12px;">Piața este dominată de talking head — format cel mai ușor de produs dar cu cel mai mic reach organic. POV umor (6s) și audio trending au generat 10x+ mai multe views.</p>
+    </div>
+    <div class="analysis-card">
+      <h4>📈 Frecvență postare &amp; recomandare</h4>
+      <ul>
+        <li><span class="li-dot">1.</span><span><strong>Regina Maria Dental</strong> — 5+ video-uri/săptămână. Lider de frecvență și de reach. Mix: umor scurt + educație + recrutare.</span></li>
+        <li><span class="li-dot">2.</span><span><strong>DENT ESTET</strong> — 3 video-uri/săptămână. Consecvente dar monotone. Format identic de fiecare dată.</span></li>
+        <li><span class="li-dot">3.</span><span><strong>Dr. Ardeleanu</strong> — 2 video-uri/săptămână. Sub media pieței. Concept bun ("Tu cauți pe Google") dar fără reach.</span></li>
+        <li><span class="li-dot">🎯</span><span><strong>Recomandare pentru noi:</strong> Minim 4-5 video-uri/săptămână. Cel puțin 2 cu audio trending, 1 format scurt (POV/umor &lt;15s), 1 educational, 1 behind the scenes clinică.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ACTION PLAN -->
+  <div class="section-title">▶ Ce Facem Săptămâna Următoare pe TikTok</div>
+  <div class="action-plan">
+    <h3>Plan tactic · 1–7 Iunie 2026</h3>
+    <div class="action-items">
+      <div class="action-item">
+        <div class="action-number">01</div>
+        <div class="action-title">Video POV Umor &lt;15s</div>
+        <div class="action-desc">Replică formatul Regina Maria (POV 6s). Exemplu: "POV: pacientul vine la control și toți dinții sunt perfecți" sau "POV: medicul vede o carie în ziua de naștere a pacientului". Hook instant, fără narare lungă. Audio trending de pe TikTok "For You" RO săptămâna asta.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-number">02</div>
+        <div class="action-title">Video cu Audio Trending</div>
+        <div class="action-desc">Folosiți audio "Humor Jazzy Funk" (cel care a dat 12.2K la Regina Maria) sau echivalentul său de top în săptămâna 1-7 iunie. Format: "Ziua unui medic la Dr. Ardeleanu" sau "Ce înseamnă să ai 80+ medici" — video energic, 30-45s, CapCut cu text overlay.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-number">03</div>
+        <div class="action-title">Continuare "Tu Cauți pe Google" Ep.3</div>
+        <div class="action-desc">Seria funcționează ca concept educațional. Adăugăm hook mai puternic în primele 3 secunde: text overlay mare "Tu ai googlit asta?" + asistentă cu reacție exagerată. Hashtag: #dentistsoftiktok #stomatologie #fyp. Durată: 30-40s (mai scurt decât ep.1-2).</div>
+      </div>
+      <div class="action-item">
+        <div class="action-number">04</div>
+        <div class="action-title">Before/After Vizual</div>
+        <div class="action-desc">0 before/after în piața dentară săptămâna aceasta — spațiu complet liber! Video de 15-20s cu un caz real de albire sau fațete. Split screen înainte/după. Audio trending. Cel mai shareabil tip de conținut în stomatologie în general.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-number">05</div>
+        <div class="action-title">Frecvență target: 4-5/săpt.</div>
+        <div class="action-desc">De la 2 video-uri (săpt. aceasta) la 4-5 video-uri. TikTok recompensează volumul. Distribuiți producția pe 2-3 zile de filmare la clinică (1 zi = 3-4 video-uri filmate deodată). Postare zilnică sau la 2 zile.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="report-footer">
+  <div><strong>Status Claude in Chrome:</strong> Activ · Browser 1 (Windows) · TikTok logat</div>
+  <div><strong>Surse:</strong> TikTok.com (profil + video-uri) via Claude in Chrome</div>
+  <div><strong>TikTok Ads Library:</strong> ✅ Verificată · DENT ESTET CLINIC SA: 1 reclamă activă (pediatric, 10K-100K users) · Toți ceilalți: 0 reclame TikTok RO</div>
+  <div><strong>Perioadă:</strong> 25–31 Mai 2026</div>
+  <div><strong>Conturi inexistente:</strong> @clinicaelidadent (404)</div>
+  <div><strong>Conturi inactive:</strong> @lifedentalspa (sept.2024), @dentestet4kids.clinic (iun.2025)</div>
+  <div><strong>Confidence date organice:</strong> ✅ Înalt (date directe din UI TikTok)</div>
+  <div><strong>Generator:</strong> competitor-weekly-tiktok v1.0 · 31.05.2026</div>
+  <div style="width:100%; border-top:1px solid var(--wheat); padding-top:8px; color:#aaa;">Dr. Ardeleanu Dental Clinics · clinicileardeleanu.ro · 031 99 63 · Din 2017</div>
+</div>
+
+</body>
+</html>

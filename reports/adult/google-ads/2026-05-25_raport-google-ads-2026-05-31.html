@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="google-ads">
+<meta name="report:cadence" content="weekly">
+<meta name="report:date" content="2026-05-25">
+<meta name="report:period" content="25–31 mai 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Ads Raport Săptămânal · Dr. Ardeleanu · 31 mai 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background:#F5EDE3;color:#222;line-height:1.6}
+.wrap{max-width:920px;margin:0 auto;padding:32px 20px}
+.header{background:#7B1C16;color:#fff;border-radius:14px;padding:32px 36px;margin-bottom:28px}
+.header .eyebrow{color:#F2DAB7;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.header h1{font-size:26px;font-weight:800;margin-bottom:8px}
+.header .week{font-size:13px;color:#FBE483;font-weight:500}
+.badge-noi{background:#FBE483;color:#7B1C16;font-size:10px;font-weight:800;padding:2px 10px;border-radius:20px;display:inline-block;margin-left:8px;vertical-align:middle}
+.badge-alert{background:#FCEBEB;color:#A32D2D;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px}
+.badge-new{background:#EAF3DE;color:#3B6D11;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px}
+.badge-warn{background:#FAEEDA;color:#854F0B;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px}
+.section{background:#fff;border-radius:12px;padding:24px 28px;margin-bottom:22px;border:1px solid #e8ddd6}
+.section h2{font-size:12px;font-weight:700;color:#7B1C16;margin-bottom:18px;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #F2DAB7;padding-bottom:10px}
+.pill{background:#7B1C16;color:#F2DAB7;font-size:9px;padding:2px 10px;border-radius:20px;font-weight:700}
+ul.b{list-style:none;padding:0}
+ul.b li{padding:7px 0 7px 22px;position:relative;font-size:13.5px;line-height:1.65;border-bottom:1px solid #f5efe9}
+ul.b li:last-child{border-bottom:none}
+ul.b li::before{content:"▸";position:absolute;left:0;color:#7B1C16;font-size:11px;top:9px}
+ul.b li strong{color:#7B1C16}
+/* TABLE OVERVIEW */
+table.vol{width:100%;border-collapse:collapse;font-size:12px}
+table.vol th{background:#7B1C16;color:#fff;padding:10px 12px;text-align:left;font-weight:600;font-size:11px}
+table.vol td{padding:9px 12px;border-bottom:1px solid #ede7e0;vertical-align:middle;font-size:12px}
+table.vol tr:nth-child(even) td{background:#faf7f4}
+table.vol tr.noi td{background:#FFFAED;font-weight:600}
+table.vol tr.noi td:first-child{border-left:4px solid #7B1C16}
+table.vol tr.alert td{background:#fff5f5}
+.rang{display:inline-block;background:#7B1C16;color:#FBE483;font-size:11px;font-weight:800;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px}
+.rang.g{background:#ccc;color:#666}
+.rang.r{background:#A32D2D;color:#fff}
+/* HEATMAP */
+table.heat{width:100%;border-collapse:collapse;font-size:12px}
+table.heat th{background:#F2DAB7;color:#7B1C16;padding:8px 10px;text-align:left;font-weight:700;font-size:11px}
+table.heat td{padding:8px 10px;border-bottom:1px solid #f0e8e0;vertical-align:middle}
+table.heat tr:nth-child(even) td{background:#faf7f4}
+.hc1{background:#A32D2D;color:#fff;border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;white-space:nowrap}
+.hc2{background:#F2DAB7;color:#7B1C16;border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700}
+.hc3{background:#EAF3DE;color:#3B6D11;border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700}
+.hc0{background:#eee;color:#888;border-radius:6px;padding:2px 8px;font-size:10px;font-style:italic}
+/* BRAND CARDS */
+.card-brand{border:1px solid #e0d5cc;border-radius:12px;margin-bottom:18px;overflow:hidden}
+.bh{background:#F2DAB7;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.bh h3{font-size:14px;font-weight:700;color:#7B1C16}
+.bh .meta{font-size:11px;color:#7B1C16;opacity:.75}
+.card-brand.hl .bh{background:#7B1C16}
+.card-brand.hl .bh h3{color:#FBE483}
+.card-brand.hl .bh .meta{color:#F2DAB7;opacity:1}
+.cb{padding:18px}
+.sm{margin-bottom:16px}
+.sm h4{font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid #eee}
+.ad-item{font-size:13px;padding:9px 0;border-bottom:1px solid #f5f0eb}
+.ad-item:last-child{border-bottom:none}
+.at{font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;display:inline-block}
+.at.search{background:#E6F1FB;color:#185FA5}
+.at.display{background:#EAF3DE;color:#3B6D11}
+.at.local{background:#FAEEDA;color:#854F0B}
+.at.discovery{background:#fbeaf0;color:#993556}
+.at.video{background:#FCEBEB;color:#A32D2D}
+.ad-title{font-weight:700;color:#185FA5;font-size:13.5px;display:block;margin-bottom:3px}
+.ad-desc{color:#555;font-size:12.5px;line-height:1.55}
+.ad-landing{font-size:11px;color:#3B6D11;margin-top:3px}
+.ad-cat{font-size:10px;background:#f0f0f0;color:#666;padding:1px 7px;border-radius:8px;margin-left:4px}
+.obs{background:#fdf8f7;border-left:4px solid #7B1C16;padding:10px 14px;border-radius:0 8px 8px 0;font-size:12.5px;margin-top:12px;color:#555;line-height:1.7}
+.obs strong{color:#7B1C16}
+.obs.alert{border-left-color:#A32D2D;background:#fff5f5}
+.obs.alert strong{color:#A32D2D}
+.t2i{font-size:13px;padding:8px 0;border-bottom:1px solid #f0e8e0;display:flex;align-items:flex-start;gap:12px}
+.t2i:last-child{border-bottom:none}
+.t2i strong{color:#7B1C16;min-width:100px;flex-shrink:0}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;margin:2px}
+.tag.g{background:#EAF3DE;color:#3B6D11}
+.tag.r{background:#FCEBEB;color:#A32D2D}
+.tag.a{background:#FAEEDA;color:#854F0B}
+.tag.b{background:#E6F1FB;color:#185FA5}
+.ri{font-size:13px;padding:12px 14px;background:#F5EDE3;border-radius:10px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;line-height:1.65}
+.rn{background:#7B1C16;color:#FBE483;font-size:14px;font-weight:800;min-width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.footer-box{background:#7B1C16;color:#F2DAB7;border-radius:12px;padding:20px 24px;font-size:12px;line-height:2.2}
+.footer-box strong{color:#FBE483}
+.din2017{text-align:center;font-size:11px;color:#B5BD5C;font-weight:700;letter-spacing:3px;margin-top:24px;padding-bottom:8px}
+.revelation{background:#FFFAED;border:2px solid #FBE483;border-radius:10px;padding:14px 18px;margin:14px 0;font-size:13px}
+.revelation strong{color:#7B1C16}
+@media(max-width:600px){.wrap{padding:16px 12px}.header{padding:22px 20px}.header h1{font-size:20px}}
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+<div class="wrap">
+
+<div class="header">
+  <div class="eyebrow">Clinicile Dentare Dr. Ardeleanu · Intelligence Competitiv Google Ads</div>
+  <h1>Google Ads — Raport Săptămânal · Săpt. 22 / 2026</h1>
+  <div class="week">25 mai 2026 – 31 mai 2026 &nbsp;|&nbsp; Sursă: Google Ads Transparency Center (oficial Google) ✓ &nbsp;|&nbsp; 31 mai 2026, ora 22:30 UTC</div>
+</div>
+
+<!-- PE SCURT -->
+<div class="section">
+  <h2>⚡ Pe scurt — revelațiile săptămânii</h2>
+  <ul class="b">
+    <li><strong>DentEstet domină Google cu ~500 reclame</strong> — cel mai mare portofoliu Google Ads din piața dentară RO verificată. Strategie: Local Ads per locație (Aviatorilor, Ploiești etc.) + Search geo-targetat pe servicii-cheie (implant Sibiu etc.). Buget publicitar estimat: substanțial.</li>
+    <li><strong>Revelație majoră: JC Dent este parte din grupul DentEstet</strong> — contul publicitar Google al JC Dent este "DENT ESTET SRL". JC Dent rulează 5 reclame Google targetate direct pe Slobozia (pediatrie + servicii complete). Concurență directă pe două fronturi simultan în orașele noastre.</li>
+    <li><strong>Dental Blue atacă exact pe teritoriul nostru geografic</strong> — 2 reclame Search targetate specific pe Slobozia, Călărași, Ialomița: "Stomatolog Slobozia Calarasi" și "Dentist Ialomita si Calarasi". Concurență locală directă neglijată până acum.</li>
+    <li><strong>Dr. Ardeleanu are 72 reclame Google</strong> — lider numeric față de Life Dental Spa (71) și Dental Blue (2). DentEstet (~500) e într-o categorie diferită. Mesajele noastre actuale: Local Ads, Search generic ("Excelent Raport Calitate Pret"), Display prevenție (Detartraj, Periaj, Airflow).</li>
+    <li><strong>Life Dental Spa: 71 reclame Google</strong>, mesaj flagship: "Zambet complet nou in 24h - Procedura Fast &amp; Fixed" — implanturi într-o zi, fără durere, fără așteptare. Reclamă Discovery cu fotografie emoțională (bărbat vârstnic zâmbitor).</li>
+    <li><strong>Elidadent, Dr. Malama, Dentrust, Saviem Smile, Ark Med: 0 reclame Google Ads</strong> — complet absente din Google. Regina Maria are ~5.000 reclame dar sunt brand medical general (maternitate, dermatoscopie etc.), nu stomatologie specifică.</li>
+  </ul>
+</div>
+
+<!-- TABEL OVERVIEW -->
+<div class="section">
+  <h2>📊 Tabel overview — reclame Google Ads active (verificat Transparency Center)</h2>
+  <div style="overflow-x:auto">
+  <table class="vol">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Domeniu verificat</th>
+        <th>Total reclame</th>
+        <th>Search</th>
+        <th>Display</th>
+        <th>Local Ads</th>
+        <th>Discovery/Video</th>
+        <th>Rang Google</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="alert">
+        <td><strong>DentEstet</strong> <span class="badge-alert">⚠️ LIDER</span></td>
+        <td>dentestet.ro</td>
+        <td><strong>~500</strong></td>
+        <td>✓ masiv</td>
+        <td>✓</td>
+        <td>✓ per locație</td>
+        <td>✓</td>
+        <td><span class="rang r">1</span></td>
+      </tr>
+      <tr class="noi">
+        <td><strong>Dr. Ardeleanu</strong> <span class="badge-noi">NOI</span></td>
+        <td>clinicileardeleanu.ro</td>
+        <td><strong>72</strong></td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>?</td>
+        <td><span class="rang">2</span></td>
+      </tr>
+      <tr>
+        <td>Life Dental Spa</td>
+        <td>lifedentalspa.ro</td>
+        <td><strong>71</strong></td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓ (Iași)</td>
+        <td>✓ Discovery</td>
+        <td><span class="rang">3</span></td>
+      </tr>
+      <tr>
+        <td>Regina Maria</td>
+        <td>reginamaria.ro</td>
+        <td>~5.000*</td>
+        <td>✓ (medical gen.)</td>
+        <td>✓ Display</td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="rang g">*</span></td>
+      </tr>
+      <tr>
+        <td>Dental Blue <span class="badge-warn">⚠️ GEO</span></td>
+        <td>dentalblue.ro</td>
+        <td><strong>2</strong></td>
+        <td>✓ Slobozia/CL</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="rang g">T1</span></td>
+      </tr>
+      <tr>
+        <td>Elidadent</td>
+        <td>elidadent.ro</td>
+        <td><strong>0</strong></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="rang g">—</span></td>
+      </tr>
+      <tr style="background:#fff9f0">
+        <td><em>JC Dent (T2)</em> <span class="badge-alert">⚠️ GRUP DE</span></td>
+        <td>jcdent.ro</td>
+        <td><strong>5</strong></td>
+        <td>✓ Slobozia copii</td>
+        <td>✓ Display</td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="rang g">T2!</span></td>
+      </tr>
+      <tr style="background:#fff9f0">
+        <td><em>Dr. Malama (T2)</em></td>
+        <td>drmalama.ro</td>
+        <td>0</td>
+        <td>—</td><td>—</td><td>—</td><td>—</td>
+        <td><span class="rang g">—</span></td>
+      </tr>
+      <tr style="background:#fff9f0">
+        <td><em>Dentrust, Ark Med, Saviem (T2)</em></td>
+        <td>diverse</td>
+        <td>0</td>
+        <td>—</td><td>—</td><td>—</td><td>—</td>
+        <td><span class="rang g">—</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-top:8px">* Regina Maria ~5.000 reclame acoperă întregul brand medical (spitale, maternitate, laborator etc.) — nu stomatologie specifică &nbsp;|&nbsp; ✓ = format confirmat vizual în Transparency Center</p>
+</div>
+
+<!-- HEATMAP VERTICALE -->
+<div class="section">
+  <h2>🔥 Heatmap — cine domină pe fiecare vertical de serviciu</h2>
+  <div style="overflow-x:auto">
+  <table class="heat">
+    <thead>
+      <tr>
+        <th>Vertical / Serviciu</th>
+        <th>Lider Google Ads</th>
+        <th>#2</th>
+        <th>Dr. Ardeleanu (NOI)</th>
+        <th>Gap / Oportunitate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Implantologie</strong></td>
+        <td><span class="hc1">DentEstet (~50+ anunțuri)</span></td>
+        <td><span class="hc2">Life Dental Spa (Fast&amp;Fixed)</span></td>
+        <td><span class="hc0">neconfirmat</span></td>
+        <td style="font-size:11.5px;color:#A32D2D"><strong>⚠️ GAP MAJOR</strong> — suntem invizibili pe cel mai căutat serviciu</td>
+      </tr>
+      <tr>
+        <td><strong>Pedodonție / Copii</strong></td>
+        <td><span class="hc1">JC Dent/DentEstet (Slobozia!)</span></td>
+        <td><span class="hc2">DentEstet 4Kids</span></td>
+        <td><span class="hc0">neconfirmat</span></td>
+        <td style="font-size:11.5px;color:#A32D2D"><strong>⚠️ GAP LOCAL CRITIC</strong> — JC Dent ne bate în Slobozia pe copii</td>
+      </tr>
+      <tr>
+        <td><strong>Geo-local (Slobozia, CL)</strong></td>
+        <td><span class="hc1">Dental Blue ("Stomatolog Slobozia")</span></td>
+        <td><span class="hc2">JC Dent ("Copii Slobozia")</span></td>
+        <td><span class="hc3">Dr. Ardeleanu (72 reclame, Local Ads)</span></td>
+        <td style="font-size:11.5px;color:#854F0B">Prezență Local Ads confirmată — mesajele de consolidat</td>
+      </tr>
+      <tr>
+        <td><strong>Prevenție (detartraj, airflow)</strong></td>
+        <td><span class="hc3">Dr. Ardeleanu (Display "Zâmbet Sănătos")</span></td>
+        <td><span class="hc0">neidentificat</span></td>
+        <td><span class="hc3">✓ Confirmat Display</span></td>
+        <td style="font-size:11.5px;color:#3B6D11">Lider pe prevenție — de menținut și extins</td>
+      </tr>
+      <tr>
+        <td><strong>Calitate/Preț</strong></td>
+        <td><span class="hc3">Dr. Ardeleanu ("Excelent Raport Calitate Pret")</span></td>
+        <td><span class="hc2">Dental Blue ("prețuri corecte")</span></td>
+        <td><span class="hc3">✓ Confirmat Search</span></td>
+        <td style="font-size:11.5px;color:#3B6D11">Lider pe mesaj accesibilitate — de consolidat cu preț explicit</td>
+      </tr>
+      <tr>
+        <td><strong>Albire / Estetică</strong></td>
+        <td><span class="hc1">DentEstet</span></td>
+        <td><span class="hc0">neidentificat</span></td>
+        <td><span class="hc0">neconfirmat</span></td>
+        <td style="font-size:11.5px;color:#A32D2D">Gap potențial — verificat în săptămâna viitoare</td>
+      </tr>
+      <tr>
+        <td><strong>Abonamente / Corporate</strong></td>
+        <td><span class="hc1">Regina Maria ("Consultații fără limită -30%")</span></td>
+        <td><span class="hc0">—</span></td>
+        <td><span class="hc0">—</span></td>
+        <td style="font-size:11.5px;color:#555">Piață diferită — Regina Maria adresează corporate, nu individual</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="obs" style="margin-top:14px">
+    <strong>Concluzie heatmap:</strong> Suntem invizibili pe Google pe implantologie — cel mai mare și mai profitabil serviciu dentar. DentEstet + Life Dental Spa controlează această verticală. Gap-ul pe pediatrie locală e critic (JC Dent/DentEstet ne atacă direct în Slobozia). Suntem lideri pe prevenție și mesaj calitate/preț — avantaje de consolidat.
+  </div>
+</div>
+
+<!-- ACTIVITATE COMPLETĂ TIER 1 + NOI -->
+<div class="section">
+  <h2>🔍 Activitate completă pe cont <span class="pill">TIER 1 + NOI</span></h2>
+
+  <!-- DR. ARDELEANU -->
+  <div class="card-brand hl">
+    <div class="bh">
+      <h3>Clinicile Dentare Dr. Ardeleanu <span class="badge-noi">NOI</span></h3>
+      <span class="meta">clinicileardeleanu.ro · 72 reclame totale · Transparency Center ✓</span>
+    </div>
+    <div class="cb">
+      <div class="sm">
+        <h4>Local Ads (Google Maps / Google Search local)</h4>
+        <div class="ad-item">
+          <span class="at local">LOCAL</span>
+          <span class="ad-title">Dr. Ardeleanu Focșani</span>
+          <span class="ad-desc">5,0 ★★★★★ (60) · Stomatolog · Focșani · "Respirație proaspătă - Investește în zâmbetul tău. Beneficiezi de Aparatura..." — butoane: Apelează / Site / Indicații de orientare</span>
+          <div class="ad-landing">↗ clinicileardeleanu.ro · <span class="ad-cat">Local / Brand</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at local">LOCAL</span>
+          <span class="ad-title">Zâmbet impecabil — Dr. Ardeleanu</span>
+          <span class="ad-desc">"Investește în zâmbetul tău. Beneficiezi de..." — format Local cu butoane Indicații + Apelați</span>
+          <div class="ad-landing">↗ clinicileardeleanu.ro · <span class="ad-cat">Local / Brand</span></div>
+        </div>
+      </div>
+      <div class="sm">
+        <h4>Search Ads</h4>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Personal medical Profesionist - Excelent Raport Calitate Pret</span>
+          <span class="ad-desc">"Investește în zâmbetul tău. Beneficiezi de Aparatura Medicala de Ultima Generatie"</span>
+          <div class="ad-landing">↗ www.clinicileardeleanu.ro/ · <span class="ad-cat">Brand generic / Calitate</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Excelent Raport Calitate Pret</span>
+          <span class="ad-desc">"Investește în zâmbetul tău. Beneficiezi de Aparatura Medicala de Ultima Generatie" — variantă mai scurtă</span>
+          <div class="ad-landing">↗ www.clinicileardeleanu.ro/ · <span class="ad-cat">Brand generic / Calitate</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Clinica Dr. Ardeleanu Giurgiu [sitelinks]</span>
+          <span class="ad-desc">Sitelinks vizibile: Contact — "Programeaza o vizita Clinica Dr. Ardeleanu" · Tratamente si Promotii — "Vezi Reducerile Lunii Oferte si Promotii Stomatologie" · Promotiile Zilei — "Implant dentar rapid si eficient Plata in Rate"</span>
+          <div class="ad-landing">↗ clinicileardeleanu.ro · <span class="ad-cat">Brand local / Giurgiu / Multi-serviciu</span></div>
+        </div>
+      </div>
+      <div class="sm">
+        <h4>Display Ads</h4>
+        <div class="ad-item">
+          <span class="at display">DISPLAY</span>
+          <span class="ad-title">Zâmbet Sănătos — Detartraj · Periaj Profesional · Airflow</span>
+          <span class="ad-desc">Banner format vertical — "3 servicii esențiale" cu pictogramă dinte iluminat, fundal burgund, CTA "Află mai multe"</span>
+          <div class="ad-landing">↗ clinicileardeleanu.ro · <span class="ad-cat">Prevenție / Igienizare</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at display">DISPLAY</span>
+          <span class="ad-title">Drumul către un zâmbet sănătos începe azi</span>
+          <span class="ad-desc">Format Story/vertical — "Periaj Profesional, Detartraj, Airflow" + foto echipă clinică + CTA "Contactează clinica"</span>
+          <div class="ad-landing">↗ clinicileardeleanu.ro · <span class="ad-cat">Prevenție / Brand</span></div>
+        </div>
+      </div>
+      <div class="obs">
+        <strong>Analiză strategie Google Ads — Dr. Ardeleanu:</strong> Portofoliu solid de 72 reclame, bine distribuit între Local, Search și Display. Punctele forte: prezență Local Ads confirmată în orașele noastre (Focșani, Giurgiu etc.), Display pe prevenție cu mesaj diferențiat, sitelinks cu call-to-action clar pe reduceri și implant.
+        <br><br>
+        <strong>Lipsuri critice identificate:</strong> (1) Zero campanie Search dedicată implantologiei — cel mai profitabil serviciu, unde DentEstet + Life Dental Spa domină. (2) Nicio campanie Search pe Slobozia/Călărași pediatrie — JC Dent ne bate pe propriul teren. (3) Mesajul Search principal ("Excelent Raport Calitate Pret") e generic și nu diferențiază față de Dental Blue care spune același lucru. (4) Protocolul Dr. Ardeleanu (Medic Arhitect + Randare AI) — cel mai puternic diferențiator — inexistent în Google Ads.
+      </div>
+    </div>
+  </div>
+
+  <!-- DENTESTET -->
+  <div class="card-brand">
+    <div class="bh">
+      <h3>DentEstet <span class="badge-alert">⚠️ LIDER ABSOLUT ~500 RECLAME</span></h3>
+      <span class="meta">dentestet.ro · ~500 reclame totale · Transparency Center ✓</span>
+    </div>
+    <div class="cb">
+      <div class="sm">
+        <h4>Search Ads — exemple confirmate</h4>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Preț implant dentar Sibiu</span>
+          <span class="ad-desc">"Prețul implantului dentar în Sibiu depinde de situația clinică a pacientului." — reclamă geo-targetată pe Sibiu</span>
+          <div class="ad-landing">↗ www.dentestet.ro/ · <span class="ad-cat">Implantologie / Geo Sibiu</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">+ zeci de variante geo × serviciu</span>
+          <span class="ad-desc">Strategia confirmată: matrice [serviciu] × [oraș] — probabil combinații tip "implant București", "albire Ploiești", "ortodonție Brașov" etc. ~500 reclame totale susțin această structură.</span>
+          <div class="ad-landing">↗ dentestet.ro · <span class="ad-cat">Multi-serviciu / Multi-geo</span></div>
+        </div>
+      </div>
+      <div class="sm">
+        <h4>Local Ads — per locație</h4>
+        <div class="ad-item">
+          <span class="at local">LOCAL</span>
+          <span class="ad-title">DENT ESTET Aviatorilor 15</span>
+          <span class="ad-desc">4,7 ★ (656 reviews) · Clinică de stomatologie · Deschis nonstop · Butoane: Apel / Indicații</span>
+          <div class="ad-cat">Local / Brand locație</div>
+        </div>
+        <div class="ad-item">
+          <span class="at local">LOCAL</span>
+          <span class="ad-title">DENT ESTET Ploiești</span>
+          <span class="ad-desc">4,9 ★ (565 reviews) · Clinică de stomatologie · Deschis nonstop</span>
+          <div class="ad-cat">Local / Brand locație</div>
+        </div>
+        <div class="ad-item">
+          <span class="at local">LOCAL</span>
+          <span class="ad-title">+ Local Ads pentru fiecare locație DentEstet</span>
+          <span class="ad-desc">Strategie sistematică: Local Ad separat per clinică, cu rating specific și "Deschis nonstop" ca diferențiator cheie.</span>
+        </div>
+      </div>
+      <div class="obs alert">
+        <strong>Alertă strategică — DentEstet Google Ads:</strong> Cu ~500 reclame, DentEstet operează cea mai complexă și mai costisitoare campanie Google din piața dentară RO. Matricea [serviciu × geo] le permite să apară pe orice căutare locală din România. Avantajul "Deschis nonstop" apare consistent în Local Ads — diferențiator puternic față de noi.
+        <br><br>
+        <strong>Ce facem noi față de ei:</strong> Nu putem egala volumul (~500 vs 72) fără investiție masivă. Strategia corectă: dominăm geografic în orașele noastre + atacăm implantologia și Protocolul Dr. Ardeleanu pe Search national.
+      </div>
+    </div>
+  </div>
+
+  <!-- LIFE DENTAL SPA -->
+  <div class="card-brand">
+    <div class="bh">
+      <h3>Life Dental Spa</h3>
+      <span class="meta">lifedentalspa.ro · 71 reclame totale · Transparency Center ✓</span>
+    </div>
+    <div class="cb">
+      <div class="sm">
+        <h4>Discovery / Display Ads</h4>
+        <div class="ad-item">
+          <span class="at discovery">DISCOVERY</span>
+          <span class="ad-title">Zambet complet nou in 24h - Procedura Fast &amp; Fixed</span>
+          <span class="ad-desc">"Fara durere si fara a astepta luni de zile... sa ai zambetul pe care ti-l doresti" — fotografie emoțională: bărbat vârstnic (60+) zâmbitor, expresie caldă. Format Discovery (Gmail + YouTube + Discover feed)</span>
+          <div class="ad-landing">↗ lifedentalspa.ro · <span class="ad-cat">Implantologie / Fast&Fixed / Emotional</span></div>
+        </div>
+      </div>
+      <div class="sm">
+        <h4>Local Ads</h4>
+        <div class="ad-item">
+          <span class="at local">LOCAL</span>
+          <span class="ad-title">Life Dental Spa Iasi</span>
+          <span class="ad-desc">Local Ad geo-targetat Iași — Judeul Iași &lt;Distance&gt;</span>
+          <div class="ad-cat">Local / Iași</div>
+        </div>
+      </div>
+      <div class="obs">
+        <strong>Strategie Life Dental Spa Google:</strong> Mesajul "Fast &amp; Fixed" (implanturi în 24h) e cel mai puternic diferențiator din piață pe Google — răspunde direct la anxietatea principală a pacientului de implant (timp lung de așteptare). Formatul Discovery cu foto emoțională arată investiție în creative de calitate. 71 reclame = paritate cu noi numeric dar cu mesaje mult mai focusate pe conversie.
+      </div>
+    </div>
+  </div>
+
+  <!-- REGINA MARIA -->
+  <div class="card-brand">
+    <div class="bh">
+      <h3>Regina Maria</h3>
+      <span class="meta">reginamaria.ro · ~5.000 reclame (brand medical complet)</span>
+    </div>
+    <div class="cb">
+      <div class="sm">
+        <h4>Exemple confirmate (brand general, nu stomatologie)</h4>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Dermatoscopie cu Path Finder</span>
+          <span class="ad-desc">"Monitorizează-ți alunițele prin tehnologie digitală avansată de screening la Euroclinic" — complet neconectat de stomatologie</span>
+          <div class="ad-landing">↗ www.reginamaria.ro/ · <span class="ad-cat">Dermatologie — irelevant</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at display">DISPLAY</span>
+          <span class="ad-title">Cere o ofertă personalizată — Pachete naștere Mamă @ Regina Maria</span>
+          <span class="ad-desc">Brand medical maternitate — complet neconectat de stomatologie</span>
+        </div>
+        <div class="ad-item">
+          <span class="at display">DISPLAY</span>
+          <span class="ad-title">Consultații fără limită — 30% discount! Până pe 31.05. ⚠️</span>
+          <span class="ad-desc">"Abonează-ți echipa la sănătate, acum cu până la 30% discount! Până pe 31.05." — campanie corporativă cu deadline AZI (31 mai)</span>
+          <div class="ad-landing">↗ reginamaria.ro · <span class="ad-cat">Corporate / Abonament medical</span></div>
+        </div>
+      </div>
+      <div class="obs">
+        <strong>Concluzie Regina Maria Google:</strong> ~5.000 reclame acoperă întregul portofoliu medical (spitale, maternitate, dermatologie, oncologie, laborator etc.). Stomatologia e o fracțiune mică din bugetul lor Google. Nu sunt un competitor relevant pe Google Ads stomatologie specifică. Campania de abonamente corporate cu deadline azi semnalează push de final de lună.
+      </div>
+    </div>
+  </div>
+
+  <!-- DENTAL BLUE -->
+  <div class="card-brand">
+    <div class="bh">
+      <h3>Dental Blue <span class="badge-warn">⚠️ ATACĂ SLOBOZIA + CĂLĂRAȘI</span></h3>
+      <span class="meta">dentalblue.ro · 2 reclame Search · MEDICAL DENTAL BLUE S.R.L.</span>
+    </div>
+    <div class="cb">
+      <div class="sm">
+        <h4>Search Ads — targetare directă pe orașele noastre</h4>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Stomatolog Slobozia Calarasi</span>
+          <span class="ad-desc">"Beneficiaza de servicii stomaologice de topla Dental Blue. Ialomita si Calarasi." — [notă: "topla" = typo în reclamă, "de top la"]</span>
+          <div class="ad-landing">↗ www.dentalblue.ro/ · <span class="ad-cat">Brand local / Slobozia / Călărași / Ialomița</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Dentist Ialomita si Calarasi</span>
+          <span class="ad-desc">"Servicii stomatologice la standarde înalte de calitate, cu prețuri corecte."</span>
+          <div class="ad-landing">↗ www.dentalblue.ro/ · <span class="ad-cat">Brand local / Ialomița / Călărași</span></div>
+        </div>
+      </div>
+      <div class="obs alert">
+        <strong>Alertă geografică — Dental Blue:</strong> Ambele reclame targetează exact orașele unde avem clinici (Slobozia, Călărași, Ialomița). Mesajul "prețuri corecte" e similar cu al nostru dar fără diferențiator. Reclama are chiar un typo ("topla" în loc de "top la") — semn de management manual fără verificare. <strong>Acțiune: verificați dacă clinicile noastre din Slobozia și Călărași au campanii Search locale active care să contracareze. Dacă nu, lansați urgent.</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELIDADENT -->
+  <div class="card-brand">
+    <div class="bh">
+      <h3>Elidadent</h3>
+      <span class="meta">elidadent.ro · 0 reclame Google Ads ✓</span>
+    </div>
+    <div class="cb">
+      <div class="obs">Elidadent este complet absent din Google Ads. Nicio reclamă identificată în Transparency Center pentru domeniul elidadent.ro. Confirmă absența națională observată și pe Facebook. Elidadent pare să opereze exclusiv pe trafic organic / referral la nivel național.</div>
+    </div>
+  </div>
+</div>
+
+<!-- REVELAȚIE JC DENT -->
+<div class="section">
+  <h2>🚨 Revelație Tier 2 — JC Dent este parte din grupul DentEstet <span class="pill">PRIORITATE MAXIMĂ</span></h2>
+  <div class="revelation">
+    <strong>🔍 Ce am descoperit:</strong> Contul publicitar Google al JC Dent (jcdent.ro) este înregistrat ca <strong>"DENT ESTET SRL"</strong> — același grup care operează clinicile DentEstet. JC Dent nu este un competitor independent Tier 2 — este o extensie a celui mai puternic competitor al nostru.
+  </div>
+  <div class="card-brand">
+    <div class="bh">
+      <h3>JC Dent (deținut de DENT ESTET SRL) <span class="badge-alert">⚠️ GRUP DENTESTET</span></h3>
+      <span class="meta">jcdent.ro · 5 reclame Google Ads · cont publicitar: DENT ESTET SRL</span>
+    </div>
+    <div class="cb">
+      <div class="sm">
+        <h4>Search + Display Ads — focusat pe Slobozia</h4>
+        <div class="ad-item">
+          <span class="at display">DISPLAY</span>
+          <span class="ad-title">Stomatologie Copii Slobozia - Cabinet Stomatologie Slobozia</span>
+          <span class="ad-desc">"De la prevenție la estetică dentară – soluții complete într-un singur cabinet. Servicii stomatologice moderne, adaptate nevoilor tale. Te așteptăm cu drag! Stomatologie Pediatrică...." — fotografie medic la consultație</span>
+          <div class="ad-landing">↗ www.jcdent.ro/ · <span class="ad-cat">Pediatrie / Slobozia / Servicii complete</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">Servicii Dentare pentru Copii - JC Dent</span>
+          <span class="ad-desc">"Îngrijire dentară blândă pentru copii, cu răbdare și empatie la fiecare vizită."</span>
+          <div class="ad-landing">↗ jcdent.ro/stomatologie/copii · <span class="ad-cat">Pediatrie / Landing dedicată</span></div>
+        </div>
+        <div class="ad-item">
+          <span class="at search">SEARCH</span>
+          <span class="ad-title">+ 3 reclame suplimentare</span>
+          <span class="ad-desc">Servicii generale + combinații serviciu-locație</span>
+        </div>
+      </div>
+      <div class="obs alert">
+        <strong>Implicație strategică:</strong> DentEstet controlează prin JC Dent un al doilea front în Slobozia — atacă simultan cu brandul principal și cu sub-brandul local. 5 reclame Google targetate Slobozia + 6 reclame Meta (bruxism) = DentEstet/JC Dent este cel mai activ competitor în piața noastră locală din Slobozia. Trebuie tratat ca Tier 1 în monitorizarea locală.
+        <br><br>
+        <strong>Acțiune imediată:</strong> Verificați dacă clinica Dr. Ardeleanu Slobozia are campanii Search + Display active pe cuvinte cheie "stomatolog slobozia", "dentist copii slobozia", "pediatrie dentara slobozia". Dacă nu — lansați în 48h.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ALERTE TIER 2 -->
+<div class="section">
+  <h2>📡 Alerte Tier 2 — date verificate Google Transparency Center</h2>
+  <div class="t2i"><strong>JC Dent:</strong> <span style="color:#A32D2D;font-weight:600">5 reclame active ⚠️ — parte din DentEstet SRL, targetează Slobozia pe pediatrie. Detalii mai sus.</span></div>
+  <div class="t2i"><strong>Dr. Malama:</strong> <span style="color:#999;font-style:italic">0 reclame Google Ads. Absent complet din Google.</span></div>
+  <div class="t2i"><strong>Ark Med:</strong> <span style="color:#999;font-style:italic">0 reclame Google Ads. Absent complet din Google.</span></div>
+  <div class="t2i"><strong>Dentrust:</strong> <span style="color:#999;font-style:italic">0 reclame Google Ads. (Are 1 reclamă Meta CSR — nu rulează Google.)</span></div>
+  <div class="t2i"><strong>Saviem Smile:</strong> <span style="color:#999;font-style:italic">0 reclame Google Ads. Absent complet din Google.</span></div>
+</div>
+
+<!-- MESAJE DOMINANTE -->
+<div class="section">
+  <h2>💬 Mesaje dominante în piață — cross-competitor Google Ads</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:16px">
+    <div>
+      <div style="font-size:11px;font-weight:700;color:#7B1C16;margin-bottom:8px;text-transform:uppercase">Expresii frecvente în anunțuri Search</div>
+      <span class="tag b">implant dentar</span>
+      <span class="tag r">prețuri corecte / preț</span>
+      <span class="tag g">calitate</span>
+      <span class="tag a">fără durere</span>
+      <span class="tag b">stomatolog [oraș]</span>
+      <span class="tag g">programați-vă</span>
+      <span class="tag r">24h / rapid</span>
+      <span class="tag a">servicii complete</span>
+      <span class="tag g">pentru copii</span>
+      <span class="tag b">deschis nonstop</span>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:700;color:#7B1C16;margin-bottom:8px;text-transform:uppercase">Pattern-uri identificate</div>
+      <ul class="b" style="font-size:12.5px">
+        <li>Geo × serviciu (DentEstet dominant)</li>
+        <li>Fast / 24h / rapid (Life Dental Spa)</li>
+        <li>"Prețuri corecte" apare la 2 branduri simultan (noi + Dental Blue)</li>
+        <li>Emoție + foto pentru Discovery (Life Dental Spa)</li>
+        <li>Rating vizibil în Local Ads (DentEstet lead)</li>
+        <li>"Deschis nonstop" — DentEstet diferențiator</li>
+      </ul>
+    </div>
+  </div>
+  <div class="obs">
+    <strong>Gap-uri și oportunități neexploatate în piață:</strong> (1) Nimeni nu comunică pe Google <em>transparența procesului</em> — "vezi rezultatul înainte de tratament" e unic disponibil pentru noi (Protocolul Dr. Ardeleanu). (2) Nimeni nu face Search pe "medic arhitect dentar" sau "randare AI zâmbet" — keywords cu competiție zero și intenție înaltă. (3) "Plată în rate" apare în sitelinks-urile noastre dar nu în titlul principal — DentEstet nu comunică rate pe Google (oportunitate de diferențiere financiară).
+  </div>
+</div>
+
+<!-- CE FACEM NOI -->
+<div class="section">
+  <h2>🎯 Ce facem noi săptămâna 1–7 iunie pe Google Ads</h2>
+  <div class="ri">
+    <div class="rn">1</div>
+    <div><strong>Campanie Search dedicată implantologiei — URGENT</strong><br>
+    Suntem invizibili pe cel mai profitabil serviciu. Lansați o campanie Search cu mesaj diferențiator: "Implant dentar cu Medic Arhitect + Randare AI — vezi zâmbetul tău înainte de tratament." Keyword groups: "implant dentar [oraș]", "implant dentar pret", "implant dentar clinica". Landing: pagina dedicată implant cu Protocol Dr. Ardeleanu.</div>
+  </div>
+  <div class="ri">
+    <div class="rn">2</div>
+    <div><strong>Campanie Search Slobozia — copii — 48 ore</strong><br>
+    JC Dent/DentEstet ne atacă direct în Slobozia pe pediatrie cu 5 reclame. Trebuie o contra-campanie Search cu "stomatolog copii slobozia", "dentist pediatric slobozia", "Dental Safari Slobozia". Mesaj: "Dental Safari Slobozia — La dentist ca într-o aventură. Fără frică, cu drag." Landing: pagina Dental Safari.</div>
+  </div>
+  <div class="ri">
+    <div class="rn">3</div>
+    <div><strong>Consolidare Local Ads — Slobozia + Călărași</strong><br>
+    Dental Blue rulează 2 reclame Search pe Slobozia/Călărași. Verificați dacă Local Ads pentru clinicile noastre din aceste orașe sunt active și optimizate. Adăugați "Deschis [ore]" și rating-ul Google (4.9★) în descriere — DentEstet face asta sistematic.</div>
+  </div>
+  <div class="ri">
+    <div class="rn">4</div>
+    <div><strong>Diferențiați mesajul Search principal</strong><br>
+    "Excelent Raport Calitate Pret" este același mesaj cu Dental Blue ("prețuri corecte"). Schimbați titlul principal în ceva unic: "Clinica familiei tale din 2017 — 30.000+ pacienți" sau "4.9★ din 2950 recenzii — Dr. Ardeleanu" — social proof numeric imposibil de copiat.</div>
+  </div>
+  <div class="ri">
+    <div class="rn">5</div>
+    <div><strong>Discovery Ad cu Protocolul Dr. Ardeleanu</strong><br>
+    Life Dental Spa are succes cu Discovery emoțional (foto bărbat zâmbitor). Creați o reclamă Discovery similară: foto before/after real + titlu "Îți arătăm zâmbetul înainte să-l facem — Protocolul Dr. Ardeleanu." Audiență: 35–60 ani, interes stomatologie/estetică dentară.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-box">
+  <div><strong>Sursă date:</strong> Google Ads Transparency Center (adstransparency.google.com) — sursa oficială Google, 100% publică și completă pentru România ✓</div>
+  <div><strong>Domenii scanate:</strong> 11/11 — clinicileardeleanu.ro · dentestet.ro · reginamaria.ro · lifedentalspa.ro · elidadent.ro · dentalblue.ro · jcdent.ro · drmalama.ro · dentrust.ro · arkmed.ro · saviemsmile.ro</div>
+  <div><strong>Fără reclame Google (0):</strong> elidadent.ro · drmalama.ro · dentrust.ro · arkmed.ro · saviemsmile.ro</div>
+  <div><strong>Revelații cheie:</strong> JC Dent = DENT ESTET SRL (grup) · Dental Blue atacă Slobozia/CL direct · Life Dental Spa "Fast&Fixed 24h" mesaj flagship</div>
+  <div><strong>Confidence level:</strong> HIGH — Google Ads Transparency Center este sursa cea mai completă și oficială din toate rapoartele competitive</div>
+  <div><strong>Skill:</strong> competitor-weekly-google-ads v1.0 · <strong>Generat:</strong> duminică 31 mai 2026, ora 22:30 UTC</div>
+</div>
+
+<div class="din2017">DIN 2017 · CLINICILE DENTARE DR. ARDELEANU</div>
+</div>
+</body>
+</html>

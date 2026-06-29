@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="youtube">
+<meta name="report:cadence" content="weekly">
+<meta name="report:date" content="2026-06-08">
+<meta name="report:period" content="8–14 iun 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport YouTube Competitori — 8-14 iunie 2026 | Dr. Ardeleanu</title>
+<style>
+  :root{
+    --burgundy:#6e1423; --burgundy-dark:#4a0d18; --gold:#c8a24a; --gold-light:#e3c97f;
+    --ink:#23191b; --muted:#7a6c6f; --line:#ece2e4; --bg:#faf6f4; --card:#ffffff;
+    --green:#2e7d4f; --red:#b23b3b; --amber:#b8860b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:15px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px 60px}
+  header.hero{background:linear-gradient(135deg,var(--burgundy),var(--burgundy-dark));color:#fff;padding:38px 0 30px;border-bottom:4px solid var(--gold)}
+  .hero-in{max-width:1000px;margin:0 auto;padding:0 22px}
+  .hero h1{font-size:26px;font-weight:700;letter-spacing:.2px}
+  .hero .sub{color:var(--gold-light);font-size:15px;margin-top:6px;font-weight:500}
+  .hero .meta{color:#e9d9dc;font-size:13px;margin-top:14px;opacity:.92}
+  .badge-src{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:3px 10px;border-radius:20px;font-size:12px;margin-top:12px}
+  h2{font-size:20px;color:var(--burgundy);margin:38px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line);font-weight:700}
+  h3{font-size:16px;color:var(--ink);margin:22px 0 10px;font-weight:600}
+  p{margin:8px 0}
+  .lead{font-size:15.5px;color:#3a2c2f}
+  .tldr{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:18px 20px;margin-top:22px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .tldr h2{margin-top:0;border:none;padding:0;font-size:17px}
+  .kpis{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}
+  .kpi{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .kpi .n{font-size:30px;font-weight:700;color:var(--burgundy);line-height:1}
+  .kpi .l{font-size:12.5px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.4px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .card.active{border-left:4px solid var(--green)}
+  .card.idle{border-left:4px solid #cfc3c5}
+  .card.client{border-left:4px solid var(--gold);background:#fffdf8}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .cname{font-size:16.5px;font-weight:700;color:var(--ink)}
+  .tier{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:2px 9px;border-radius:20px;background:#f1e7e9;color:var(--burgundy)}
+  .tier.t2{background:#eef0f2;color:#5a6470}
+  .pill{font-size:11.5px;padding:2px 9px;border-radius:20px;font-weight:600}
+  .pill.on{background:#e4f3ea;color:var(--green)}
+  .pill.off{background:#f0eaea;color:var(--muted)}
+  .chan-meta{font-size:12.5px;color:var(--muted);margin-top:2px}
+  table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13.5px}
+  th{text-align:left;background:#f6eef0;color:var(--burgundy);padding:8px 10px;font-weight:600;border-bottom:1px solid var(--line)}
+  td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .ttl{font-weight:500;color:var(--ink)}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .tag{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:4px;font-weight:600;margin-left:4px}
+  .tag.short{background:#fde9ef;color:#9c2a4e}
+  .tag.long{background:#e7eefb;color:#2a4d9c}
+  .note{font-size:13px;color:var(--muted);margin-top:8px;font-style:italic}
+  .insight{background:#fffaf0;border:1px solid #f0e2c0;border-radius:8px;padding:14px 16px;margin:10px 0;font-size:14px}
+  .insight strong{color:var(--amber)}
+  .action{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 0;margin-top:12px}
+  .action .item{padding:12px 18px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}
+  .action .item:last-child{border-bottom:none}
+  .action .pri{flex-shrink:0;font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px;text-transform:uppercase;letter-spacing:.4px}
+  .pri.high{background:#fae3e3;color:var(--red)}
+  .pri.med{background:#fdf0d8;color:var(--amber)}
+  .pri.low{background:#e9eef0;color:#5a6470}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);text-align:center}
+  .winner{color:var(--green);font-weight:600}
+  ul.clean{margin:8px 0 8px 20px}
+  ul.clean li{margin:5px 0}
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+<header class="hero">
+  <div class="hero-in">
+    <h1>Raport YouTube — Inteligență Competitivă</h1>
+    <div class="sub">Clinicile Dr. Ardeleanu · piața stomatologică România</div>
+    <div class="meta">Perioadă analizată: <strong>8 – 14 iunie 2026</strong> &nbsp;·&nbsp; Generat: 15 iunie 2026</div>
+    <span class="badge-src">Sursă date: scraping YouTube logat (Claude in Chrome) — fără API key, estimări de afișări publice</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="tldr">
+    <h2>Pe scurt</h2>
+    <p class="lead">Săptămână foarte liniștită pe YouTube în piață. Din 8 canale monitorizate, doar <strong>2 competitori</strong> au publicat conținut nou în fereastra 8-14 iunie: <strong>Regina Maria Dental</strong> (1 video lung + 1 Short) și <strong>Life Dental Spa</strong> (3 Shorts). Liderul de abonați, <strong>DENT ESTET</strong>, n-a postat nimic în fereastră. Tier 2 e aproape complet dormant, cu o singură excepție notabilă: <strong>Clinica Dentalist (Dr. Alexandra Mircea)</strong>, care continuă să producă video lung de calitate.</p>
+    <p class="lead" style="margin-top:10px"><span class="winner">Clinicile Dr. Ardeleanu au dominat volumul în fereastră</span> cu 6 Shorts (8-10 iunie) — mai mult decât oricare competitor — inclusiv anunțul noii clinici din Brăila (998 afișări, cel mai bun rezultat propriu al săptămânii).</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="n">8</div><div class="l">Canale monitorizate</div></div>
+    <div class="kpi"><div class="n">2</div><div class="l">Competitori activi în fereastră</div></div>
+    <div class="kpi"><div class="n">5</div><div class="l">Materiale competitori (în fereastră)</div></div>
+    <div class="kpi"><div class="n">6</div><div class="l">Shorts Dr. Ardeleanu (în fereastră)</div></div>
+  </div>
+
+  <h2>Tier 1 — Analiză detaliată</h2>
+
+  <div class="card client">
+    <div class="row">
+      <div>
+        <span class="cname">Clinicile Dr. Ardeleanu</span>
+        <span class="tier">Noi</span>
+        <span class="pill on">Activ</span>
+      </div>
+      <span class="pill on">6 materiale în fereastră</span>
+    </div>
+    <div class="chan-meta">@Dr.Ardeleanu · 911 abonați · 351 videoclipuri</div>
+    <table>
+      <tr><th>Titlu</th><th>Tip</th><th>Data</th><th class="num">Afișări</th></tr>
+      <tr><td class="ttl">700 mp de stomatologie modernă - Dr. Ardeleanu - Brăila</td><td><span class="tag short">SHORT</span></td><td>8 iun.</td><td class="num">998</td></tr>
+      <tr><td class="ttl">Tu cauți pe Google. Noi îți răspundem. (mituri estetică/albire)</td><td><span class="tag short">SHORT</span></td><td>8 iun.</td><td class="num">132</td></tr>
+      <tr><td class="ttl">Ce spune zodia ta despre vizita la dentist? (+ promo BT Direct)</td><td><span class="tag short">SHORT</span></td><td>9 iun.</td><td class="num">189</td></tr>
+      <tr><td class="ttl">Cum schimbi viitorul unei comunități? (campania „Educăm zâmbete sănătoase", școală Târgoviște)</td><td><span class="tag short">SHORT</span></td><td>10 iun.</td><td class="num">104</td></tr>
+      <tr><td class="ttl">„Pentru mine, longevitatea nu înseamnă doar să trăim mai mult…" (citat Dr. Virginia Ardeleanu)</td><td><span class="tag short">SHORT</span></td><td>10 iun.</td><td class="num">135</td></tr>
+      <tr><td class="ttl">Ești prea bătrân pentru aparat dentar? (educație ortodonție)</td><td><span class="tag short">SHORT</span></td><td>10 iun.</td><td class="num">166</td></tr>
+    </table>
+    <p class="note">Video lung: 0 în fereastră (ultimul, „Claudia Pătrășcanu", acum ~1 lună). Postări Comunitate: 0 în fereastră. Notă: încă un Short a apărut azi (15 iun.) — „turbina pe modul Silent", deja 1.230 afișări, cel mai bun start.</p>
+  </div>
+
+  <div class="card active">
+    <div class="row">
+      <div>
+        <span class="cname">Regina Maria Dental Clinics</span>
+        <span class="tier">Tier 1</span>
+        <span class="pill on">Activ</span>
+      </div>
+      <span class="pill on">2 materiale în fereastră</span>
+    </div>
+    <div class="chan-meta">@ReginaMariaDentalClinics</div>
+    <table>
+      <tr><th>Titlu</th><th>Tip</th><th>Data</th><th class="num">Afișări</th></tr>
+      <tr><td class="ttl">Fumatul și sănătatea orală: ce trebuie să știe orice fumător</td><td><span class="tag long">VIDEO</span></td><td>~13 iun.</td><td class="num">13</td></tr>
+      <tr><td class="ttl">Stomatologii căutând zilnic moduri să te convingă să nu uiți de consultul periodic</td><td><span class="tag short">SHORT</span></td><td>12 iun.</td><td class="num">3.700</td></tr>
+    </table>
+    <p class="note">Singurul competitor cu video lung în fereastră. Shortul din 12 iun. (umor/POV, 3,7K afișări) e cel mai performant material competitor al săptămânii. Comunitatea e dezactivată.</p>
+  </div>
+
+  <div class="card idle">
+    <div class="row">
+      <div>
+        <span class="cname">DENT ESTET</span>
+        <span class="tier">Tier 1</span>
+        <span class="pill off">Inactiv în fereastră</span>
+      </div>
+    </div>
+    <div class="chan-meta">@ClinicaDENTESTET · 1,33K abonați · 600 videoclipuri</div>
+    <p>Niciun material nou în 8-14 iunie. Ultimul video lung: acum ~2 săptămâni. Ultimul Short: 4 iun. („Fațete subțiri", 5 afișări). În ciuda celei mai mari biblioteci (600 clipuri), afișările pe materialele recente sunt foarte mici (5-20), semn de distribuție organică slabă.</p>
+  </div>
+
+  <div class="card idle">
+    <div class="row">
+      <div>
+        <span class="cname">Life Dental Spa</span>
+        <span class="tier">Tier 1</span>
+        <span class="pill on">Activ (doar Shorts)</span>
+      </div>
+      <span class="pill on">3 materiale în fereastră</span>
+    </div>
+    <div class="chan-meta">@lifedentalspa-ro</div>
+    <table>
+      <tr><th>Titlu</th><th>Tip</th><th>Data</th><th class="num">Afișări</th></tr>
+      <tr><td class="ttl">90% dintre oameni fac această greșeală când se spală pe dinți</td><td><span class="tag short">SHORT</span></td><td>10 iun.</td><td class="num">132</td></tr>
+      <tr><td class="ttl">Dacă îți sângerează gingiile, nu este de la periuță</td><td><span class="tag short">SHORT</span></td><td>9 iun.</td><td class="num">278</td></tr>
+      <tr><td class="ttl">Se mai poate reconstrui zâmbetul într-un timp scurt?</td><td><span class="tag short">SHORT</span></td><td>8 iun.</td><td class="num">132</td></tr>
+    </table>
+    <p class="note">Cadență Shorts zilnică (8-9-10 iun.), temă „mituri / educație". Video lung: 0 în fereastră (ultimul acum ~13 zile). Mai postează 1 Short azi, 15 iun.</p>
+  </div>
+
+  <div class="card idle">
+    <div class="row">
+      <div>
+        <span class="cname">Dental Blue International</span>
+        <span class="tier">Tier 1</span>
+        <span class="pill off">Fără canal YouTube</span>
+      </div>
+    </div>
+    <p>Nu are canal YouTube în baza de date. Neaplicabil pentru acest raport.</p>
+  </div>
+
+  <h2>Tier 2 — Alerte scurte</h2>
+
+  <div class="card active">
+    <div class="row">
+      <div>
+        <span class="cname">Clinica Dentalist — Dr. Alexandra Mircea</span>
+        <span class="tier t2">Tier 2</span>
+        <span class="pill on">Activ</span>
+      </div>
+      <span class="pill on">1 video lung în fereastră</span>
+    </div>
+    <div class="chan-meta">@DrAlexandraMircea</div>
+    <p><strong>Alertă:</strong> singurul canal care produce constant video lung de înaltă calitate. Nou în fereastră: „DURERI DE MAXILAR, GÂT SAU DINȚI? Legătura dintre ATM, postură și stomatologie" (9:48, ~14 iun., 141 afișări). Materialul precedent („Aliniatori vs Brackets") a strâns 8,4K afișări — performanță net peste media pieței. Producție vizuală (thumbnails, montaj) superioară majorității Tier 1.</p>
+  </div>
+
+  <div class="card idle">
+    <div class="row">
+      <div><span class="cname">Dentrust</span><span class="tier t2">Tier 2</span><span class="pill off">Dormant</span></div>
+    </div>
+    <div class="chan-meta">@dentrustromania1202</div>
+    <p>Canal abandonat — ultimul material acum ~8 ani. Fără Shorts. Zero risc competitiv pe YouTube.</p>
+  </div>
+
+  <div class="card idle">
+    <div class="row">
+      <div><span class="cname">Dent Priority</span><span class="tier t2">Tier 2</span><span class="pill off">Inactiv în fereastră</span></div>
+    </div>
+    <div class="chan-meta">@dentpriority · 632 abonați · 30 videoclipuri</div>
+    <p>Niciun material în fereastră. Ultimul video lung acum ~5 luni; ultimul Short 5 iun. <strong>2025</strong>. De urmărit: shortul respectiv promova un eveniment „Scanning Day pe 20 iunie" (tratament ortodontic gratuit prin tragere la sorți + 30% reducere aligneri). Posibil campanie anuală recurentă de iunie — merită verificat dacă revine în 2026.</p>
+  </div>
+
+  <div class="card idle">
+    <div class="row">
+      <div><span class="cname">Elidadent</span><span class="tier t2">Tier 2</span><span class="pill off">Dormant</span></div>
+    </div>
+    <div class="chan-meta">@Elidadent</div>
+    <p>Niciun material în fereastră. Ultimul: 9 oct. 2025 (promo finanțare BT Direct). De notat: aceeași temă „credit prin BT Direct" pe care o folosește și Dr. Ardeleanu — mesaj de finanțare comun în piață.</p>
+  </div>
+
+  <h2>Observații strategice</h2>
+
+  <div class="insight">
+    <strong>1. Piața e tăcută — fereastră de share of voice.</strong> Cu DENT ESTET și majoritatea Tier 2 inactive, săptămâna a fost dominată din volum de Dr. Ardeleanu (6 Shorts) și Life Dental Spa (3). Continuarea unei cadențe zilnice de Shorts oferă vizibilitate disproporționată când restul pieței tace.
+  </div>
+  <div class="insight">
+    <strong>2. Shorts &gt; video lung pentru afișări.</strong> Shortul Regina Maria (3,7K) și videourile lungi Dentalist (8,4K istoric) trag departe peste media pieței. Pe canalul propriu, shortul de expansiune Brăila (998) și cel de azi (1.230) confirmă: formatul scurt aduce cele mai bune afișări. Video lung rămâne aproape inexistent la majoritatea — un teren puțin disputat.
+  </div>
+  <div class="insight">
+    <strong>3. Concurentul de urmărit la conținut: Dr. Alexandra Mircea (Clinica Dentalist).</strong> Singura care construiește un canal pe video lung educativ bine produs, cu afișări mari. Dacă vrei un benchmark de calitate pentru video lung, ea este reperul — nu liderii Tier 1.
+  </div>
+  <div class="insight">
+    <strong>4. Mesajul de finanțare (BT Direct) e folosit de mai mulți.</strong> Atât Dr. Ardeleanu, cât și Elidadent comunică opțiuni de credit. Diferențiere posibilă: Dr. Ardeleanu împachetează deja mesajul creativ (zodii, mituri) — un avantaj de execuție față de promo-ul direct al concurenței.
+  </div>
+
+  <h2>Acțiuni recomandate</h2>
+  <div class="action">
+    <div class="item"><span class="pri high">Prioritate</span><div>Menține cadența zilnică de Shorts cât timp piața tace — săptămâna aceasta volumul tău a depășit orice competitor. Capitalizează shortul Brăila (998 afișări): transformă-l într-o mini-serie despre noua clinică (before/after construcție, tur, echipă).</div></div>
+    <div class="item"><span class="pri med">Mediu</span><div>Testează 1 video lung educativ bine produs (format Dr. Alexandra Mircea / „aliniatori vs brackets"), unde competiția e aproape inexistentă și afișările istorice sunt cele mai mari din piață.</div></div>
+    <div class="item"><span class="pri med">Mediu</span><div>Pregătește din timp o contra-ofertă pentru un eventual „Scanning Day" Dent Priority pe 20 iunie (recurență posibilă). Dacă revine, ai răspuns gata.</div></div>
+    <div class="item"><span class="pri low">Monitor</span><div>Urmărește Regina Maria — singurul Tier 1 cu cadență mixtă (lung + Short) și afișări reale (3,7K). Este competitorul cu cel mai sănătos canal YouTube acum.</div></div>
+  </div>
+
+  <footer>
+    Raport generat automat pe baza datelor publice YouTube (afișări vizibile public, fără API). Cifrele de afișări sunt aproximative și pot varia. Datele marcate „~" sunt estimate din eticheta relativă („acum X zile"). 8 canale verificate: DENT ESTET, Regina Maria Dental, Life Dental Spa, Elidadent, Dentrust, Clinica Dentalist, Dent Priority + canalul propriu. Dental Blue International nu are canal YouTube.
+  </footer>
+
+</div>
+</body>
+</html>

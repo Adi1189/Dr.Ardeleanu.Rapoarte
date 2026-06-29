@@ -1,0 +1,12 @@
+{
+  "channels": [
+    { "id": "market-moves", "folder": "market-moves", "name": "Market Moves", "cadence": "monthly" },
+    { "id": "google-ads",   "folder": "google-ads",   "name": "Google Ads",   "cadence": "monthly" },
+    { "id": "linkedin",     "folder": "linkedin",     "name": "LinkedIn",     "cadence": "monthly" },
+    { "id": "facebook",     "folder": "facebook",     "name": "Facebook",     "cadence": "weekly" },
+    { "id": "instagram",    "folder": "instagram",    "name": "Instagram",    "cadence": "weekly" },
+    { "id": "tiktok",       "folder": "tiktok",       "name": "TikTok",       "cadence": "weekly" },
+    { "id": "youtube",      "folder": "youtube",      "name": "YouTube",      "cadence": "weekly" },
+    { "id": "concluzii",    "folder": "cross-channel","name": "Concluzii",    "cadence": "weekly" }
+  ]
+}

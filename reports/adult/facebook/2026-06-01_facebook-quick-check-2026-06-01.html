@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="facebook">
+<meta name="report:cadence" content="daily">
+<meta name="report:date" content="2026-06-01">
+<meta name="report:period" content="1 iun 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Quick Check · 1 Iunie 2026 · Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #7B1C16;
+    --burgundy-dark: #5a1410;
+    --cream: #F5EDE3;
+    --wheat: #F2DAB7;
+    --olive: #B5BD5C;
+    --amber: #C9A227;
+    --yellow: #FBE483;
+    --text: #222222;
+    --white: #FFFFFF;
+    --muted: #888;
+    --border: #e8ddd0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #ede5d8;
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--burgundy);
+    padding: 28px 48px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    right: -60px; bottom: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .header-left h1 {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .header-left h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    padding: 8px 16px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--olive);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  .header-meta {
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* ── CONTAINER ── */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+  }
+
+  /* ── CONTEXT BAR ── */
+  .context-bar {
+    background: var(--amber);
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .context-bar .icon { font-size: 20px; }
+  .context-bar p {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #3a2800;
+    line-height: 1.5;
+  }
+  .context-bar strong { font-weight: 700; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+  .section-label h3 {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--burgundy);
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── DR. ARDELEANU HIGHLIGHT ── */
+  .ardeleanu-card {
+    background: var(--burgundy);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ardeleanu-card::before {
+    content: '⭐';
+    position: absolute;
+    right: 20px; top: 16px;
+    font-size: 40px;
+    opacity: 0.15;
+  }
+  .ardeleanu-card .brand-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--amber);
+    color: #3a2800;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+  .ardeleanu-card .brand-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .ardeleanu-card .post-time {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+  }
+  .ardeleanu-card .post-text {
+    background: rgba(255,255,255,0.08);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 14px;
+  }
+  .ardeleanu-card .verdict {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(181,189,92,0.15);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    color: var(--white);
+    line-height: 1.55;
+  }
+  .ardeleanu-card .verdict strong { color: var(--olive); }
+
+  /* ── COMPETITOR CARDS ── */
+  .comp-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .comp-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: start;
+    transition: box-shadow 0.2s;
+  }
+  .comp-card:hover { box-shadow: 0 4px 20px rgba(123,28,22,0.08); }
+
+  .comp-icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .icon-bg-red { background: #fff0ef; }
+  .icon-bg-blue { background: #eff4ff; }
+  .icon-bg-olive { background: #f4f5eb; }
+  .icon-bg-gray { background: #f5f5f5; }
+
+  .comp-body {}
+  .comp-brand {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--burgundy);
+    margin-bottom: 3px;
+  }
+  .comp-time {
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .comp-time .fb-icon { font-size: 11px; }
+  .comp-text {
+    font-size: 12.5px;
+    color: #444;
+    line-height: 1.6;
+  }
+  .comp-text .quote {
+    font-style: italic;
+    color: #555;
+    background: var(--cream);
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin: 8px 0 0;
+    display: block;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .comp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+  }
+  .tag {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .tag-editorial { background: #fff0ef; color: var(--burgundy); }
+  .tag-edu { background: #eff4ff; color: #2c5fa8; }
+  .tag-hr { background: #f4f5eb; color: #4a5200; }
+  .tag-internal { background: #f5f5f5; color: #666; }
+  .tag-seasonal { background: #fff9e6; color: #7a5200; }
+
+  .comp-badge {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .activity-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin-top: 4px;
+  }
+  .dot-green { background: var(--olive); }
+  .dot-yellow { background: var(--amber); }
+  .dot-gray { background: #ccc; }
+  .dot-label { font-size: 9px; color: var(--muted); font-weight: 500; text-align: right; }
+
+  /* ── INACTIVE ── */
+  .inactive-row {
+    background: #fafaf8;
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px dashed var(--border);
+  }
+  .inactive-row .dot-gray-sm {
+    width: 8px; height: 8px; border-radius: 50%; background: #ddd; flex-shrink: 0;
+  }
+  .inactive-row p { font-size: 11.5px; color: #aaa; }
+  .inactive-row strong { color: #888; font-weight: 600; }
+
+  /* ── INSIGHT BOX ── */
+  .insight-box {
+    background: var(--cream);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-top: 32px;
+    border-left: 4px solid var(--amber);
+  }
+  .insight-box h4 {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .insight-box p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .insight-box p + p { margin-top: 8px; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--burgundy);
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+  }
+  .footer p { font-size: 10px; color: rgba(255,255,255,0.4); }
+  .din2017 { font-size: 12px; font-weight: 700; color: var(--amber); letter-spacing: 2px; }
+
+  @media(max-width:640px){
+    .header { padding: 20px 16px; flex-direction: column; gap: 14px; align-items: flex-start; }
+    .header-right { text-align: left; }
+    .container { padding: 20px 14px 40px; }
+    .footer { flex-direction: column; gap: 8px; padding: 16px 20px; text-align: center; }
+    .comp-card { grid-template-columns: auto 1fr; }
+    .comp-badge { display: none; }
+  }
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>Dr. Ardeleanu Dental Clinics · Intelligence</h1>
+    <h2>Facebook Quick Check<br>1 Iunie 2026</h2>
+  </div>
+  <div class="header-right">
+    <div class="status-badge">
+      <div class="status-dot"></div>
+      Status: CALM
+    </div>
+    <div class="header-meta">Verificat live · Facebook organic · 4 pagini · ora 21:45</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- CONTEXT -->
+  <div class="context-bar">
+    <div class="icon">🎉</div>
+    <p><strong>Tema zilei: #1Iunie — Ziua Copilului.</strong> Toată piața a activat conținut tematic. Niciun red flag comercial sau criză PR detectată. Câștigătorul zilei pe content: Dr. Ardeleanu — singurul cu eveniment real în teren.</p>
+  </div>
+
+  <!-- DR. ARDELEANU -->
+  <div class="section-label">
+    <h3>Noi — Dr. Ardeleanu</h3>
+  </div>
+
+  <div class="ardeleanu-card">
+    <div class="brand-pill">⭐ Best Content al Zilei</div>
+    <div class="brand-name">Clinicile Dentare Dr. Ardeleanu</div>
+    <div class="post-time">📘 Acum 5 ore · facebook.com/Dr.Ardeleanu</div>
+    <div class="post-text">
+      Copiii merită toată atenția, grija și bucuria. 🐥💛<br><br>
+      De 1 Iunie, prin conceptul <strong>Dental Safari by Dr. Ardeleanu</strong>, am adus aventura mai aproape de cei mici.<br><br>
+      Am vorbit despre dinți sănătoși, periaj corect și mersul la dentist fără teamă — totul prin joc, voie bună și activități interactive.<br><br>
+      Ne-am jucat, am râs și am învățat împreună, iar zâmbetele lor sincere ne-au amintit de ce iubim ceea ce facem.<br><br>
+      Iunie este luna copiilor, iar surprizele abia încep! 🎉<br><br>
+      <em>Dental Safari by Dr. Ardeleanu — La dentist ca într-o aventură!</em>
+    </div>
+    <div class="verdict">
+      <span style="font-size:18px">🏆</span>
+      <div>
+        <strong>Câștigătorul zilei.</strong> Singurul competitor cu dovadă reală de activitate în teren (mascotă, eveniment cu copii, activități interactive). Regina Maria a postat o grafică standard. Dr. Ardeleanu a construit o amintire. Autenticitate > design frumos.
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPETITORI -->
+  <div class="section-label" style="margin-top:36px">
+    <h3>Competitori verificați azi</h3>
+  </div>
+
+  <div class="comp-list">
+
+    <!-- Regina Maria -->
+    <div class="comp-card">
+      <div class="comp-icon icon-bg-red">🏥</div>
+      <div class="comp-body">
+        <div class="comp-brand">Regina Maria Dental Clinics</div>
+        <div class="comp-time"><span class="fb-icon">📘</span> Acum 14 ore · reginamariadentalclinics</div>
+        <div class="comp-text">
+          Postare grafică festivă de Ziua Copilului — <strong>"Eroi mici, zâmbete mari · La mulți ani micilor cadeți!"</strong>
+          <span class="quote">"Astăzi este despre joacă, curaj, imaginație și zâmbete purtate fără grijă. La mulți ani micilor eroi care cuceresc lumea cu dințișori de lapte, râsete mari și povești pe măsură!"</span>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-seasonal">1 Iunie</span>
+          <span class="tag tag-editorial">Grafică</span>
+        </div>
+      </div>
+      <div class="comp-badge">
+        <div class="activity-dot dot-green"></div>
+        <div class="dot-label">Activ<br>azi</div>
+      </div>
+    </div>
+
+    <!-- Life Dental Spa -->
+    <div class="comp-card">
+      <div class="comp-icon icon-bg-blue">💙</div>
+      <div class="comp-body">
+        <div class="comp-brand">Life Dental Spa</div>
+        <div class="comp-time"><span class="fb-icon">📘</span> Acum 13 ore · LifeDentalSpa</div>
+        <div class="comp-text">
+          Video educațional (1:35 min) — subiect: caria dentară. Medic în față de cameră, postare în <strong>engleză</strong>.
+          <span class="quote">"Many people believe that a cavity is just a small hole in a tooth. In reality, a cavity is an active infection that can affect the health of the entire body."</span>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-edu">Educațional</span>
+          <span class="tag tag-edu">Video</span>
+        </div>
+      </div>
+      <div class="comp-badge">
+        <div class="activity-dot dot-green"></div>
+        <div class="dot-label">Activ<br>azi</div>
+      </div>
+    </div>
+
+    <!-- Elidadent -->
+    <div class="comp-card">
+      <div class="comp-icon icon-bg-olive">🦷</div>
+      <div class="comp-body">
+        <div class="comp-brand">Elidadent Clinica Stomatologică</div>
+        <div class="comp-time"><span class="fb-icon">📘</span> Acum 12 ore · Elidadent Clinica Stomatologica</div>
+        <div class="comp-text">
+          Postare internă de aniversare angajat.
+          <span class="quote">"🎉 La mulți ani, Raluca Mitrea, Asistent Medical! 🍀 Îți dorim o zi plină de..."</span>
+          Content intern, fără impact comercial sau tematic 1 Iunie.
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-internal">Intern</span>
+          <span class="tag tag-hr">Team</span>
+        </div>
+      </div>
+      <div class="comp-badge">
+        <div class="activity-dot dot-yellow"></div>
+        <div class="dot-label">Activ<br>azi</div>
+      </div>
+    </div>
+
+    <!-- DENT ESTET -->
+    <div class="comp-card">
+      <div class="comp-icon icon-bg-gray">🔵</div>
+      <div class="comp-body">
+        <div class="comp-brand">DENT ESTET</div>
+        <div class="comp-time"><span class="fb-icon">📘</span> Ieri 31 mai, 10:00 · dentestet.ro</div>
+        <div class="comp-text">
+          <strong>Fără postare azi.</strong> Ultima postare: JOB ALERT asistenți medicali București cu date de contact directe. Postare anterioară (29 mai): campanie cu termen limitat pentru un sistem ortodontic (<em>"Au mai rămas 2 zile..."</em>).
+          <br><br>
+          <span style="font-size:11px; color:#999;">⚠️ DENT ESTET nu a postat nimic de Ziua Copilului — surprinzător pentru un brand cu sub-brandul 4 Kids.</span>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-hr">Recrutare</span>
+          <span class="tag tag-seasonal">Promo expirat?</span>
+        </div>
+      </div>
+      <div class="comp-badge">
+        <div class="activity-dot dot-gray"></div>
+        <div class="dot-label">Inactiv<br>azi</div>
+      </div>
+    </div>
+
+    <!-- Dentrust -->
+    <div class="comp-card">
+      <div class="comp-icon icon-bg-gray">⚫</div>
+      <div class="comp-body">
+        <div class="comp-brand">Dentrust</div>
+        <div class="comp-time"><span class="fb-icon">📘</span> Ieri 31 mai, 18:00 · DentrustRomania</div>
+        <div class="comp-text">Fără postare azi. Ultima activitate detectată: ieri seara.</div>
+      </div>
+      <div class="comp-badge">
+        <div class="activity-dot dot-gray"></div>
+        <div class="dot-label">Inactiv<br>azi</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NEVERIFICATE -->
+  <div class="section-label" style="margin-top:28px">
+    <h3>Neverificate azi (Tier 2)</h3>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    <div class="inactive-row">
+      <div class="dot-gray-sm"></div>
+      <p><strong>Saviem Smile · Dental Blue International · JC Dent · Clinica Dr. Malama · Ark Med Clinic</strong> — activitate istorică redusă pe Facebook. Neverificate în quick check de azi. Verificare completă: raport săptămânal Facebook, duminică.</p>
+    </div>
+  </div>
+
+  <!-- INSIGHT -->
+  <div class="insight-box">
+    <h4>💡 Insight zilei</h4>
+    <p><strong>DENT ESTET 0 postări de Ziua Copilului</strong> — cel mai surprinzător absent al zilei. Au un întreg sub-brand dedicat copiilor (4 Kids) și nu au activat niciun content tematic. Fie au planificat pentru altă dată, fie au ratat ziua. Merită monitorizat mâine.</p>
+    <p><strong>Life Dental Spa postează în engleză</strong> — un semnal de posibilă targetare a pacienților expați sau refolosire de conținut internațional. De notat ca pattern de comunicare.</p>
+    <p><strong>Dr. Ardeleanu — poziție unică azi:</strong> singurul din piață cu prezență fizică dovedită la un eveniment cu copii, nu doar o grafică postată de la birou. Autenticitatea e greu de imitat pe termen scurt.</p>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Dr. Ardeleanu Dental Clinics · Verificat live via Claude in Chrome · Facebook organic · 1 Iunie 2026, 21:45 · skill: competitor-daily-quick-check</p>
+  <div class="din2017">DIN 2017</div>
+</div>
+
+</body>
+</html>

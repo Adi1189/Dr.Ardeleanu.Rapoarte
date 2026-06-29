@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="linkedin">
+<meta name="report:cadence" content="weekly">
+<meta name="report:date" content="2026-05-25">
+<meta name="report:period" content="25–31 mai 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn — Raport Săptămânal · 25–31 Mai 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --burgundy: #7B1C16;
+    --cream: #F5EDE3;
+    --wheat: #F2DAB7;
+    --olive: #B5BD5C;
+    --gold: #C9A227;
+    --yellow: #FBE483;
+    --text: #222222;
+    --white: #FFFFFF;
+    --alert: #FF0300;
+    --terracotta: #dd7e6b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0ebe4;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .report-header {
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 36px 48px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .report-header::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    border: 40px solid rgba(255,255,255,0.07);
+  }
+  .report-header::after {
+    content: '';
+    position: absolute;
+    right: 60px; bottom: -80px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    border: 30px solid rgba(255,255,255,0.05);
+  }
+  .header-brand {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 16px;
+  }
+  .header-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .header-meta-item {
+    background: rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .header-meta-item span {
+    color: var(--gold);
+    font-weight: 700;
+    display: block;
+    font-size: 18px;
+  }
+  .din2017 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    margin-top: 12px;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+  }
+
+  /* SECTION TITLES */
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    border-left: 4px solid var(--burgundy);
+    padding-left: 12px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  /* SUMMARY BOX */
+  .summary-box {
+    background: var(--burgundy);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+  .summary-box h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .summary-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .summary-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  /* VOLUMES TABLE */
+  .volumes-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    margin-bottom: 8px;
+  }
+  .volumes-table thead {
+    background: var(--burgundy);
+    color: var(--white);
+  }
+  .volumes-table thead th {
+    padding: 12px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .volumes-table thead th:first-child { text-align: left; }
+  .volumes-table tbody tr:nth-child(even) { background: var(--cream); }
+  .volumes-table tbody tr.highlight-row {
+    background: var(--wheat) !important;
+    font-weight: 600;
+  }
+  .volumes-table tbody tr.highlight-row td:first-child {
+    border-left: 4px solid var(--burgundy);
+  }
+  .volumes-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .volumes-table td:first-child { text-align: left; font-weight: 600; }
+  .volumes-table .tier2-sep td {
+    background: #f5f5f5;
+    font-size: 11px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+  }
+  .badge-yes { color: var(--olive); font-weight: 700; }
+  .badge-no { color: #bbb; }
+  .badge-alert { color: var(--burgundy); font-weight: 700; }
+  .rank-badge {
+    display: inline-block;
+    background: var(--burgundy);
+    color: var(--white);
+    border-radius: 50%;
+    width: 24px; height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .rank-badge.gold { background: var(--gold); color: var(--text); }
+  .rank-badge.us { background: var(--wheat); color: var(--burgundy); }
+
+  /* COMPETITOR CARDS */
+  .competitor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 8px;
+  }
+  .competitor-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  }
+  .competitor-card.us-card {
+    border: 2px solid var(--burgundy);
+  }
+  .card-header {
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--cream);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .card-header-left h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--burgundy);
+    margin-bottom: 2px;
+  }
+  .card-header-left a {
+    font-size: 11px;
+    color: #0077b5;
+    text-decoration: none;
+  }
+  .card-followers {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: right;
+  }
+  .card-followers span {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--burgundy);
+  }
+  .us-pill {
+    background: var(--burgundy);
+    color: var(--white);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-left: 8px;
+  }
+  .card-body {
+    padding: 16px 20px;
+  }
+  .card-section {
+    margin-bottom: 16px;
+  }
+  .card-section-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--wheat);
+  }
+  .post-item {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--burgundy);
+  }
+  .post-item.no-data {
+    border-left-color: #ddd;
+    background: #f9f9f9;
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+  }
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .post-date { font-size: 11px; font-weight: 600; color: var(--burgundy); }
+  .post-type { font-size: 10px; background: var(--wheat); padding: 2px 7px; border-radius: 10px; color: var(--text); font-weight: 500; }
+  .post-text { font-size: 12px; line-height: 1.5; color: var(--text); margin-bottom: 4px; }
+  .post-theme { font-size: 10px; color: #888; }
+  .post-engagement { font-size: 11px; font-weight: 600; color: var(--olive); }
+
+  .job-item {
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+  .job-title { font-weight: 600; color: var(--burgundy); }
+  .job-meta { font-size: 11px; color: #888; }
+
+  .ad-item {
+    background: var(--wheat);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    border-left: 3px solid var(--gold);
+  }
+  .ad-text { font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .ad-meta { font-size: 11px; color: #777; }
+
+  .observations {
+    background: var(--burgundy);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  .observations strong { color: var(--gold); }
+
+  /* ANALYSIS SECTIONS */
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 700px) { .analysis-grid { grid-template-columns: 1fr; } }
+
+  .analysis-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .analysis-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--burgundy);
+    margin-bottom: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .analysis-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .analysis-card ul li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--cream);
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .analysis-card ul li:last-child { border-bottom: none; }
+  .li-dot { color: var(--burgundy); font-weight: 700; flex-shrink: 0; }
+
+  /* ACTION PLAN */
+  .action-plan {
+    background: var(--burgundy);
+    border-radius: 16px;
+    padding: 28px 32px;
+    color: var(--white);
+  }
+  .action-plan h3 {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .action-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .action-item {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px;
+    border-top: 3px solid var(--gold);
+  }
+  .action-number {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .action-title { font-weight: 700; font-size: 13px; margin-bottom: 6px; }
+  .action-desc { font-size: 11px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+
+  /* TIER 2 ALERTS */
+  .tier2-alert {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 8px;
+    border-left: 4px solid var(--wheat);
+    font-size: 13px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  }
+  .tier2-alert .icon { font-size: 18px; flex-shrink: 0; }
+  .tier2-alert strong { color: var(--burgundy); }
+
+  /* FOOTER */
+  .report-footer {
+    background: var(--cream);
+    border-top: 2px solid var(--wheat);
+    padding: 20px 48px;
+    font-size: 11px;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 40px;
+  }
+  .footer-item strong { color: var(--burgundy); }
+
+  /* TREND BARS */
+  .trend-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .trend-label { width: 140px; flex-shrink: 0; font-weight: 500; }
+  .trend-bar-bg { flex: 1; background: var(--cream); border-radius: 4px; height: 10px; overflow: hidden; }
+  .trend-bar-fill { height: 100%; border-radius: 4px; background: var(--burgundy); }
+  .trend-count { width: 24px; text-align: right; font-weight: 700; color: var(--burgundy); }
+
+  /* ALERT BANNER */
+  .alert-banner {
+    background: var(--yellow);
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-left: 4px solid var(--burgundy);
+  }
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+
+<!-- HEADER -->
+<div class="report-header">
+  <div class="header-brand">Dr. Ardeleanu Dental Clinics · Intelligence Report</div>
+  <div class="header-title">🔗 LinkedIn — Raport Săptămânal</div>
+  <div class="header-subtitle">Săptămâna 25 – 31 Mai 2026 · Săpt. 22/2026</div>
+  <div class="header-meta">
+    <div class="header-meta-item">Brands analizate<span>4</span></div>
+    <div class="header-meta-item">Postări în săpt.<span>5</span></div>
+    <div class="header-meta-item">Reclame LI active<span>2</span></div>
+    <div class="header-meta-item">Joburi deschise<span>0</span></div>
+  </div>
+  <div class="din2017">Clinicile Dentare Dr. Ardeleanu · Din 2017</div>
+</div>
+
+<!-- BODY -->
+<div class="container">
+
+  <!-- ALERT -->
+  <div class="alert-banner">
+    ⚡ <span>Atenție strategică: DENT ESTET este singurul competitor cu reclame LinkedIn active — 2 campanii în curs, inclusiv un video de brand awareness pe 27 ani de activitate.</span>
+  </div>
+
+  <!-- PE SCURT -->
+  <div class="section-title">▶ Pe Scurt</div>
+  <div class="summary-box">
+    <h3>Semnale strategice · Săptămâna 25–31 Mai 2026</h3>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>DENT ESTET domină LinkedIn</strong> săptămâna aceasta: 3 postări organice (cea mai activă pagină) + 2 reclame plătite active. Mesajul săptămânii: expansiune în Oradea + parteneriat universitar UMFST Târgu Mureș (Marisiensis 2026) + lider media cu "27 ani în media".</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Regina Maria Dental</strong> a postat de 2 ori, ambele pe teme B2C cu unghi medical: menopauza și sănătatea orală (SuperAGE event) + vizită educativă la grădinița din Ploiești. Abordare human interest, fără B2B.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Life Dental Spa</strong> — inactivă pe LinkedIn săptămâna aceasta (ultima postare datează de 3 săptămâni). Deși are 9K followers (cel mai mare din piața dentară RO pe LinkedIn!), utilizarea canalului este slabă.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Dr. Ardeleanu</strong> — 0 postări în săptămână. Cea mai recentă postare este de acum 2 săptămâni (Forbes Romania Business Fest — leadership/sănătate). 0 reclame LinkedIn active. 0 joburi deschise pe platformă.</div></div>
+    <div class="summary-item"><div class="summary-dot"></div><div><strong>Oportunitate imediată:</strong> LinkedIn e practic liber pentru noi — concurența postează sporadic, nimeni altcineva în afară de DENT ESTET nu rulează reclame. Cu 80+ medici supraspecializați avem materie primă de conținut pentru cel puțin 4 postări/săptămână de quality leadership.</div></div>
+  </div>
+
+  <!-- VOLUME TABLE -->
+  <div class="section-title">▶ Volumele Săptămânii</div>
+  <table class="volumes-table">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Followers</th>
+        <th>Postări săpt.</th>
+        <th>Joburi LI</th>
+        <th>Reclame LI</th>
+        <th>Engagement est.</th>
+        <th>Rang activitate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-row">
+        <td>Dr. Ardeleanu <span class="us-pill">NOI</span></td>
+        <td>1.162</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">—</td>
+        <td><span class="rank-badge us">4</span></td>
+      </tr>
+      <tr>
+        <td>DENT ESTET</td>
+        <td>2.252</td>
+        <td class="badge-alert">3</td>
+        <td class="badge-no">0</td>
+        <td class="badge-alert">2</td>
+        <td>~20 reactions</td>
+        <td><span class="rank-badge gold">1</span></td>
+      </tr>
+      <tr>
+        <td>Regina Maria Dental</td>
+        <td>2.747</td>
+        <td class="badge-yes">2</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">0</td>
+        <td>~2 reactions</td>
+        <td><span class="rank-badge">2</span></td>
+      </tr>
+      <tr>
+        <td>Life Dental Spa</td>
+        <td>9.000+</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">0</td>
+        <td class="badge-no">—</td>
+        <td><span class="rank-badge">3</span></td>
+      </tr>
+      <tr class="tier2-sep">
+        <td colspan="7">— Tier 2: fără pagini LinkedIn verificate —</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- COMPETITOR CARDS -->
+  <div class="section-title">▶ Activitate Pagină cu Pagină — Tier 1</div>
+  <div class="competitor-grid">
+
+    <!-- DR. ARDELEANU -->
+    <div class="competitor-card us-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>Dr. Ardeleanu Dental Clinics <span class="us-pill">NOI</span></h4>
+          <a href="https://www.linkedin.com/company/clinicile-dentare-dr-ardeleanu" target="_blank">linkedin.com/company/clinicile-dentare-dr-ardeleanu</a>
+        </div>
+        <div class="card-followers">Followers<span>1.162</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Postări organice (0 în săpt.)</div>
+          <div class="post-item no-data">Nicio postare în săptămâna 25–31 mai. Cea mai recentă postare: acum 2 săptămâni (Forbes Romania Business Fest — sănătate, wellbeing, experiența pacientului).</div>
+        </div>
+        <div class="card-section">
+          <div class="card-section-title">Joburi deschise (0)</div>
+          <div class="post-item no-data">Nicio poziție activă pe LinkedIn în prezent. Un job pentru Sales Operations Support Specialist a apărut acum ~1 lună dar este deja închis.</div>
+        </div>
+        <div class="card-section">
+          <div class="card-section-title">Reclame LinkedIn (0)</div>
+          <div class="post-item no-data">Nicio reclamă activă în LinkedIn Ad Library.</div>
+        </div>
+        <div class="observations">
+          <strong>➜ Observații:</strong> Cu 1.162 followers suntem cei mai mici ca audiență dintre toți competitorii Tier 1 cu LinkedIn. Gap-ul față de Life Dental Spa (9K) este uriaș. LinkedIn e complet neexploatat — 0 postări, 0 reclame, 0 joburi. Oportunitate majoră de construcție de brand B2B și employer branding.
+        </div>
+      </div>
+    </div>
+
+    <!-- DENT ESTET -->
+    <div class="competitor-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>DENT ESTET</h4>
+          <a href="https://www.linkedin.com/company/dent-estet" target="_blank">linkedin.com/company/dent-estet</a>
+        </div>
+        <div class="card-followers">Followers<span>2.252</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Postări organice (3 în săpt.)</div>
+
+          <div class="post-item">
+            <div class="post-meta">
+              <span class="post-date">~27 mai (4d ago)</span>
+              <span class="post-type">Carusel imagini</span>
+            </div>
+            <div class="post-text">„La DENT ESTET Oradea, fiecare detaliu contează atunci când vine vorba despre experiența pacientului. Iată 5 lucruri care definesc clinica noastră din Oradea: Echipă multidisciplinară, Radiologie digitală inclusă, Plată în rate, Tehnologie WaterLase®, Laborator propriu de tehnică dentară."</div>
+            <div class="post-theme">Temă: Expansiune geografică · Oradea · Servicii clinică</div>
+            <div class="post-engagement">3 reactions · 1 repost</div>
+          </div>
+
+          <div class="post-item">
+            <div class="post-meta">
+              <span class="post-date">~25 mai (6d ago)</span>
+              <span class="post-type">Carusel foto</span>
+            </div>
+            <div class="post-text">„Colaborarea cu University of Medicine, Pharmacy, Science and Technology "G.E. Palade" of Târgu Mureș înseamnă oportunitatea de a fi aproape de viitorii medici stomatologi [...] la Marisiensis 2026, DENT ESTET a susținut participanții la #Dentatlon prin premii educaționale și oportunități de dezvoltare profesională."</div>
+            <div class="post-theme">Temă: Parteneriat universitar · Employer branding · Recrutare medici tineri</div>
+            <div class="post-engagement">12 reactions · 1 repost</div>
+          </div>
+
+          <div class="post-item">
+            <div class="post-meta">
+              <span class="post-date">~26 mai (5d ago)</span>
+              <span class="post-type">Video</span>
+            </div>
+            <div class="post-text">„Sănătatea orală este strâns legată de longevitate. Astăzi, tot mai multe studii arată legătura dintre sănătatea gingiilor și afecțiuni precum bolile cardiovasculare, diabetul sau declinul cognitiv." — Dr. Anamaria Ghiurcă, Medic Specialist Parodontologie la emisiunea Vorbeste Lumea (Pro TV)</div>
+            <div class="post-theme">Temă: Leadership medical · Apariție TV · Parodontologie & longevitate</div>
+            <div class="post-engagement">5 reactions · 1 comment</div>
+          </div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">Joburi deschise (0)</div>
+          <div class="post-item no-data">Nicio poziție activă pe LinkedIn în această săptămână.</div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">Reclame LinkedIn (2 active)</div>
+          <div class="ad-item">
+            <div class="ad-text">Reclamă 1 — [tip neprecizat, prima din librărie]</div>
+            <div class="ad-meta">Conținut nedisponibil complet în Ad Library fără scroll extins.</div>
+          </div>
+          <div class="ad-item">
+            <div class="ad-text">Reclamă 2 — Video · „Încredere. Vizibilitate. Performanță. #DENTESTET – 27 de ani în media. Fiecare apariție reflectă mai mult..."</div>
+            <div class="ad-meta">Tip: Video Ad · Audiență: B2B / PR / media professionals · Mesaj: brand authority, longevitate, leadership</div>
+          </div>
+        </div>
+
+        <div class="observations">
+          <strong>➜ Observații:</strong> DENT ESTET folosește LinkedIn ca instrument de employer branding și recrutare medici tineri (parteneriat UMFST, Dentatlon) + brand awareness B2B. Expansiunea în Oradea confirmată și pe LinkedIn. Campania media "27 ani în media" targetează jurnaliști și parteneri B2B. Lider clar al săptămânii pe LinkedIn.
+        </div>
+      </div>
+    </div>
+
+    <!-- REGINA MARIA DENTAL -->
+    <div class="competitor-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>Regina Maria Dental Clinics</h4>
+          <a href="https://www.linkedin.com/company/dr.-leahu-clinici-dentare" target="_blank">linkedin.com/company/dr.-leahu-clinici-dentare</a>
+        </div>
+        <div class="card-followers">Followers<span>2.747</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Postări organice (2 în săpt.)</div>
+
+          <div class="post-item">
+            <div class="post-meta">
+              <span class="post-date">~26 mai (5d ago)</span>
+              <span class="post-type">Carusel foto</span>
+            </div>
+            <div class="post-text">„Menopauza este o etapă importantă în sănătatea femeii și merită discutată cu deschidere, empatie și informație medicală corectă. La 'Let's Talk About Menopause' Timișoara, conversația s-a deschis cu medici, informații clare și perspective multidisciplinare despre impactul menopauzei asupra întregului organism, inclusiv asupra sănătății orale." — Dr. Cezara Grosu, Endodonție</div>
+            <div class="post-theme">Temă: Leadership medical · Eveniment B2C · Sănătate feminină · Interdisciplinar</div>
+            <div class="post-engagement">2 reactions</div>
+          </div>
+
+          <div class="post-item">
+            <div class="post-meta">
+              <span class="post-date">~25 mai (6d ago)</span>
+              <span class="post-type">Imagine</span>
+            </div>
+            <div class="post-text">„La Regina Maria Dental Clinics Galați, copiii de la Școala Nanny au făcut cunoștință cu lumea stomatologiei într-un mod prietenos, interactiv și adaptat vârstei lor."</div>
+            <div class="post-theme">Temă: Comunitate · Pedodonție · CSR / educație</div>
+            <div class="post-engagement">Engagement neidentificat</div>
+          </div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">Joburi deschise (0)</div>
+          <div class="post-item no-data">Nicio poziție activă. Bannerul paginii promovează "170 de medici din toate specialitățile" — semnal de employer branding implicit, fără joburi postate.</div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">Reclame LinkedIn (0)</div>
+          <div class="post-item no-data">Nicio reclamă activă în LinkedIn Ad Library pentru "Regina Maria Dental".</div>
+        </div>
+
+        <div class="observations">
+          <strong>➜ Observații:</strong> Regina Maria Dental alege subiectele cu unghi sănătate holistică (menopauza+sănătate orală) și comunitate. Nu rulează reclame LI. Formatul preferat: carusel foto de eveniment. Tonul e warm & educational. Bannerul "170 de medici" e cel mai agresiv mesaj de employer branding din piată — dar e static, nu în postări.
+        </div>
+      </div>
+    </div>
+
+    <!-- LIFE DENTAL SPA -->
+    <div class="competitor-card">
+      <div class="card-header">
+        <div class="card-header-left">
+          <h4>Life Dental Spa</h4>
+          <a href="https://www.linkedin.com/company/life-dental-spa" target="_blank">linkedin.com/company/life-dental-spa</a>
+        </div>
+        <div class="card-followers">Followers<span>9.000+</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Postări organice (0 în săpt.)</div>
+          <div class="post-item no-data">Nicio postare în săptămâna analizată. Ultima postare: acum ~3 săptămâni. Pagina e inactivă în ciuda audienței masive de 9K followers.</div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">Joburi deschise (0)</div>
+          <div class="post-item no-data">Nicio poziție activă pe LinkedIn.</div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">Reclame LinkedIn (0)</div>
+          <div class="post-item no-data">Nicio reclamă activă în LinkedIn Ad Library.</div>
+        </div>
+
+        <div class="observations">
+          <strong>➜ Observații:</strong> Life Dental Spa are <strong>9K followers</strong> — de 8x mai mult decât noi și de 4x mai mult decât DENT ESTET — dar nu postează constant. Pagina a crescut probabil în timp prin conținut anterior, acum e dormantă. Aceasta e o vulnerabilitate pe care o putem exploata: cu postare consecventă putem depăși rate-ul lor de engagement rapid.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /competitor-grid -->
+
+  <!-- TIER 2 ALERTS -->
+  <div class="section-title">▶ Alerte Tier 2</div>
+  <div class="tier2-alert">
+    <span class="icon">ℹ️</span>
+    <div><strong>Saviem Smile, Dental Blue, JC Dent, Clinica Dr. Malama, Ark Med, Elidadent, Dentrust</strong> — Niciun competitor Tier 2 nu are pagină de LinkedIn confirmată în competitors.json. Nu există date de monitorizat pentru această săptămână. Recomandare: verificare manuală a existenței paginilor LinkedIn pentru Elidadent și Dentrust (au 11-50 angajați = posibil să fi creat pagini recent).</div>
+  </div>
+
+  <!-- TEME -->
+  <div class="section-title">▶ Analiza Temelor — Cross Tier 1</div>
+  <div class="analysis-grid">
+    <div class="analysis-card">
+      <h4>📊 Distribuție teme postări săptămână</h4>
+      <div class="trend-bar-row">
+        <span class="trend-label">Eveniment / conferință</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:100%"></div></div>
+        <span class="trend-count">3</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">Leadership medical</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:66%"></div></div>
+        <span class="trend-count">2</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">Employer branding</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:33%"></div></div>
+        <span class="trend-count">1</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">Case study clinic</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:33%"></div></div>
+        <span class="trend-count">1</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">Comunitate / CSR</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:33%"></div></div>
+        <span class="trend-count">1</span>
+      </div>
+      <div class="trend-bar-row">
+        <span class="trend-label">B2B / Parteneriat</span>
+        <div class="trend-bar-bg"><div class="trend-bar-fill" style="width:33%"></div></div>
+        <span class="trend-count">1</span>
+      </div>
+    </div>
+
+    <div class="analysis-card">
+      <h4>📋 Format dominant în piață</h4>
+      <ul>
+        <li><span class="li-dot">▶</span><span>Carusel imagini (foto eveniment / grafice) — format dominant, folosit de ambii competitori activi</span></li>
+        <li><span class="li-dot">▶</span><span>Video nativ — apare la DENT ESTET (apariție TV Pro TV, reclamă LinkedIn) — format cu reach mai mare</span></li>
+        <li><span class="li-dot">▶</span><span>Text + link — nefolosit de nimeni în săptămâna aceasta</span></li>
+        <li><span class="li-dot">▶</span><span>Ton dominant: profesional-warm, educational, fără promoții directe de preț</span></li>
+        <li><span class="li-dot">▶</span><span>Frecvență postare Tier 1: 0–3 postări/săptămână. Media: 1,25 postări/brand/săptămână</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EMPLOYER BRANDING -->
+  <div class="section-title">▶ Employer Branding — Focus</div>
+  <div class="analysis-grid">
+    <div class="analysis-card">
+      <h4>🏆 Cine recrutează mai agresiv?</h4>
+      <ul>
+        <li><span class="li-dot">1.</span><span><strong>DENT ESTET</strong> — parteneriat UMFST + Dentatlon (competiție națională pentru studenți stomatologie). Recrutare long-game: prind medicii înainte să termine facultatea. Mesaj: "formăm generația viitoare"</span></li>
+        <li><span class="li-dot">2.</span><span><strong>Regina Maria</strong> — bannerul "170 de medici" e cel mai puternic mesaj pasiv de employer branding. Nu recrutează activ săptămâna aceasta.</span></li>
+        <li><span class="li-dot">3.</span><span><strong>Dr. Ardeleanu</strong> — cu 80+ medici supraspecializați avem o poveste de employer branding excelentă dar nespusă pe LinkedIn. Oportunitate directă.</span></li>
+      </ul>
+    </div>
+
+    <div class="analysis-card">
+      <h4>🔗 Leadership / B2B — Focus</h4>
+      <ul>
+        <li><span class="li-dot">▶</span><span><strong>DENT ESTET</strong> cel mai activ în leadership: video cu specialist pe Pro TV, campanie "27 ani în media" — targetează jurnaliști, asigurători, parteneri corporate</span></li>
+        <li><span class="li-dot">▶</span><span><strong>Regina Maria</strong> trimite medici la conferințe externe (Let's Talk About Menopause, SuperAGE) — vizibilitate B2B indirectă</span></li>
+        <li><span class="li-dot">▶</span><span><strong>Life Dental Spa</strong> — 0 activitate, dar are cea mai mare audiență LI. Paradox: followers fără conținut</span></li>
+        <li><span class="li-dot">▶</span><span>Niciun competitor nu comunică activ cu asigurătorii sau corporațiile pe LinkedIn în săptămâna aceasta — spațiu liber pentru noi</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TENDINTE -->
+  <div class="section-title">▶ Tendințe LinkedIn în Piața Dentară RO</div>
+  <div class="analysis-card" style="margin-bottom: 8px;">
+    <h4>📈 Ce ne spune săptămâna aceasta</h4>
+    <ul>
+      <li><span class="li-dot">▶</span><span><strong>LinkedIn nu e prioritar pentru clinicile dentare RO</strong> — nici DENT ESTET (lider) nu depășește 3 postări/săptămână. Bariera de intrare e joasă.</span></li>
+      <li><span class="li-dot">▶</span><span><strong>Conferințele și evenimentele medicale</strong> sunt principalul generator de conținut LinkedIn în piață. Dacă Dr. Ardeleanu participă la conferințe, există conținut gata de postat.</span></li>
+      <li><span class="li-dot">▶</span><span><strong>Apariții TV ale medicilor</strong> = conținut premium pentru LinkedIn (DENT ESTET o face constant). Dr. Ghiurcă la Vorbeste Lumea a generat cel mai bun video al săptămânii.</span></li>
+      <li><span class="li-dot">▶</span><span><strong>Gap followers enorm</strong>: Life Dental Spa 9K vs Dr. Ardeleanu 1.162. Dar engagement-ul Life Dental Spa e practic 0 în prezent — ceea ce înseamnă că numărul brut de followers nu e totul.</span></li>
+      <li><span class="li-dot">▶</span><span><strong>Singurul competitor cu reclame LI</strong> este DENT ESTET. LinkedIn Ads în piața dentară RO = spațiu neocupat.</span></li>
+    </ul>
+  </div>
+
+  <!-- ACTION PLAN -->
+  <div class="section-title">▶ Ce Facem Noi Săptămâna Următoare pe LinkedIn</div>
+  <div class="action-plan">
+    <h3>Plan tactic · 1–7 Iunie 2026</h3>
+    <div class="action-items">
+      <div class="action-item">
+        <div class="action-number">01</div>
+        <div class="action-title">Postare Leadership</div>
+        <div class="action-desc">Subiect: un medic din echipă prezintă un caz clinic rar sau o procedură complexă (implantologie/endodonție). Format: text long-form + 1–2 imagini. Semnatură: Dr. Ardeleanu sau medicul specialist. Ton: autoritate medicală caldă. Hashtags: #stomatologie #implantologie #medic</div>
+      </div>
+      <div class="action-item">
+        <div class="action-number">02</div>
+        <div class="action-title">Postare Employer Branding</div>
+        <div class="action-desc">Temă: "Ce înseamnă să fii medic la Dr. Ardeleanu" — cultură, supraspecializare, echipă. Format: carusel 4–5 slides sau video scurt cu un medic povestind. Targetăm medicii stomatologi în formare sau cu experiență. Mesaj cheie: 80+ medici supraspecializați, 8 clinici.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-number">03</div>
+        <div class="action-title">Postare B2B Corporate</div>
+        <div class="action-desc">Temă: beneficii sănătate dentară pentru angajați / pachete corporate. Format: infografic sau text cu date (costul indirect al problemelor dentare netratate în productivitate). Targetăm HR managers și directors din București. Aceasta e o nișă neocupată de competitori săptămâna aceasta.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-number">04</div>
+        <div class="action-title">Test Reclamă LinkedIn</div>
+        <div class="action-desc">Lansăm prima campanie LinkedIn Ads: Single Image Ad sau Video Ad. Audiență: HR Managers + C-Suite + asigurători din București. Mesaj: "Îngrijire dentară premium pentru echipa ta. Dr. Ardeleanu Dental Clinics — 8 clinici, 80+ medici." Budget test: 200–300 EUR.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="report-footer">
+  <div><strong>Status Claude in Chrome:</strong> Activ · Browser 1 (Windows)</div>
+  <div><strong>Surse:</strong> LinkedIn (cont logat) + LinkedIn Ad Library (public)</div>
+  <div><strong>Perioadă:</strong> 25–31 Mai 2026</div>
+  <div><strong>Tier 2 cu LinkedIn:</strong> Niciun competitor confirmat</div>
+  <div><strong>Confidence:</strong> ✅ Înalt (date directe din UI LinkedIn)</div>
+  <div><strong>Generator:</strong> competitor-weekly-linkedin v1.0 · Generat 31.05.2026</div>
+  <div style="width:100%; border-top: 1px solid var(--wheat); padding-top: 8px; color: #aaa;">Dr. Ardeleanu Dental Clinics · clinicileardeleanu.ro · 031 99 63 · Din 2017</div>
+</div>
+
+</body>
+</html>

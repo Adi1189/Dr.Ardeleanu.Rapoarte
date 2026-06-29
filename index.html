@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Intelligence Reports · Dr. Ardeleanu</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{ --primary:#7B1C16; --amber:#C9A227; --cream:#F5EDE3; --wheat:#F2DAB7; --line:#e7ddd0; --ink:#222; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+    button{font-family:inherit;cursor:pointer}
+    a{text-decoration:none}
+
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 28px;background:#fff;border-bottom:3px solid var(--primary)}
+    .topbar .logo{height:46px;width:auto;display:block}
+    .brand-tag{font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--primary);text-align:right}
+
+    .wrap{max-width:880px;margin:0 auto;padding:22px 20px 60px}
+    .crumb{font-size:13px;color:#9a8e82;margin:4px 2px 16px}
+    .crumb-link{color:var(--primary);cursor:pointer;font-weight:500}
+    .sep{color:#cbb;margin:0 4px}
+
+    .h{font-size:15px;font-weight:600;color:var(--primary);margin:0 0 14px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+    .tile{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:18px 16px;cursor:pointer;text-align:left;transition:all .12s;display:flex;flex-direction:column;gap:5px}
+    .tile:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:0 6px 16px rgba(123,28,22,.12)}
+    .tile .t-name{font-size:16px;font-weight:600;color:var(--ink)}
+    .tile .t-sub{font-size:11px;color:#9a8e82;text-transform:uppercase;letter-spacing:.5px}
+    .tile.mon{border-left:5px solid var(--amber)}
+    .tile.wk{border-left:5px solid var(--primary)}
+
+    .week{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:18px;cursor:pointer;text-align:center;transition:all .12s}
+    .week:hover{border-color:var(--primary);transform:translateY(-2px)}
+    .week .w-big{font-size:22px;font-weight:700;color:var(--primary)}
+    .week .w-range{font-size:11px;color:#6f655b;margin-top:3px}
+    .week.empty{opacity:.5;cursor:not-allowed;border-style:dashed}
+    .week.empty:hover{transform:none;border-color:var(--line)}
+    .week.empty .w-big{color:#bbb}
+
+    .btn{display:inline-block;background:var(--primary);color:#fff;border:none;padding:13px 26px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer}
+    .btn:hover{background:#66160f}
+    .btn.dim{background:var(--line);color:#9a8e82;cursor:not-allowed}
+    .back{display:inline-block;margin-top:16px;background:transparent;border:1.5px solid var(--line);color:#6f655b;padding:8px 16px;border-radius:9px;font-size:13px;cursor:pointer}
+    .back:hover{border-color:var(--primary);color:var(--primary)}
+
+    .report{background:#fff;border-radius:12px;border-left:5px solid var(--primary);padding:24px;box-shadow:0 2px 12px rgba(123,28,22,.08)}
+    .report .r-ch{font-size:11px;font-weight:600;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+    .report .r-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--ink);margin-bottom:6px}
+    .report .r-period{font-size:13px;color:#6f655b;margin-bottom:16px}
+
+    @media(max-width:540px){ .topbar{padding:14px 18px} .grid{grid-template-columns:repeat(2,1fr)} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <img class="logo" src="assets/img/logo.png" alt="Dr. Ardeleanu Dental Clinics" />
+    <span class="brand-tag">Marketing Intelligence Reports</span>
+  </header>
+
+  <main class="wrap">
+    <div id="crumb" class="crumb"></div>
+    <div id="stage"></div>
+  </main>
+
+  <script>
+/* === DATA START (generat automat — NU edita intre marcaje) === */
+window.__CHANNELS__ = [{"id":"market-moves","name":"Market Moves","cad":"monthly"},{"id":"google-ads","name":"Google Ads","cad":"monthly"},{"id":"linkedin","name":"LinkedIn","cad":"monthly"},{"id":"facebook","name":"Facebook","cad":"weekly"},{"id":"instagram","name":"Instagram","cad":"weekly"},{"id":"tiktok","name":"TikTok","cad":"weekly"},{"id":"youtube","name":"YouTube","cad":"weekly"},{"id":"concluzii","name":"Concluzii","cad":"weekly"}];
+window.__REPORTS__ = [{"c":"google-ads","y":2026,"mo":5,"w":null,"title":"Google Ads Raport Săptămânal · Dr. Ardeleanu · 31 mai 2026","period":"25–31 mai 2026","path":"reports/adult/google-ads/2026-05-25_raport-google-ads-2026-05-31.html"},{"c":"linkedin","y":2026,"mo":5,"w":null,"title":"LinkedIn — Raport Săptămânal · 25–31 Mai 2026","period":"25–31 mai 2026","path":"reports/adult/linkedin/2026-05-25_raport-linkedin-2026-05-31.html"},{"c":"market-moves","y":2026,"mo":5,"w":null,"title":"Mișcări de Piață — Săpt. 22 | 26 Mai – 1 Iunie 2026 | Dr. Ardeleanu","period":"26 mai – 1 iun 2026","path":"reports/adult/market-moves/2026-05-26_raport-market-moves-2026-06-01.html"},{"c":"facebook","y":2026,"mo":5,"w":4,"title":"Facebook Raport Săptămânal · Dr. Ardeleanu · 31 mai 2026","period":"25–31 mai 2026","path":"reports/adult/facebook/2026-05-25_raport-facebook-2026-05-31.html"},{"c":"tiktok","y":2026,"mo":5,"w":4,"title":"TikTok — Raport Săptămânal · 25–31 Mai 2026","period":"25–31 mai 2026","path":"reports/adult/tiktok/2026-05-25_raport-tiktok-2026-05-31.html"},{"c":"youtube","y":2026,"mo":5,"w":4,"title":"YouTube — Raport Săptămânal · 25–31 Mai 2026","period":"25–31 mai 2026","path":"reports/adult/youtube/2026-05-25_raport-youtube-2026-05-31.html"},{"c":"google-ads","y":2026,"mo":6,"w":null,"title":"Raport Google Ads · Competitori · 2026-06-08","period":"1–7 iun 2026","path":"reports/adult/google-ads/2026-06-01_raport-google-ads-2026-06-08.html"},{"c":"concluzii","y":2026,"mo":6,"w":1,"title":"3 concluzii acționabile · Săpt. 24/2026 · Dr. Ardeleanu","period":"1–7 iun 2026","path":"reports/adult/cross-channel/2026-06-01_concluzii-actionabile-2026-06-08.html"},{"c":"facebook","y":2026,"mo":6,"w":1,"title":"Raport Facebook · Săpt. 1-7 iunie 2026 · Dr. Ardeleanu Dental Clinics","period":"1–7 iun 2026","path":"reports/adult/facebook/2026-06-01_raport-facebook-2026-06-08.html"},{"c":"tiktok","y":2026,"mo":6,"w":1,"title":"Raport TikTok competitori · Săpt. 23 · 1–7 iunie 2026","period":"1–7 iun 2026","path":"reports/adult/tiktok/2026-06-01_raport-tiktok-competitori-1-7-iunie-2026.html"},{"c":"youtube","y":2026,"mo":6,"w":1,"title":"YouTube — Raport săptămânal · 1–7 iunie 2026","period":"1–7 iun 2026","path":"reports/adult/youtube/2026-06-01_raport-youtube-2026-06-09.html"},{"c":"concluzii","y":2026,"mo":6,"w":2,"title":"Top 3 Concluzii Acționabile · Sinteză Cross-Channel · 8–14 iunie 2026 · Dr. Ardeleanu","period":"8–14 iun 2026","path":"reports/adult/cross-channel/2026-06-08_concluzii-cross-channel-8-14-iunie-2026.html"},{"c":"facebook","y":2026,"mo":6,"w":2,"title":"Raport Facebook Săptămânal · 8–14 iunie 2026 · Dr. Ardeleanu","period":"8–14 iun 2026","path":"reports/adult/facebook/2026-06-08_raport-facebook-2026-06-14.html"},{"c":"instagram","y":2026,"mo":6,"w":2,"title":"Raport Instagram Săptămânal · 8–14 iunie 2026 · Dr. Ardeleanu","period":"8–14 iun 2026","path":"reports/adult/instagram/2026-06-08_raport-instagram-2026-06-14.html"},{"c":"tiktok","y":2026,"mo":6,"w":2,"title":"TikTok · Raport săptămânal · 8–14 iunie 2026 · Dr. Ardeleanu","period":"8–14 iun 2026","path":"reports/adult/tiktok/2026-06-08_raport-tiktok-2026-06-14.html"},{"c":"youtube","y":2026,"mo":6,"w":2,"title":"Raport YouTube Competitori — 8-14 iunie 2026 | Dr. Ardeleanu","period":"8–14 iun 2026","path":"reports/adult/youtube/2026-06-08_raport-youtube-8-14-iunie-2026.html"},{"c":"concluzii","y":2026,"mo":6,"w":3,"title":"Sinteză Cross-Channel · 15–21 iunie 2026 · Dr. Ardeleanu","period":"15–21 iun 2026","path":"reports/adult/cross-channel/2026-06-15_raport-sinteza-cross-channel-2026-06-21.html"},{"c":"facebook","y":2026,"mo":6,"w":3,"title":"Raport Facebook Săptămânal · Dr. Ardeleanu · 15–21 iunie 2026","period":"15–21 iun 2026","path":"reports/adult/facebook/2026-06-15_raport-facebook-2026-06-21.html"},{"c":"instagram","y":2026,"mo":6,"w":3,"title":"Raport Instagram Săptămânal · Dr. Ardeleanu · 15–21 iunie 2026","period":"15–21 iun 2026","path":"reports/adult/instagram/2026-06-15_raport-instagram-2026-06-21.html"},{"c":"tiktok","y":2026,"mo":6,"w":3,"title":"Raport TikTok Săptămânal · 15–21 iunie 2026 · Dr. Ardeleanu","period":"15–21 iun 2026","path":"reports/adult/tiktok/2026-06-15_raport-tiktok-2026-06-21.html"},{"c":"youtube","y":2026,"mo":6,"w":3,"title":"Raport YouTube Săptămânal · 15–21 iunie 2026 · Clinicile Dr. Ardeleanu","period":"15–21 iun 2026","path":"reports/adult/youtube/2026-06-15_raport-youtube-2026-06-21.html"}];
+/* === DATA END === */
+  </script>
+  <script>
+(function(){
+  var CHANNELS = window.__CHANNELS__ || [];
+  var REPORTS  = window.__REPORTS__ || [];
+  var MONAME = ["","ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"];
+  var WK = {1:"1–7",2:"8–14",3:"15–21",4:"22–31"};
+  var st = { ch:null, key:null, w:null }; // key = "y-mo"
+
+  var stage = document.getElementById("stage");
+  var crumb = document.getElementById("crumb");
+
+  function ch(id){ return CHANNELS.find(function(c){return c.id===id;}); }
+  function monthsFor(id){
+    var seen = {}, out = [];
+    REPORTS.filter(function(r){return r.c===id;}).forEach(function(r){
+      var k = r.y+"-"+r.mo;
+      if(!seen[k]){ seen[k]=1; out.push({key:k, y:r.y, mo:r.mo}); }
+    });
+    out.sort(function(a,b){ return (b.y-a.y)||(b.mo-a.mo); });
+    return out;
+  }
+  function moLabel(key){ var p=key.split("-"); return MONAME[+p[1]].charAt(0).toUpperCase()+MONAME[+p[1]].slice(1)+" "+p[0]; }
+  function hasWeek(id,key,w){ var p=key.split("-"); return REPORTS.some(function(r){return r.c===id&&r.y==p[0]&&r.mo==p[1]&&r.w===w;}); }
+  function findReport(){
+    var p = st.key.split("-");
+    return REPORTS.find(function(r){
+      if(r.c!==st.ch.id || r.y!=p[0] || r.mo!=p[1]) return false;
+      return st.ch.cad==="monthly" ? true : r.w===st.w;
+    });
+  }
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+
+  function setCrumb(){
+    var parts = ['<span class="crumb-link" data-go="0">Rapoarte</span>'];
+    if(st.ch) parts.push('<span class="crumb-link" data-go="1">'+esc(st.ch.name)+'</span>');
+    if(st.key) parts.push((st.ch.cad==="weekly" && !st.w) ? moLabel(st.key) : '<span class="crumb-link" data-go="2">'+moLabel(st.key)+'</span>');
+    if(st.w) parts.push("S"+st.w);
+    crumb.innerHTML = parts.join('<span class="sep">›</span>');
+  }
+
+  function render(){
+    setCrumb();
+    if(!st.ch) return renderChannels();
+    if(!st.key) return renderMonths();
+    if(st.ch.cad==="monthly") return renderMonthly();
+    if(!st.w) return renderWeeks();
+    renderReport();
+  }
+  function renderChannels(){
+    var h='<p class="h">Alege raportul</p><div class="grid">';
+    CHANNELS.forEach(function(c){
+      h+='<button class="tile '+(c.cad==="monthly"?"mon":"wk")+'" data-ch="'+c.id+'"><span class="t-name">'+esc(c.name)+'</span><span class="t-sub">'+(c.cad==="monthly"?"lunar":"săptămânal")+'</span></button>';
+    });
+    h+='</div>'; stage.innerHTML=h;
+  }
+  function renderMonths(){
+    var ms = monthsFor(st.ch.id);
+    var h='<p class="h">'+esc(st.ch.name)+' — alege luna</p>';
+    if(!ms.length){ h+='<p style="color:#9a8e82">Niciun raport disponibil încă.</p>'; }
+    else{ h+='<div class="grid">'; ms.forEach(function(m){ h+='<button class="tile wk" data-mo="'+m.key+'"><span class="t-name">'+moLabel(m.key)+'</span></button>'; }); h+='</div>'; }
+    h+='<button class="back" data-go="0">← Înapoi la rapoarte</button>';
+    stage.innerHTML=h;
+  }
+  function renderWeeks(){
+    var h='<p class="h">'+esc(st.ch.name)+' · '+moLabel(st.key)+' — alege săptămâna</p><div class="grid">';
+    [1,2,3,4].forEach(function(w){
+      var has=hasWeek(st.ch.id,st.key,w);
+      h+='<button class="week'+(has?'':' empty')+'" '+(has?'data-wk="'+w+'"':'disabled')+'><div class="w-big">S'+w+'</div><div class="w-range">'+WK[w]+(has?'':' · fără raport')+'</div></button>';
+    });
+    h+='</div><button class="back" data-go="1">← Înapoi la luni</button>';
+    stage.innerHTML=h;
+  }
+  function renderMonthly(){
+    var rep=findReport();
+    var h='<p class="h">'+esc(st.ch.name)+' · '+moLabel(st.key)+'</p>';
+    h+= rep ? '<button class="btn" data-show="1">Afișează raport</button>'
+            : '<button class="btn dim" disabled>Fără raport pentru această lună</button>';
+    h+='<div></div><button class="back" data-go="1">← Înapoi la luni</button>';
+    stage.innerHTML=h;
+  }
+  function renderReport(){
+    var rep=findReport();
+    if(!rep){ stage.innerHTML='<p class="h">Raportul nu a fost găsit.</p><button class="back" data-go="1">← Înapoi</button>'; return; }
+    var h='<div class="report"><div class="r-ch">'+esc(st.ch.name)+'</div>'
+        + '<div class="r-title">'+esc(rep.title)+'</div>'
+        + '<div class="r-period">'+esc(rep.period)+'</div>'
+        + '<a class="btn" href="'+rep.path+'">Deschide raportul →</a></div>'
+        + '<button class="back" data-go="'+(st.ch.cad==="weekly"?"2":"1")+'">← Înapoi</button>';
+    stage.innerHTML=h;
+  }
+
+  stage.addEventListener("click",function(e){
+    var t=e.target.closest("[data-ch],[data-mo],[data-wk],[data-go],[data-show]");
+    if(!t) return;
+    if(t.dataset.ch){ st.ch=ch(t.dataset.ch); st.key=null; st.w=null; render(); }
+    else if(t.dataset.mo){ st.key=t.dataset.mo; st.w=null; render(); }
+    else if(t.dataset.wk){ st.w=parseInt(t.dataset.wk,10); render(); }
+    else if(t.dataset.show){ st.w="_"; renderReport(); }
+    else if(t.dataset.go!==undefined){ goTo(parseInt(t.dataset.go,10)); }
+  });
+  crumb.addEventListener("click",function(e){ var t=e.target.closest("[data-go]"); if(t) goTo(parseInt(t.dataset.go,10)); });
+  function goTo(l){ if(l<=0){st.ch=null;st.key=null;st.w=null;} else if(l===1){st.key=null;st.w=null;} else if(l===2){st.w=null;} render(); }
+
+  render();
+})();
+  </script>
+</body>
+</html>

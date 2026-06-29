@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="market-moves">
+<meta name="report:cadence" content="weekly">
+<meta name="report:date" content="2026-05-26">
+<meta name="report:period" content="26 mai – 1 iun 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mișcări de Piață — Săpt. 22 | 26 Mai – 1 Iunie 2026 | Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #7B1C16;
+    --cream: #F5EDE3;
+    --wheat: #F2DAB7;
+    --olive: #B5BD5C;
+    --amber: #C9A227;
+    --yellow: #FBE483;
+    --text: #222222;
+    --white: #FFFFFF;
+    --alert: #FF0300;
+    --terracotta: #dd7e6b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0e8de;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  /* ── HEADER ── */
+  .header {
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 32px 48px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    right: -40px; top: -40px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .logo-area h1 {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 4px;
+  }
+  .logo-area h2 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+  .header-meta {
+    text-align: right;
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+  }
+  .header-meta strong { color: var(--amber); font-size: 13px; }
+  .header-subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 14px;
+    display: flex;
+    gap: 32px;
+  }
+  .header-subtitle span { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); display: inline-block; }
+
+  /* ── CONTAINER ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+
+  /* ── SECTION TITLES ── */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  .section-title h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--burgundy);
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--wheat);
+  }
+  .section-icon {
+    width: 32px; height: 32px;
+    background: var(--burgundy);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  /* ── EXECUTIVE SUMMARY ── */
+  .exec-summary {
+    background: var(--burgundy);
+    color: var(--white);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 8px;
+  }
+  .exec-summary .pill {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--text);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .exec-summary p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ── TOP 3 ── */
+  .top3-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  .top3-card {
+    background: var(--cream);
+    border-radius: 14px;
+    padding: 22px;
+    border-left: 4px solid var(--alert);
+    position: relative;
+  }
+  .top3-card .rank {
+    position: absolute;
+    top: 16px; right: 16px;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgba(123,28,22,0.08);
+    line-height: 1;
+  }
+  .top3-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--burgundy);
+    margin-bottom: 8px;
+    padding-right: 40px;
+  }
+  .top3-card .category-badge {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--burgundy);
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .top3-card p { font-size: 12.5px; color: #444; margin-bottom: 10px; line-height: 1.65; }
+  .top3-card .action-box {
+    background: var(--wheat);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+  .top3-card .action-box strong { color: var(--burgundy); }
+  .top3-card .source {
+    margin-top: 10px;
+    font-size: 10px;
+    color: #888;
+  }
+  .top3-card .source a { color: var(--burgundy); text-decoration: none; }
+
+  /* ── CE AM FĂCUT NOI ── */
+  .noi-card {
+    background: var(--burgundy);
+    color: var(--white);
+    border-radius: 14px;
+    padding: 24px 28px;
+  }
+  .noi-card .pill {
+    background: var(--amber);
+    color: var(--text);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+  .noi-item {
+    display: flex;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .noi-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .noi-emoji { font-size: 20px; flex-shrink: 0; width: 28px; text-align: center; }
+  .noi-content h5 { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: var(--amber); }
+  .noi-content p { font-size: 12px; color: rgba(255,255,255,0.8); line-height: 1.5; }
+  .noi-empty { color: rgba(255,255,255,0.55); font-size: 12.5px; font-style: italic; }
+
+  /* ── COMPETITOR CARDS ── */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+  .comp-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--wheat);
+    position: relative;
+  }
+  .comp-card .comp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--wheat);
+  }
+  .comp-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--burgundy);
+  }
+  .comp-tier {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: var(--wheat);
+    color: var(--burgundy);
+  }
+  .move {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .move:last-of-type { border-bottom: none; }
+  .move-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .impact-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  }
+  .impact-red { background: var(--alert); }
+  .impact-yellow { background: #f5a623; }
+  .impact-green { background: var(--olive); }
+  .move-title { font-size: 12px; font-weight: 600; color: var(--text); }
+  .move-code {
+    font-size: 10px;
+    background: var(--cream);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .move-detail { font-size: 11.5px; color: #555; line-height: 1.55; margin-bottom: 6px; }
+  .move-date { font-size: 10px; color: #999; margin-bottom: 4px; }
+  .move-source { font-size: 10px; }
+  .move-source a { color: var(--burgundy); text-decoration: none; }
+  .comp-insight {
+    margin-top: 12px;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+  .comp-insight strong { color: var(--burgundy); }
+  .no-activity {
+    color: #aaa;
+    font-size: 12px;
+    font-style: italic;
+    padding: 10px 0;
+  }
+
+  /* ── TENDINTE ── */
+  .tendinte-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .tendinta-card {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .tendinta-card .icon { font-size: 24px; margin-bottom: 10px; }
+  .tendinta-card h5 { font-size: 11px; font-weight: 700; color: var(--burgundy); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+  .tendinta-card p { font-size: 12px; color: #555; line-height: 1.55; }
+
+  /* ── ALERTE ── */
+  .alerta-list { display: flex; flex-direction: column; gap: 10px; }
+  .alerta-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 14px 16px;
+    border-left: 4px solid;
+  }
+  .alerta-item.red { border-color: var(--alert); }
+  .alerta-item.orange { border-color: #f5a623; }
+  .alerta-item.green { border-color: var(--olive); }
+  .alerta-icon { font-size: 20px; flex-shrink: 0; }
+  .alerta-content h5 { font-size: 12.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .alerta-content p { font-size: 12px; color: #555; line-height: 1.5; }
+
+  /* ── RECOMANDARI ── */
+  .reco-list { display: flex; flex-direction: column; gap: 12px; }
+  .reco-item {
+    display: flex;
+    gap: 16px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid var(--wheat);
+  }
+  .reco-num {
+    width: 36px; height: 36px;
+    background: var(--burgundy);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 800;
+    flex-shrink: 0;
+  }
+  .reco-content h5 { font-size: 12px; font-weight: 700; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .reco-content p { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .reco-content .timing {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--amber);
+    color: var(--text);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+
+  /* ── FOOTER ── */
+  .report-footer {
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 28px 48px;
+    margin-top: 48px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  .footer-col h6 { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 8px; }
+  .footer-col p, .footer-col li { font-size: 11px; color: rgba(255,255,255,0.7); line-height: 1.8; }
+  .footer-col ul { padding-left: 14px; }
+  .confidence {
+    display: inline-block;
+    padding: 3px 10px;
+    background: var(--amber);
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 1px;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bottom p { font-size: 10px; color: rgba(255,255,255,0.45); }
+  .din2017 { font-size: 13px; font-weight: 700; color: var(--amber); letter-spacing: 2px; }
+
+  @media(max-width:700px){
+    .header { padding: 24px 20px; }
+    .container { padding: 20px 14px; }
+    .header-top { flex-direction: column; gap: 14px; }
+    .header-meta { text-align: left; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-top">
+    <div class="logo-area">
+      <h1>Dr. Ardeleanu Dental Clinics · Intelligence</h1>
+      <h2>MIȘCĂRI DE PIAȚĂ<br>SĂPTĂMÂNA 22 / 2026</h2>
+    </div>
+    <div class="header-meta">
+      <div><strong>26 Mai – 1 Iunie 2026</strong></div>
+      <div>Generat: Luni 1 Iunie, 21:32</div>
+      <div>Skill: competitor-weekly-market-moves v1.0</div>
+      <div>Acoperire: 10 competitori · România</div>
+    </div>
+  </div>
+  <div class="header-subtitle">
+    <span><span class="dot"></span> 10 competitori monitorizați</span>
+    <span><span class="dot"></span> Surse verificate cu link</span>
+    <span><span class="dot"></span> Confidence: MEDIUM</span>
+    <span><span class="dot"></span> Piața dentară privată RO</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ═══ EXECUTIVE SUMMARY ═══ -->
+  <div class="section-title" style="margin-top:0">
+    <div class="section-icon">📋</div>
+    <h3>Executive Summary</h3>
+  </div>
+  <div class="exec-summary">
+    <div class="pill">REZUMAT EXECUTIV</div>
+    <p>
+      Săptămâna 26 mai – 1 iunie 2026 a adus o <strong style="color:var(--yellow)">schimbare legislativă majoră</strong> care afectează întreg sectorul privat stomatologic din România: de la 8 mai 2026 (confirmat public în această săptămână de CMSR), cabinetele nu mai au nevoie de reautorizare sanitară completă pentru extinderea serviciilor — suficientă o notificare administrativă. Aceasta reduce bariera birocrativă pentru toate rețelele și poate <strong style="color:var(--yellow)">accelera expansiunea competitorilor</strong> în specialități noi sau noi locații. Pe plan individual al competitorilor monitorizați, nu au fost identificate mișcări majore confirmate cu surse directe în intervalul strict al săptămânii. Cea mai recentă mișcare relevantă de piață rămâne <strong style="color:var(--yellow)">expansiunea Dental Elite</strong> (3 clinici noi: Ploiești, Buzău, Voluntari — investiție 2 mil. EUR, anunțată la finalul lui aprilie 2026), care semnalează un val de expansiune geografică în orașe secundare — exact spațiul unde Dr. Ardeleanu este deja prezent cu avantaj competitiv. Nicio criză PR sau schimbare de preț confirmată în săptămâna analizată pentru cei 10 competitori direcți.
+    </p>
+  </div>
+
+  <!-- ═══ TOP 3 MIȘCĂRI ═══ -->
+  <div class="section-title">
+    <div class="section-icon">🏆</div>
+    <h3>Top 3 Mișcări ale Săptămânii</h3>
+  </div>
+  <div class="top3-grid">
+
+    <!-- #1 -->
+    <div class="top3-card">
+      <div class="rank">1</div>
+      <div class="category-badge">📊 LEGISLAȚIE · 🔴 IMPACT MARE</div>
+      <h4>CMSR confirmă: fără reautorizare sanitară pentru extinderea serviciilor — în vigoare de la 8 mai 2026</h4>
+      <p>Colegiul Medicilor Stomatologi din România a comunicat public o modificare legislativă intrată în vigoare la 8 mai 2026: autorizația sanitară nu mai conditionează extinderea listei de servicii stomatologice, nu mai e necesar un nou aviz complet — suficientă o notificare administrativă cu certificat-anexă. Impactul: orice rețea (inclusiv competitorii) poate adăuga specialități noi sau lărgi oferta dintr-o clinică existentă fără birocrație.</p>
+      <div class="action-box">
+        <strong>➜ Acțiune recomandată:</strong> Verificați cu echipa juridică dacă există specialități sau servicii pe care le-ați amânat din cauza procedurii de reautorizare. Dacă da, depuneți notificarea și extindeți oferta — acum costul administrativ e minim. Concurenții mari vor mișca rapid.
+      </div>
+      <div class="source">Sursă verificată: <a href="https://dentalnews.ro/simplificare-majora-pentru-cabinetele-stomatologice/" target="_blank">dentalnews.ro · Actualități Stomatologice nr. 110, mai 2026</a></div>
+    </div>
+
+    <!-- #2 -->
+    <div class="top3-card">
+      <div class="rank">2</div>
+      <div class="category-badge">🏢 EXPANSIUNE · 🔴 IMPACT MARE</div>
+      <h4>Dental Elite — 3 clinici noi (Ploiești, Buzău, Voluntari) · investiție 2 mil. EUR</h4>
+      <p>Dental Elite, rețea din București și Brașov, a inaugurat la finalul lui aprilie 2026 trei locații noi: Ploiești (5 cabinete, 250 mp), Voluntari (4 cabinete, 200 mp) și Buzău (4 cabinete, 160 mp), ajungând la 8 clinici și 41 de scaune. Deși Dental Elite nu e în lista celor 10 competitori direcți monitorizați, mișcarea lor confirmă un trend clar: expansiunea rețelelor spre orașe secundare și zona Muntenia — direct în zona de influență Dr. Ardeleanu (Oltenița, Slobozia, Călărași, Giurgiu).</p>
+      <div class="action-box">
+        <strong>➜ Acțiune recomandată:</strong> Reacție PR proactivă — comunicat sau postare cu "Noi suntem deja în Oltenia și Muntenia de ani de zile". Poziționați avantajul de first-mover în zona de sud-est față de noii intrați pe piață.
+      </div>
+      <div class="source">Sursă verificată: <a href="https://www.dentalelite.ro/blog/2-milioane-de-euro-investitie-in-extinderea-dental-elite-3-noi-clinici-stomatologice-inaugurate-in-tara/" target="_blank">dentalelite.ro · Comunicat oficial, ~22 apr. 2026</a></div>
+    </div>
+
+    <!-- #3 -->
+    <div class="top3-card">
+      <div class="rank">3</div>
+      <div class="category-badge">📊 DATE / PIAȚĂ · 🟡 IMPACT MEDIU</div>
+      <h4>Trend confirmat: abonamente stomatologice +32% (2023–2025) — piața intră în faza de maturizare</h4>
+      <p>O analiză Dental Elite publicată la Buzău și preluată în presă confirmă că abonamentele stomatologice (pachete recurente cu igienizări, controale și reduceri la tratamente) au crescut cu 32% în rețelele private între 2023 și 2025. Pacienții caută predictibilitate financiară. Tendința e validată de CMSR și presa de profil: stomatologia privată din România intră într-o fază de maturizare, cu accent pe prevenție și fidelizare.</p>
+      <div class="action-box">
+        <strong>➜ Acțiune recomandată:</strong> Evaluați dacă Dr. Ardeleanu are un produs de tip abonament/plan de prevenție activ și vizibil pe site. Dacă nu, acesta e momentul să lansați — concurenții premium deja o fac.
+      </div>
+      <div class="source">Sursă verificată: <a href="https://reporterbuzoian.ro/2-milioane-de-euro-investitie-in-extinderea-dental-elite-3-noi-clinici-stomatologice-inaugurate-in-tara-ploiesti-buzau-si-voluntari/" target="_blank">reporterbuzoian.ro · apr. 2026</a></div>
+    </div>
+
+  </div>
+
+  <!-- ═══ CE AM FĂCUT NOI ═══ -->
+  <div class="section-title">
+    <div class="section-icon">⭐</div>
+    <h3>Ce Am Făcut Noi — Dr. Ardeleanu</h3>
+  </div>
+  <div class="noi-card">
+    <div class="pill">DR. ARDELEANU · SĂPT. 26 MAI – 1 IUNIE 2026</div>
+    <div class="noi-item">
+      <div class="noi-emoji">🔍</div>
+      <div class="noi-content">
+        <h5>Monitorizare presă — zero apariții media identificate</h5>
+        <p>Nu au fost identificate apariții în presa de business sau media generalistă pentru Dr. Ardeleanu în intervalul monitorizat. Asta poate reflecta o perioadă mai puțin activă din punct de vedere PR sau lipsa unui pitch media inițiat.</p>
+      </div>
+    </div>
+    <div class="noi-item">
+      <div class="noi-emoji">🌐</div>
+      <div class="noi-content">
+        <h5>Site-ul clinicileardeleanu.ro — fără anunțuri noi de expansiune detectate public</h5>
+        <p>Nu au fost identificate pagini noi, comunicări de expansiune sau modificări vizibile la oferta de servicii în intervalul săptămânii analizate.</p>
+      </div>
+    </div>
+    <div class="noi-item" style="border-bottom:none; padding-bottom:0;">
+      <div class="noi-emoji">💡</div>
+      <div class="noi-content">
+        <h5>Self-check: Oportunitate PR ratată?</h5>
+        <p>Intrarea în vigoare a simplificării legislative (8 mai) și tendința de expansiune a pieței erau oportunități de a posta un comentariu de poziționare de expert sau un comunicat "Dr. Ardeleanu, deja prezent acolo unde alții abia ajung". Săptămâna viitoare poate recupera.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MIȘCĂRI PE COMPETITOR ═══ -->
+  <div class="section-title">
+    <div class="section-icon">🏢</div>
+    <h3>Mișcări pe Competitor — Toți 10</h3>
+  </div>
+  <div class="comp-grid">
+
+    <!-- DENT ESTET -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">DENT ESTET</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">dentestet.ro · parte MedLife</div>
+        </div>
+        <div class="comp-tier">premium · tier 1</div>
+      </div>
+      <div class="move">
+        <div class="move-header">
+          <div class="impact-dot impact-yellow"></div>
+          <span class="move-code">👥 TEAM</span>
+          <span class="move-title">Recrutare activă — clinic manager Ploiești + financial controller</span>
+        </div>
+        <div class="move-detail">DENT ESTET caută manager clinică Ploiești și Financial Controller la nivel de grup — semnale de expansiune/consolidare operațională. Prezența pe LinkedIn confirmă activitate de HR în mai 2026.</div>
+        <div class="move-date">📅 Identificat în săptămâna curentă</div>
+        <div class="move-source">Sursă: <a href="https://www.linkedin.com/company/dent-estet" target="_blank">linkedin.com/company/dent-estet</a></div>
+      </div>
+      <div class="move">
+        <div class="move-header">
+          <div class="impact-dot impact-green"></div>
+          <span class="move-code">📊 DATE</span>
+          <span class="move-title">18 clinici · 9 orașe · 185+ medici (confirmat)</span>
+        </div>
+        <div class="move-detail">Profil YouTube actualizat confirmă 18 clinici în 9 orașe și o echipă de peste 185 de medici. Laborator digital Aspen propriu. 200.000+ zâmbete transformate — mesaj de autoritate activat.</div>
+        <div class="move-source">Sursă: <a href="https://www.youtube.com/user/ClinicaDentEstet" target="_blank">youtube.com · DENT ESTET</a></div>
+      </div>
+      <div class="comp-insight">
+        <strong>➜ Insight:</strong> Recrutarea de manager la Ploiești sugerează că DENT ESTET fie deschide o locație nouă acolo, fie consolidează una existentă. De urmărit deschideri noi în Q3 2026.
+      </div>
+    </div>
+
+    <!-- REGINA MARIA DENTAL -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Regina Maria Dental Clinics</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">reginamaria.ro/dental · fostă Dr. Leahu</div>
+        </div>
+        <div class="comp-tier">premium · tier 1</div>
+      </div>
+      <div class="move">
+        <div class="move-header">
+          <div class="impact-dot impact-green"></div>
+          <span class="move-code">📋 OPERAȚIONAL</span>
+          <span class="move-title">Program 1–2 mai 2026 comunicat — activitate operațională standard</span>
+        </div>
+        <div class="move-detail">Site-ul reginamaria.ro a afișat programul locațiilor pentru sărbătoarea de 1–2 mai 2026. Nu au fost identificate anunțuri de expansiune, lansare de servicii sau campanii promoționale confirmate în intervalul strict analizat.</div>
+        <div class="move-date">📅 Comunicat anterior săptămânii</div>
+        <div class="move-source">Sursă: <a href="https://www.reginamaria.ro/stiri/clinicile-dentare-dr-leahu-se-alatura-retelei-regina-maria" target="_blank">reginamaria.ro</a></div>
+      </div>
+      <div class="no-activity">Fără mișcări majore detectate în săptămâna 26 mai – 1 iunie 2026.</div>
+      <div class="comp-insight">
+        <strong>➜ Insight:</strong> Regina Maria Dental rămâne cea mai extinsă rețea (13 orașe, 19 clinici). Lipsa unui anunț public săptămâna asta nu înseamnă inactivitate — monitorizați secțiunea /stiri săptămâna viitoare.
+      </div>
+    </div>
+
+    <!-- LIFE DENTAL SPA -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Life Dental Spa</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">lifedentalspa.ro · laser dental</div>
+        </div>
+        <div class="comp-tier">premium · tier 1</div>
+      </div>
+      <div class="no-activity">Fără mișcări majore detectate și confirmate cu sursă în săptămâna analizată. Profil Instagram activ (13K followers, 2.283 posts) — monitorizare socială recomandată în raportul Instagram.</div>
+      <div class="comp-insight">
+        <strong>➜ Insight:</strong> Life Dental Spa a comunicat în 2023 planuri ambițioase de extindere la 15+ clinici. Verificați dacă au atins ținta — ar putea intra în competiție directă în orașele dvs.
+      </div>
+    </div>
+
+    <!-- SAVIEM SMILE -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Saviem Smile</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">saviem-smile.ro</div>
+        </div>
+        <div class="comp-tier">mid · tier 2</div>
+      </div>
+      <div class="no-activity">Fără mișcări detectate în presă sau online în intervalul analizat.</div>
+    </div>
+
+    <!-- DENTAL BLUE -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Dental Blue International</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">dentalblue.ro</div>
+        </div>
+        <div class="comp-tier">premium · tier 2</div>
+      </div>
+      <div class="no-activity">Fără mișcări detectate în presă sau online în intervalul analizat.</div>
+    </div>
+
+    <!-- JC DENT -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">JC Dent</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">jcdent.ro</div>
+        </div>
+        <div class="comp-tier">mid · tier 2</div>
+      </div>
+      <div class="no-activity">Fără mișcări detectate în presă sau online în intervalul analizat.</div>
+    </div>
+
+    <!-- DR. MALAMA -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Clinica Dr. Malama</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">clinicadrmalama.ro</div>
+        </div>
+        <div class="comp-tier">mid · tier 2</div>
+      </div>
+      <div class="no-activity">Fără mișcări detectate în presă sau online în intervalul analizat.</div>
+    </div>
+
+    <!-- ARK MED -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Ark Med Clinic</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">arkmed.ro</div>
+        </div>
+        <div class="comp-tier">mid · tier 2</div>
+      </div>
+      <div class="no-activity">Fără mișcări detectate în presă sau online în intervalul analizat.</div>
+    </div>
+
+    <!-- ELIDADENT -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Elidadent</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">elidadent.ro · elidadentforkids.ro</div>
+        </div>
+        <div class="comp-tier">mid · tier 2</div>
+      </div>
+      <div class="no-activity">Fără mișcări detectate în presă sau online în intervalul analizat. De monitorizat sub-brandul Elidadent for KIDS — concurent direct cu Dental Safari.</div>
+    </div>
+
+    <!-- DENTRUST -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div>
+          <div class="comp-name">Dentrust</div>
+          <div style="font-size:10px;color:#888;margin-top:2px;">dentrust.ro</div>
+        </div>
+        <div class="comp-tier">mid · tier 2</div>
+      </div>
+      <div class="no-activity">Fără mișcări detectate în presă sau online în intervalul analizat.</div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TENDINȚE ═══ -->
+  <div class="section-title">
+    <div class="section-icon">📈</div>
+    <h3>Tendințe pe Piață</h3>
+  </div>
+  <div class="tendinte-grid">
+    <div class="tendinta-card">
+      <div class="icon">📍</div>
+      <h5>Expansiune geografică</h5>
+      <p>Rețelele mari se mută spre orașe secundare (Ploiești, Buzău, Voluntari). Dr. Ardeleanu are avantaj de first-mover în sud-estul României. Trebuie apărat activ.</p>
+    </div>
+    <div class="tendinta-card">
+      <div class="icon">📋</div>
+      <h5>Abonamente & prevenție</h5>
+      <p>+32% abonamente stomatologice în 2023–2025. Pacienții vor pachete recurente cu predictibilitate financiară — un produs pe care trebuie să-l aveți vizibil.</p>
+    </div>
+    <div class="tendinta-card">
+      <div class="icon">⚖️</div>
+      <h5>Reglementare favorabilă</h5>
+      <p>Simplificarea autorizării (8 mai 2026) reduce bariera birocrativă. Toți jucătorii pot adăuga specialități mai rapid — o sabie cu două tăișuri.</p>
+    </div>
+    <div class="tendinta-card">
+      <div class="icon">🤖</div>
+      <h5>Digitalizare & AI</h5>
+      <p>DENT ESTET cu laboratorul digital Aspen, Dr. Ardeleanu cu Protocolul AI. Mesajele de tehnologie devin standard — diferențiatorul e execuția și comunicarea.</p>
+    </div>
+  </div>
+
+  <!-- ═══ ALERTE ═══ -->
+  <div class="section-title">
+    <div class="section-icon">🚨</div>
+    <h3>Alerte</h3>
+  </div>
+  <div class="alerta-list">
+    <div class="alerta-item red">
+      <div class="alerta-icon">🔴</div>
+      <div class="alerta-content">
+        <h5>EXPANSIUNE GEOGRAFICĂ ACCELERATĂ — zona de sud-est sub presiune</h5>
+        <p>Dental Elite a deschis în Ploiești și Buzău. Urmăriți dacă DENT ESTET (recrutare Ploiești) deschide și el acolo. Zona Muntenia-Sud devine câmp de bătălie. Dr. Ardeleanu are pozițiile Oltenița, Slobozia, Călărași, Giurgiu — mesajul "suntem deja acolo" trebuie activat proactiv în comunicare.</p>
+      </div>
+    </div>
+    <div class="alerta-item orange">
+      <div class="alerta-icon">⚠️</div>
+      <div class="alerta-content">
+        <h5>LEGISLAȚIE — Simplificarea autorizării intră rapid în practica competitorilor</h5>
+        <p>Dacă nu ați verificat deja dacă beneficiați de noua procedură simplificată, faceți-o imediat. Competitorii mari au echipe juridice și vor acționa primii. Sursa: <a href="https://dentalnews.ro/simplificare-majora-pentru-cabinetele-stomatologice/" target="_blank">dentalnews.ro, mai 2026</a>.</p>
+      </div>
+    </div>
+    <div class="alerta-item green">
+      <div class="alerta-icon">💸</div>
+      <div class="alerta-content">
+        <h5>PREȚ / PROMO — Nicio schimbare majoră detectată în săptămână</h5>
+        <p>Nu au fost identificate promoții agresive sau schimbări de preț publice la cei 10 competitori monitorizați în intervalul 26 mai – 1 iunie 2026. Piața pare stabilă pe componenta de preț.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ RECOMANDĂRI TACTICE ═══ -->
+  <div class="section-title">
+    <div class="section-icon">🎯</div>
+    <h3>Recomandări Tactice</h3>
+  </div>
+  <div class="reco-list">
+
+    <div class="reco-item">
+      <div class="reco-num">1</div>
+      <div class="reco-content">
+        <div class="timing">ACȚIUNE URGENTĂ — Săptămâna aceasta</div>
+        <h5>Verificare juridică: beneficiați de simplificarea autorizării?</h5>
+        <p>Contactați echipa juridică/managerul de clinici și verificați dacă există servicii sau specialități pe care le-ați amânat din cauza birocrației de reautorizare. Dacă da, inițiați notificarea administrativă imediat. Cost: zero. Beneficiu: extindere mai rapidă a ofertei fără investiție suplimentară în autorizații. Sursa legislativă: Ordinul intrat în vigoare la <strong>8 mai 2026</strong>, confirmat de CMSR pe dentalnews.ro.</p>
+      </div>
+    </div>
+
+    <div class="reco-item">
+      <div class="reco-num">2</div>
+      <div class="reco-content">
+        <div class="timing">ACȚIUNE TACTICĂ — Luna iunie</div>
+        <h5>Postare / comunicat "First Mover" în zona de sud-est</h5>
+        <p>Lansați un content piece (postare LinkedIn/Instagram sau comunicat de presă) care să sublinieze că Dr. Ardeleanu este prezent în Oltenița, Slobozia, Călărași, Giurgiu, Focșani <strong>din 2017–2022</strong> — în timp ce rețelele mari abia acum descoperă zona. Mesaj cheie: <em>"Noi suntem clinica familiei tale de ani de zile, acolo unde alții tocmai ajung."</em> Timingul este perfect: Dental Elite tocmai a deschis în Buzău și Voluntari.</p>
+      </div>
+    </div>
+
+    <div class="reco-item">
+      <div class="reco-num">3</div>
+      <div class="reco-content">
+        <div class="timing">OBSERVAȚIE STRATEGICĂ — Management</div>
+        <h5>Abonamentele stomatologice: evaluați dacă aveți un produs vizibil și competitiv</h5>
+        <p>Piața confirmă +32% creștere a interesului pentru abonamente dentare. Verificați dacă Dr. Ardeleanu are un pachet de prevenție/abonament activ, vizibil pe site și promovat. Dacă nu, acesta devine o prioritate de produs pentru H2 2026 — înainte ca jucătorii mari să domineze spațiul comunicațional pe această nișă. Modelul "x RON/lună pentru 2 igienizări + reduceri" e simplu de lansat și cu ROI rapid în retenție de pacienți.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /container -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="report-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h6>Date de Verificare</h6>
+      <ul>
+        <li>Surse consultate: ~18</li>
+        <li>Surse confirmate cu conținut: 8</li>
+        <li>Surse inaccesibile/paywall: 0</li>
+        <li>Surse fără rezultate recente: ~10</li>
+        <li>Interval monitorizat: 26 mai – 1 iun. 2026</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>Calitate Raport</h6>
+      <p>Nivel de încredere: <span class="confidence">MEDIUM</span></p>
+      <p style="margin-top:8px">Mișcările Tier 1 (DENT ESTET, Regina Maria Dental, Life Dental Spa) sunt parțial acoperite — presa de business nu a publicat știri noi verificabile în intervalul strict. Mișcările legislative și de piață sunt FULLY VERIFIED.</p>
+    </div>
+    <div class="footer-col">
+      <h6>Calendarul Următor</h6>
+      <ul>
+        <li>Raport market moves: Duminică 7 iunie</li>
+        <li>Raport Facebook: Duminică 7 iunie</li>
+        <li>Raport Instagram: Duminică 7 iunie</li>
+        <li>Raport Google Ads: Duminică 7 iunie</li>
+        <li>Orchestrator complet: Duminică 7 iunie</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Dr. Ardeleanu Dental Clinics · clinicileardeleanu.ro · 031 99 63 · Generat automat: skill competitor-weekly-market-moves v1.0 · Luni 1 Iunie 2026, 21:32 UTC</p>
+    <div class="din2017">DIN 2017</div>
+  </div>
+</div>
+
+</body>
+</html>

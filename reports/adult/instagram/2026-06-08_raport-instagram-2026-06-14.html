@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="report:brand" content="adult">
+<meta name="report:channel" content="instagram">
+<meta name="report:cadence" content="weekly">
+<meta name="report:date" content="2026-06-08">
+<meta name="report:period" content="8–14 iun 2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport Instagram Săptămânal · 8–14 iunie 2026 · Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#7B1C16; --navy2:#5e1511; --teal:#C9A227; --teal-l:#FBE483;
+    --gold:#C9A227; --ink:#222222; --muted:#7a6a62; --line:#ece2d4;
+    --bg:#F5EDE3; --card:#ffffff; --us:#7B1C16; --us-bg:#f9f0df;
+    --warn:#b45309; --good:#5e6a1e; --bad:#b91c1c;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Poppins',sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;font-size:15px;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 80px;}
+  header.masthead{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;
+    padding:40px 20px 34px;margin-bottom:0;}
+  header.masthead .inner{max-width:980px;margin:0 auto;}
+  .kicker{display:inline-block;background:rgba(201,162,39,.18);color:var(--teal-l);
+    font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    padding:5px 12px;border-radius:30px;margin-bottom:14px;}
+  header.masthead h1{margin:0 0 6px;font-family:'Playfair Display',serif;
+    font-size:32px;line-height:1.2;font-weight:900;}
+  header.masthead .period{font-size:16px;color:#e9d3a3;font-weight:500;}
+  header.masthead .brandline{margin-top:18px;font-size:13px;color:rgba(255,255,255,.72);
+    border-top:1px solid rgba(255,255,255,.16);padding-top:14px;}
+  h2{font-size:21px;font-weight:800;color:var(--navy);margin:42px 0 16px;
+    display:flex;align-items:center;gap:10px;}
+  h2 .bar{width:5px;height:22px;background:var(--teal);border-radius:3px;display:inline-block;}
+  h3{font-size:16px;color:var(--navy2);margin:24px 0 10px;}
+  p{margin:0 0 14px;}
+  .summary{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 26px;margin-top:28px;box-shadow:0 1px 3px rgba(123,28,22,.06);}
+  .summary ul{margin:0;padding-left:0;list-style:none;}
+  .summary li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid var(--line);}
+  .summary li:last-child{border-bottom:none;}
+  .summary li:before{content:"";position:absolute;left:6px;top:17px;width:8px;height:8px;
+    background:var(--teal);border-radius:50%;}
+  .summary li b{color:var(--navy);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;
+    overflow:hidden;box-shadow:0 1px 3px rgba(123,28,22,.07);font-size:14px;border:1px solid var(--line);}
+  th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-weight:600;font-size:13px;}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);}
+  tr:last-child td{border-bottom:none;}
+  tr.us{background:var(--us-bg);}
+  tr.us td{font-weight:700;color:var(--navy);}
+  tr.us td:first-child:before{content:"°5 ";color:var(--gold);}
+  tr.tier-sep td{background:#efe6d8;color:var(--muted);font-size:12px;font-weight:700;
+    text-transform:uppercase;letter-spacing:1px;padding:8px 14px;}
+  .num{text-align:center;font-variant-numeric:tabular-nums;}
+  .rank{font-weight:800;color:var(--teal);text-align:center;}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;}
+  .pill.r{background:#f6e3e1;color:#7B1C16;} .pill.v{background:#eef0db;color:#5e6a1e;}
+  .pill.c{background:#eef0db;color:#5e6a1e;} .pill.p{background:#f8eecb;color:#8a6a13;}
+  .cards{display:grid;gap:18px;margin-top:8px;}
+  .pcard{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:0;overflow:hidden;box-shadow:0 1px 3px rgba(123,28,22,.07);}
+  .pcard.us{border:2px solid var(--navy);}
+  .pcard .phead{padding:14px 20px;border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .pcard.us .phead{background:var(--us-bg);}
+  .pcard .phead .nm{font-weight:800;color:var(--navy);font-size:16px;}
+  .pcard .phead .hd{font-size:13px;color:var(--muted);}
+  .pcard .phead a{color:var(--navy);text-decoration:none;}
+  .pcard .pbody{padding:16px 20px;}
+  .pcard .stat-row{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px;
+    padding-bottom:14px;border-bottom:1px dashed var(--line);}
+  .stat{text-align:center;}
+  .stat .n{font-size:22px;font-weight:800;color:var(--navy);line-height:1;}
+  .stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:4px;}
+  .post{padding:9px 0;border-bottom:1px solid #f1ebe1;font-size:13.5px;}
+  .post:last-child{border-bottom:none;}
+  .post .meta{color:var(--muted);font-size:12px;}
+  .post .cap{color:var(--ink);}
+  .post a{color:var(--navy);text-decoration:none;font-size:12px;}
+  .obs{margin-top:14px;background:#faf6ef;border-left:3px solid var(--teal);
+    padding:10px 14px;border-radius:0 8px 8px 0;font-size:13.5px;}
+  .obs b{color:var(--navy);}
+  .alert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+  .alert{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-size:13.5px;}
+  .alert .an{font-weight:700;color:var(--navy);}
+  .alert .ad{color:var(--muted);font-size:12px;}
+  .nextbox{background:linear-gradient(135deg,#7B1C16,#5e1511);color:#fff;border-radius:14px;padding:24px 28px;margin-top:10px;}
+  .nextbox h3{color:var(--teal-l);margin-top:0;}
+  .nextbox ol{margin:0;padding-left:20px;}
+  .nextbox li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .nextbox li:last-child{border-bottom:none;}
+  .nextbox b{color:#fff;}
+  .nextbox .sub{color:#e9d3a3;font-size:13px;}
+  .trend{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;}
+  .trend ul{margin:0;padding-left:18px;}
+  .trend li{padding:5px 0;}
+  footer.foot{margin-top:50px;background:#7B1C16;color:#e3cfa8;border-radius:14px;padding:22px 26px;font-size:13px;}
+  footer.foot b{color:#fff;}
+  footer.foot .row{padding:5px 0;}
+  .conf{display:inline-block;background:var(--good);color:#fff;font-weight:700;
+    font-size:12px;padding:3px 10px;border-radius:20px;}
+  .warn-note{background:#fcf3e3;border:1px solid #e7c98f;border-radius:10px;padding:12px 16px;
+    font-size:13.5px;color:#7c4a12;margin:14px 0;}
+  .warn-note b{color:#9a5a12;}
+  @media(max-width:640px){
+    header.masthead h1{font-size:25px;}
+    table{font-size:12.5px;} th,td{padding:8px 8px;}
+    .stat-row{gap:12px;}
+  }
+</style>
+</head>
+<body>
+<a href="../../../index.html" id="mir-back" style="display:block;background:#7B1C16;color:#fff;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:14px;font-weight:500;padding:11px 20px;letter-spacing:.3px">&larr;&nbsp; Înapoi la rapoarte</a>
+<header class="masthead">
+  <div class="inner">
+    <span class="kicker">Instagram · Raport Săptămânal · Săpt. 24</span>
+    <h1>Inteligență Competitivă Instagram</h1>
+    <div class="period">8 – 14 iunie 2026 · Piața stomatologică România</div>
+    <div class="brandline">Clinicile Dentare Dr. Ardeleanu · Monitorizare organic + Meta Ads (placement Instagram)</div>
+  </div>
+</header>
+<div class="wrap">
+
+  <!-- PE SCURT -->
+  <div class="summary">
+    <h2 style="margin-top:0"><span class="bar"></span>Pe scurt</h2>
+    <ul>
+      <li><b>Noi (Dr. Ardeleanu)</b> am avut o săptămână solidă pe organic — <b>7 postări</b> (3 reels, 2 carusele, 2 foto) — în plin nivel competitiv cu liderii premium, plus <b>~40 reclame Meta active</b> pe placement Instagram.</li>
+      <li><b>Regina Maria Dental</b> domină reach-ul organic: un reel pediatric a strâns <b>59.692 vizualizări</b> — de departe cel mai performant conținut al săptămânii din întreaga piață.</li>
+      <li><b>Life Dental Spa</b> e regele paid-ului — <b>~210 reclame Meta active</b> pe Instagram, dar engagement-ul organic e foarte slab (multe postări cu 0–5 like-uri).</li>
+      <li><b>Dental Blue</b> e dormant pe organic (ultima postare feb. 2024), dar pompează <b>19+ reclame Meta</b> — strategie 100% paid, fără prezență organică.</li>
+      <li>Pe pediatric, <b>DENT ESTET 4 KIDS</b> a fost extrem de activ (<b>9 postări</b>); noi nu avem încă un cont pediatric dedicat pe Instagram — gol strategic de evaluat.</li>
+    </ul>
+  </div>
+
+  <!-- VOLUME -->
+  <h2><span class="bar"></span>Volumele săptămânii</h2>
+  <table>
+    <thead>
+      <tr><th>Brand</th><th class="num">Feed (foto+carusel)</th><th class="num">Reels</th><th class="num">Total postări</th><th class="num">Reclame IG active*</th><th class="num">Rang organic</th></tr>
+    </thead>
+    <tbody>
+      <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td class="num">4</td><td class="num">3</td><td class="num">7</td><td class="num">~40</td><td class="rank">2</td></tr>
+      <tr><td>DENT ESTET</td><td class="num">4</td><td class="num">4</td><td class="num">8</td><td class="num">10</td><td class="rank">1</td></tr>
+      <tr><td>Life Dental Spa</td><td class="num">4</td><td class="num">3</td><td class="num">7</td><td class="num">~210</td><td class="rank">2</td></tr>
+      <tr><td>Regina Maria Dental</td><td class="num">2</td><td class="num">3</td><td class="num">5</td><td class="num">~86</td><td class="rank">4</td></tr>
+      <tr><td>Elidadent</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">0</td><td class="rank">5</td></tr>
+      <tr><td>Dental Blue International</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19+</td><td class="rank">—</td></tr>
+      <tr class="tier-sep"><td colspan="6">Conturi pediatrice</td></tr>
+      <tr><td>DENT ESTET 4 KIDS</td><td class="num">5</td><td class="num">4</td><td class="num">9</td><td class="num">4</td><td class="rank">—</td></tr>
+      <tr><td>Elidadent for KIDS</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">0</td><td class="rank">—</td></tr>
+      <tr class="tier-sep"><td colspan="6">Tier 2 (alerte)</td></tr>
+      <tr><td>Dent Priority</td><td class="num">2</td><td class="num">5</td><td class="num">7</td><td class="num">~57</td><td class="rank">—</td></tr>
+      <tr><td>Clinica Dentalist</td><td class="num">4</td><td class="num">2</td><td class="num">6</td><td class="num">2</td><td class="rank">—</td></tr>
+      <tr><td>Edent Clinic</td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">n/a</td><td class="rank">—</td></tr>
+      <tr><td>Dr. Malama</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">n/a</td><td class="rank">—</td></tr>
+      <tr><td>JC Dent</td><td colspan="4" class="num" style="color:var(--muted)">cont Instagram inaccesibil (handle inexistent)</td><td class="rank">—</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12.5px;color:var(--muted);margin-top:8px">*Reclame IG active = reclame din Meta Ads Library cu placement Instagram confirmat. Cifrele „~" reprezintă totalul rezultatelor afișate de bibliotecă; eșantionul verificat a confirmat placement Instagram pe toate reclamele inspectate. Reclamele Meta sunt comune FB/IG și nu sunt limitate la fereastra 8–14 iunie.</p>
+
+  <!-- DISTRIBUTIE -->
+  <h2><span class="bar"></span>Distribuția tipurilor de conținut (organic)</h2>
+  <table>
+    <thead><tr><th>Brand</th><th class="num">% Reels</th><th class="num">% Carusel</th><th class="num">% Foto</th><th>Observație format</th></tr></thead>
+    <tbody>
+      <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td class="num">43%</td><td class="num">29%</td><td class="num">28%</td><td>Mix echilibrat, reels pe teme „virale" (zodii)</td></tr>
+      <tr><td>DENT ESTET</td><td class="num">50%</td><td class="num">37%</td><td class="num">13%</td><td>Reels educativ + carusele corporate</td></tr>
+      <tr><td>Regina Maria Dental</td><td class="num">60%</td><td class="num">40%</td><td class="num">0%</td><td>Reels-first, zero foto singulară</td></tr>
+      <tr><td>Life Dental Spa</td><td class="num">43%</td><td class="num">29%</td><td class="num">28%</td><td>Volum mare, conținut „template" repetitiv</td></tr>
+      <tr><td>Elidadent</td><td class="num">67%</td><td class="num">33%</td><td class="num">0%</td><td>Volum mic, reels scurte</td></tr>
+    </tbody>
+  </table>
+
+  <!-- REELS FOCUS -->
+  <h2><span class="bar"></span>Reels — focus pe reach</h2>
+  <p>Reels-urile rămân cel mai mare motor de reach pe Instagram. Top performeri organici ai săptămânii (vizualizări reale afișate de IG):</p>
+  <table>
+    <thead><tr><th>Brand</th><th>Reel (temă)</th><th class="num">Vizualizări</th><th class="num">Likes</th><th>Data</th></tr></thead>
+    <tbody>
+      <tr><td>Regina Maria</td><td>Carii pe dinții de lapte — tratăm sau așteptăm? (pedo)</td><td class="num">59.692</td><td class="num">94</td><td>08 iun</td></tr>
+      <tr><td>Life Dental Spa</td><td>Stresul și sistemul nervos vs. sănătatea orală</td><td class="num">33.668</td><td class="num">55</td><td>09 iun</td></tr>
+      <tr><td>Regina Maria</td><td>POV: stomatologii care te conving să vii la control</td><td class="num">14.814</td><td class="num">112</td><td>11 iun</td></tr>
+      <tr><td>DENT ESTET</td><td>Rezultatele nu sunt întâmplătoare (implantologie)</td><td class="num">6.692</td><td class="num">59</td><td>08 iun</td></tr>
+      <tr><td>DENT ESTET</td><td>Implant inserat în aceeași ședință</td><td class="num">5.521</td><td class="num">17</td><td>11 iun</td></tr>
+      <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td>Ce spune zodia ta despre vizita la dentist? 🔮</td><td class="num">3.792</td><td class="num">56</td><td>09 iun</td></tr>
+      <tr><td>Dent Priority</td><td>(reel implantologie)</td><td class="num">3.295</td><td class="num">96</td><td>09 iun</td></tr>
+      <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td>Extracții până la implanturi, fără durere</td><td class="num">2.397</td><td class="num">11</td><td>12 iun</td></tr>
+    </tbody>
+  </table>
+  <div class="obs"><b>Citire strategică:</b> reach-ul mare se concentrează pe două teme — <b>conținut pediatric</b> (Regina Maria, 59k) și <b>format „POV/relatable" + umor</b> (Regina Maria 14k, reel-ul nostru de zodii 3,8k). Reel-ul nostru „zodii" a fost cel mai bun organic al nostru — formatul light/relatable funcționează și pentru noi. Conținutul pur tehnic-corporate (Virtual Check-up DENT ESTET, 502 views) sub-performează constant.</div>
+
+  <!-- PROFIL CU PROFIL -->
+  <h2><span class="bar"></span>Activitate profil cu profil (Tier 1)</h2>
+  <div class="cards">
+
+    <!-- NOI -->
+    <div class="pcard us">
+      <div class="phead"><span class="nm">★ Dr. Ardeleanu (NOI)</span><span class="hd"><a href="https://www.instagram.com/dr.ardeleanu/">@dr.ardeleanu</a></span></div>
+      <div class="pbody">
+        <div class="stat-row">
+          <div class="stat"><div class="n">7</div><div class="l">postări</div></div>
+          <div class="stat"><div class="n">3</div><div class="l">reels</div></div>
+          <div class="stat"><div class="n">~40</div><div class="l">reclame IG</div></div>
+          <div class="stat"><div class="n">3.792</div><div class="l">best reel views</div></div>
+        </div>
+        <div class="post"><span class="meta">09 iun · <span class="pill r">reel</span></span> <span class="cap">„Ce spune zodia ta despre vizita la dentist?" — 3.792 views / 56 likes</span> · <a href="https://www.instagram.com/reel/DZXLq9GorWw/">link</a></div>
+        <div class="post"><span class="meta">10 iun · <span class="pill r">reel</span></span> <span class="cap">„Ești prea bătrân pentru aparat dentar?" — 2.669 views / 20 likes</span> · <a href="https://www.instagram.com/reel/DZZRrtyoWjB/">link</a></div>
+        <div class="post"><span class="meta">12 iun · <span class="pill r">reel</span></span> <span class="cap">Extracții → implanturi fără durere — 2.397 views / 11 likes</span> · <a href="https://www.instagram.com/reel/DZfIxkvoo1i/">link</a></div>
+        <div class="post"><span class="meta">11 iun · <span class="pill p">foto</span></span> <span class="cap">Testimonial pacient „îmi crește stima de sine" — 19 likes / 2 comm</span> · <a href="https://www.instagram.com/p/DZcBe4DlqDT/">link</a></div>
+        <div class="post"><span class="meta">10–11 iun · <span class="pill c">2× carusel</span></span> <span class="cap">Durere de dinți / „ți-e dor să muști dintr-un măr" — 10–13 likes</span></div>
+        <div class="post"><span class="meta">13 iun · <span class="pill p">foto</span></span> <span class="cap">Promo podcast Ideaticu' (Vlad Gafencu) — 3 likes</span> · <a href="https://www.instagram.com/p/DZhfHwOtcmj/">link</a></div>
+        <div class="obs"><b>Observații:</b> volum bun și consecvent. Reels-urile noastre conduc reach-ul, iar formatul „relatable" (zodii) ne-a dat cel mai bun rezultat. Postarea-promo de podcast a sub-performat (3 likes) — conținutul de tip „anunț" fără hook vizual nu prinde. Recomandare: mai multe reels relatable + un singur post „corporate" pe săptămână.</div>
+      </div>
+    </div>
+
+    <!-- DENT ESTET -->
+    <div class="pcard">
+      <div class="phead"><span class="nm">DENT ESTET</span><span class="hd"><a href="https://www.instagram.com/dent.estet/">@dent.estet</a> · 7.207 followers</span></div>
+      <div class="pbody">
+        <div class="stat-row">
+          <div class="stat"><div class="n">8</div><div class="l">postări</div></div>
+          <div class="stat"><div class="n">4</div><div class="l">reels</div></div>
+          <div class="stat"><div class="n">10</div><div class="l">reclame IG</div></div>
+          <div class="stat"><div class="n">128</div><div class="l">best post likes</div></div>
+        </div>
+        <div class="post"><span class="meta">14 iun · <span class="pill c">carusel 6</span></span> <span class="cap">„La mulți ani, Andreea Necula!" (10 ani în echipă) — 128 likes / 53 comm</span> · <a href="https://www.instagram.com/p/DZjpqH1jA-4/">link</a></div>
+        <div class="post"><span class="meta">08 iun · <span class="pill r">reel</span></span> <span class="cap">Implantologie „rezultatele nu sunt întâmplătoare" — 6.692 views / 59 likes</span> · <a href="https://www.instagram.com/reel/DZUbHFPj_fb/">link</a></div>
+        <div class="post"><span class="meta">11 iun · <span class="pill r">reel</span></span> <span class="cap">Implant inserat în aceeași ședință — 5.521 views</span> · <a href="https://www.instagram.com/reel/DZcXLsBCBP_/">link</a></div>
+        <div class="post"><span class="meta">12 iun · <span class="pill r">reel</span></span> <span class="cap">MODJAW 4D — analiză mișcări mandibulă — 5.227 views</span> · <a href="https://www.instagram.com/reel/DZe7-zZDUzR/">link</a></div>
+        <div class="post"><span class="meta">14 iun · <span class="pill c">carusel 5</span></span> <span class="cap">Testimoniale pacienți (zâmbete recâștigate) — 14 likes</span></div>
+        <div class="obs"><b>Observații:</b> mix matur — reels tehnice (tehnologie de vârf: MODJAW 4D, implant imediat) + conținut de cultură internă care a generat cel mai mare engagement al lor (aniversare angajat, 53 comentarii). Strategia „employer branding" le merge foarte bine. 10 reclame Meta active pe IG.</div>
+      </div>
+    </div>
+
+    <!-- REGINA MARIA -->
+    <div class="pcard">
+      <div class="phead"><span class="nm">Regina Maria Dental</span><span class="hd"><a href="https://www.instagram.com/reginamariadentalclinics/">@reginamariadentalclinics</a></span></div>
+      <div class="pbody">
+        <div class="stat-row">
+          <div class="stat"><div class="n">5</div><div class="l">postări</div></div>
+          <div class="stat"><div class="n">3</div><div class="l">reels</div></div>
+          <div class="stat"><div class="n">~86</div><div class="l">reclame IG</div></div>
+          <div class="stat"><div class="n">59.692</div><div class="l">best reel views</div></div>
+        </div>
+        <div class="post"><span class="meta">08 iun · <span class="pill r">reel</span></span> <span class="cap">Carii pe dinții de lapte — tratăm sau așteptăm? — 59.692 views / 94 likes</span> · <a href="https://www.instagram.com/reel/DZU9_MDIog0/">link</a></div>
+        <div class="post"><span class="meta">11 iun · <span class="pill r">reel</span></span> <span class="cap">„POV: stomatologii care te conving să vii la control" — 14.814 views / 112 likes</span> · <a href="https://www.instagram.com/reel/DZckDIiI_cc/">link</a></div>
+        <div class="post"><span class="meta">14 iun · <span class="pill r">reel</span></span> <span class="cap">Încrederea unui copil se construiește în pași mici — 3.792 views / 53 likes</span> · <a href="https://www.instagram.com/reel/DZkwuLHomUp/">link</a></div>
+        <div class="post"><span class="meta">12 iun · <span class="pill c">carusel 3</span></span> <span class="cap">Soluții adaptate când problemele dentare îți schimbă viața — 6 likes</span></div>
+        <div class="post"><span class="meta">15 iun · <span class="pill c">carusel 9</span></span> <span class="cap">Eveniment fizic — sănătate, mișcare, prevenție (parteneri)</span></div>
+        <div class="obs"><b>Observații:</b> cel mai mare reach organic din piață, condus de <b>conținut pediatric</b> și <b>format relatable/POV</b>. Strategie reels-first (zero foto). ~86 reclame Meta active — al doilea spender ca volum. Aceasta e clinica de urmărit pe reach.</div>
+      </div>
+    </div>
+
+    <!-- LIFE DENTAL SPA -->
+    <div class="pcard">
+      <div class="phead"><span class="nm">Life Dental Spa</span><span class="hd"><a href="https://www.instagram.com/lifedentalspa/">@lifedentalspa</a></span></div>
+      <div class="pbody">
+        <div class="stat-row">
+          <div class="stat"><div class="n">7</div><div class="l">postări</div></div>
+          <div class="stat"><div class="n">3</div><div class="l">reels</div></div>
+          <div class="stat"><div class="n">~210</div><div class="l">reclame IG</div></div>
+          <div class="stat"><div class="n">33.668</div><div class="l">best reel views</div></div>
+        </div>
+        <div class="post"><span class="meta">09 iun · <span class="pill r">reel</span></span> <span class="cap">Stresul și sistemul nervos vs. sănătatea orală — 33.668 views / 55 likes</span> · <a href="https://www.instagram.com/reel/DZW6Zfus7Fg/">link</a></div>
+        <div class="post"><span class="meta">11 iun · <span class="pill r">reel</span></span> <span class="cap">Alternativă la proteza mobilă — 868 views / 0 likes</span></div>
+        <div class="post"><span class="meta">10 iun · <span class="pill c">carusel 9</span></span> <span class="cap">7 medicamente care afectează sănătatea orală — 13 likes</span></div>
+        <div class="post"><span class="meta">12 iun · <span class="pill c">carusel 8</span></span> <span class="cap">Sănătatea orală și îmbătrânirea organismului — 0 likes</span></div>
+        <div class="post"><span class="meta">13–14 iun · <span class="pill p">2× foto</span></span> <span class="cap">Detartraj / albire — 1–4 likes</span></div>
+        <div class="obs"><b>Observații:</b> paradox clar — <b>cel mai mare buget paid din piață (~210 reclame)</b> dar engagement organic aproape inexistent (0–13 likes pe majoritatea postărilor). Conținut de tip „template informativ" care nu rezonează. Excepție: un reel a prins 33k views. Lecția: volumul organic fără hook nu construiește comunitate.</div>
+      </div>
+    </div>
+
+    <!-- ELIDADENT -->
+    <div class="pcard">
+      <div class="phead"><span class="nm">Elidadent</span><span class="hd"><a href="https://www.instagram.com/clinicaelidadent/">@clinicaelidadent</a></span></div>
+      <div class="pbody">
+        <div class="stat-row">
+          <div class="stat"><div class="n">3</div><div class="l">postări</div></div>
+          <div class="stat"><div class="n">2</div><div class="l">reels</div></div>
+          <div class="stat"><div class="n">0</div><div class="l">reclame IG</div></div>
+          <div class="stat"><div class="n">618</div><div class="l">best reel views</div></div>
+        </div>
+        <div class="post"><span class="meta">11 iun · <span class="pill c">carusel 6</span></span> <span class="cap">Dezvoltare profesională continuă (training echipă) — 30 likes</span> · <a href="https://www.instagram.com/p/DZcEGvMEUPd/">link</a></div>
+        <div class="post"><span class="meta">12 iun · <span class="pill r">reel</span></span> <span class="cap">Anunț: clinica închisă 15–16 iunie — 618 views / 7 likes</span></div>
+        <div class="post"><span class="meta">10 iun · <span class="pill r">reel</span></span> <span class="cap">Proteză vs. Fast & Fixed — 360 views / 4 likes</span></div>
+        <div class="obs"><b>Observații:</b> activitate redusă, fără investiție paid pe Meta (0 reclame). Reach organic mic. Cel mai puțin agresiv jucător din Tier 1 această săptămână.</div>
+      </div>
+    </div>
+
+    <!-- DENTAL BLUE -->
+    <div class="pcard">
+      <div class="phead"><span class="nm">Dental Blue International</span><span class="hd"><a href="https://www.instagram.com/dentalblue.ro/">@dentalblue.ro</a></span></div>
+      <div class="pbody">
+        <div class="stat-row">
+          <div class="stat"><div class="n">0</div><div class="l">postări organic</div></div>
+          <div class="stat"><div class="n">19+</div><div class="l">reclame IG</div></div>
+          <div class="stat"><div class="n">feb '24</div><div class="l">ultima postare</div></div>
+        </div>
+        <div class="warn-note"><b>Cont organic dormant:</b> ultima postare pe Instagram datează din februarie 2024. Totuși, rulează <b>19+ reclame Meta active</b> cu placement Instagram (lansate mai–iunie 2026). Strategie 100% paid-acquisition, fără efort de comunitate organică.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PEDIATRIC -->
+  <h2><span class="bar"></span>Instagram pediatric — comparație</h2>
+  <table>
+    <thead><tr><th>Cont</th><th class="num">Postări</th><th>Teme</th><th>Ton</th></tr></thead>
+    <tbody>
+      <tr><td>DENT ESTET 4 KIDS</td><td class="num">9</td><td>Recrutare locală (Oradea), dinți de lapte, prietenii copii, apariții TV (MedikaTV)</td><td>Cald, educativ, prezență media</td></tr>
+      <tr><td>Elidadent for KIDS</td><td class="num">3</td><td>Mit vs. realitate (aparat, pastă de dinți), recunoștință</td><td>Light, întrebări „mit/realitate"</td></tr>
+      <tr class="us"><td>Dr. Ardeleanu (Dental Safari)</td><td class="num" colspan="3" style="color:var(--warn)">Niciun cont pediatric dedicat identificat pe Instagram — gol strategic vs. concurență</td></tr>
+    </tbody>
+  </table>
+  <div class="obs"><b>Oportunitate:</b> DENT ESTET 4 KIDS publică foarte agresiv (9 postări/săptămână) și folosește apariții TV ca pruf social. Dacă brandul nostru pediatric (Dental Safari) are cont IG, ar trebui activat; dacă nu, merită discutat lansarea — segmentul pediatric generează cel mai mare reach organic din piață (vezi reel-ul Regina Maria de 59k).</div>
+
+  <!-- ALERTE TIER 2 -->
+  <h2><span class="bar"></span>Alerte Tier 2</h2>
+  <div class="alert-grid">
+    <div class="alert"><div class="an">Dent Priority</div><div class="ad">7 postări (5 reels). O foto a strâns 176 likes — cel mai mare engagement Tier 2. <b>~57 reclame Meta active</b> pe IG — spender agresiv.</div></div>
+    <div class="alert"><div class="an">Clinica Dentalist</div><div class="ad">6 postări, engagement bun (carusel 57 likes, reel 3.817 views). Doar 2 reclame Meta — strategie organic-led, condusă de fondatoare (Dr. Alexandra Mircea).</div></div>
+    <div class="alert"><div class="an">Edent Clinic</div><div class="ad">3 reels (best: 2.081 views / 69 likes pe 10 iun). Activitate constantă, focus exclusiv pe reels.</div></div>
+    <div class="alert"><div class="an">Dr. Malama</div><div class="ad">Fără activitate în interval (ultima postare 5 iun).</div></div>
+    <div class="alert"><div class="an">JC Dent</div><div class="ad">Handle Instagram din baza de date (@jcdent_slobozia) nu mai există / inaccesibil. De verificat noul cont.</div></div>
+  </div>
+
+  <!-- TRENDURI -->
+  <h2><span class="bar"></span>Trenduri Instagram în piață</h2>
+  <div class="trend">
+    <ul>
+      <li><b>Pediatricul = reach maxim.</b> Cele mai virale conținuturi ale săptămânii au fost pediatrice (Regina Maria, 59k views). Părinții sunt un public foarte angajat.</li>
+      <li><b>Format „POV / relatable / umor" în creștere.</b> Reel-ul „POV stomatologii" (14k) și reel-ul nostru „zodii" (3,8k) confirmă: conținutul light bate conținutul tehnic-corporate la engagement.</li>
+      <li><b>Reels-first este norma Tier 1.</b> Regina Maria și DENT ESTET prioritizează reels; foto singulară aproape a dispărut din strategia liderilor.</li>
+      <li><b>Employer branding funcționează.</b> Cel mai comentat post al săptămânii (DENT ESTET, 53 comm) a fost despre un angajat, nu despre un tratament.</li>
+      <li><b>Decuplarea paid–organic.</b> Life Dental Spa și Dental Blue dovedesc că bugetul Meta uriaș nu garantează comunitate organică. Noi avem un mix mai sănătos (organic activ + ~40 reclame).</li>
+    </ul>
+  </div>
+
+  <!-- CE FACEM NOI -->
+  <h2><span class="bar"></span>Ce facem noi săptămâna viitoare pe Instagram</h2>
+  <div class="nextbox">
+    <h3>Plan de acțiune</h3>
+    <ol>
+      <li><b>Reel relatable nou.</b> <span class="sub">Capitalizează pe succesul reel-ului „zodii". Idee: „Tipuri de pacienți la dentist" sau „Ce zice fiecare semn când aude freza" — durată 15–25s, audio trending, hook în primele 2 secunde.</span></li>
+      <li><b>Reel pediatric de testat.</b> <span class="sub">Segmentul cu cel mai mare reach din piață. Concept: „Prima vizită a copilului la dentist — ce să-i spui" sau mit/realitate despre dinți de lapte. Ton cald, blând.</span></li>
+      <li><b>Post de cultură internă.</b> <span class="sub">Preluăm formatul DENT ESTET (aniversare/prezentare membru echipă) — generează cel mai mult engagement și umanizează clinica. Carusel cu medicul lunii.</span></li>
+      <li><b>Story plan.</b> <span class="sub">Actualizează highlights „Înainte/După" și „Echipa". Story-uri zilnice din clinică (behind-the-scenes) pentru a menține prezența între postări.</span></li>
+      <li><b>Optimizare Meta Ads.</b> <span class="sub">Avem ~40 reclame active (lansate 18 mai) — de evaluat care reels performează ca reclamă și de promovat reel-ul „zodii" ca paid, dat fiind reach-ul organic bun.</span></li>
+    </ol>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="row"><b>Status Claude in Chrome:</b> activ (cont Instagram logat) — date organice precise</div>
+    <div class="row"><b>Surse oficiale:</b> Instagram (feed API cu cont logat), Meta Ads Library (placement Instagram, country=RO, reclame active)</div>
+    <div class="row"><b>Surse inaccesibile:</b> JC Dent (handle @jcdent_slobozia inexistent); Ark Med, Dentrust, Saviem Smile (fără cont Instagram în baza de date)</div>
+    <div class="row"><b>Corecții de date necesare în competitors.json:</b> Elidadent → handle real <code>clinicaelidadent</code> (nu <code>elidadent</code>); JC Dent → handle Instagram de re-verificat</div>
+    <div class="row"><b>Note:</b> View-urile reels = exact ce afișează Instagram. Cifrele de reclame „~" = total rezultate Meta Ads Library; placement Instagram confirmat pe eșantionul inspectat. Vizualizările/like-urile sunt valori la momentul extragerii (15 iun 2026).</div>
+    <div class="row" style="margin-top:10px"><span class="conf">Confidence: ÎNALT</span> &nbsp; Generat de: competitor-weekly-instagram v1.0 · 15 iunie 2026</div>
+  </footer>
+
+</div>
+</body>
+</html>
