@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport Google Ads Competitori · Iunie 2026 · Clinicile Dr. Ardeleanu</title>
+<style>
+  :root{
+    --brand:#7b1c16; --brand-dark:#5e120d; --brand-light:#f6e9e4;
+    --accent:#e0ab46; --ink:#2b1a18; --muted:#7a635f; --line:#ecdcd6;
+    --bg:#faf5f3; --card:#ffffff; --ok:#1a8a5a; --warn:#c0392b; --neutral:#a99490;
+    --highlight:#fdf3e3; --highlight-bd:#e0ab46;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.55;font-size:15px;padding:0 0 60px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header.masthead{background:linear-gradient(135deg,var(--brand-dark),var(--brand));color:#fff;padding:38px 0 30px;margin-bottom:28px;border-bottom:4px solid var(--accent)}
+  header.masthead .wrap{display:flex;flex-direction:column;gap:6px}
+  .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--accent);font-weight:700}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.5px}
+  .sub{color:#f2dab7;font-size:15px}
+  .period{display:inline-block;margin-top:10px;background:rgba(255,255,255,.14);padding:6px 14px;border-radius:30px;font-size:13px;font-weight:600}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:22px;box-shadow:0 1px 3px rgba(123,28,22,.05)}
+  h2{font-size:19px;color:var(--brand-dark);font-weight:800;margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--brand-light);display:flex;align-items:center;gap:9px}
+  h2 .ic{width:26px;height:26px;background:var(--brand-light);border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:15px}
+  h3{font-size:15px;color:var(--brand-dark);font-weight:700;margin:16px 0 8px}
+  p{margin-bottom:10px}
+  ul{margin:6px 0 12px 20px}li{margin-bottom:6px}
+  .bullets li{list-style:none;position:relative;padding-left:22px;margin-bottom:9px}
+  .bullets li:before{content:'▶';position:absolute;left:0;color:var(--brand);font-size:11px;top:3px}
+  table{width:100%;border-collapse:collapse;margin:8px 0 6px;font-size:14px}
+  th,td{padding:9px 11px;text-align:center;border-bottom:1px solid var(--line)}
+  th{background:var(--brand-dark);color:#fff;font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:var(--brand-light)}
+  tr.client{background:var(--highlight)!important;font-weight:700}
+  tr.client td{border-bottom:1px solid var(--highlight-bd)}
+  tr.zero td{color:var(--neutral)}
+  .badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:700}
+  .b-t1{background:#f3e3dd;color:#7b1c16}.b-t2{background:#efe9e6;color:#7a635f}.b-cli{background:var(--accent);color:#5e120d}
+  .pill{display:inline-block;padding:1px 7px;border-radius:5px;font-size:12px;font-weight:700}
+  .p-hi{background:#fde8e8;color:var(--warn)}.p-mid{background:#fff3d6;color:#9a7a00}.p-lo{background:#e4f3ea;color:var(--ok)}.p-zero{background:#eef1f2;color:var(--neutral)}
+  .cards{display:grid;gap:16px}
+  .acard{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .acard.cli{border:2px solid var(--highlight-bd)}
+  .acard .head{background:var(--brand-light);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+  .acard.cli .head{background:var(--highlight)}
+  .acard .head .nm{font-weight:800;color:var(--brand-dark);font-size:16px}
+  .acard .head .dm{font-size:12px;color:var(--muted);font-weight:500}
+  .acard .body{padding:14px 16px}
+  .fmtrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .fmtchip{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 11px;font-size:12.5px;font-weight:600}
+  .fmtchip b{color:var(--brand-dark);font-size:14px}
+  .strat{background:#fdf9f8;border-left:3px solid var(--brand);padding:9px 13px;border-radius:0 8px 8px 0;font-size:13.5px;color:var(--ink)}
+  .insight{background:var(--brand-light);border-radius:10px;padding:13px 16px;margin-top:10px;font-size:14px;border-left:4px solid var(--brand)}
+  .insight b{color:var(--brand-dark)}
+  .note{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:6px}
+  .recs{counter-reset:r}
+  .recs li{list-style:none;position:relative;padding:10px 0 10px 44px;border-bottom:1px solid var(--line)}
+  .recs li:last-child{border-bottom:none}
+  .recs li:before{counter-increment:r;content:counter(r);position:absolute;left:0;top:9px;width:30px;height:30px;background:var(--brand);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+  .recs li b{color:var(--brand-dark)}
+  footer{margin-top:10px;font-size:12.5px;color:var(--muted)}
+  footer .wrap{border-top:1px solid var(--line);padding-top:16px}
+  .ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+  .ok-i{color:var(--ok);font-weight:700}
+  .warnbox{background:#fff8f0;border:1px solid #f0d9bf;border-radius:10px;padding:12px 16px;font-size:13.5px;margin-top:12px}
+  .warnbox b{color:#9a5b00}
+  @media(max-width:680px){.ft-grid{grid-template-columns:1fr}h1{font-size:24px}table{font-size:12.5px}th,td{padding:7px 6px}}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Clinicile Dentare Dr. Ardeleanu · Competitive Intelligence</div>
+    <h1>Google Ads — Raport Lunar Competitori</h1>
+    <div class="sub">Activitate publicitară Google Ads · 14 domenii monitorizate (13 competitori + Dr. Ardeleanu)</div>
+    <span class="period">📅 Perioadă analizată: 30 mai – 28 iunie 2026 (ultimele 30 de zile)</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2><span class="ic">⚡</span>Pe scurt</h2>
+  <ul class="bullets">
+    <li><b>Piața dentară RO face surprinzător de puțin Google Ads.</b> Din 13 competitori, <b>7 au ZERO reclame active</b> în ultimele 30 de zile (Elidadent, Dental Blue, Dr. Malama, Ark Med, Dentrust, Saviem Smile) — inclusiv 2 dintre cei 5 competitori Tier 1 premium. Oportunitate reală de a domina spațiul SEM acolo unde concurența lipsește.</li>
+    <li><b>Noi (Dr. Ardeleanu) rulăm 21 de reclame, din care 2 video</b> — o schimbare notabilă față de profilul istoric „100% static". Suntem peste media de prezență SEM a pieței, dar sub volumul advertiserilor agresivi.</li>
+    <li><b>Cei mai agresivi pe Google Ads (excluzând Regina Maria*):</b> Dent Priority (71), Life Dental Spa (51), Clinica Dentalist (50), DENT ESTET (38). Aceștia sunt adevărații concurenți SEM — nu neapărat brandurile premium clasice.</li>
+    <li><b>Video câștigă teren la mid-tier:</b> Clinica Dentalist (12 video) și Dent Priority (8 video) împing cel mai tare formatul video, în timp ce liderii premium (DENT ESTET) rămân aproape exclusiv pe Search.</li>
+    <li><b>JC Dent presează direct Slobozia:</b> rulează Search targetat explicit pe teritoriul nostru („Stomatologie Copii Slobozia", „Programează-te Online"). Volum mic (5), dar 100% geo-țintit pe noi.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="ic">📊</span>Tabel overview — reclame active (30 zile)</h2>
+  <table>
+    <thead>
+      <tr><th>Brand</th><th>Search</th><th>Display</th><th>Video</th><th>Total activ</th><th>Tier</th><th>Rang*</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Regina Maria Dental*</td><td>~200+</td><td>~200+</td><td>~200+</td><td>~2.000</td><td><span class="badge b-t1">T1</span></td><td>—*</td></tr>
+      <tr><td>Dent Priority</td><td>63</td><td>0</td><td>8</td><td><b>71</b></td><td><span class="badge b-t2">T2</span></td><td>1</td></tr>
+      <tr><td>Life Dental Spa</td><td>46</td><td>3</td><td>2</td><td><b>51</b></td><td><span class="badge b-t1">T1</span></td><td>2</td></tr>
+      <tr><td>Clinica Dentalist</td><td>36</td><td>2</td><td>12</td><td><b>50</b></td><td><span class="badge b-t2">T2</span></td><td>3</td></tr>
+      <tr><td>DENT ESTET</td><td>37</td><td>0</td><td>1</td><td><b>38</b></td><td><span class="badge b-t1">T1</span></td><td>4</td></tr>
+      <tr class="client"><td>★ Clinicile Dr. Ardeleanu (NOI)</td><td>19</td><td>0</td><td>2</td><td><b>21</b></td><td><span class="badge b-cli">NOI</span></td><td>5</td></tr>
+      <tr><td>Edent Clinic</td><td>11</td><td>1</td><td>1</td><td><b>13</b></td><td><span class="badge b-t2">T2</span></td><td>6</td></tr>
+      <tr><td>JC Dent</td><td>5</td><td>0</td><td>0</td><td><b>5</b></td><td><span class="badge b-t2">T2</span></td><td>7</td></tr>
+      <tr class="zero"><td>Dr. Malama</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="badge b-t2">T2</span></td><td>—</td></tr>
+      <tr class="zero"><td>Ark Med</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="badge b-t2">T2</span></td><td>—</td></tr>
+      <tr class="zero"><td>Dentrust</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="badge b-t2">T2</span></td><td>—</td></tr>
+      <tr class="zero"><td>Saviem Smile</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="badge b-t2">T2</span></td><td>—</td></tr>
+      <tr class="zero"><td>Elidadent</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="badge b-t1">T1</span></td><td>—</td></tr>
+      <tr class="zero"><td>Dental Blue International</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="badge b-t1">T1</span></td><td>—</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Search = format Text · Display = format Imagine · Video = format YouTube/video. Rang* calculat excluzând Regina Maria (vezi mai jos).</p>
+  <div class="warnbox">
+    <b>⚠ Notă metodologică — Regina Maria:</b> Domeniul <i>reginamaria.ro</i> agregă reclamele întregii rețele medicale Regina Maria (spitale, policlinici, imagistică, laboratoare), nu doar segmentul dental. Volumul de ~2.000 reclame NU este comparabil 1:1 cu o clinică pur dentară și a fost exclus din clasament pentru a evita distorsiunea. Reclamele dentare propriu-zise sunt un subset mic din acest total.
+  </div>
+</section>
+
+<section>
+  <h2><span class="ic">🔥</span>Heatmap — formatul dominant pe fiecare brand</h2>
+  <table>
+    <thead><tr><th>Brand</th><th>Profil format</th><th>Search</th><th>Video</th><th>Strategie observată</th></tr></thead>
+    <tbody>
+      <tr><td>Dent Priority</td><td><span class="pill p-mid">Search + Video</span></td><td>89%</td><td>11%</td><td>Volum mare, dominant Search, video în creștere</td></tr>
+      <tr><td>Life Dental Spa</td><td><span class="pill p-lo">Mix echilibrat</span></td><td>90%</td><td>4%</td><td>Search predominant, puțin display + video</td></tr>
+      <tr><td>Clinica Dentalist</td><td><span class="pill p-hi">Video-forward</span></td><td>72%</td><td>24%</td><td>Cel mai mare % video din piață — strategie agresivă YouTube</td></tr>
+      <tr><td>DENT ESTET</td><td><span class="pill p-lo">Search-pur</span></td><td>97%</td><td>3%</td><td>Aproape exclusiv Search; brand premium, nu împinge video</td></tr>
+      <tr class="client"><td>★ Dr. Ardeleanu (NOI)</td><td><span class="pill p-mid">Search + Video</span></td><td>90%</td><td>10%</td><td>Search dominant, 2 video active (progres față de istoric)</td></tr>
+      <tr><td>Edent Clinic</td><td><span class="pill p-lo">Mix mic</span></td><td>85%</td><td>8%</td><td>Volum redus, prezent pe toate formatele</td></tr>
+      <tr><td>JC Dent</td><td><span class="pill p-lo">Search-pur</span></td><td>100%</td><td>0%</td><td>Doar Search, geo-țintit Slobozia</td></tr>
+    </tbody>
+  </table>
+  <div class="insight">
+    <b>Citire strategică:</b> Piața SEM dentară din România este <b>dominată de Search</b> (text). Video rămâne sub-exploatat — doar Clinica Dentalist (24%) și Dent Priority (11%) îl folosesc serios. <b>Suntem deja la 10% video</b>, peste DENT ESTET și liderii premium. Spațiul de diferențiere este clar: <b>video pe YouTube + Display</b>, unde aproape nimeni nu concurează la nivel mid.
+  </div>
+</section>
+
+<section>
+  <h2><span class="ic">🗂</span>Activitate completă pe cont — Tier 1 + noi</h2>
+  <div class="cards">
+
+    <div class="acard cli">
+      <div class="head"><span class="nm">★ Clinicile Dr. Ardeleanu</span><span class="dm">clinicileardeleanu.ro · advertiser confirmat</span></div>
+      <div class="body">
+        <div class="fmtrow">
+          <span class="fmtchip">Search <b>19</b></span>
+          <span class="fmtchip">Display <b>0</b></span>
+          <span class="fmtchip">Video <b>2</b></span>
+          <span class="fmtchip">Total <b>21</b></span>
+        </div>
+        <div class="strat"><b>➜ Strategie:</b> Bază solidă de Search (19 reclame), plus <b>2 video active</b> — un pas înainte față de profilul istoric 100% static. Suntem peste media de prezență a pieței și al 5-lea cel mai activ advertiser dentar (excluzând Regina Maria). Gap-uri: zero Display, video încă subțire.</div>
+      </div>
+    </div>
+
+    <div class="acard">
+      <div class="head"><span class="nm">DENT ESTET</span><span class="dm">dentestet.ro · advertiser: CODEZILLA SRL</span></div>
+      <div class="body">
+        <div class="fmtrow">
+          <span class="fmtchip">Search <b>37</b></span>
+          <span class="fmtchip">Display <b>0</b></span>
+          <span class="fmtchip">Video <b>1</b></span>
+          <span class="fmtchip">Total <b>38</b></span>
+        </div>
+        <div class="strat"><b>➜ Strategie:</b> Lider premium, dar <b>aproape exclusiv pe Search</b> (97%). Volum dublu față de noi pe Search, însă paradoxal slab pe video (1 singur). Își bazează SEM pe acoperire de keyword-uri branded + servicii premium, nu pe formate vizuale. Vulnerabil pe video/YouTube.</div>
+      </div>
+    </div>
+
+    <div class="acard">
+      <div class="head"><span class="nm">Life Dental Spa</span><span class="dm">lifedentalspa.ro</span></div>
+      <div class="body">
+        <div class="fmtrow">
+          <span class="fmtchip">Search <b>46</b></span>
+          <span class="fmtchip">Display <b>3</b></span>
+          <span class="fmtchip">Video <b>2</b></span>
+          <span class="fmtchip">Total <b>51</b></span>
+        </div>
+        <div class="strat"><b>➜ Strategie:</b> Cel mai echilibrat advertiser premium — prezent pe toate cele 3 formate. Rețea națională, volum mare de Search (46). Reclame promo vizibile de tip „White Friday" (campanii sezoniere agresive cu reduceri). Concurent SEM serios și real.</div>
+      </div>
+    </div>
+
+    <div class="acard">
+      <div class="head"><span class="nm">Elidadent</span><span class="dm">elidadent.ro</span></div>
+      <div class="body">
+        <div class="fmtrow"><span class="fmtchip">Total <b>0</b></span></div>
+        <div class="strat"><b>➜ Strategie:</b> <b>Zero Google Ads</b> (inclusiv all-time). Brand premium care se bazează exclusiv pe organic/reputație. Absent complet din competiția SEM.</div>
+      </div>
+    </div>
+
+    <div class="acard">
+      <div class="head"><span class="nm">Dental Blue International</span><span class="dm">dentalblue.ro</span></div>
+      <div class="body">
+        <div class="fmtrow"><span class="fmtchip">Total <b>0</b></span></div>
+        <div class="strat"><b>➜ Strategie:</b> <b>Zero Google Ads.</b> Consistent cu strategia lor organic video-first (YouTube/social educativ). Investesc în conținut, nu în paid search. Absent din SEM.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="ic">📡</span>Alerte Tier 2 (scurt)</h2>
+  <ul class="bullets">
+    <li><b>Dent Priority — 71 reclame (cel mai activ advertiser dentar real).</b> Search-heavy (63) + 8 video. Reclame vizibile: „Aparate dentare transparente", „Implanturi dentare Slatina", „Programează o consultație". Acoperire pe implantologie + ortodonție invizibilă (aligners). <span class="pill p-hi">de monitorizat atent</span></li>
+    <li><b>Clinica Dentalist — 50 reclame, lider video (12).</b> Cel mai agresiv pe YouTube din piață. București, brand personal Dr. Alexandra Mircea. Reclamă vizibilă: „Curățare Dentară Premium". <span class="pill p-mid">amenințare pe video</span></li>
+    <li><b>Edent Clinic — 13 reclame.</b> București (Louis Blanc). Prezent pe toate formatele la scară mică. Reclame: „Igienizare profesională", „Implantologie București - Programează-te Azi". <span class="pill p-lo">activ moderat</span></li>
+    <li><b>JC Dent — 5 reclame, 100% Slobozia.</b> Concurent direct teritorial. Targetează explicit „Stomatologie Copii Slobozia". Volum mic dar chirurgical pe teritoriul nostru. <span class="pill p-hi">geo-amenințare directă</span></li>
+    <li><b>Dr. Malama, Ark Med, Dentrust, Saviem Smile — 0 reclame.</b> Niciun fel de activitate Google Ads. Necompetitivi pe SEM în această perioadă. <span class="pill p-zero">inactivi</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="ic">💬</span>Mesaje &amp; verticale dominante în piață</h2>
+  <p>Pe baza reclamelor Search vizibile în liste (textul exact al fiecărei reclame nu este extractibil în masă — vezi nota de la subsol), verticalele cel mai vizibil împinse de competitori sunt:</p>
+  <table>
+    <thead><tr><th>Verticală</th><th>Cine împinge</th><th>Semnal</th></tr></thead>
+    <tbody>
+      <tr><td>Implantologie</td><td>Dent Priority, Edent Clinic</td><td>„Implanturi dentare", „Implantologie București/Slatina"</td></tr>
+      <tr><td>Ortodonție / Aligners</td><td>Dent Priority</td><td>„Aparate dentare transparente"</td></tr>
+      <tr><td>Igienizare / Profilaxie</td><td>Edent Clinic, Clinica Dentalist</td><td>„Igienizare profesională", „Curățare Dentară Premium"</td></tr>
+      <tr><td>Pedodonție (copii)</td><td>JC Dent</td><td>„Stomatologie Copii Slobozia"</td></tr>
+      <tr><td>Promoții sezoniere</td><td>Life Dental Spa</td><td>„White Friday — reduceri"</td></tr>
+      <tr><td>Programare rapidă (CTA)</td><td>toți advertiserii activi</td><td>„Programează-te Online / Azi" — CTA standard al pieței</td></tr>
+    </tbody>
+  </table>
+  <div class="insight">
+    <b>Pattern:</b> Piața comunică pe <b>implantologie + igienizare + CTA „programează rapid"</b>. Promoțiile sezoniere (Life Dental Spa) și pedodonția geo-țintită (JC Dent) sunt nișe unde concurența e punctuală. <b>Aproape nimeni nu comunică pe video pentru estetică/fațete</b> — gap clar.
+  </div>
+</section>
+
+<section>
+  <h2><span class="ic">🎯</span>Ce facem noi luna următoare pe Google Ads</h2>
+  <ol class="recs">
+    <li><b>Prioritizăm video pe YouTube.</b> Doar Clinica Dentalist (12) și Dent Priority (8) împing video serios. Liderii premium (DENT ESTET) au 1 singur video. Cu doar 2 video active, scalarea la 4–6 video ne-ar plasa peste majoritatea pieței la cost competitiv — diferențiere reală.</li>
+    <li><b>Apărăm Slobozia împotriva JC Dent.</b> Aceștia targetează direct „Stomatologie Copii Slobozia". Recomandăm campanie Search dedicată geo-Slobozia + pedodonție, cu CTA „programare rapidă", pentru a nu ceda teritoriul.</li>
+    <li><b>Testăm Display — zonă aproape goală.</b> Doar Life Dental Spa (3), Dentalist (2), Edent (1) folosesc Display. Un set de bannere responsive pe remarketing ne-ar da acoperire la cost mic, fără concurență reală.</li>
+    <li><b>Atacăm pe implantologie + estetică/fațete.</b> Implantologia e disputată (Dent Priority, Edent), dar <b>fațetele/estetica pe video sunt neacoperite</b>. Recomandăm Search pe „fațete dentare" + video estetic pe YouTube unde nimeni nu licitează.</li>
+    <li><b>Menținem avantajul de prezență.</b> Suntem deja al 5-lea cel mai activ și peste media pieței (7 competitori au 0 reclame). Consolidăm volumul de Search pe servicii premium și menținem cele 2 video, crescând treptat.</li>
+  </ol>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>📌 <b>Sursă:</b> Google Ads Transparency Center (oficial Google) <span class="ok-i">✓</span></div>
+      <div>🗓 <b>Perioadă:</b> 30 mai – 28 iunie 2026 (filtru „Ultimele 30 de zile")</div>
+      <div>🌐 <b>Domenii scanate:</b> 14/14 (13 competitori + Dr. Ardeleanu) <span class="ok-i">✓</span></div>
+      <div>🚫 <b>Domenii fără reclame active:</b> Elidadent, Dental Blue, Dr. Malama, Ark Med, Dentrust, Saviem Smile (6)</div>
+      <div>📊 <b>Confidence:</b> RIDICAT pe count + format + advertiser (sursă oficială)</div>
+      <div>⚙ <b>Generat:</b> competitor-monthly-google-ads · 29 iun. 2026</div>
+    </div>
+    <p class="note" style="margin-top:12px">
+      <b>Limitări de date:</b> Numărul de reclame, defalcarea pe format (Search/Display/Video) și numele advertiserului sunt extrase direct din Transparency Center și sunt fiabile. <b>Textul complet (titlu + descriere) al fiecărei reclame nu este extractibil în masă</b> — creative-urile sunt randate în iframe-uri securizate, iar copy-ul exact e vizibil doar deschizând individual fiecare reclamă. Mesajele/verticalele de mai sus se bazează pe titlurile vizibile în liste, nu pe o citire integrală. Regina Maria a fost exclusă din clasament (domeniu de rețea medicală, nu pur dental).
+    </p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
