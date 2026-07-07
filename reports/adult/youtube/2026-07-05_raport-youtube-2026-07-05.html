@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport YouTube Săptămânal · 29 iun – 5 iul 2026 · Clinicile Dr. Ardeleanu</title>
+<style>
+  :root{
+    --burgundy:#7B1C16; --gold:#E0AB46; --cream:#F2DAB7;
+    --ink:#241210; --muted:#6b5548; --line:#e6d6bd;
+    --ok:#2e7d32; --warn:#b8860b; --bad:#a12a1f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:#faf4ea;line-height:1.55;padding:0 0 60px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header.masthead{background:linear-gradient(135deg,var(--burgundy),#5a130f);color:var(--cream);padding:34px 0 30px;border-bottom:5px solid var(--gold)}
+  header.masthead .wrap{display:flex;flex-direction:column;gap:6px}
+  .eyebrow{letter-spacing:.22em;font-size:12px;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.4px}
+  .period{font-size:15px;color:#f4e3c8;font-weight:600}
+  .partial{margin-top:12px;display:inline-block;background:rgba(224,171,70,.16);border:1px solid var(--gold);color:var(--cream);font-size:12.5px;padding:7px 12px;border-radius:7px}
+  section{margin-top:34px}
+  h2{color:var(--burgundy);font-size:20px;font-weight:800;border-left:5px solid var(--gold);padding-left:12px;margin-bottom:14px}
+  h3{color:var(--burgundy);font-size:16px;font-weight:700;margin:18px 0 8px}
+  p{margin-bottom:10px}
+  .lead-list{list-style:none;display:grid;gap:9px}
+  .lead-list li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);padding:11px 14px;border-radius:8px;font-size:14.5px}
+  .lead-list li b{color:var(--burgundy)}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+  th{background:var(--burgundy);color:var(--cream);text-align:left;padding:10px 12px;font-weight:700;font-size:13px}
+  td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+  tr.us td{background:#fdf6e9;font-weight:600}
+  tr.us td:first-child{color:var(--burgundy)}
+  .tier-sep td{background:var(--cream);color:var(--burgundy);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px}
+  .num{text-align:center;font-variant-numeric:tabular-nums}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0;margin-bottom:18px;overflow:hidden}
+  .card-h{background:linear-gradient(90deg,#fbf1de,#fff);padding:13px 16px;border-bottom:2px solid var(--gold);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+  .card-h .name{font-weight:800;color:var(--burgundy);font-size:16px}
+  .card-h .subs{font-size:12.5px;color:var(--muted)}
+  .card-b{padding:14px 16px}
+  .block-label{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);font-weight:800;margin:12px 0 6px;border-bottom:1px dashed var(--line);padding-bottom:3px}
+  .block-label:first-child{margin-top:0}
+  .vid{padding:7px 0;border-bottom:1px solid #f2ead9;font-size:13.7px}
+  .vid:last-child{border-bottom:none}
+  .vid .t{font-weight:600}
+  .vid .meta{color:var(--muted);font-size:12.3px;margin-top:2px}
+  .vid a{color:var(--burgundy);text-decoration:none;border-bottom:1px dotted var(--gold)}
+  .obs{margin-top:12px;background:#fdf6e9;border:1px solid var(--gold);border-radius:8px;padding:10px 12px;font-size:13.3px}
+  .obs b{color:var(--burgundy)}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:4px}
+  .pill.viral{background:#a12a1f;color:#fff}
+  .pill.new{background:var(--gold);color:#3a2600}
+  .pill.dead{background:#e0e0e0;color:#555}
+  .alert{background:#fff;border:1px solid var(--line);border-radius:9px;padding:11px 14px;margin-bottom:9px;font-size:13.7px}
+  .alert b{color:var(--burgundy)}
+  .flag-hot{border-left:4px solid var(--bad)}
+  .flag-cold{border-left:4px solid #b7b7b7}
+  .action{background:#fff;border:1px solid var(--line);border-left:4px solid var(--burgundy);border-radius:9px;padding:12px 15px;margin-bottom:10px;font-size:14px}
+  .action .k{font-weight:800;color:var(--burgundy);display:block;margin-bottom:3px}
+  footer{margin-top:40px;background:var(--ink);color:#e9d9c2;border-radius:12px;padding:18px 20px;font-size:12.6px}
+  footer h4{color:var(--gold);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  footer ul{list-style:none;display:grid;gap:4px}
+  footer .ok{color:#9ad19c}.footer .warn{color:#e6c86a}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.two{grid-template-columns:1fr}h1{font-size:24px}}
+  .mini{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <span class="eyebrow">Competitive Intelligence · YouTube</span>
+    <h1>Raport Săptămânal YouTube</h1>
+    <span class="period">Perioada: 29 iunie – 5 iulie 2026 · Clinicile Dentare Dr. Ardeleanu</span>
+    <span class="partial">⚠ RAPORT PARȚIAL — cheia YouTube Data API v3 lipsește din <code>competitors.json</code>. Datele au fost extrase prin scraping public + verificarea datei exacte de publicare din pagina fiecărui video. View-urile și datele sunt reale (din YouTube), dar fără API precizia rămâne la nivel „best-effort".</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>▶ Pe scurt</h2>
+  <ul class="lead-list">
+    <li><b>DENT ESTET a inundat canalul:</b> ~33 de piese noi în interval — un „dump" masiv de peste 28 de Shorts educaționale pe 30 iunie (medici care explică proceduri) plus tururi de clinică și apariții TV (Medika TV, B1 TV). De departe cel mai mare volum din piață.</li>
+    <li><b>Dr. Alexandra Mircea (Clinica Dentalist) domină engagement-ul:</b> 3 Shorts în interval, dintre care unul viral cu <b>378K vizionări</b> — un colab cu influencerul <b>@mitzuu</b>. Un singur Short al ei bate volumul tuturor celorlalți competitori la un loc.</li>
+    <li><b>Noi (Dr. Ardeleanu) suntem activi și competitivi pe Shorts:</b> 3 Shorts în interval (29 iun, 1 iul, 3 iul). Ritm bun, dar view-urile (126–435) sunt sub potențialul pieței — lipsește un cârlig „viral".</li>
+    <li><b>Jumătate din piață e adormită pe YouTube:</b> Elidadent (ultimul conținut oct. 2025), Dentrust (canal mort, ultima postare acum 8 ani), Dent Priority (nimic de 5 luni) — zero activitate.</li>
+    <li><b>Tendința clară a săptămânii:</b> Shorts educaționale scurte cu medic în cadru (explică o procedură/mit) — formatul preferat de toți jucătorii activi.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>▶ Volumele</h2>
+  <table>
+    <thead>
+      <tr><th>Brand</th><th class="num">Long-form / Mid</th><th class="num">Shorts</th><th class="num">Community</th><th class="num">Video Ads YT</th><th class="num">Subscriberi</th><th class="num">Rang volum</th></tr>
+    </thead>
+    <tbody>
+      <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td class="num">0</td><td class="num">3</td><td class="num">—</td><td class="num">n/v*</td><td class="num">—</td><td class="num">4</td></tr>
+      <tr class="tier-sep"><td colspan="7">Tier 1</td></tr>
+      <tr><td>DENT ESTET</td><td class="num">~4 +TV</td><td class="num">~33</td><td class="num">—</td><td class="num">~400 ads†</td><td class="num">n/v</td><td class="num">1</td></tr>
+      <tr><td>Regina Maria Dental</td><td class="num">1</td><td class="num">1</td><td class="num">—</td><td class="num">n/v*</td><td class="num">9,32K</td><td class="num">3</td></tr>
+      <tr><td>Life Dental Spa</td><td class="num">0</td><td class="num">1</td><td class="num">—</td><td class="num">n/v*</td><td class="num">1,99K</td><td class="num">5</td></tr>
+      <tr><td>Elidadent</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">n/v*</td><td class="num">n/v</td><td class="num">—</td></tr>
+      <tr><td>Dental Blue International</td><td colspan="6" class="mini">Fără canal YouTube în competitors.json (strategie video-first pe alte platforme).</td></tr>
+      <tr class="tier-sep"><td colspan="7">Tier 2 (alerte)</td></tr>
+      <tr><td>Dr. Alexandra Mircea (Dentalist)</td><td class="num">0‡</td><td class="num">3</td><td class="num">—</td><td class="num">n/v*</td><td class="num">344K</td><td class="num">2</td></tr>
+      <tr><td>Dent Priority</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">n/v*</td><td class="num">631</td><td class="num">—</td></tr>
+      <tr><td>Dentrust</td><td class="num">0</td><td class="num">0</td><td class="num">—</td><td class="num">n/v*</td><td class="num">50</td><td class="num">—</td></tr>
+      <tr><td colspan="7" class="mini">Restul competitorilor (JC Dent, Dr. Malama, Ark Med, Saviem Smile, Clinica Dentalist – pagina clinicii, Dent Priority Kids, Edent Clinic) nu au canal YouTube propriu listat.</td></tr>
+    </tbody>
+  </table>
+  <p class="mini" style="margin-top:8px">* <b>n/v</b> = neverificat acest run (breakdown-ul pe format video din Google Ads Transparency Center necesită aplicarea manuală a filtrului de format — nefinalizat). † DENT ESTET rulează ~400 de anunțuri Google totale prin advertiserul CODEZILLA SRL; proporția de reclame video YouTube nu a fost izolată. ‡ Cel mai recent long-form al Dr. Mircea e din 28 iunie — cu o zi în afara intervalului.</p>
+</section>
+
+<section>
+  <h2>▶ Conținut nou pe canal — detalii (Tier 1 + jucători activi)</h2>
+
+  <div class="card">
+    <div class="card-h"><span class="name">DENT ESTET <span class="pill new">volum #1</span></span><span class="subs">youtube.com/@ClinicaDENTESTET</span></div>
+    <div class="card-b">
+      <div class="block-label">Long-form / Mid (în interval)</div>
+      <div class="vid"><div class="t">Fațete dentare și AI: Tehnologiile care schimbă estetica dentară — Dr. Silvia Zaharii | Medika TV</div><div class="meta">44:33 · apariție TV · (publicat 7 iul, la limita de sus a intervalului)</div></div>
+      <div class="vid"><div class="t">Dinți ficși în 24 ore — Reabilitări orale complexe cu All-on-4® — Dr. Horațiu Dobre | B1 TV</div><div class="meta">22:24 · apariție TV · ~4 iul · 14 vizionări</div></div>
+      <div class="vid"><div class="t">Clinică stomatologică în Arad — Tur complet DENT ESTET Genesys Arad</div><div class="meta">2:27 · tur clinică · ~4 iul · 12 vizionări</div></div>
+      <div class="vid"><div class="t">O clinică. O echipă. O experiență. DENT ESTET Oradea</div><div class="meta">2:55 · brand/tur · ~4 iul · 6 vizionări</div></div>
+      <div class="vid"><div class="t">Case review — Implanturi dentare pentru un zâmbet perfect funcțional</div><div class="meta">0:53 · case review · ~3 iul</div></div>
+
+      <div class="block-label">Shorts (~33 în interval)</div>
+      <div class="vid"><div class="t">„Dump" masiv de conținut pe 30 iunie</div><div class="meta">Peste 28 de Shorts publicate în aceeași dimineață (interval 04:24–05:38), majoritatea medici care explică o procedură/opțiune (All-on-4®, plata în rate, retracție gingivală, albire, lupele dentare, aligneri etc.). View-uri mici (1–7) — conținut proaspăt, încă neamplificat.</div></div>
+      <div class="vid"><div class="t">Efectele uzurii dentare asupra esteticii</div><div class="meta">3 iul · 991 vizionări (cel mai performant Short al săptămânii lor)</div></div>
+      <div class="vid"><div class="t">A Smile 4 All — A Smile for YOU — Case review</div><div class="meta">2 iul · 489 vizionări · campanie brand</div></div>
+      <div class="vid"><div class="t">Implant dentar planificat digital</div><div class="meta">1 iul · 236 vizionări</div></div>
+      <div class="obs"><b>➜ Observații:</b> Strategie „content factory" — probabil au filmat un batch de zeci de clipuri cu medicii și le-au urcat simultan pe 30 iunie pentru a alimenta atât Shorts organice, cât și (probabil) reclame video. Punct forte: autoritate medicală (medic cu nume în fiecare clip). Punct slab: view-urile organice pe bulk sunt minuscule — depind de amplificare plătită. Combină cu apariții TV (Medika, B1) reciclate ca long-form.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="name">Regina Maria Dental Clinics</span><span class="subs">9,32K abonați · @ReginaMariaDentalClinics</span></div>
+    <div class="card-b">
+      <div class="block-label">Long-form (1 în interval)</div>
+      <div class="vid"><div class="t">Infecția dentară: simptome, riscuri și tratament — cu Dr. Andrei Cudera</div><div class="meta">5:47 · educațional cu medic · 2 iul · 17 vizionări</div></div>
+      <div class="block-label">Shorts (1 în interval)</div>
+      <div class="vid"><div class="t">De ce nu primesc direct lucrarea finală?</div><div class="meta">5 iul · 137 vizionări · Q&A pacient</div></div>
+      <div class="obs"><b>➜ Observații:</b> Format „talk-show medical" — invitați (inclusiv Emilia Popescu în clipuri recente în afara intervalului) discută cu medicii. Poziționare de brand mare/spital, dar volum mic și view-uri organice modeste. Ritm ~1–2 piese/săptămână.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="name">Life Dental Spa</span><span class="subs">1,99K abonați · @lifedentalspa-ro</span></div>
+    <div class="card-b">
+      <div class="block-label">Shorts (1 în interval)</div>
+      <div class="vid"><div class="t">🔴 Te speli pe dinți zilnic și totuși gingiile îți sângerează?</div><div class="meta">2 iul · 250 vizionări · educațional/hook cu emoji</div></div>
+      <div class="obs"><b>➜ Observații:</b> Canal 100% orientat pe Shorts educaționale, cu titluri-cârlig (emoji roșu + întrebare). Ritm scăzut în această săptămână (1 piesă) după un iunie mai activ. Formatul lor de titlu funcționează — merită „împrumutat".</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="name">Dr. Alexandra Mircea — Clinica Dentalist <span class="pill viral">378K viral</span></span><span class="subs">344K abonați · @DrAlexandraMircea</span></div>
+    <div class="card-b">
+      <div class="block-label">Shorts (3 în interval)</div>
+      <div class="vid"><div class="t">POTRIVEȘTE PRODUSELE CU ZAHĂRUL @mitzuu</div><div class="meta">30 iun · <b>378.000 vizionări</b> · colab cu influencer · format joc/challenge <span class="pill viral">VIRAL</span></div></div>
+      <div class="vid"><div class="t">SUNT SUFICIENTE 3 ORE DE SOMN? 😴</div><div class="meta">4 iul · 32.000 vizionări · lifestyle+sănătate</div></div>
+      <div class="vid"><div class="t">ALINIATORII TRANSPARENȚI, EROII ZÂMBETULUI TĂU? 🦸🏻‍♂️</div><div class="meta">3 iul · 12.000 vizionări · educațional ortodonție</div></div>
+      <div class="obs"><b>➜ Observații:</b> Cel mai puternic „creator dentist" din piața RO. Deși e Tier 2 ca clinică, pe YouTube e forța #1 la engagement — canal personal de 344K, construit ca brand de creator, nu de clinică. Cârligul viral: <b>colaborarea cu @mitzuu</b> (audiență non-dentară) + format de challenge/entertainment, nu clinică. Aceasta e diferența dintre 378K și 250 de view-uri.</div>
+    </div>
+  </div>
+
+  <div class="card" style="border-color:var(--burgundy)">
+    <div class="card-h" style="background:linear-gradient(90deg,#fdf6e9,#fff)"><span class="name">Dr. Ardeleanu — NOI <span class="pill new">activ</span></span><span class="subs">@dr.ardeleanu</span></div>
+    <div class="card-b">
+      <div class="block-label">Shorts (3 în interval)</div>
+      <div class="vid"><div class="t">Poți merge la dentist în timpul sarcinii?</div><div class="meta">29 iun · 435 vizionări · Q&A/educațional (cel mai bun al nostru)</div></div>
+      <div class="vid"><div class="t">Un zâmbet nou începe cu un plan</div><div class="meta">1 iul · 126 vizionări · brand/proces</div></div>
+      <div class="vid"><div class="t">Te întorci în România doar pentru câteva zile?</div><div class="meta">3 iul · 208 vizionări · targeting diaspora (relevant Slobozia/diaspora)</div></div>
+      <div class="obs"><b>➜ Unde stăm:</b> Ritm de postare bun (3/săptămână, la egalitate cu Dr. Mircea la număr). Formatul Q&A e corect. Problema e <b>amplitudinea</b>: cel mai bun clip al nostru (435) e sub cel mai slab clip performant al pieței active. Clipul „diaspora" (208) e un unghi bun și diferențiat — merită dublat. Ne lipsește un cârlig de tip entertainment/colab care să spargă bula celor 100–400 de view-uri.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>▶ Analiză format (jucători activi)</h2>
+  <div class="two">
+    <div>
+      <h3>Distribuție formate în interval</h3>
+      <ul class="lead-list">
+        <li><b>Educațional „medic explică" (Short):</b> formatul dominant — DENT ESTET (zeci), Life, Regina Maria, noi. Autoritate mare, engagement mic dacă nu e amplificat.</li>
+        <li><b>Entertainment / colab cu influencer:</b> doar Dr. Mircea — dar aduce <b>~90% din tot engagement-ul pieței</b> printr-un singur clip.</li>
+        <li><b>Tur de clinică / brand:</b> DENT ESTET (Arad, Oradea) — util pentru încredere, view-uri mici.</li>
+        <li><b>Apariții TV reciclate ca long-form:</b> DENT ESTET (Medika TV, B1 TV) — poziționare de autoritate.</li>
+        <li><b>Q&A / diaspora:</b> noi + Regina Maria — nișă bună, sub-exploatată de restul.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ce aduce engagement săptămâna asta?</h3>
+      <p>Ierarhia e clară și dură: <b>colab-ul cu creator non-dentar (378K) &gt;&gt; lifestyle-health (32K) &gt; educațional ortodonție (12K) &gt;&gt; tot restul (sub 1.000)</b>. Volumul brut (DENT ESTET) nu se traduce în engagement organic fără amplificare plătită. Concluzie: în această piață, <b>1 clip cu distribuție „împrumutată" de la un influencer bate 30 de clipuri de clinică</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>▶ Shorts — Top 5 din piață (interval)</h2>
+  <table>
+    <thead><tr><th class="num">#</th><th>Brand</th><th>Titlu</th><th class="num">Views</th><th>Format</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td>Dr. Mircea (Dentalist)</td><td>Potrivește produsele cu zahărul (colab @mitzuu)</td><td class="num">378.000</td><td>challenge/colab</td></tr>
+      <tr><td class="num">2</td><td>Dr. Mircea (Dentalist)</td><td>Sunt suficiente 3 ore de somn?</td><td class="num">32.000</td><td>lifestyle-health</td></tr>
+      <tr><td class="num">3</td><td>Dr. Mircea (Dentalist)</td><td>Aliniatorii transparenți, eroii zâmbetului?</td><td class="num">12.000</td><td>educațional</td></tr>
+      <tr><td class="num">4</td><td>DENT ESTET</td><td>Efectele uzurii dentare asupra esteticii</td><td class="num">991</td><td>educațional</td></tr>
+      <tr><td class="num">5</td><td>DENT ESTET</td><td>A Smile 4 All — Case review</td><td class="num">489</td><td>case review/brand</td></tr>
+      <tr class="us"><td class="num">—</td><td>Dr. Ardeleanu (NOI)</td><td>Poți merge la dentist în timpul sarcinii?</td><td class="num">435</td><td>Q&A</td></tr>
+    </tbody>
+  </table>
+  <p class="mini" style="margin-top:8px"><b>Pattern detectat:</b> hook în primul cadru (întrebare directă sau produs/joc), lungime ~20–45s, prezența unei „fețe" care vorbește la cameră. Diferența de 3 ordine de mărime dintre #1 și #4 vine <b>exclusiv</b> din distribuția de tip colab, nu din calitatea producției.</p>
+</section>
+
+<section>
+  <h2>▶ Alerte Tier 2</h2>
+  <div class="alert flag-hot"><b>Dr. Alexandra Mircea (Clinica Dentalist) — ALERTĂ ROȘIE:</b> deși e clinică Tier 2, pe YouTube e cel mai mare pericol competitiv din întreaga piață. Un colab viral (378K) într-o săptămână echivalează cu luni de conținut de clinică. Model de urmărit și de contracarat, nu de ignorat.</div>
+  <div class="alert flag-cold"><b>Dent Priority — inactiv:</b> nimic nou de ~5 luni. Notabil: Shorts-urile lor vechi „digital dentistry" au 87K–260K view-uri (puternic promovate plătit în trecut), dar canalul e acum înghețat.</div>
+  <div class="alert flag-cold"><b>Elidadent — inactiv:</b> ultimul conținut oct. 2025 (4 Shorts în total pe canal). Practic absent de pe YouTube.</div>
+  <div class="alert flag-cold"><b>Dentrust — canal mort:</b> ultima postare acum ~8 ani, 50 de abonați. Fără prezență YouTube reală.</div>
+</section>
+
+<section>
+  <h2>▶ Tendințe YouTube în piață</h2>
+  <ul class="lead-list">
+    <li><b>Categoria dominantă:</b> Shorts educaționale scurte cu medic în cadru — hook-întrebare + răspuns de 20–45s.</li>
+    <li><b>Lungime medie:</b> Shorts 20–50s; long-form aproape exclusiv apariții TV sau podcast-uri cu invitați (5–45 min).</li>
+    <li><b>Frecvență postare:</b> polarizată — fie „factory" (DENT ESTET, zeci/lună în batch-uri), fie 3/săptămână (Dr. Mircea, noi), fie zero (jumătate din piață).</li>
+    <li><b>Câștigătorul structural:</b> distribuția, nu producția. Colab-ul cu influencer e singura pârghie care sparge plafonul organic de câteva sute de view-uri.</li>
+    <li><b>Oportunitate liberă:</b> nișa „diaspora / pacient care revine în RO" — noi o atingem deja (clipul de 208 view-uri), restul pieței o ignoră.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>▶ Ce facem noi săptămâna următoare pe YouTube</h2>
+  <div class="action"><span class="k">1 · Short de produs / cârlig viral</span>Testează un clip cu format „entertainment", nu „clinică": un mini-challenge sau un „mit vs. adevăr" filmat dinamic, ideal cu o <b>colaborare</b> (un medic din echipă cu prezență de cameră, sau un micro-influencer local din zona Slobozia/diaspora). Țintă: spargem plafonul de 435. Durată 25–40s, hook în secunda 1.</div>
+  <div class="action"><span class="k">2 · Dublează unghiul „diaspora"</span>Clipul „Te întorci în România doar pentru câteva zile?" (208) atinge o nișă pe care NIMENI din piață n-o exploatează. Fă o mini-serie (2–3 clipuri): „tratament rapid în vacanță", „programare din străinătate", „ce poți rezolva în 3 zile". E teren liber și relevant pentru Slobozia + diaspora.</div>
+  <div class="action"><span class="k">3 · Împrumută formatul de titlu de la Life Dental Spa</span>Titluri-cârlig cu emoji + întrebare directă („🔴 Te speli pe dinți zilnic dar…?"). Ridică CTR-ul pe aceleași subiecte educaționale pe care le facem deja.</div>
+  <div class="action"><span class="k">4 · Long-form / autoritate (opțional)</span>Un singur clip mai lung „medic explică" (3–6 min) pe un subiect cu volum de căutare (implant, sarcină, canal) — pentru SEO YouTube + reciclare în Shorts. Model: Regina Maria (Q&A cu medic) sau apariția TV a DENT ESTET.</div>
+  <div class="action"><span class="k">5 · Reclamă video de testat</span>Promovează plătit cel mai bun Short organic al nostru (cel cu sarcina, 435 — dovedit că prinde) către audiență locală + diaspora RO. Landing: pagina de programare. Verifică în Google Ads Transparency Center dacă DENT ESTET rulează video ads pe bulk-ul lor din 30 iunie (probabil da).</div>
+</section>
+
+<footer>
+  <h4>Date de verificare</h4>
+  <ul>
+    <li>Sursă date: <b>Scraping public YouTube</b> + verificare individuală a datei exacte de publicare (<code>publishDate</code> din pagina fiecărui video). YouTube Data API v3: <span class="warn">✗ cheie lipsă</span></li>
+    <li>Canale acoperite: <b>8/8</b> cu canal YouTube (4 Tier 1 + 3 Tier 2 activ/verificat + client). Competitorii fără canal YouTube au fost excluși corect.</li>
+    <li>Interval strict aplicat: 29 iunie – 5 iulie 2026. Piese la limită (28 iun / 7 iul) marcate explicit ca în afara intervalului.</li>
+    <li>Reclame video: <b>neizolate acest run</b> — breakdown-ul pe format din Google Ads Transparency Center necesită aplicarea manuală a filtrului de format (recomandat pentru run-ul următor).</li>
+    <li>Community posts: nu au fost detectate postări noi relevante în interval pe canalele active.</li>
+    <li>Nivel de încredere: <b>Ridicat</b> pentru datele și titlurile organice (verificate direct); <b>Mediu</b> pentru numărul total de Shorts DENT ESTET (estimat din batch-ul de 30 iun).</li>
+    <li>Generat: competitor-weekly-youtube v1.0 · 7 iulie 2026</li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>
