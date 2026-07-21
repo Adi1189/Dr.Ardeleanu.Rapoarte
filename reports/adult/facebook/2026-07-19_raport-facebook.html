@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Raport Facebook Săptămânal · 13–19 Iulie 2026 · Dr. Ardeleanu</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+  :root{
+    --burgundy:#7B1C16;
+    --burgundy-dark:#5A1410;
+    --olive:#B5BD5C;
+    --terracotta:#dd7e6b;
+    --gold:#C9A227;
+    --yellow:#FBE483;
+    --wheat:#F2DAB7;
+    --cream:#F5EDE3;
+    --alert:#FF0300;
+    --text:#222222;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0;
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    background:var(--cream);
+    line-height:1.55;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 0 60px;}
+
+  /* HEADER */
+  .hero{
+    background:linear-gradient(135deg,var(--burgundy) 0%,var(--burgundy-dark) 100%);
+    color:var(--white);
+    padding:42px 40px 34px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero:before{
+    content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;
+    border-radius:50%;background:rgba(255,255,255,0.06);
+  }
+  .hero .pill{
+    display:inline-block;background:var(--yellow);color:var(--burgundy-dark);
+    font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;
+    padding:5px 14px;border-radius:20px;margin-bottom:16px;
+  }
+  .hero h1{
+    font-family:'Playfair Display',serif;font-size:34px;margin:0 0 6px;font-weight:700;
+  }
+  .hero .sub{color:var(--gold);font-weight:500;font-size:16px;margin:0 0 18px;}
+  .hero .meta{font-size:13px;color:rgba(255,255,255,0.75);}
+
+  /* SECTION HEADERS */
+  h2.section{
+    font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--white);background:var(--burgundy);
+    padding:10px 40px;margin:0;
+  }
+  .section-body{padding:26px 40px;}
+
+  /* PE SCURT */
+  ul.bullets{margin:0;padding-left:0;list-style:none;}
+  ul.bullets li{
+    background:var(--white);border-left:4px solid var(--gold);
+    padding:12px 18px;margin-bottom:10px;border-radius:4px;font-size:14.5px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.05);
+  }
+  ul.bullets li b{color:var(--burgundy);}
+
+  /* TABLE */
+  table.vol{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--white);border-radius:6px;overflow:hidden;}
+  table.vol th{
+    background:var(--burgundy);color:var(--white);text-align:left;padding:10px 12px;
+    font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;
+  }
+  table.vol td{padding:9px 12px;border-bottom:1px solid var(--wheat);}
+  table.vol tr.noi td{background:var(--wheat);font-weight:700;color:var(--burgundy-dark);}
+  table.vol tr.tier2-hdr td{background:var(--burgundy-dark);color:var(--white);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:1px;}
+  table.vol tr:last-child td{border-bottom:none;}
+  .badge-new{background:var(--alert);color:white;font-size:10px;padding:2px 7px;border-radius:10px;margin-left:6px;font-weight:700;}
+  .badge-noi{background:var(--gold);color:white;font-size:10px;padding:2px 8px;border-radius:10px;margin-left:4px;font-weight:700;}
+
+  /* CARDS */
+  .card{
+    background:var(--white);border-radius:8px;padding:20px 22px;margin-bottom:20px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.06);border-top:4px solid var(--burgundy);
+  }
+  .card.noi{border-top-color:var(--gold);background:#FFFDF6;}
+  .card h3{margin:0 0 2px;font-size:18px;color:var(--burgundy-dark);font-family:'Playfair Display',serif;}
+  .card .handle{font-size:12px;color:#888;margin-bottom:14px;}
+  .card .stats-row{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px;}
+  .stat{background:var(--cream);border-radius:6px;padding:8px 14px;font-size:12.5px;text-align:center;min-width:90px;}
+  .stat b{display:block;font-size:20px;color:var(--burgundy);font-family:'Poppins';}
+  .post-item{border-left:3px solid var(--wheat);padding:8px 0 8px 14px;margin-bottom:8px;font-size:13.5px;}
+  .post-item .pdate{font-weight:600;color:var(--burgundy);}
+  .post-item .ptype{font-size:11px;background:var(--olive);color:white;padding:1px 8px;border-radius:8px;margin-left:6px;}
+  .obs{
+    margin-top:14px;background:var(--wheat);padding:12px 16px;border-radius:6px;font-size:13px;
+  }
+  .obs b{color:var(--burgundy-dark);}
+  .datalim{font-size:11.5px;color:#8a7458;font-style:italic;margin-top:8px;}
+
+  /* TIER 2 ALERTS */
+  .alert-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .alert-item{background:var(--white);border-radius:6px;padding:12px 16px;font-size:13px;border-left:3px solid var(--terracotta);}
+  .alert-item b{color:var(--burgundy-dark);display:block;margin-bottom:3px;}
+  .alert-item.quiet{border-left-color:#ccc;color:#888;}
+
+  /* KIDS SECTION */
+  .kids-box{background:var(--olive);color:#1a1a00;border-radius:8px;padding:22px 24px;}
+  .kids-box h3{margin-top:0;font-family:'Playfair Display',serif;color:var(--burgundy-dark);}
+  table.kids{width:100%;border-collapse:collapse;font-size:13px;margin-top:14px;background:rgba(255,255,255,0.65);border-radius:6px;overflow:hidden;}
+  table.kids th{background:var(--burgundy-dark);color:white;padding:8px 10px;text-align:left;}
+  table.kids td{padding:8px 10px;border-bottom:1px solid rgba(0,0,0,0.08);}
+
+  /* RECOMMENDATIONS */
+  ol.reco{padding-left:20px;}
+  ol.reco li{margin-bottom:14px;font-size:14px;background:var(--white);padding:12px 16px;border-radius:6px;list-style:none;margin-left:-20px;border-left:4px solid var(--burgundy);}
+  ol.reco{counter-reset:reco;}
+  ol.reco li{counter-increment:reco;position:relative;padding-left:40px;}
+  ol.reco li:before{
+    content:counter(reco);position:absolute;left:12px;top:10px;
+    background:var(--burgundy);color:white;width:20px;height:20px;border-radius:50%;
+    font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  }
+
+  /* FOOTER */
+  .footer{
+    background:var(--burgundy-dark);color:rgba(255,255,255,0.85);padding:26px 40px;font-size:12.5px;
+  }
+  .footer div{margin-bottom:4px;}
+  .footer .brand{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold);margin-bottom:10px;}
+  .conf{display:inline-block;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;}
+  .conf.medium{background:var(--gold);color:#3a2b00;}
+  a{color:var(--burgundy);}
+  .footer a{color:var(--yellow);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="pill">Facebook · Raport Săptămânal · Săpt. 29</span>
+    <h1>🦷 Inteligență Competitivă — Facebook</h1>
+    <p class="sub">13 – 19 Iulie 2026</p>
+    <p class="meta">Clinicile Dr. Ardeleanu · Excelența la prețuri accesibile — Din 2017 · Generat 20 iulie 2026</p>
+  </div>
+
+  <!-- PE SCURT -->
+  <h2 class="section">▶ Pe scurt</h2>
+  <div class="section-body">
+    <ul class="bullets">
+      <li><b>Life Dental Spa rămâne, de departe, cel mai agresiv pe Meta Ads</b> — ~230 reclame active, cu peste 10 creative noi lansate doar în această săptămână (parodontoză, albire, carii, proteze vs. implant). Ritmul de rotație al creativelor e mult peste orice alt competitor.</li>
+      <li><b>DENT ESTET a avut cea mai intensă săptămână de conținut nou</b> — minim 8 reclame/postări noi între 13–20 iulie: campania pediatrică "Rise & Smile" (DENT ESTET 4 KIDS, activă până pe 31.07), evenimentul "Implant Expert Days" la Craiova (30 iulie) și un video cu Dr. Irina Manafu despre laserul WaterLase.</li>
+      <li><b>Regina Maria Dental rămâne liderul absolut de volum</b> (~150 reclame active), dar cu un ritm de reînnoire mai lent — o singură reclamă clar nouă săptămâna asta (educație despre fumat și parodontoză, Pitești).</li>
+      <li><b>Dentrust (Focșani) rulează o campanie CSR notabilă</b> — povestea "Adelin", un adolescent din Soveja ajutat împreună cu Asociația Graurii; 4 din cele 5 reclame active au pornit chiar în această săptămână (13 și 17 iulie).</li>
+      <li><b>Noi (Dr. Ardeleanu) am publicat organic 4 postări</b> (15, 16 și 19 iulie) — campania de vacanță pentru diaspora ("Vii acasă în vacanță?"), un reel umoristic despre recenzii și un testimonial înainte/după. Volum de reclame Meta stabil (~42 active), fără creative noi lansate special în această săptămână — recomandăm reîmprospătarea mesajelor pentru a nu pierde ritmul față de DENT ESTET și Life Dental Spa.</li>
+    </ul>
+  </div>
+
+  <!-- VOLUME -->
+  <h2 class="section">▶ Volumele pe care le vede piața</h2>
+  <div class="section-body">
+    <table class="vol">
+      <tr><th>Brand</th><th>Reclame Meta active</th><th>Reclame noi (13–19 iul.)</th><th>Postări organice confirmate</th><th>Rang volum Ads</th></tr>
+      <tr class="noi"><td>Dr. Ardeleanu (NOI)</td><td>~42</td><td>0</td><td>4</td><td>#4</td></tr>
+      <tr><td>DENT ESTET (+4 Kids)</td><td>~30</td><td>8 <span class="badge-new">activ</span></td><td>1 confirmată</td><td>#5</td></tr>
+      <tr><td>Regina Maria Dental</td><td>~150</td><td>1</td><td>1 confirmată</td><td>#2</td></tr>
+      <tr><td>Life Dental Spa</td><td>~230</td><td>10+ <span class="badge-new">foarte activ</span></td><td>1 confirmată</td><td>#1</td></tr>
+      <tr><td>Elidadent</td><td>0</td><td>0</td><td>1 confirmată</td><td>—</td></tr>
+      <tr><td>Dental Blue International</td><td>2</td><td>2 <span class="badge-new">relansare</span></td><td>1 confirmată</td><td>#9</td></tr>
+      <tr class="tier2-hdr"><td colspan="5">Tier 2 (alerte scurte)</td></tr>
+      <tr><td>JC Dent (Slobozia)</td><td>7</td><td>2</td><td>1 confirmată</td><td>#7</td></tr>
+      <tr><td>Dr. Malama (Slobozia)</td><td>0</td><td>0</td><td>1 confirmată</td><td>—</td></tr>
+      <tr><td>Ark Med (Călărași)</td><td>0</td><td>0</td><td>0 (profil inactiv)</td><td>—</td></tr>
+      <tr><td>Dentrust (Focșani)</td><td>5</td><td>4 <span class="badge-new">CSR</span></td><td>1 confirmată</td><td>#8</td></tr>
+      <tr><td>Saviem Smile (Giurgiu)</td><td>0</td><td>0</td><td>1 confirmată</td><td>—</td></tr>
+      <tr><td>Clinica Dentalist</td><td>~13</td><td>6</td><td>—</td><td>#6</td></tr>
+      <tr><td>Dent Priority</td><td>~58</td><td>0 vizibil</td><td>—</td><td>#3</td></tr>
+      <tr><td>Edent Clinic</td><td>~18</td><td>1</td><td>—</td><td>#5.5</td></tr>
+    </table>
+    <p class="datalim">Notă: numărul de reclame active provine din Meta Ads Library (sursă oficială, fără limitări) — cifre exacte la data rulării. Numărul de "postări organice confirmate" reflectă postările pe care le-am putut vedea efectiv scrolând feed-ul fiecărei pagini; Facebook a limitat tehnic încărcarea la 1–4 postări pe pagină în această sesiune, deci NU este inventarul complet al săptămânii pentru competitori — doar minimul confirmat. Pentru Dr. Ardeleanu am reușit să vedem 4 postări complete.</p>
+  </div>
+
+  <!-- DISTRIBUTIE CONTINUT -->
+  <h2 class="section">▶ Ce format domină conținutul văzut</h2>
+  <div class="section-body">
+    <p style="font-size:14px;">Din eșantionul confirmat această săptămână, <b>reel-ul/video scurt este formatul dominant</b> la toate brandurile mari — DENT ESTET, Life Dental Spa, Elidadent, Dental Blue și Dr. Ardeleanu au postat exclusiv sau majoritar video în ultimele zile. Singura excepție organică a fost Regina Maria Dental (foto de echipă, clinica Timișoara) și noi (carusel foto înainte/după). Pe partea de reclame plătite, Life Dental Spa și Regina Maria combină video explicativ cu formate carusel/imagine pentru oferte cu preț afișat.</p>
+  </div>
+
+  <!-- ACTIVITATE PAGINA CU PAGINA -->
+  <h2 class="section">▶ Activitate pagină cu pagină (Tier 1)</h2>
+  <div class="section-body">
+
+    <div class="card noi">
+      <h3>Dr. Ardeleanu (NOI) · facebook.com/Dr.Ardeleanu</h3>
+      <div class="handle">17K urmăritori</div>
+      <div class="stats-row">
+        <div class="stat"><b>4</b>postări organice</div>
+        <div class="stat"><b>~42</b>reclame Meta active</div>
+        <div class="stat"><b>0</b>reclame noi</div>
+      </div>
+      <div class="post-item"><span class="pdate">19 iulie, 12:23</span><span class="ptype">reel</span><br>
+        "Cum ar fi dacă review-urile s-ar putea negocia?" — reel umoristic cu o angajată care "negociază" o recenzie de 3 stele. Engagement: 8 reacții.</div>
+      <div class="post-item"><span class="pdate">16 iulie, 20:02</span><span class="ptype">foto</span><br>
+        "Foarte ușor... neașteptat de ușor." — testimonial cu fotografii înainte/după (implant + coroane). Engagement: 6 like-uri, 5 distribuiri.</div>
+      <div class="post-item"><span class="pdate">15 iulie, 15:42</span><span class="ptype">reel</span><br>
+        Reel despre greșeli comune în îngrijirea dentară ("Are you making one of these mistakes?").</div>
+      <div class="post-item"><span class="pdate">15 iulie, 10:30</span><span class="ptype">foto</span><br>
+        "Vii acasă în vacanța asta? Profită de fiecare zi." — campanie dedicată diasporei: programări prioritare, mai multe tratamente într-o singură vizită. Include carusel înainte/după. Engagement: 3 like-uri, 4 distribuiri.</div>
+      <div class="obs"><b>➜ Observații:</b> Campania de diasporă e un unghi bun și diferențiator — niciun competitor Tier 1 nu comunică explicit către români din străinătate. Recomandăm extinderea ei (vezi secțiunea de recomandări). Pe Meta Ads, volumul de ~42 reclame active e solid, dar mesajele active (plombe, pachete igienizare, aparat metalic, evaluare 95 lei, SPARK, implant în rate) sunt aceleași din 18 mai — nicio reclamă nouă lansată în ultimele 7 zile, spre deosebire de DENT ESTET și Life Dental Spa care reînnoiesc constant creativele.</div>
+    </div>
+
+    <div class="card">
+      <h3>DENT ESTET (+ DENT ESTET 4 KIDS) · facebook.com/dentestet.ro</h3>
+      <div class="handle">45K urmăritori · 98% recomandă (1.275 recenzii)</div>
+      <div class="stats-row">
+        <div class="stat"><b>1+</b>postare confirmată</div>
+        <div class="stat"><b>~30</b>reclame Meta active</div>
+        <div class="stat"><b>8</b>reclame noi</div>
+      </div>
+      <div class="post-item"><span class="pdate">20 iulie (azi, ~4h)</span><span class="ptype">reel</span><br>
+        Dr. Irina Manafu explică folosirea laserului WaterLase în implantologie (clinica Oradea). Reclamă și postare organică cu același conținut.</div>
+      <div class="post-item"><span class="pdate">18 iulie</span><span class="ptype">foto</span><br>
+        Postare de mulțumire/testimoniale pentru pacienți ("recunoscători pentru că alegeți DENT ESTET").</div>
+      <div class="post-item"><span class="pdate">17 iulie</span><span class="ptype">reclamă</span><br>
+        "DENT ESTET on Tour" ajunge la Craiova — Implant Expert Days, 30 iulie, cu Dr. Alexandru Georgescu (Director Medical).</div>
+      <div class="post-item"><span class="pdate">17 iulie</span><span class="ptype">reclamă</span><br>
+        Campania pediatrică "Rise & Smile" (DENT ESTET 4 KIDS) — 50% reducere periaj/sigilări, 30% consultație ortodontică, program 08:00–12:00 L-V, activă până pe 31.07.</div>
+      <div class="post-item"><span class="pdate">13–14 iulie</span><span class="ptype">reclamă</span><br>
+        Pachet implant + coroană cu avantaj 250€, targetat pe Oradea.</div>
+      <div class="obs"><b>➜ Observații:</b> Săptămâna cu cel mai intens ritm de conținut nou dintre toți competitorii Tier 1. Strategia de "roadshow" (DENT ESTET on Tour, Implant Expert Days în orașe secundare — Craiova, Oradea) e un pattern de expansiune geografică de urmărit. Campania Rise & Smile (dimineața, pentru copii) e o idee ușor de adaptat pentru Dental Safari.</div>
+    </div>
+
+    <div class="card">
+      <h3>Regina Maria Dental Clinics · facebook.com/ReginaMariaDentalClinics</h3>
+      <div class="handle">84K urmăritori · 88% recomandă (691 recenzii)</div>
+      <div class="stats-row">
+        <div class="stat"><b>1</b>postare confirmată</div>
+        <div class="stat"><b>~150</b>reclame Meta active</div>
+        <div class="stat"><b>1</b>reclamă nouă</div>
+      </div>
+      <div class="post-item"><span class="pdate">19 iulie</span><span class="ptype">foto</span><br>
+        "Regina Maria Dental Clinics is in Timișoara" — "Nu este vorba doar despre dinți. Este despre cum trăiești în fiecare zi." Foto echipă medicală în timpul unei intervenții. Engagement: 8 reacții, 2 comentarii.</div>
+      <div class="post-item"><span class="pdate">15 iulie</span><span class="ptype">reclamă</span><br>
+        Educație despre fumat și sănătatea gingiilor cu Dr. Andreea Vladu, targetat pe Pitești ("Protocolul Dr. Leahu").</div>
+      <div class="obs"><b>➜ Observații:</b> Volumul de ~150 reclame active e susținut aproape integral de un set mic de creative evergreen reciclate ("Dinți Ficși în 24h", "Dinții care se mișcă pot fi salvați", protocol Dr. Leahu, plată în rate până la 60 de rate) — nu ritm mare de creative noi, ci acoperire media masivă pe mesaje deja validate. Parteneriatul cu Oral-B / eMAG (abonament stomatologic 3 luni cadou) e un exemplu de co-marketing pe care nu îl vedem la niciun alt competitor.</div>
+    </div>
+
+    <div class="card">
+      <h3>Life Dental Spa · facebook.com/LifeDentalSpa</h3>
+      <div class="handle">81K urmăritori</div>
+      <div class="stats-row">
+        <div class="stat"><b>1</b>postare confirmată</div>
+        <div class="stat"><b>~230</b>reclame Meta active</div>
+        <div class="stat"><b>10+</b>reclame noi</div>
+      </div>
+      <div class="post-item"><span class="pdate">20 iulie (azi, ~4h)</span><span class="ptype">reel</span><br>
+        "Crezi că ai nevoie de albire dentară, dar problema este, de fapt, tartrul?" — reel educațional. Engagement: 6 like-uri, 1 comentariu.</div>
+      <div class="post-item"><span class="pdate">14 iulie (val nou)</span><span class="ptype">reclamă ×7</span><br>
+        Cel mai mare cluster de creative noi din toată piața într-o singură zi: parodontoză + laser (voucher 300 lei), albire laser (50%), tratament carii cu laser (50%), gingii sângerânde + protocol BIOPARO, proteze mobile vs. dinți ficși pe implant, aparat dentar invizibil (voucher 1000€), apă de gură vs. BIOPARO.</div>
+      <div class="post-item"><span class="pdate">16 iulie</span><span class="ptype">reclamă</span><br>
+        Repetare campanie albire dentară laser, 50% reducere.</div>
+      <div class="obs"><b>➜ Observații:</b> Life Dental Spa confirmă statutul de lider absolut pe volum de reclame — dar ce e nou de această săptămână e <b>viteza</b>: 7+ creative diferite lansate în aceeași zi (14 iulie), toate pe tema "stomatologie biologică laser, fără durere". Mesajul lor central ("laser = fără freză, fără durere, fără anestezie") e extrem de consistent și repetat pe toate temele (carii, parodontoză, implant). Acest volum de testare rapidă sugerează un buget media semnificativ și o echipă media internă/agenție dedicată.</div>
+    </div>
+
+    <div class="card">
+      <h3>Elidadent · facebook.com/profile.php?id=100038889943740</h3>
+      <div class="handle">4,6K urmăritori · 100% recomandă (98 recenzii) · Târgoviște</div>
+      <div class="stats-row">
+        <div class="stat"><b>1</b>postare confirmată</div>
+        <div class="stat"><b>0</b>reclame Meta active</div>
+        <div class="stat"><b>0</b>reclame noi</div>
+      </div>
+      <div class="post-item"><span class="pdate">17 iulie, 12:55</span><span class="ptype">reel</span><br>
+        "Vrei un implant care să reziste ani de zile? Atunci răbdarea este parte din tratament." Engagement: 25 reacții, 2 comentarii — cel mai bun engagement organic din eșantionul acestei săptămâni.</div>
+      <div class="post-item"><span class="pdate">recent (featured)</span><span class="ptype">reclamă</span><br>
+        Parteneriat de finanțare cu BT Direct (credit pentru tratamente dentare).</div>
+      <div class="obs"><b>➜ Observații:</b> Elidadent are zero reclame Meta active în acest moment — dependență exclusivă pe organic + parteneriatul de creditare BT Direct. Engagement-ul organic (25 reacții pe un reel cu buget relativ mic de urmăritori) e neobișnuit de bun proporțional — un semnal că audiența lor e foarte implicată local, în ciuda paginii mici.</div>
+    </div>
+
+    <div class="card">
+      <h3>Dental Blue International · facebook.com/people/Dental-Blue-International</h3>
+      <div class="handle">6,2K urmăritori · 98% recomandă (230 recenzii) · Slobozia, Bucur., Constanța, Tăndărei, Fetești, Buzău + Tel Aviv</div>
+      <div class="stats-row">
+        <div class="stat"><b>1</b>postare confirmată</div>
+        <div class="stat"><b>2</b>reclame Meta active</div>
+        <div class="stat"><b>2</b>reclame noi</div>
+      </div>
+      <div class="post-item"><span class="pdate">17 iulie, 19:30</span><span class="ptype">reel</span><br>
+        "Poți avea un chist mare la rădăcina dintelui... și să nu simți absolut nimic." Engagement: 4 reacții.</div>
+      <div class="post-item"><span class="pdate">20 iulie (azi)</span><span class="ptype">reclamă ×2</span><br>
+        Relansare de reclame Meta după o perioadă fără activitate plătită vizibilă — un mesaj despre ortodonție/aparat dentar, altul despre gestionarea anxietății pacientului ("16+ ani experiență").</div>
+      <div class="obs"><b>➜ Observații:</b> Dental Blue pare să fi relansat chiar azi bugetul de Meta Ads (ambele reclame active au pornit acum ~2h, cu impresii sub 100). Menționează un punct de lucru la Tel Aviv — un unghi de diasporă similar cu campania noastră "Vii acasă în vacanță", dar orientat spre израелienii de origine română.</div>
+    </div>
+
+  </div>
+
+  <!-- DENTAL SAFARI VS -->
+  <h2 class="section">▶ Dental Safari vs. DENT ESTET 4 KIDS vs. Elidadent for Kids</h2>
+  <div class="section-body">
+    <div class="kids-box">
+      <h3>🦒 Poziționare pediatrică — cine mișcă piața săptămâna asta</h3>
+      <p style="font-size:14px;">Singurul competitor cu activitate pediatrică vizibilă de facturare/reclame în această săptămână este <b>DENT ESTET 4 KIDS</b>, cu campania "Rise & Smile" — un unghi simplu și replicabil: reduceri pentru programări de dimineață (08:00–12:00, L-V), motivate de faptul că un copil odihnit e mai cooperant. Este o campanie cu deadline clar (31 iulie), ceea ce creează presiune de conversie pe termen scurt. Nu am identificat reclame Meta active pentru un eventual "Elidadent for Kids" ca sub-brand separat — pediatria lor pare integrată în comunicarea generală a clinicii, fără cont sau campanie dedicată. Recomandăm monitorizarea explicită a paginii Facebook Kids a Regina Maria ("Academia Spațială pentru Copii") și a Dent Priority Kids, care nu au avut reclame vizibile în eșantionul nostru din această săptămână, dar merită verificare directă în raportul lunar de Google Ads / social pediatric dedicat.</p>
+      <table class="kids">
+        <tr><th>Sub-brand</th><th>Activitate săpt. 13–19 iul.</th><th>Unghi de mesaj</th></tr>
+        <tr><td><b>Dental Safari</b> (noi)</td><td>Fără campanie dedicată activă în Meta Ads Library în această fereastră</td><td>Univers "safari", gamificare, fără frică</td></tr>
+        <tr><td>DENT ESTET 4 KIDS</td><td>2 reclame noi (17 iul.), campanie activă până 31 iul.</td><td>"Rise & Smile" — reduceri pentru programări dimineața</td></tr>
+        <tr><td>Elidadent for Kids</td><td>Nicio activitate separată identificată</td><td>Pediatrie integrată în brandul general</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ALERTE TIER 2 -->
+  <h2 class="section">▶ Alerte Tier 2</h2>
+  <div class="section-body">
+    <div class="alert-grid">
+      <div class="alert-item"><b>JC Dent (Slobozia)</b>2 reclame Meta noi (13 iul.) despre implant + dinte provizoriu în aceeași zi. Organic: reel despre chirurgie laser pe gingie fără suturi (3 reacții). Competitor direct pentru clinica noastră din Slobozia.</div>
+      <div class="alert-item"><b>Dr. Malama (Slobozia)</b>Fără reclame Meta active. Organic activ: postare despre "Dantura Fixă pe Implanturi în 48h — Fast and Fixed", plus conținut de brand ("de 20 de ani făurim zâmbete").</div>
+      <div class="alert-item quiet"><b>Ark Med (Călărași)</b>Fără activitate. Este de fapt un profil personal Facebook (2.454 prieteni, nu pagină de business), iar ultimul comentariu vizibil datează de 9 săptămâni — pagină practic inactivă.</div>
+      <div class="alert-item"><b>Dentrust (Focșani)</b>4 din 5 reclame active au pornit chiar în această săptămână (13 și 17 iul.) — campanie CSR "Adelin", un adolescent din Soveja ajutat împreună cu Asociația Graurii, plus cazuri clinice complexe (12 implanturi, tehnică din Portugalia).</div>
+      <div class="alert-item"><b>Saviem Smile (Giurgiu)</b>Fără reclame Meta. Organic: articol lung despre "cum arată o consultație modernă în 2026" + campanie de recrutare într-un grup WhatsApp pentru pacienți. Competitor direct pentru clinica noastră din Giurgiu, deși foarte mic (869 urmăritori).</div>
+      <div class="alert-item"><b>Clinica Dentalist</b>6 reclame noi (16 iul.) — campanie sezonieră "Summer Smile" (rezolvă o durere de măsea înainte de vacanță, valabilă până 15 august) + recrutare continuă de personal (clinică nouă în București).</div>
+      <div class="alert-item quiet"><b>Dent Priority</b>~58 reclame active, dar niciuna clar nouă în fereastra 13–19 iulie în eșantionul verificat — mesaje evergreen (implantologie digitală, ortodonție) rulate constant în Craiova, Târgu Jiu, Slatina, Caracal.</div>
+      <div class="alert-item"><b>Edent Clinic</b>1 reclamă nouă (17 iul.) — pachet de vară pentru copii "Zâmbet de vacanță" la EDENT Kids Tulcea (consult pedodontic + radiografie + igienizare + fluorizare, valabil 1 iulie – 30 august).</div>
+    </div>
+  </div>
+
+  <!-- TEME RECURENTE -->
+  <h2 class="section">▶ Teme recurente pe Facebook săptămâna asta</h2>
+  <div class="section-body">
+    <ul class="bullets">
+      <li><b>Vacanța de vară ca declanșator de mesaj</b> — apare la noi (diaspora), Clinica Dentalist ("Summer Smile"), Edent Kids ("Zâmbet de vacanță") și, indirect, la Life Dental Spa. E tema dominantă a lunii iulie în toată piața.</li>
+      <li><b>"Fără durere" / tehnologie laser ca argument central</b> — Life Dental Spa îl repetă pe toate temele; DENT ESTET îl folosește pentru WaterLase; Regina Maria pentru sedare conștientă.</li>
+      <li><b>Storytelling cu pacienți reali / CSR</b> — Dentrust (Adelin) e cel mai clar exemplu; noi avem testimoniale înainte/după, dar fără o poveste narativă construită pe mai multe episoade.</li>
+      <li><b>CTA dominant:</b> "Programează-te acum" / "Solicită o programare" rămâne aproape universal; DENT ESTET și Regina Maria adaugă din ce în ce mai des variante de plată în rate ca argument de conversie.</li>
+    </ul>
+  </div>
+
+  <!-- CE FACEM NOI -->
+  <h2 class="section">▶ Ce facem noi săptămâna următoare pe Facebook</h2>
+  <div class="section-body">
+    <ol class="reco">
+      <li><b>Extinde campania "Vii acasă în vacanță":</b> transform-o într-o mini-serie (3–4 postări) cu pași concreți pentru diaspora — programare de la distanță, plan de tratament comprimat, testimoniale de la pacienți din diasporă. Niciun competitor Tier 1 nu ocupă activ acest unghi momentan.</li>
+      <li><b>Testează un reel pe formatul "Fast and Fixed" / laser, fără durere:</b> Life Dental Spa arată că acest mesaj generează engagement constant; putem adapta pentru Protocolul Dr. Ardeleanu (scanare digitală = fără disconfort, fără mulaje clasice).</li>
+      <li><b>Comunică o promoție de vară cu preț afișat</b> (tip pachet igienizare sau evaluare 95 lei, deja active în Ads) și organic, cu deadline clar — Clinica Dentalist și Edent Clinic arată că framing-ul de "rezolvă înainte de vacanță" funcționează bine sezonier.</li>
+      <li><b>Engagement de generat:</b> un sondaj/poll simplu tip "Care e frica ta #1 la dentist?" (inspirat de reușita organică a Saviem Smile pe acest unghi) — ieftin de produs, generează comentarii utile pentru insight-uri de conținut viitor.</li>
+    </ol>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="brand">Clinicile Dr. Ardeleanu · Din 2017</div>
+    <div>Competitori scanați: 13/13 (Meta Ads Library) · 8/13 verificați organic (limitare tehnică de încărcare Facebook pentru restul)</div>
+    <div>Sursă reclame: Meta Ads Library (oficial Meta) ✓ — acoperire completă, fără limitări</div>
+    <div>Sursă organic: Claude in Chrome, cont Facebook logat ✓ — inventar parțial (1–4 postări/pagină confirmate vizibil, nu neapărat totalul săptămânii)</div>
+    <div>Surse inaccesibile: niciuna respinsă — doar scroll limitat tehnic pe paginile mari (DENT ESTET, Regina Maria, Life Dental Spa, Dr. Malama) după 1-2 postări</div>
+    <div>Confidence level: <span class="conf medium">MEDIU-RIDICAT</span> — foarte ridicat pe partea de reclame plătite, mediu pe partea organică (eșantion parțial, nu inventar complet)</div>
+    <div style="margin-top:10px;">Generat automat de skill: competitor-weekly-facebook v1.0 · <a href="https://clinicileardeleanu.ro">clinicileardeleanu.ro</a></div>
+  </div>
+
+</div>
+</body>
+</html>
