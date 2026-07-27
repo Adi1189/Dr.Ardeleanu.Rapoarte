@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport Instagram Săptămânal (corectat) · 20–26 iulie 2026</title>
+<style>
+  :root{
+    --bordo:#7a1420; --bordo-dark:#5a0e18; --gold:#c9a34e; --gold-light:#e3c987;
+    --ink:#22181a; --muted:#6c5b5e; --line:#e7dcd0; --bg:#faf6f0; --card:#fffdfa;
+    --ok:#2e7d54; --warn:#b5642a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.55;font-size:15px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 80px}
+  header{background:linear-gradient(135deg,var(--bordo),var(--bordo-dark));color:#fff;
+    padding:38px 40px;border-radius:0 0 18px 18px;box-shadow:0 6px 24px rgba(90,14,24,.25)}
+  header .kicker{color:var(--gold-light);letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:600}
+  header h1{margin:8px 0 4px;font-size:27px;font-weight:700}
+  header .range{color:#f3e7d6;font-size:15px}
+  header .meta{margin-top:14px;font-size:12.5px;color:#e9d9c4;opacity:.9}
+  h2{color:var(--bordo);font-size:19px;margin:40px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--gold);
+    display:flex;align-items:center;gap:9px}
+  h2 .ico{width:8px;height:20px;background:var(--gold);border-radius:2px;display:inline-block}
+  .lead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);
+    border-radius:10px;padding:16px 20px;margin-top:8px}
+  .lead ul{margin:0;padding-left:20px}
+  .lead li{margin:7px 0}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+    border-radius:10px;overflow:hidden;font-size:14px;margin-top:6px}
+  th{background:var(--bordo);color:#fff;text-align:left;padding:11px 14px;font-weight:600;font-size:13px}
+  td{padding:10px 14px;border-top:1px solid var(--line)}
+  tr.us td{background:#fdf4e6;font-weight:600}
+  tr.us td:first-child{color:var(--bordo)}
+  .tier-sep td{background:#f0e7db;color:var(--muted);font-size:11.5px;text-transform:uppercase;
+    letter-spacing:.08em;font-weight:600;padding:6px 14px}
+  .na{color:var(--warn);font-style:italic}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+    box-shadow:0 2px 8px rgba(90,14,24,.05)}
+  .card.us{border:2px solid var(--gold);box-shadow:0 4px 14px rgba(201,163,78,.22)}
+  .card .head{padding:12px 16px;background:#f7eee2;border-bottom:1px solid var(--line);
+    font-weight:700;color:var(--bordo);font-size:15px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .card.us .head{background:linear-gradient(135deg,var(--bordo),var(--bordo-dark));color:#fff}
+  .card .head .h{font-size:11.5px;font-weight:600;color:var(--muted)}
+  .card.us .head .h{color:var(--gold-light)}
+  .card .body{padding:6px 16px 14px}
+  .post{padding:11px 0;border-bottom:1px solid var(--line)}
+  .post:last-child{border-bottom:none}
+  .post .top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:3px}
+  .tag{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+    padding:2px 7px;border-radius:20px;color:#fff}
+  .tag.reel{background:#8e3b6b}.tag.post{background:#3b6ea5}.tag.carusel{background:#2e7d54}
+  .date{font-size:12px;color:var(--muted);font-weight:600}
+  .post .cap{font-size:13.5px;margin:2px 0 4px}
+  .eng{font-size:12px;color:var(--bordo);font-weight:600}
+  .eng .sub{color:var(--muted);font-weight:400}
+  .obs{background:#fdf4e6;border-radius:8px;padding:10px 14px;margin-top:10px;font-size:13px;border-left:3px solid var(--gold)}
+  .obs b{color:var(--bordo)}
+  .alert{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:10px;font-size:13.5px}
+  .alert.off{opacity:.75}
+  .alert b{color:var(--bordo)}
+  .todo{counter-reset:t;list-style:none;padding:0;margin:8px 0 0}
+  .todo li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px 12px 46px;
+    position:relative;margin-bottom:10px;font-size:13.5px}
+  .todo li::before{counter-increment:t;content:counter(t);position:absolute;left:14px;top:12px;
+    width:22px;height:22px;background:var(--bordo);color:#fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+  .todo li b{color:var(--bordo)}
+  footer{margin-top:44px;background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:16px 20px;font-size:12.5px;color:var(--muted)}
+  footer b{color:var(--ink)}
+  .conf{display:inline-block;background:var(--ok);color:#fff;padding:2px 10px;border-radius:20px;font-size:11.5px;font-weight:600}
+  .pill{display:inline-block;background:#f0e7db;color:var(--muted);padding:1px 8px;border-radius:20px;font-size:11px;margin-left:4px}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Instagram · Raport Săptămânal</div>
+  <h1>Activitate proprie & competitori</h1>
+  <div class="range">20 – 26 iulie 2026 &nbsp;·&nbsp; Săpt. 30</div>
+  <div class="meta">Clinicile Dentare Dr. Ardeleanu · doar activitate organică (fără Meta Ads, la cerere)</div>
+</header>
+<div class="wrap">
+
+<h2><span class="ico"></span>Pe scurt</h2>
+<div class="lead">
+<ul>
+<li><b>Noi:</b> 4 postări în fereastră (1 carusel caz clinic transformare + 3 reels — testimonial „doamna Coca", educativ „pasta de dinți", poziționare „Doi medici"). Cel mai bun al nostru: educativul cu pasta de dinți (22 iul), <b>51 likes / 6 com</b> — date recitite exact la sursă.</li>
+<li><b>DENT ESTET</b> conduce clar la volum și engagement: 7 postări, prezență multi-oraș și ambasadori celebri. Caruselul Before&After al fondatoarei Dr. Oana Taban a strâns <b>299 likes</b> — cel mai puternic post din toată piața săptămâna asta.</li>
+<li><b>Regina Maria Dental</b> (5 postări) rulează o linie editorială unitară anti-dezinformare / „Protocolul Dr. Leahu"; <b>Life Dental Spa</b> (6 reels) împinge o serie de employer branding — interviuri personale cu medicii.</li>
+<li><b>Dental Blue</b> (4 reels educative, „Zâmbete reale. Fără frică.") și <b>Elidadent</b> (6 postări, mix promo finanțare + branding + aniversări echipă) — activi și consecvenți.</li>
+<li>Toată piața folosește preponderent <b>audio original</b>. Singura excepție notabilă: DENT ESTET pe audio trending (Michael Bublé) la reel-ul cu actrița Ofelia Popii — un lever de reach pe care noi nu îl folosim.</li>
+</ul>
+</div>
+
+<h2><span class="ico"></span>Volume confirmate (20–26 iul)</h2>
+<table>
+<thead><tr><th>Brand</th><th>Feed / Carusel</th><th>Reels</th><th>Total</th><th>Top engagement</th></tr></thead>
+<tbody>
+<tr class="us"><td>Dr. Ardeleanu (NOI)</td><td>1 carusel</td><td>3</td><td>4</td><td>51 likes (reel pasta de dinți, 22 iul)</td></tr>
+<tr><td>DENT ESTET</td><td>1 carusel</td><td>6</td><td>7</td><td>299 likes (Before&After Dr. Oana Taban)</td></tr>
+<tr><td>Regina Maria Dental</td><td>1 post</td><td>4</td><td>5</td><td>41 likes (reel mituri alignere)</td></tr>
+<tr><td>Life Dental Spa</td><td>0</td><td>6</td><td>6</td><td>21 likes (interviuri medici)</td></tr>
+<tr><td>Dental Blue International</td><td>0</td><td>4</td><td>4</td><td>10 likes</td></tr>
+<tr><td>Elidadent (Târgoviște)</td><td>3 posts</td><td>3</td><td>6</td><td>14 likes (promo finanțare BT)</td></tr>
+<tr class="tier-sep"><td colspan="5">Tier 2</td></tr>
+<tr><td>Clinica Dentalist</td><td>3 posts</td><td>1</td><td>4</td><td>35 likes (caz aliniatori+compozit)</td></tr>
+<tr><td>Dr. Malama</td><td colspan="4" class="na">Inactiv — ultima postare ian. 2025</td></tr>
+<tr><td>JC Dent</td><td colspan="4" class="na">Profil inaccesibil (handle @jcdent_slobozia indisponibil)</td></tr>
+<tr><td>Dent Priority · Edent Clinic</td><td colspan="4" class="na">Neverificați în această rulare</td></tr>
+</tbody>
+</table>
+
+<h2><span class="ico"></span>Activitate profil cu profil (Tier 1)</h2>
+<div class="grid">
+
+<div class="card us">
+  <div class="head">Dr. Ardeleanu (NOI) <span class="h">@dr.ardeleanu</span></div>
+  <div class="body">
+    <div class="post"><div class="top"><span class="tag carusel">Carusel</span><span class="date">24 iul</span></div>
+      <div class="cap">Caz clinic: „🦷 În spatele unei transformări complete nu se află o singură intervenție, ci un plan de tratament construit etapă cu etapă." — abordare personalizată.</div>
+      <div class="eng">26 likes <span class="sub">/ 2 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">23 iul</span></div>
+      <div class="cap">Testimonial „doamna Coca — 20 de ani cu proteză, astăzi zâmbesc din nou" (colaborare @dr.claudiafratila).</div>
+      <div class="eng">12 likes <span class="sub">/ 0 com · audio original</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">22 iul</span></div>
+      <div class="cap">Educativ: „🦷 Tu după ce criteriu alegi pasta de dinți? Ambalajul, reclama sau recomandarea unui prieten?"</div>
+      <div class="eng">51 likes <span class="sub">/ 6 com · audio original</span> — top-ul nostru</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">20 iul</span></div>
+      <div class="cap">Poziționare: „Doi medici pot avea aceeași pregătire, aceeași experiență și aceeași dorință de a face bine. Și totuși, unul are agenda plină, iar celălalt se luptă să atragă..."</div>
+      <div class="eng">19 likes <span class="sub">/ 2 com · audio original</span></div></div>
+    <div class="obs"><b>Observații:</b> mix echilibrat caz clinic + testimonial + educativ + poziționare. Educativul scurt bate net restul la engagement (51 vs 12–26) — merită mai mult conținut de acest tip. Zero audio trending, zero serie recognoscibilă. <b>Corecție:</b> reel-ul CARE Forum din raportul precedent NU e în fereastra 20–26; toate cifrele sunt recitite exact la sursă (og:description).</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head">DENT ESTET <span class="h">@dent.estet</span></div>
+  <div class="body">
+    <div class="post"><div class="top"><span class="tag carusel">Carusel</span><span class="date">~25 iul</span></div>
+      <div class="cap">Before&After fondatoare Dr. Oana Taban — DSD, fațete premium ASPEN.</div>
+      <div class="eng">299 likes <span class="sub">/ 8 com</span> — cel mai puternic post din piață</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~24 iul</span></div>
+      <div class="cap">Ambasador: actrița Ofelia Popii, Ambasadoare a Sibiului.</div>
+      <div class="eng">167 likes <span class="sub">· audio trending (Michael Bublé)</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~24 iul</span></div>
+      <div class="cap">Endodonție la microscop (Dr. Roxana Chirică) · DENT ESTET.</div>
+      <div class="eng">9 likes <span class="sub">/ 1 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~23 iul</span></div>
+      <div class="cap">Apariție TV: fațete & riduri, Prima TV „Sănătate cu Stil".</div>
+      <div class="eng">23 likes</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~22 iul</span></div>
+      <div class="cap">Educativ: proteză mobilă vs dinți ficși (Sibiu) · laser carii (Craiova).</div>
+      <div class="eng">41 & 38 likes <span class="sub">(2 reels 22 iul)</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~26 iul</span></div>
+      <div class="cap">Prezentare locație nouă: DENT ESTET Oradea.</div>
+      <div class="eng">13 likes</div></div>
+    <div class="obs"><b>Observații:</b> mașinărie de conținut multi-oraș (București, Sibiu, Oradea, Craiova). Ambasadori celebri + apariții TV + before/after de autoritate (propriul zâmbet al fondatoarei). Producție și distribuție peste tot restul pieței.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head">Regina Maria Dental <span class="h">@reginamariadentalclinics</span></div>
+  <div class="body">
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~26 iul</span></div>
+      <div class="cap">Anti-dezinformare: „mitul triunghiurilor negre" la alignere / IPR (Dr. Ioana Lungu).</div>
+      <div class="eng">41 likes <span class="sub">· audio original</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~24 iul</span></div>
+      <div class="cap">„De ce se pierde un implant" — Protocolul Dr. Leahu (Dr. Mișu Dîga).</div>
+      <div class="eng">16 likes <span class="sub">/ 1 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag post">Post</span><span class="date">~23 iul</span></div>
+      <div class="cap">Abordare multidisciplinară · Hospital Caramfil.</div>
+      <div class="eng">11 likes</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~22 iul</span></div>
+      <div class="cap">Vindecare & integrare implant — Protocolul Dr. Leahu.</div>
+      <div class="eng">12 likes <span class="sub">/ 1 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~21 iul</span></div>
+      <div class="cap">Anti-mit: albirea dinților — ce obiceiuri păstrezi (Dr. Cătălina Gheorghiță).</div>
+      <div class="eng">31 likes <span class="sub">/ 3 com</span></div></div>
+    <div class="obs"><b>Observații:</b> linie editorială foarte coerentă — combaterea miturilor din social media + brand-ul „Protocolul Dr. Leahu" ca semnătură de autoritate. Poziționare educațională, mai puțin before/after.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head">Life Dental Spa <span class="h">@lifedentalspa</span></div>
+  <div class="body">
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~26 iul</span></div>
+      <div class="cap">Serie interviuri: Dr. Ștefan Cîrstolovean (ortodont, Brașov).</div>
+      <div class="eng">5 likes <span class="sub">/ 1 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~25 iul</span></div>
+      <div class="cap">Serie interviuri: Dr. Dan Andrei.</div>
+      <div class="eng">21 likes <span class="sub">/ 4 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~24 iul</span></div>
+      <div class="cap">Serie interviuri: Dr. Roxana Corciova.</div>
+      <div class="eng">21 likes <span class="sub">/ 2 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~23 iul</span></div>
+      <div class="cap">Serie interviuri: Dr. Adnana Purcaru (Sibiu).</div>
+      <div class="eng">4 likes</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~22 iul</span></div>
+      <div class="cap">Educativ: parodontoză & protocol laser BIOPARO.</div>
+      <div class="eng">1 like</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~20 iul</span></div>
+      <div class="cap">Educativ: tartru vs albire — când e suficientă igienizarea.</div>
+      <div class="eng">3 likes</div></div>
+    <div class="obs"><b>Observații:</b> 100% reels, condusă de fondatoarea Dr. Cristina Obreja. Miză mare pe employer branding (medicii „dincolo de cabinet"). Engagement modest — seria umanizează echipa dar nu generează reach.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head">Dental Blue International <span class="h">@dental_blue_international</span></div>
+  <div class="body">
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~26 iul</span></div>
+      <div class="cap">Before&After — recăpătarea încrederii.</div>
+      <div class="eng">2 likes</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~25 iul</span></div>
+      <div class="cap">Educativ: „vin pentru estetică, descoperă problema funcțională".</div>
+      <div class="eng">10 likes <span class="sub">/ 2 com · audio original</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~22 iul</span></div>
+      <div class="cap">Educativ: retratament endodontic — reinfecția unui dinte tratat.</div>
+      <div class="eng">10 likes <span class="sub">/ 3 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~22 iul</span></div>
+      <div class="cap">Educativ: alignere — diagnostic & consecvență (22h/zi).</div>
+      <div class="eng">5 likes <span class="sub">/ 2 com</span></div></div>
+    <div class="obs"><b>Observații:</b> concept vizual/verbal unitar „Zâmbete reale. Fără frică." Conținut educativ onest (inclusiv admiterea limitelor medicinei) — ton de încredere. Prezent în Slobozia/Fetești/Țăndărei/București/Constanța/Buzău — competitor direct pe zona ta.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head">Elidadent <span class="h">@clinicaelidadent · Târgoviște</span></div>
+  <div class="body">
+    <div class="post"><div class="top"><span class="tag post">Post</span><span class="date">~25 iul</span></div>
+      <div class="cap">Aniversare echipă: Dr. Andra Dogaru.</div>
+      <div class="eng">6 likes</div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~25 iul</span></div>
+      <div class="cap">Behind-the-scenes amuzant din clinică.</div>
+      <div class="eng">13 likes</div></div>
+    <div class="post"><div class="top"><span class="tag post">Post</span><span class="date">~23 iul</span></div>
+      <div class="cap">Caz clinic: coroane provizorii ONX (Dr. Andrei Cozma).</div>
+      <div class="eng">6 likes <span class="sub">/ 2 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~23 iul</span></div>
+      <div class="cap">Promo finanțare: rate BT 0,99%/lună până în septembrie.</div>
+      <div class="eng">14 likes <span class="sub">/ 2 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag post">Post</span><span class="date">~21 iul</span></div>
+      <div class="cap">Branding valori: „stomatologia înseamnă oameni".</div>
+      <div class="eng">9 likes <span class="sub">/ 1 com</span></div></div>
+    <div class="post"><div class="top"><span class="tag reel">Reel</span><span class="date">~21 iul</span></div>
+      <div class="cap">Educativ: igiena implantului (Dr. Cătălin Anghel).</div>
+      <div class="eng">6 likes <span class="sub">/ 2 com</span></div></div>
+    <div class="obs"><b>Observații:</b> mix divers (promo finanțare + caz + branding + aniversări echipă + fun). Singurul competitor cu <b>ofertă comercială explicită</b> (rate BT) în această săptămână — un lever de conversie pe care restul nu îl folosesc.</div>
+  </div>
+</div>
+
+</div>
+
+<h2><span class="ico"></span>Alerte & note Tier 2</h2>
+<div class="alert"><b>Clinica Dentalist</b> (@dentalist.ro) — activ, 4 postări (20–26 iul): caz aliniatori+compozit (35 likes), pedodonție (29 likes), testimoniale cuplu/experiență (16 likes fiecare). Engagement bun pentru dimensiune, ton cald „experiență relaxantă". Lansează promo „Implanto Day" pe 27 iul.</div>
+<div class="alert off"><b>Dr. Malama</b> — cont inactiv, ultima postare ianuarie 2025. Fără activitate.</div>
+<div class="alert off"><b>JC Dent</b> — profilul @jcdent_slobozia din baza noastră returnează „page isn't available". Competitor direct pe Slobozia; de reverificat handle-ul.</div>
+<div class="alert off"><b>Dent Priority</b> și <b>Edent Clinic</b> — neverificate în această rulare (limită de timp). De inclus în următoarea.</div>
+
+<h2><span class="ico"></span>Trenduri în piață</h2>
+<div class="lead">
+<ul>
+<li><b>Audio:</b> piața rulează aproape integral pe audio original. DENT ESTET e singurul care exploatează audio trending pentru reach (Michael Bublé). <b>Oportunitate directă pentru noi.</b></li>
+<li><b>Anti-dezinformare</b> ca format în creștere: Regina Maria și Dental Blue construiesc reels care demontează mituri din social media („alignerele fac triunghiuri negre", „albirea", „implant pierdut"). Format cu engagement bun și autoritate.</li>
+<li><b>Serii recognoscibile:</b> Life (interviuri medici), Regina Maria (Protocolul Dr. Leahu), Dental Blue („Zâmbete reale. Fără frică."). Noi nu avem încă o semnătură serială.</li>
+<li><b>Autoritate prin fondator/ambasador:</b> DENT ESTET folosește propriul zâmbet al fondatoarei + celebrități. Cel mai mare engagement al săptămânii vine din acest tip de conținut.</li>
+<li><b>Ofertă comercială:</b> Elidadent împinge finanțare în rate; DENT ESTET „Align Smile Wallet" (−500€, de la 27 iul). Sezon de promoții pe alignere/implant spre toamnă.</li>
+</ul>
+</div>
+
+<h2><span class="ico"></span>Ce facem noi săptămâna următoare</h2>
+<ol class="todo">
+<li><b>Reel educativ scurt</b> pe model câștigător (pasta de dinți a fost top-ul nostru): un „3 mituri despre albire" sau „alignere: ce nu ți se spune" — talking-head medic, 20–30s, <b>pe audio trending</b> (testăm ce face DENT ESTET), CTA în comentarii.</li>
+<li><b>Carusel Before&After</b> de autoritate: caz clinic propriu bine produs, cu planul de tratament pas cu pas (caruselul de transformare din 24 iul funcționează — ridicăm calitatea foto și punem medicul în cadru, ca DENT ESTET).</li>
+<li><b>Pornim o serie recognoscibilă:</b> ex. „Întrebarea săptămânii" sau „Adevărat/Fals" — format repetabil care să ne dea semnătură editorială, cum au competitorii.</li>
+<li><b>Story highlights:</b> actualizăm un highlight cu caruselul de transformare (24 iul) și unul cu testimonialul „doamna Coca" cât timp sunt relevante.</li>
+<li><b>Testăm o ofertă comercială clară</b> (ex. pachet consultație implant / finanțare) — Elidadent și DENT ESTET o fac, noi nu; e un gol de acoperit înainte de sezonul de toamnă.</li>
+</ol>
+
+<footer>
+<div><span class="conf">Confidence: ridicat</span> pentru toate datele marcate — fiecare postare a fost deschisă individual și data/engagement citite direct din pagina Instagram (cont logat).</div>
+<p style="margin:10px 0 0">
+<b>Status Claude in Chrome:</b> activ, cont logat.<br>
+<b>Surse:</b> Instagram (profil cu profil, cont logat). Datele „~ziua" sunt derivate din eticheta relativă a Instagram („2d", „5d" etc.) raportată la data rulării (27 iul).<br>
+<b>Corecții bază de date necesare</b> <span class="pill">important</span>: handle-uri actualizate — Elidadent = <b>@clinicaelidadent</b> (nu @elidadent); Dental Blue = <b>@dental_blue_international</b> (nu @dentalblue.ro). JC Dent @jcdent_slobozia indisponibil, de reverificat.<br>
+<b>Neacoperit:</b> Dent Priority, Edent Clinic (Tier 2); analiză Meta Ads (exclusă la cerere).<br>
+<b>Generat de:</b> competitor-weekly-instagram v1.0 · 27 iul 2026 · <b>corectat: datele proprii re-extrase live la sursă (dată+caption+engagement exacte)</b>
+</p>
+</footer>
+
+</div>
+</body>
+</html>

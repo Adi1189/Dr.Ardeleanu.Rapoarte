@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport de concluzii (corectat) · Săpt. 30 · 20–26 iulie 2026 · Clinicile Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --burgundy:#7B1C16; --olive:#B5BD5C; --terracotta:#dd7e6b;
+    --amber:#C9A227; --yellow:#FBE483; --wheat:#F2DAB7; --cream:#F5EDE3;
+    --alert:#FF0300; --text:#222222; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Poppins',sans-serif;color:var(--text);background:#e9e2d7;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;background:var(--white);box-shadow:0 2px 30px rgba(0,0,0,.12)}
+  header{background:var(--burgundy);color:#fff;padding:38px 46px 30px}
+  .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--yellow);font-weight:600}
+  header h1{font-family:'Playfair Display',serif;font-size:33px;margin:6px 0 4px;font-weight:700}
+  header .range{font-size:16px;color:#f3d9d6;font-weight:300}
+  header .meta{margin-top:14px;font-size:12.5px;color:#f0cdca;border-top:1px solid rgba(255,255,255,.22);padding-top:12px;display:flex;gap:26px;flex-wrap:wrap}
+  header .meta b{color:#fff;font-weight:600}
+  section{padding:30px 46px}
+  h2{font-family:'Poppins';font-weight:700;color:var(--burgundy);font-size:20px;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+  h2 .bar{width:5px;height:22px;background:var(--amber);border-radius:3px;display:inline-block}
+  .sub{color:#7a6f63;font-size:13px;margin-bottom:18px}
+  h3{color:var(--burgundy);font-size:15.5px;margin:18px 0 8px;font-weight:600}
+  .tldr{background:var(--cream);border-left:5px solid var(--burgundy);border-radius:8px;padding:20px 24px}
+  .tldr ul{list-style:none}
+  .tldr li{position:relative;padding-left:26px;margin-bottom:11px;font-size:14.5px}
+  .tldr li:last-child{margin-bottom:0}
+  .tldr li:before{content:"▸";position:absolute;left:0;color:var(--amber);font-weight:700}
+  .tldr b{color:var(--burgundy)}
+  .correction{background:#fff5f5;border:1px solid var(--alert);border-left:5px solid var(--alert);border-radius:8px;padding:16px 20px;margin-top:6px;font-size:13.5px}
+  .correction b{color:var(--burgundy)}
+  .correction .t{font-weight:700;color:var(--alert);font-size:12px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+  th{background:var(--burgundy);color:#fff;font-weight:600;text-align:left;padding:10px 12px;font-size:12.5px}
+  th.num,td.num{text-align:center}
+  td{padding:9px 12px;border-bottom:1px solid #eadfd0;vertical-align:top}
+  tbody tr:nth-child(even){background:#fbf7f0}
+  tr.us{background:var(--wheat)!important;font-weight:600}
+  tr.us td{border-bottom:2px solid var(--burgundy)}
+  .badge{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.3px}
+  .b-new{background:var(--alert);color:#fff}
+  .b-us{background:var(--burgundy);color:#fff}
+  .b-hi{background:var(--olive);color:#31371a}
+  .p{font-size:14px;margin-bottom:12px}
+  .p b{color:var(--burgundy)}
+  .theme{background:#fbf7f0;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:13.8px;border-left:3px solid var(--amber)}
+  .theme b{color:var(--burgundy)}
+  .recs{counter-reset:r}
+  .rec{background:var(--cream);border-radius:10px;padding:14px 18px 14px 52px;margin-bottom:12px;position:relative;font-size:14px}
+  .rec:before{counter-increment:r;content:counter(r);position:absolute;left:16px;top:14px;width:26px;height:26px;background:var(--burgundy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+  .rec b{color:var(--burgundy)}
+  .rec .pri{display:inline-block;font-size:10px;font-weight:700;padding:1px 8px;border-radius:20px;margin-left:6px;vertical-align:middle}
+  .pri-max{background:var(--alert);color:#fff}
+  .pri-hi{background:var(--amber);color:#3a2c00}
+  footer{background:var(--burgundy);color:#f0cdca;padding:26px 46px;font-size:12.5px}
+  footer .ck{display:grid;grid-template-columns:1fr 1fr;gap:6px 30px;margin-bottom:16px}
+  footer .ck div{border-bottom:1px solid rgba(255,255,255,.15);padding:5px 0}
+  footer .ck b{color:#fff}
+  .din{text-align:center;color:var(--yellow);letter-spacing:4px;font-size:12px;font-weight:600;margin-top:14px}
+  a{color:#0563C1;text-decoration:none}
+  @media(max-width:640px){header,section,footer{padding-left:22px;padding-right:22px}footer .ck{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Raport de concluzii · Săpt. 30 · CORECTAT</div>
+  <h1>Concluzii &amp; plan săptămânal</h1>
+  <div class="range">20 – 26 iulie 2026 · sinteză pe 4 canale (Facebook · Instagram · TikTok · YouTube)</div>
+  <div class="meta">
+    <span><b>Client:</b> Clinicile Dentare Dr. Ardeleanu</span>
+    <span><b>Competitori:</b> 13 monitorizați</span>
+    <span><b>Generat:</b> 27 iul 2026 · corectat cu date proprii re-extrase live</span>
+  </div>
+</header>
+
+<section>
+  <div class="correction">
+    <div class="t">⚠ Ce s-a corectat față de prima sinteză</div>
+    Prima rulare raporta că <b>„organicul nostru a fost tăcut" (1 postare FB)</b> și că pe <b>TikTok avem „zero date"</b> (grila blocată în sesiune). Ambele greșite. La re-extragerea live, cu conturile logate, realitatea pe toate 4 canalele e: <b>~5 Facebook + 4 Instagram + 3 TikTok + 4 YouTube (1 long-form + 3 Shorts)</b>. Mai mult: cel mai vizionat conținut organic al nostru din toată săptămâna nu e pe FB/IG, ci Short-ul YouTube <b>„Fațetări directe din compozit" — 1.717 vizionări</b>, peste orice upload nou al competiției pe YouTube. Suntem <b>activi</b> și avem deja o formulă scurtă care performează; golurile reale rămân <b>lipsa unei serii recognoscibile</b>, <b>zero audio de trend pe TikTok</b> (unde clipurile noastre sunt și prea lungi, 81–138s) și reclamele Meta înghețate din mai.
+  </div>
+</section>
+
+<section>
+  <h2><span class="bar"></span>Pe scurt</h2>
+  <div class="tldr">
+    <ul>
+      <li><b>Săptămâna „implantului".</b> Aproape toate lansările noi ale concurenței (Dentrust, JC Dent, Dental Blue, Regina Maria) au fost pe implant / dinți ficși, cu accent „rapid / în 24h / provizorie în aceeași zi".</li>
+      <li><b>Atac direct pe orașele noastre.</b> Dentrust a pornit o campanie întreagă (~11 reclame video) în <b>Focșani</b>; JC Dent + Dental Blue sunt pe <b>Slobozia</b>. Exact clinicile noastre locale.</li>
+      <li><b>Cursa pediatrică de vară a pornit fără noi.</b> DE4KIDS (Summer Smile Camp, sigilare gratuită) și Edent Kids („Zâmbet de vacanță") ocupă spațiul „control înainte de școală". Dental Safari lipsește din conversație, deși are activele (mascote, univers tematic).</li>
+      <li><b>DENT ESTET = mașina de conținut a pieței</b> pe toate canalele: 7 postări IG (top absolut — 299 likes Before&After Dr. Oana Taban), 5 long-form YouTube, clinică nouă Oradea, campanie aligneri voucher −500€. Joacă premium + autoritate, nu preț.</li>
+      <li><b>Brandul personal bate clinica pe TikTok.</b> Dr. Alexandra Mircea (Dentalist, ~979K urmăritori) — un clip de 11s cu <b>230.800 vizionări</b>, mai mult decât toate clinicile la un loc. Formatul „talking-head 50s" e depășit.</li>
+      <li><b>Golul cel mai mare: audio de trend.</b> Toată piața stă pe „sunet original". Nimeni nu-l exploatează — teren liber pentru noi.</li>
+      <li><b>Noi (corectat, 4 canale):</b> ~5 Facebook + 4 Instagram + 3 TikTok + 4 YouTube. Cele 3 piese scurte (pasta de dinți, „câți bani am", reabilitare compozit) sunt cross-postate TikTok + YouTube Shorts. Top-ul absolut al săptămânii: Short-ul YouTube <b>„Fațetări directe din compozit" — 1.717 vizionări</b>. Pe TikTok, medie <b>901 vizionări/clip</b> (peste DENT ESTET); pe IG, top e educativul „pasta de dinți" (<b>51 likes / 6 com</b>).</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2><span class="bar"></span>Activitatea noastră reală, pe canale</h2>
+  <div class="sub">Re-extras live (cont logat). Instagram, TikTok și YouTube: dată + caption + engagement exacte din sursă. Facebook: captions + date confirmate, engagement parțial (obfuscare feed).</div>
+  <table>
+    <thead><tr><th>Canal</th><th class="num">Postări în fereastră</th><th>Piese-cheie</th><th>Top engagement</th></tr></thead>
+    <tbody>
+      <tr class="us"><td>Facebook</td><td class="num">~5</td><td>Carusel transformare (24 iul) · reel „diferența o fac oamenii" (23 iul) · post parteneriat (23 iul) · Protocol „vezi-ți zâmbetul înainte"</td><td>11 reacții / 9 com (carusel 24 iul)</td></tr>
+      <tr class="us"><td>Instagram</td><td class="num">4</td><td>Carusel transformare (24) · testimonial Coca (23) · educativ pasta dinți (22) · poziționare „Doi medici" (20)</td><td>51 likes / 6 com (pasta dinți, 22 iul)</td></tr>
+      <tr class="us"><td>TikTok</td><td class="num">3</td><td>Cross-post: reabilitare compozit (23) · „câți bani am" (23) · pasta de dinți (22) — toate audio original, 81–138s</td><td>961 vizionări (23 iul); medie 901/clip</td></tr>
+      <tr class="us"><td>YouTube</td><td class="num">4</td><td>1 long-form (reabilitare compozit, 23) + 3 Shorts: Fațetări compozit (23) · pasta de dinți (21) · „câți bani am" (23)</td><td><b>1.717 vizionări</b> (Short Fațetări) — top pe toate canalele</td></tr>
+    </tbody>
+  </table>
+  <div class="sub" style="margin-top:10px">Cele 3 piese scurte sunt cross-postate TikTok ↔ YouTube Shorts, iar același conținut performează foarte diferit pe platforme: „câți bani am" 961 pe TikTok vs 91 pe YouTube Short; „pasta de dinți" 782 pe TikTok vs 107 pe YouTube Short vs 51 likes pe IG. TikTok ne aduce cel mai mult reach organic. Cont TikTok @dr.ardeleanu: 6.732 urmăritori, 298 clipuri istoric.</div>
+</section>
+
+<section>
+  <h2><span class="bar"></span>Temele care au dominat piața</h2>
+  <div class="theme"><b>Implantul / dinții ficși domină net.</b> Noile lansări sunt aproape toate pe implant, cu accent „rapid / în 24h / provizorie în aceeași zi" (Dentrust, JC Dent, Dental Blue, Regina Maria).</div>
+  <div class="theme"><b>Preț afișat vs. autoritate premium — două tabere.</b> Preț explicit (Regina Maria 3550 lei, Life 2097 lei, noi cu pachete în lei) vs. tehnologie/autoritate fără preț (DENT ESTET, Dental Blue).</div>
+  <div class="theme"><b>Sezonul „înainte de vacanță/școală".</b> Dentalist („rezolvă durerea înainte de vacanță"), DE4KIDS & Edent Kids (pachete de vară pentru copii). Unghi sezonier clar exploatat.</div>
+  <div class="theme"><b>Anti-dezinformare ca format în creștere.</b> Regina Maria și Dental Blue construiesc reels care demontează mituri („triunghiuri negre la alignere", „albirea", „implant pierdut"). Engagement bun + autoritate.</div>
+  <div class="theme"><b>Serii recognoscibile + brand personal.</b> Life (interviuri medici), Regina Maria (Protocolul Dr. Leahu), Dental Blue („Zâmbete reale. Fără frică."), Dr. Mircea (brand personal viral). Noi nu avem încă o semnătură serială.</div>
+  <div class="theme"><b>Audio de trend = golul pieței.</b> Aproape toți pe sunet original; nimeni pe audio viral (o singură excepție DENT ESTET cu Michael Bublé).</div>
+</section>
+
+<section>
+  <h2><span class="bar"></span>Ce facem noi săptămâna asta</h2>
+  <div class="sub">Prioritizat. Pornim de la activele pe care le avem deja în aer + golurile reale din piață.</div>
+  <div class="recs">
+    <div class="rec"><b>Amplifică Protocolul pe care deja l-am pornit.</b><span class="pri pri-max">PRIORITATE MAX</span><br>Postul „✨ Cum ar fi să îți vezi zâmbetul înainte..." e fix contraatacul corect la „dinte în aceeași zi" al Dentrust / JC Dent / Regina Maria și răspunde anxietății deciziei pe care o exploatează Dental Blue. Pune buget pe el ca reclamă lead-form + refolosește-l ca reel scurt pe FB și IG.</div>
+    <div class="rec"><b>Apără Focșani &amp; Slobozia — geo-targetat.</b><span class="pri pri-max">PRIORITATE MAX</span><br>Dentrust a deschis campanie în Focșani; JC Dent + Dental Blue sunt pe Slobozia. Lansează 1–2 reclame lead-form geo-restrânse (implant + evaluare 95 lei / rate), ca să nu cedăm terenul local exact în săptămâna atacului lor.</div>
+    <div class="rec"><b>Repetă formula educativă câștigătoare + audio de trend.</b><span class="pri pri-hi">PRIORITATE</span><br>„Pasta de dinți" (51/6) a fost top-ul nostru pe Instagram. Fă imediat un al doilea din aceeași serie („3 mituri despre albire" / „alignere: ce nu ți se spune"), talking-head medic 20–30s, și <b>testează-l pe audio de trend</b> — golul pe care nimeni din piață nu-l atinge. Aici putem dubla-tripla reach-ul cu efort mic.</div>
+    <div class="rec"><b>Intră în cursa pediatrică cu Dental Safari.</b><span class="pri pri-hi">PRIORITATE</span><br>DE4KIDS și Edent Kids ne-au luat-o înainte cu „consult + sigilare gratuită". Fă un pachet echivalent „control înainte de școală" sub brandul Dental Safari — avem mascotele și universul tematic ca avantaj de comunicare pe care ei nu îl au.</div>
+    <div class="rec"><b>Lansează o serie cu nume.</b><br>Avem conținut, dar nu semnătură editorială. Un format repetabil („Adevărat/Fals" sau „Întrebarea săptămânii") ne dă recognoscibilitatea pe care Life, Regina Maria și Dental Blue o au deja.</div>
+    <div class="rec"><b>Reîmprospătează creativele Meta.</b><br>Setul de ~42 reclame rulează neschimbat din mai. Testează un creativ nou pe pachetul igienizare 190 lei cu unghi sezonier („zâmbet pregătit de vacanță") — teritoriul pe care Dentalist tocmai l-a validat.</div>
+    <div class="rec"><b>TikTok &amp; Shorts — dublează formatul care deja merge.</b><span class="pri pri-hi">PRIORITATE</span><br>NU am fost absenți: 3 clipuri pe TikTok (medie <b>901 vizionări</b>, peste DENT ESTET) + 3 Shorts pe YouTube, iar „Fațetări directe din compozit" a făcut <b>1.717 vizionări</b> — cel mai bun conținut organic al nostru din săptămână. Formula scurtă compozit/fațete funcționează, deci scaleaz-o. Corectează cele două slăbiciuni proprii: clipurile sunt prea lungi pentru TikTok (81–138s) și toate pe sunet original. Testează versiuni <b>sub 20s, hook în primele 3s, pe audio de trend</b> — golul pe care nimeni din piață nu-l atinge și unde câștigăm reach mare cu efort mic.</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="bar"></span>Fir roșu</h2>
+  <div class="p">Piața a accelerat pe <b>implant + pediatric + brand personal</b>. Noi NU am fost pasivi organic — <b>~16 postări pe 4 canale</b>, iar formatul scurt compozit/fațete ne-a adus deja cel mai bun reach al săptămânii (Short-ul de 1.717 vizionări). Deci prioritatea nu e „să postăm mai mult", ci <b>să postăm mai deștept</b>: să nu cedăm Focșani/Slobozia, să reintrăm în cursa pediatrică cu Dental Safari, să amplificăm Protocolul (îl avem deja în aer) și să scalăm formatul scurt care merge — dar tăiat sub 20s și pe audio de trend, singurul teren unde câștigăm reach mare cu efort mic. Golurile de acoperit: <b>o serie cu semnătură</b>, <b>audio de trend + clipuri mai scurte pe TikTok</b>, și <b>reclame Meta reîmprospătate</b>.</div>
+</section>
+
+<footer>
+  <div class="ck">
+    <div><b>Canale sintetizate:</b> Facebook · Instagram · TikTok · YouTube</div>
+    <div><b>Fereastră:</b> 20–26 iulie 2026 (Săpt. 30)</div>
+    <div><b>Date competitori:</b> din rapoartele săptămânale existente</div>
+    <div><b>Date proprii (toate 4 canale):</b> re-extrase live, cont logat</div>
+    <div><b>Instagram / TikTok / YouTube propriu:</b> dată + caption + engagement exacte ✓</div>
+    <div><b>Facebook propriu:</b> captions + date ✓, engagement parțial</div>
+  </div>
+  <div style="font-size:12px;color:#e9c4c0;line-height:1.6">
+    <b style="color:#fff">Notă de transparență:</b> Corecțiile majore față de prima sinteză sunt datele proprii pe short-video: TikTok a trecut de la „zero date" la 3 clipuri reale (medie 901 vizionări), iar YouTube de la „1 long-form / 14 vizionări" la 4 piese (1 long-form + 3 Shorts), cu Short-ul „Fațetări directe din compozit" la 1.717 vizionări — cel mai vizionat conținut organic al nostru din săptămână, ratat complet în prima rulare. Volumul organic FB a fost corectat anterior (de la „1 postare" la ~5). Datele proprii pe IG / TikTok / YouTube sunt exacte (citite la sursă); pe FB engagement-ul e parțial (obfuscare feed). Datele competitorilor provin din rapoartele săptămânale FB / IG / TikTok / YouTube deja generate și nu au fost re-scanate. Nimic nu a fost estimat sau inventat; unde un număr nu a putut fi citit curat, este marcat ca atare.
+  </div>
+  <div class="din">DIN 2017</div>
+</footer>
+</div>
+</body>
+</html>
