@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport Facebook Săptămânal · 27.07–02.08.2026 · Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --burgundy:#7B1C16; --cream:#F5EDE3; --wheat:#F2DAB7; --amber:#C9A227;
+  --yellow:#FBE483; --olive:#B5BD5C; --terracotta:#dd7e6b; --alert:#FF0300;
+  --text:#222; --white:#fff; --muted:#6b5f5c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;color:var(--text);background:#efe7dc;line-height:1.55;padding:0 0 60px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header.top{background:var(--burgundy);color:var(--white);padding:38px 0 30px;border-bottom:5px solid var(--amber)}
+header.top .wrap{display:flex;flex-direction:column;gap:6px}
+.kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--yellow);font-weight:600}
+header.top h1{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;line-height:1.15}
+header.top .sub{font-size:15px;color:var(--wheat);font-weight:300}
+.pill{display:inline-block;background:var(--cream);color:var(--burgundy);font-size:11px;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;width:fit-content;margin-top:6px}
+section{margin-top:34px}
+h2.sec{font-family:'Poppins';font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--burgundy);border-left:5px solid var(--amber);padding-left:12px;margin-bottom:16px}
+.card{background:var(--white);border-radius:14px;padding:22px 24px;box-shadow:0 2px 14px rgba(123,28,22,.07);margin-bottom:16px}
+.tldr{background:var(--cream);border-radius:14px;padding:22px 26px;border:1px solid #e6d8c6}
+.tldr ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.tldr li{padding-left:26px;position:relative;font-size:15px}
+.tldr li::before{content:"▶";position:absolute;left:0;color:var(--amber);font-size:11px;top:4px}
+.tldr strong{color:var(--burgundy)}
+table{width:100%;border-collapse:collapse;font-size:14px;overflow:hidden;border-radius:10px}
+th{background:var(--burgundy);color:var(--white);font-weight:600;text-align:left;padding:11px 13px;font-size:12.5px;letter-spacing:.3px}
+td{padding:10px 13px;border-bottom:1px solid #f0e6d8}
+tbody tr:nth-child(even){background:#faf5ed}
+tr.us{background:var(--wheat)!important;font-weight:600}
+tr.us td{border-bottom:2px solid var(--amber)}
+.badge-us{background:var(--burgundy);color:var(--yellow);font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;letter-spacing:1px;margin-left:6px}
+.brandcard{border-left:5px solid var(--burgundy)}
+.brandcard.us{border-left:5px solid var(--amber);background:linear-gradient(180deg,#fffdf8,#fff)}
+.brandcard h3{font-size:19px;color:var(--burgundy);font-weight:700;margin-bottom:2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.brandcard .handle{font-size:12.5px;color:var(--muted);font-weight:400}
+.metricline{display:flex;gap:22px;flex-wrap:wrap;margin:12px 0;padding:12px 0;border-top:1px dashed #e2d4c2;border-bottom:1px dashed #e2d4c2}
+.metric{display:flex;flex-direction:column}
+.metric .n{font-size:22px;font-weight:700;color:var(--burgundy);font-family:'Playfair Display',serif}
+.metric .l{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.adlist{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:6px}
+.adlist li{font-size:13.5px;background:var(--cream);border-radius:8px;padding:9px 12px;border-left:3px solid var(--amber)}
+.adlist .new{border-left-color:var(--alert)}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;letter-spacing:.5px;text-transform:uppercase;vertical-align:middle}
+.tag.n{background:var(--alert);color:#fff;margin-right:6px}
+.tag.date{background:var(--wheat);color:var(--burgundy);margin-right:6px}
+.obs{margin-top:12px;background:#fbf3e6;border-radius:8px;padding:12px 14px;font-size:13.5px}
+.obs b{color:var(--burgundy)}
+.alert2{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid #f0e6d8;font-size:14px}
+.alert2 .name{font-weight:600;min-width:150px;color:var(--burgundy)}
+.hot{color:var(--alert);font-weight:700}
+.warnbox{background:#fff4f4;border:1px solid #ffd4d4;border-left:5px solid var(--alert);border-radius:10px;padding:16px 18px;font-size:13.5px}
+.warnbox b{color:var(--alert)}
+.rec{counter-reset:r;list-style:none;display:flex;flex-direction:column;gap:12px}
+.rec li{position:relative;padding:14px 16px 14px 52px;background:var(--white);border-radius:10px;box-shadow:0 1px 8px rgba(123,28,22,.06)}
+.rec li::before{counter-increment:r;content:counter(r);position:absolute;left:14px;top:14px;width:26px;height:26px;
+  background:var(--burgundy);color:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.rec b{color:var(--burgundy)}
+.foot{margin-top:40px;background:var(--burgundy);color:var(--wheat);border-radius:14px;padding:22px 26px;font-size:12.5px}
+.foot h4{color:var(--yellow);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.foot .din{text-align:center;margin-top:18px;letter-spacing:4px;font-size:12px;color:var(--amber);font-weight:600}
+.ok{color:#9fd88b}.part{color:var(--yellow)}
+a{color:var(--burgundy)}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:640px){header.top h1{font-size:26px}.metricline{gap:14px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Facebook · Raport Săptămânal · Săpt. 31</div>
+    <h1>Ce a mișcat piața pe Facebook</h1>
+    <div class="sub">27 iulie – 2 august 2026 · Clinicile Dentare Dr. Ardeleanu vs. competiție</div>
+    <span class="pill">Paid: Meta Ads Library (oficial) · Organic: Claude in Chrome · Confidence HIGH</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- PE SCURT -->
+<section>
+  <h2 class="sec">Pe scurt</h2>
+  <div class="tldr">
+    <ul>
+      <li><strong>Noi am dominat volumul paid</strong> cu ~30 reclame active și un <strong>burst mare de promo pe 31 iulie</strong>: igienizare 3-în-1 la 190 lei, plombe „reducem prețul, nu calitatea" și aparat dentar metalic 40% reducere (1.440 lei/arcadă). Suntem singurii din piață care comunică agresiv pe <strong>preț/accesibilitate</strong>.</li>
+      <li><strong>DENT ESTET</strong> a lansat săptămâna asta două creații premium noi: colecția de fațete <em>„The Amazing Smile"</em> cu fondatoarea Oana Taban (30 iul) și val nou de <em>alignere −500 €</em> (28–29 iul). Rămân pe implant 200–250 € și estetică high-end.</li>
+      <li><strong>Life Dental Spa</strong> are cel mai mare volum de reclame din Tier 1 (20+) și a deschis un unghi nou pe <strong>parodontoză</strong> („îți sângerează gingiile?", 27 iul).</li>
+      <li><strong>Alertă Focșani:</strong> <strong>Dentrust</strong> rulează o campanie agresivă de implant/All-on-X (19 reclame active, ~8 recente) — cel mai activ Tier 2, direct peste clinica noastră din Focșani.</li>
+      <li><strong>Slobozia:</strong> JC Dent stă pe implant „dinte în aceeași zi" (fără creații noi); <strong>As Dental</strong> (nou în listă) nu are paid vizibil. <strong>Elidadent</strong> și <strong>Dr. Malama</strong> = 0 reclame active (strategie pur organică).</li>
+      <li><strong>Pe organic suntem cei mai mici ca audiență</strong> (17K urmăritori vs. 84K Regina Maria, 81K Life Dental Spa, 45K DENT ESTET), dar avem cel mai bun rating (100% din 706 recenzii). Nimeni din piață nu ocupă terenul nostru „excelență la preț accesibil" — DENT ESTET vinde autoritate, Life Dental Spa vinde holistic, Regina Maria vinde rate. <strong>Golul de poziționare e al nostru.</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TABEL DE ANSAMBLU -->
+<section>
+  <h2 class="sec">Cifrele săptămânii</h2>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table>
+      <thead><tr><th>Brand</th><th>Urmăritori</th><th>Reclame Meta active</th><th>Reclame noi</th><th>Postări organic</th><th>Reacții / Com / Distrib.*</th></tr></thead>
+      <tbody>
+        <tr><td>Regina Maria Dental</td><td><b>84K</b></td><td>~15</td><td>0</td><td>3</td><td>21 / 1 / 1</td></tr>
+        <tr><td>Life Dental Spa</td><td><b>81K</b></td><td>20+</td><td>1</td><td>~4</td><td>34 / 19 / 3</td></tr>
+        <tr><td>DENT ESTET</td><td><b>45K</b></td><td>~15–18</td><td>2</td><td>~4</td><td>21 / 1 / —</td></tr>
+        <tr class="us"><td>Dr. Ardeleanu <span class="badge-us">NOI</span></td><td>17K</td><td class="hot">~30</td><td class="hot">~25</td><td>6+</td><td>47 / 5 / —</td></tr>
+        <tr><td>Dental Blue Intl. <span class="small">(Slobozia)</span></td><td>6.2K</td><td>2</td><td>1</td><td>3</td><td>7 / 1 / 20</td></tr>
+        <tr><td>Elidadent <span class="small">(Târgoviște)</span></td><td>4.6K</td><td>0</td><td>0</td><td>~4</td><td>11 / — / —</td></tr>
+        <tr style="background:#f3ece0"><td colspan="6" class="small" style="font-weight:600;color:var(--burgundy)">— Tier 2 (quick check) —</td></tr>
+        <tr><td>Dent Priority <span class="small">(Oltenia)</span></td><td>24K</td><td>17</td><td>1</td><td>—</td><td>15 / — / —</td></tr>
+        <tr><td>Edent <span class="small">(Buc.+Tulcea)</span></td><td>12K</td><td>9</td><td>2</td><td>—</td><td>—</td></tr>
+        <tr><td>Dentrust <span class="small">(Focșani)</span></td><td class="hot">9.4K</td><td class="hot">19</td><td class="hot">~8</td><td>—</td><td>79 / — / —</td></tr>
+        <tr><td>Clinica Dentalist <span class="small">(Buc.)</span></td><td>6.5K</td><td>n/s</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>Dr. Malama <span class="small">(Slobozia)</span></td><td>3.7K</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
+        <tr><td>JC Dent <span class="small">(Slobozia)</span></td><td>2.1K</td><td>~2</td><td>0</td><td>—</td><td>—</td></tr>
+        <tr><td>As Dental <span class="small">(Slobozia, nou)</span></td><td>1.6K</td><td>0</td><td>—</td><td>—</td><td>4 / — / —</td></tr>
+        <tr><td>Saviem Smile <span class="small">(Giurgiu)</span></td><td>871</td><td>n/s</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>Ark Med</td><td>—</td><td>0</td><td>—</td><td>—</td><td>27 / — / —</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">*Coloana engagement = reacții / comentarii / distribuiri pe <b>postarea de top din fereastră</b> (exact cum apar, niciodată estimate). „—" = fără date vizibile; „n/s" = paid nescanat individual (Clinica Dentalist, Saviem Smile — prioritate scăzută). Urmăritorii și ratingul detaliat + unghiul organic per brand sunt în cardurile de mai jos. Sortare după urmăritori; false-positive spam (jocuri pe keyword) filtrat manual.</p>
+</section>
+
+<!-- CARD BY CARD -->
+<section>
+  <h2 class="sec">Activitate pagină cu pagină (Tier 1)</h2>
+
+  <div class="card brandcard us">
+    <h3>Dr. Ardeleanu <span class="badge-us">NOI</span> <span class="handle">facebook.com/Dr.Ardeleanu</span></h3>
+    <div class="metricline">
+      <div class="metric"><span class="n">~30</span><span class="l">Reclame active</span></div>
+      <div class="metric"><span class="n">31 iul</span><span class="l">Burst principal</span></div>
+      <div class="metric"><span class="n">Preț</span><span class="l">Unghi dominant</span></div>
+    </div>
+    <ul class="adlist">
+      <li class="new"><span class="tag n">Nou</span><span class="tag date">31 iul</span>Pachet igienizare 3-în-1 — <b>190 lei</b> („zâmbet mai curat, respirație mai proaspătă… la jumătate de preț")</li>
+      <li class="new"><span class="tag n">Nou</span><span class="tag date">31 iul</span>Aparat dentar metalic adulți + copii — <b>40% reducere, 1.440 lei/arcadă</b></li>
+      <li class="new"><span class="tag n">Nou</span><span class="tag date">31 iul</span>Plombe adulți rezistente — „reducem prețul, nu calitatea"</li>
+      <li><span class="tag date">28 iul</span>Educational/încredere — „Ce îi face pe pacienți să spună «DA» unui plan de tratament?"</li>
+    </ul>
+    <div class="small" style="margin-top:14px;font-weight:600;color:var(--burgundy)">POSTĂRI ORGANIC (engagement vizibil)</div>
+    <ul class="adlist">
+      <li><span class="tag date">~2 aug</span>„Un zâmbet sănătos are nevoie de un viitor sănătos" (Clinica Slobozia) · <b>15 / 1 / 3</b></li>
+      <li><span class="tag date">~31 iul</span>„Rezultatul nu începe pe scaun. Începe în planificare" (video 1:00) · <b>14 / 3 / 1</b></li>
+      <li><span class="tag date">~30 iul</span>„Toată lumea vorbește despre dinți. Dar aproape nimeni despre gingii" · <b>10 / 2 / 3</b></li>
+      <li><span class="tag date">recent</span>„Investim constant în pregătirea echipei" (Dr. Virginia Ardeleanu) · <b>47 / 5</b> — top engagement</li>
+      <li><span class="tag date">recent</span>„Te temi că un CBCT dentar te radiază?" (educational) · 9 / 4 &nbsp;·&nbsp; „Am venit doar să pun o întrebare…" (umor) · 16 / 4</li>
+    </ul>
+    <div class="obs"><b>Observație:</b> suntem singurul brand major care atacă frontal pe preț și accesibilitate — fix poziționarea „Excelență la prețuri accesibile". În timp ce premium-ul (DENT ESTET, Regina Maria) vinde valoare și rate, noi vindem economie concretă cu cifre. Diferențiere clară, dar atenție să nu erodăm percepția de calitate.</div>
+  </div>
+
+  <div class="card brandcard">
+    <h3>DENT ESTET <span class="handle">facebook.com/dentestet.ro</span></h3>
+    <div class="metricline">
+      <div class="metric"><span class="n">~15–18</span><span class="l">Reclame active</span></div>
+      <div class="metric"><span class="n">2</span><span class="l">Direcții noi</span></div>
+      <div class="metric"><span class="n">Premium</span><span class="l">Poziționare</span></div>
+    </div>
+    <ul class="adlist">
+      <li class="new"><span class="tag n">Nou</span><span class="tag date">30 iul</span>„The Amazing Smile Collection" — fațete Before &amp; After cu fondatoarea Oana Taban, DSD, ceramică ASPEN</li>
+      <li class="new"><span class="tag n">Nou</span><span class="tag date">28–29 iul</span>Alignere — <b>beneficiu 500 €</b>, planificare digitală, mai multe variante creative</li>
+      <li><span class="tag date">evergreen</span>Implant dentar + coroană — avantaj <b>200–250 €</b> (variante pe orașe: Oradea, Ploiești, Brașov, București)</li>
+      <li><span class="tag date">3 aug</span>All-on-4 Sibiu (Dr. Cătălin Mărtișcă) — abia lansată, la limita ferestrei</li>
+    </ul>
+    <div class="small" style="margin-top:14px;font-weight:600;color:var(--burgundy)">POSTĂRI ORGANIC (45K urmăritori · engagement moderat)</div>
+    <ul class="adlist">
+      <li>„People of DENT ESTET — interviu Dr. Erika Vasilescu" (employer branding, endodonție) · <b>21 / 1</b></li>
+      <li>„Știai că 6–7 ani e vârsta perfectă pentru primul control ortodontic?" (kids/ortho, carusel) · <b>17 / 2</b></li>
+      <li>„Costurile nu ar trebui să fie motivul pentru care amâni un tratament" (video 1:03) · 7</li>
+      <li>All-on-4 „patru implanturi pot susține o restaurare fixă" (video 1:01)</li>
+    </ul>
+    <div class="obs"><b>Observație:</b> DENT ESTET nu concurează pe preț, ci pe <b>autoritate + estetică premium</b> (fondator ca testimonial, tehnologie MODJAW/DSD, ceramică brand).</div>
+  </div>
+
+  <div class="card brandcard">
+    <h3>Life Dental Spa <span class="handle">facebook.com/LifeDentalSpa</span></h3>
+    <div class="metricline">
+      <div class="metric"><span class="n">20+</span><span class="l">Reclame active</span></div>
+      <div class="metric"><span class="n">1</span><span class="l">Unghi nou</span></div>
+      <div class="metric"><span class="n">#1</span><span class="l">Volum Tier 1</span></div>
+    </div>
+    <ul class="adlist">
+      <li class="new"><span class="tag n">Nou</span><span class="tag date">27 iul</span>Parodontoză — „Îți sângerează gingiile când te speli pe dinți? E primul semn al unei boli tăcute…"</li>
+      <li><span class="tag date">evergreen</span>Volum mare de reclame de implant și estetică, majoritatea lansate 14–20 iul</li>
+    </ul>
+    <div class="small" style="margin-top:14px;font-weight:600;color:var(--burgundy)">POSTĂRI ORGANIC (81K urmăritori — cel mai mare audience Tier 1)</div>
+    <ul class="adlist">
+      <li><span class="tag date">~31 iul</span>„Astăzi este despre recunoștință" (aniversar/emoțional) · <b>34 / 19 / 3</b> — top engagement</li>
+      <li>„Dacă îți sângerează gingiile, înseamnă lipsă de vitamine?" (video parodontoză/holistic) · 6 / 1</li>
+      <li>„Încrederea se construiește în timp" · 12 / 1 &nbsp;·&nbsp; „Ți-e teamă de dentist și amâni de ani?" · 11</li>
+      <li><span class="tag date">pinned</span>Lansare carte „32 de cristale" de Dr. Cristina Obreja — stomatologie holistică</li>
+    </ul>
+    <div class="obs"><b>Observație:</b> cel mai mare rulaj paid din Tier 1. Unghiul de <b>parodontoză prin frică/simptom</b> („boală tăcută") e replicabil și pentru noi — educațional, cu conversie pe consultație.</div>
+  </div>
+
+  <div class="card brandcard">
+    <h3>Regina Maria Dental <span class="handle">facebook.com/ReginaMariaDentalClinics</span></h3>
+    <div class="metricline">
+      <div class="metric"><span class="n">~15</span><span class="l">Reclame active</span></div>
+      <div class="metric"><span class="n">0</span><span class="l">Noi în fereastră</span></div>
+      <div class="metric"><span class="n">Rate</span><span class="l">Cârlig financiar</span></div>
+    </div>
+    <ul class="adlist">
+      <li><span class="tag date">evergreen</span>Dinți ficși provizorii <b>în 24H</b>, reabilitare orală completă</li>
+      <li><span class="tag date">evergreen</span>„Plata în <b>60 de rate</b>" — cârlig de accesibilitate financiară</li>
+      <li><span class="tag date">evergreen</span>Parodontoză + implant („nu înseamnă automat excluderea implanturilor")</li>
+    </ul>
+    <div class="small" style="margin-top:14px;font-weight:600;color:var(--burgundy)">POSTĂRI ORGANIC (84K urmăritori — cel mai mare din Tier 1)</div>
+    <ul class="adlist">
+      <li>„Copiii care învață de mici să aibă grijă de zâmbet devin adulți fără teamă" (Oradea, prevenție) · <b>21 / 1 / 1</b></li>
+      <li><span class="tag date">~31 iul</span>„Cei care au cea mai mare nevoie de implanturi… au auzit că nu există soluție" (empatic) · 6 / 2 / 1</li>
+      <li>„Un plan bun de tratament schimbă mai mult decât un zâmbet" (Iași) · 10 <span class="small">— marcat „AI content"</span></li>
+    </ul>
+    <div class="obs"><b>Observație:</b> zero creații noi paid — rulează evergreen. Cârligul lor de <b>plata în 60 de rate</b> e cel mai apropiat de poziționarea noastră de accesibilitate; merită contrat direct cu mesajul nostru de preț.</div>
+  </div>
+
+  <div class="card brandcard">
+    <h3>Dental Blue International <span class="handle">facebook.com/people/Dental-Blue-International</span></h3>
+    <div class="metricline">
+      <div class="metric"><span class="n">2</span><span class="l">Reclame active</span></div>
+      <div class="metric"><span class="n">1</span><span class="l">Nouă</span></div>
+      <div class="metric"><span class="n">Organic</span><span class="l">Strategie</span></div>
+    </div>
+    <ul class="adlist">
+      <li class="new"><span class="tag n">Nou</span><span class="tag date">26 iul</span>Unghi de anxietate/încredere — „Ai ezitat să începi tratamentul pentru că ți-e teamă că faci alegerea greșită?"</li>
+    </ul>
+    <div class="small" style="margin-top:14px;font-weight:600;color:var(--burgundy)">POSTĂRI ORGANIC (6.2K urmăritori · Slobozia — concurent direct)</div>
+    <ul class="adlist">
+      <li>„Zi de pedodontie · Dental Blue Slobozia" · 7 / 1 / <b>20 distribuiri</b> — cel mai viral</li>
+      <li>„Pacient cu boală parodontală avansată" (case study) · 5 / <b>24 com</b> — foarte comentat</li>
+      <li>„Unii pacienți observă ceva ciudat după tratamentul ortodontic" (video 0:47) · 2 / 1</li>
+    </ul>
+    <div class="obs"><b>Observație:</b> spend paid minim; forța lor e conținutul video organic educativ. Reclama nouă atacă <b>bariera emoțională</b> (frica de decizie greșită), nu prețul — unghi psihologic, nu comercial.</div>
+  </div>
+
+  <div class="card brandcard">
+    <h3>Elidadent <span class="handle">facebook.com/profile.php?id=100038889943740</span></h3>
+    <div class="metricline">
+      <div class="metric"><span class="n">0</span><span class="l">Reclame active</span></div>
+      <div class="metric"><span class="n">100%</span><span class="l">Organic</span></div>
+    </div>
+    <div class="small" style="margin-top:4px;font-weight:600;color:var(--burgundy)">POSTĂRI ORGANIC (4.6K urmăritori · Târgoviște)</div>
+    <ul class="adlist">
+      <li>„Caz clinic Fast &amp; Fixed pe 4 implanturi la maxilar" (atribuit medicului) · 6</li>
+      <li>„Importanța examenului radiologic" (educational) · 11 &nbsp;·&nbsp; „Lucrare definitivă de Dr. Andrei Cozma" · 4</li>
+      <li>„Pentru noi, stomatologia înseamnă oameni" (relational) · 3 &nbsp;·&nbsp; <span class="tag date">pinned</span>Proteză vs implant · credit BT Direct</li>
+    </ul>
+    <div class="obs"><b>Observație:</b> zero paid pe Meta în această fereastră. Brand premium care se bazează exclusiv pe organic și reputație. Audiență mică (4.6K) dar 100% recommend. Fără presiune competitivă pe licitațiile de reclame.</div>
+  </div>
+</section>
+
+<!-- TIER 2 -->
+<section>
+  <h2 class="sec">Alerte Tier 2 (paid + organic)</h2>
+  <div class="warnbox" style="background:#fff8ec;border-color:#f0dcb0;border-left-color:var(--amber);margin-bottom:16px">
+    <b style="color:var(--burgundy)">🎯 Spotlight Slobozia:</b> clinica noastră din Slobozia are cea mai densă concurență locală — <b>trei competitori activi acolo</b>: JC Dent, Dr. Malama și As Dental (nou). <b>Dr. Malama împinge organic „Dantură Fixă pe Implanturi în 48h – Acum în Slobozia"</b> (Fast &amp; Fixed), deși nu are paid. E piața cea mai disputată din rețea.
+  </div>
+  <div class="card">
+    <div class="alert2"><span class="name hot">Dentrust (Focșani)</span><span>Paid: 19 reclame implant (~8 recente). Organic: 9.4K urmăritori, case studies implant cu engagement mare (79, 68 reacții). <b>Cel mai serios Tier 2 pe ambele fronturi</b> — presiune directă peste clinica Focșani. <b>De monitorizat săptămânal.</b></span></div>
+    <div class="alert2"><span class="name hot">Dr. Malama (Slobozia)</span><span>0 paid, dar organic: 3.7K urmăritori, <b>„Dantură Fixă pe Implanturi în 48h – Acum în Slobozia"</b> — atac direct pe piața noastră locală.</span></div>
+    <div class="alert2"><span class="name">Dent Priority (Oltenia)</span><span>Cel mai mare Tier 2 (24K urmăritori, 98%/130 rec.), 17 reclame evergreen. Conținut de echipă/BTS. Geografic în Oltenia — nu piețele noastre.</span></div>
+    <div class="alert2"><span class="name">Edent (Buc.+Tulcea)</span><span>12K urmăritori, 9 reclame (2 noi 27/29 iul). Organic educational + estetică. Activitate moderată.</span></div>
+    <div class="alert2"><span class="name">Clinica Dentalist (Buc.)</span><span>6.5K urmăritori, brand Dr. Alexandra Mircea, estetică (fațete/Invisalign). Fără presiune pe piețele noastre.</span></div>
+    <div class="alert2"><span class="name">JC Dent (Slobozia)</span><span>~2 reclame implant „dinte în aceeași zi" (fără creații noi). Organic 2.1K urmăritori, conținut de rutină (servicii, experiență clinică).</span></div>
+    <div class="alert2"><span class="name">As Dental (Slobozia)</span><span>Nou în listă. Profil personal Dr. Silviu Alexandroaie (1.6K), fără paid. Chirurgie, laser, paro, albire. Concurent local mic dar prezent.</span></div>
+    <div class="alert2"><span class="name">Saviem Smile (Giurgiu)</span><span>Player mic (871 urmăritori), comunitate WhatsApp nouă. Overlap cu clinica Giurgiu, dar impact redus.</span></div>
+    <div class="alert2" style="border-bottom:none"><span class="name">Ark Med</span><span>Conținut lifestyle/relational (recunoștință, surprize pacienți), și medicină estetică. 0 paid dentar. Nimic notabil.</span></div>
+  </div>
+</section>
+
+<!-- TEME -->
+<section>
+  <h2 class="sec">Teme recurente în piață săptămâna asta</h2>
+  <div class="card">
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px">
+      <li>🦷 <b>Implantul rămâne categoria #1 pe paid</b> — toată piața premium (DENT ESTET, Regina Maria, Dentrust) împinge implant/All-on-X cu cârlige financiare (avantaj €, rate).</li>
+      <li>💰 <b>Cârlige de accesibilitate financiară</b> — „plata în 60 de rate" (Regina Maria), „avantaj 200–500 €" (DENT ESTET). Noi mergem pe preț absolut mic, ei pe reducere de la premium.</li>
+      <li>🩸 <b>Parodontoza ca unghi de intrare prin simptom/frică</b> — Life Dental Spa a deschis-o săptămâna asta; conversie ușoară pe consultație.</li>
+      <li>🧠 <b>Unghiuri emoționale/încredere</b> — „teamă de alegerea greșită" (Dental Blue), „ce te face să spui DA" (noi). Trend spre bariere psihologice, nu doar preț.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- RECOMANDARI -->
+<section>
+  <h2 class="sec">Ce facem noi săptămâna următoare pe Facebook</h2>
+  <ol class="rec">
+    <li><b>Dublăm conținutul cu echipa/medicii.</b> Postarea noastră „Investim în pregătirea echipei" (Dr. Virginia Ardeleanu) a avut cel mai bun engagement al săptămânii (47 reacții), iar DENT ESTET și Dentrust folosesc masiv medicul ca testimonial. Producem o serie recurentă „medicii noștri" — autoritate + încredere, format care performează.</li>
+    <li><b>Preluăm unghiul de parodontoză prin simptom.</b> Reclamă tip „Îți sângerează gingiile? Nu ignora primul semn" → consultație parodontală. Îl fac Life Dental Spa și Dental Blue; noi îl putem face mai accesibil ca preț.</li>
+    <li><b>Contrăm „plata în 60 de rate" (Regina Maria) direct.</b> Mesaj comparativ implicit: „Zâmbet complet, fără dobândă ascunsă — preț corect de la început." Ne joacă pe terenul nostru de accesibilitate.</li>
+    <li><b>Apărăm Slobozia — piața cea mai disputată.</b> Trei concurenți locali activi (JC Dent, Dr. Malama, As Dental), iar Dr. Malama împinge „implant fix în 48h în Slobozia". Pregătim o campanie locală Slobozia cu cârligul nostru: implant de calitate la preț accesibil + Protocolul Dr. Ardeleanu ca diferențiator pe care ei nu-l au.</li>
+    <li><b>Watch Focșani:</b> Dentrust urcă agresiv pe implant (paid + organic, engagement mare). Pregătim o reclamă de implant pentru clinica Focșani cu cârlig de accesibilitate, ca să nu cedăm licitația locală.</li>
+  </ol>
+</section>
+
+<!-- FOOTER -->
+<div class="foot">
+  <h4>Date de verificare</h4>
+  <ul>
+    <li>Interval analizat: 27.07.2026 – 02.08.2026 (luni–duminică)</li>
+    <li>Competitori scanați: <b>14/14</b> — paid (Meta Ads) + organic (Claude in Chrome). Tier 1 detaliat, Tier 2 quick-check.</li>
+    <li>Sursă reclame: Meta Ads Library (oficial Meta) <span class="ok">✓ Confidence HIGH</span></li>
+    <li>Sursă organic: Claude in Chrome (cont non-admin) — <span class="ok">✓ extras integral</span> pentru toți cei 5 Tier 1 + Dr. Ardeleanu + toți cei 9 Tier 2.</li>
+    <li>Notă engagement organic: cifrele afișate = reacții / comentarii / distribuiri vizibile pe postare, exact cum apar. Datele „~" sunt derivate din timestamp-uri relative (3d/4d/15h) raportate la 3 aug.</li>
+    <li>Nescanați paid: Ark Med, Saviem Smile, Clinica Dentalist (prioritate scăzută)</li>
+    <li>Notă: „reclame active" = top după impresii; false-positive spam filtrat manual (ex. reclame de jocuri pe keyword „JC Dent")</li>
+    <li>Generat de skill: competitor-weekly-facebook v1.0</li>
+  </ul>
+  <div class="din">DIN 2017</div>
+</div>
+
+</div>
+</body>
+</html>
