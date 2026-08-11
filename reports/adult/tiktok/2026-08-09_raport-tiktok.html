@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok — Raport Săptămânal · 03–09.08.2026 · Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#7B1C16; --wheat:#F2DAB7; --cream:#F5EDE3; --olive:#B5BD5C;
+  --amber:#C9A227; --yellow:#FBE483; --terracotta:#dd7e6b; --alert:#FF0300;
+  --black:#222222; --white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;color:var(--black);background:#EDE6DC;line-height:1.55;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1080px;margin:0 auto;background:var(--cream);box-shadow:0 2px 30px rgba(0,0,0,.12);}
+.hero{background:var(--primary);color:var(--white);padding:38px 46px 32px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(201,162,39,.12);}
+.hero img{height:46px;margin-bottom:22px;filter:brightness(0) invert(1);}
+.hero .pill{position:absolute;top:38px;right:46px;background:var(--wheat);color:var(--primary);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:34px;line-height:1.15;margin-bottom:6px;}
+.hero .sub{color:var(--yellow);font-weight:500;font-size:16px;letter-spacing:.3px;}
+.hero .range{margin-top:14px;font-size:13px;font-weight:300;opacity:.9;}
+section{padding:30px 46px;}
+.sec-title{font-family:'Poppins';font-weight:700;font-size:20px;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.sec-title::before{content:"";width:5px;height:22px;background:var(--amber);border-radius:3px;display:inline-block;}
+.lead{background:var(--white);border-left:4px solid var(--amber);padding:18px 22px;border-radius:6px;margin-bottom:4px;}
+.lead ul{list-style:none;}
+.lead li{padding:7px 0 7px 26px;position:relative;font-size:14.5px;border-bottom:1px solid #f0e8dc;}
+.lead li:last-child{border-bottom:none;}
+.lead li::before{content:"▶";position:absolute;left:0;color:var(--amber);font-size:11px;top:9px;}
+.lead b{color:var(--primary);}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.05);}
+thead th{background:var(--primary);color:var(--white);font-weight:600;text-align:left;padding:11px 14px;font-size:12.5px;letter-spacing:.3px;}
+tbody td{padding:10px 14px;border-bottom:1px solid #efe7db;}
+tbody tr:nth-child(even){background:#FBF7F1;}
+tbody tr.us{background:var(--wheat) !important;font-weight:600;}
+tbody tr.us td{color:var(--primary);}
+tbody tr.divider td{background:var(--cream);font-weight:600;color:var(--primary);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;padding:7px 14px;}
+.num{text-align:right;font-variant-numeric:tabular-nums;}
+.rank{text-align:center;font-weight:700;color:var(--primary);}
+.card{background:var(--white);border-radius:10px;padding:0;margin-bottom:20px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.06);border:1px solid #eee2d3;}
+.card.us{border:2px solid var(--amber);}
+.card-head{background:var(--primary);color:var(--white);padding:13px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.card.us .card-head{background:linear-gradient(90deg,#7B1C16,#9a2c22);}
+.card-head .brand{font-weight:700;font-size:16px;}
+.card-head .handle{font-weight:300;font-size:12.5px;opacity:.85;}
+.card-head .meta{font-size:12px;opacity:.9;text-align:right;}
+.card-body{padding:16px 20px;}
+.vrow{border-bottom:1px solid #f0e8dc;padding:12px 0;}
+.vrow:last-child{border-bottom:none;}
+.vrow .vhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px;}
+.vdate{font-weight:600;color:var(--primary);font-size:13px;white-space:nowrap;}
+.vfmt{display:inline-block;background:var(--wheat);color:var(--primary);font-size:10.5px;font-weight:600;padding:2px 9px;border-radius:12px;letter-spacing:.4px;margin-left:6px;vertical-align:middle;}
+.vstats{font-size:12.5px;color:#555;white-space:nowrap;font-variant-numeric:tabular-nums;}
+.vstats b{color:var(--black);}
+.vcap{font-size:13px;color:#444;margin:4px 0;}
+.vmeta{font-size:11.5px;color:#777;display:flex;gap:14px;flex-wrap:wrap;margin-top:3px;}
+.vmeta .audio{color:var(--amber);font-weight:500;}
+.vmeta a{color:#8a5a52;text-decoration:none;}
+.obs{background:var(--cream);border-left:3px solid var(--olive);padding:10px 14px;margin-top:12px;border-radius:5px;font-size:13px;}
+.obs b{color:var(--primary);}
+.alert-box{background:#fff;border:1px solid #eee2d3;border-radius:8px;padding:6px 0;}
+.alert-row{padding:11px 18px;border-bottom:1px solid #f0e8dc;font-size:13.5px;display:flex;gap:10px;align-items:baseline;}
+.alert-row:last-child{border-bottom:none;}
+.dot{width:9px;height:9px;border-radius:50%;flex:none;margin-top:5px;}
+.dot.on{background:var(--olive);} .dot.off{background:#c9c0b3;} .dot.watch{background:var(--amber);}
+.alert-row .an{font-weight:600;min-width:150px;color:var(--primary);}
+.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:auto;white-space:nowrap;}
+.tag.active{background:#e8edcf;color:#5a6320;} .tag.idle{background:#efe7db;color:#8a7f6d;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.mini{background:var(--white);border-radius:10px;padding:16px 18px;box-shadow:0 1px 6px rgba(0,0,0,.05);border:1px solid #eee2d3;}
+.mini h4{color:var(--primary);font-size:14px;margin-bottom:10px;}
+.audio-item{padding:9px 0;border-bottom:1px solid #f0e8dc;font-size:13px;}
+.audio-item:last-child{border-bottom:none;}
+.audio-item b{color:var(--black);}
+.badge-orig{background:var(--wheat);color:var(--primary);}
+.badge-trend{background:var(--olive);color:#3a4014;}
+.badge-lib{background:#e6e0f0;color:#4a3d6b;}
+.abadge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:9px;letter-spacing:.3px;}
+.top5{counter-reset:t;}
+.top5 .t5{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #f0e8dc;}
+.top5 .t5:last-child{border-bottom:none;}
+.top5 .t5::before{counter-increment:t;content:counter(t);font-family:'Playfair Display';font-weight:900;font-size:26px;color:var(--amber);min-width:32px;line-height:1;}
+.t5 .t5b{font-size:13.5px;}
+.t5 .t5b .bn{font-weight:600;color:var(--primary);}
+.t5 .v{margin-left:auto;font-weight:700;color:var(--primary);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.reco{background:var(--primary);color:var(--white);border-radius:12px;padding:26px 30px;}
+.reco h3{font-family:'Playfair Display';font-weight:700;font-size:22px;margin-bottom:18px;color:var(--yellow);}
+.reco ol{list-style:none;counter-reset:r;}
+.reco li{counter-increment:r;padding:11px 0 11px 44px;position:relative;border-bottom:1px solid rgba(255,255,255,.13);font-size:14px;}
+.reco li:last-child{border-bottom:none;}
+.reco li::before{content:counter(r);position:absolute;left:0;top:10px;width:28px;height:28px;background:var(--amber);color:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;}
+.reco li b{color:var(--yellow);}
+.footer{background:#2a0f0c;color:#d8c9c5;padding:26px 46px;font-size:12px;}
+.footer h4{color:var(--wheat);font-size:13px;margin-bottom:10px;letter-spacing:.5px;}
+.footer ul{list-style:none;}
+.footer li{padding:3px 0 3px 18px;position:relative;}
+.footer li::before{content:"•";position:absolute;left:0;color:var(--amber);}
+.footer .conf{display:inline-block;margin-top:8px;background:var(--olive);color:#2a3010;font-weight:700;font-size:11px;padding:3px 12px;border-radius:12px;}
+.din{text-align:center;color:var(--primary);font-weight:300;font-size:12px;letter-spacing:2px;padding:16px;background:var(--cream);}
+@media(max-width:720px){.grid2{grid-template-columns:1fr;}section{padding:24px 22px;}.hero{padding:30px 24px;}.hero .pill{position:static;display:inline-block;margin-bottom:14px;}.footer{padding:24px 22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="pill">Raport Săptămânal</span>
+    <img src="data:image/png;base64,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" alt="Dr. Ardeleanu Dental Clinics">
+    <h1>TikTok — Inteligență Competitivă</h1>
+    <div class="sub">Săptămâna 32 · Analiză organică · 6 branduri Tier 1 + 8 Tier 2</div>
+    <div class="range">Perioadă: 3 – 9 august 2026 &nbsp;·&nbsp; Generat: 10 august 2026</div>
+  </div>
+
+  <section>
+    <div class="sec-title">Pe scurt</div>
+    <div class="lead"><ul>
+      <li><b>Life Dental Spa domină săptămâna categoric</b>: 7 clipuri și ~16.300 vizualizări, purtate de un video cu <b>Gabriela Cristea & Tavi Clonda</b> (12.800 views, 149 aprecieri, 30 salvări) — de departe cel mai puternic conținut din piață.</li>
+      <li><b>Noi (Dr. Ardeleanu) am postat doar 2 clipuri</b>, dar cu media pe video sănătoasă (941 views/clip) și cel mai mare număr de aprecieri total pe profil din întreaga piață (56.4K). Volumul e punctul slab, nu calitatea.</li>
+      <li><b>Aproape toată piața folosește „sunet original"</b>. Singura excepție notabilă: <b>Regina Maria Dental</b>, care a testat audio de trend + muzică din librărie — și a obținut cel mai bun rate de engagement al săptămânii (post pedodonți: 15 aprecieri la 452 views).</li>
+      <li><b>Surpriza vine din Tier 2</b>: <b>Clinica Dentalist</b> (28.3K urmăritori) și <b>Edent Clinic</b> (20.7K urmăritori / 157K aprecieri) au audiențe TikTok mai mari decât orice brand Tier 1 — inclusiv decât noi.</li>
+      <li><b>Dental Blue tace</b> (ultimul clip 31.07), iar <b>Dent Priority</b> conduce piața la frecvență brută (5 clipuri în 7 zile).</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <div class="sec-title">Volumele săptămânii</div>
+    <table>
+      <thead><tr>
+        <th>Brand</th><th class="num">Clipuri</th><th class="num">Vizualizări</th>
+        <th class="num">Avg/clip</th><th>Audio dominant</th><th class="rank">Rang</th>
+      </tr></thead>
+      <tbody>
+        <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td class="num">2</td><td class="num">1.881</td><td class="num">941</td><td>Sunet original</td><td class="rank">3</td></tr>
+        <tr><td>Life Dental Spa</td><td class="num">7</td><td class="num">16.268</td><td class="num">2.324</td><td>Sunet original</td><td class="rank">1</td></tr>
+        <tr><td>DENT ESTET</td><td class="num">5</td><td class="num">2.805</td><td class="num">561</td><td>Sunet original</td><td class="rank">2</td></tr>
+        <tr><td>Regina Maria Dental</td><td class="num">2</td><td class="num">1.353</td><td class="num">677</td><td>Trend + librărie</td><td class="rank">4</td></tr>
+        <tr><td>Elidadent</td><td class="num">1</td><td class="num">975</td><td class="num">975</td><td>Sunet original</td><td class="rank">5</td></tr>
+        <tr><td>Dental Blue International</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td>—</td><td class="rank">6</td></tr>
+        <tr class="divider"><td colspan="6">Tier 2 — activitate în fereastră (nr. clipuri estimat din grid)</td></tr>
+        <tr><td>Dent Priority</td><td class="num">5</td><td class="num">n/d*</td><td class="num">—</td><td>—</td><td class="rank">—</td></tr>
+        <tr><td>Saviem Smile</td><td class="num">3</td><td class="num">n/d*</td><td class="num">—</td><td>—</td><td class="rank">—</td></tr>
+        <tr><td>Edent Clinic</td><td class="num">3</td><td class="num">n/d*</td><td class="num">—</td><td>—</td><td class="rank">—</td></tr>
+        <tr><td>Dentrust</td><td class="num">1</td><td class="num">n/d*</td><td class="num">—</td><td>—</td><td class="rank">—</td></tr>
+        <tr><td>JC Dent · Dr. Malama · As Dental</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td>—</td><td class="rank">—</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:11.5px;color:#888;margin-top:8px;">*Pentru Tier 2 s-a făcut verificare rapidă (frecvență + status). Vizualizările pe clip nu au fost extrase individual — vezi „Alerte Tier 2".</p>
+  </section>
+
+  <section>
+    <div class="sec-title">Distribuție formate (Tier 1)</div>
+    <div class="lead"><ul>
+      <li><b>DENT ESTET</b> — 100% talking-head medic / educațional. 2 din 5 clipuri sunt apariții TV recuperate (B1.ro, Prima TV). Zero trend, zero promo direct.</li>
+      <li><b>Life Dental Spa</b> — mix testimonial pacient + educațional scurt. Un singur clip „celebrity" duce tot reach-ul. Formatele lungi (150s+) coexistă cu clipuri de 30s.</li>
+      <li><b>Regina Maria Dental</b> — singurul brand care iese din tipar: 1 clip „relatable/listicle" pe trend audio + 1 testimonial sportiv (rugby).</li>
+      <li><b>Dr. Ardeleanu (noi)</b> — 1 educațional (periuță) + 1 promo/lifestyle (deschidere Slobozia). Format solid, dar prea puține postări.</li>
+      <li><b>Elidadent</b> — 1 clip educațional scurt (24s), format „2 semne că..." — hook clar, direct.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <div class="sec-title">Activitate profil cu profil (Tier 1)</div>
+
+    <!-- US -->
+    <div class="card us">
+      <div class="card-head">
+        <div><span class="brand">Dr. Ardeleanu</span> <span class="handle">@dr.ardeleanu — NOI</span></div>
+        <div class="meta">6.749 urmăritori · 56.4K aprecieri · 305 clipuri<br>Cele mai multe aprecieri pe profil din piață</div>
+      </div>
+      <div class="card-body">
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">6 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>1.071</b> views · 11 apr · 1 dist · 1 com · 1 salv</span></div>
+          <div class="vcap">„Crezi că o periuță mai dură îți curăță dinții mai bine? S-ar putea să faci una dintre cele mai frecvente greșeli!..."</div>
+          <div class="vmeta"><span class="audio">♫ original sound - Dr. Ardeleanu</span><span>88s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">5 aug<span class="vfmt">Promo / Lifestyle</span></span>
+            <span class="vstats"><b>810</b> views · 9 apr · 1 dist · 2 com</span></div>
+          <div class="vcap">„🔥 Slobozia, suntem gata! Clinica noastră este pregătită să își primească pacienții în cele 7 cabinete complet echipate..."</div>
+          <div class="vmeta"><span class="audio">♫ original sound - Dr. Ardeleanu</span><span>69s</span></div>
+        </div>
+        <div class="obs"><b>➜ Observații:</b> Media pe clip (941 views) e peste DENT ESTET, Regina Maria și Elidadent. Problema e strict frecvența — 2 clipuri într-o săptămână în care Life Dental Spa a postat 7 și Dent Priority 5. Clipul „Slobozia" e un semnal bun de expansiune de folosit și pe celelalte canale.</div>
+      </div>
+    </div>
+
+    <!-- LIFE DENTAL SPA -->
+    <div class="card">
+      <div class="card-head">
+        <div><span class="brand">Life Dental Spa</span> <span class="handle">@lifedentalspa</span></div>
+        <div class="meta">6.893 urmăritori · 51.1K aprecieri · 690 clipuri</div>
+      </div>
+      <div class="card-body">
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">6 aug<span class="vfmt">Celebrity</span></span>
+            <span class="vstats"><b>12.800</b> views · 149 apr · 9 dist · 2 com · 30 salv</span></div>
+          <div class="vcap">„Întâlnire cu Gabriela Cristea și Tavi Clonda la Life Dental Spa! Gabriela a revenit pentru controlul fațetelor dentare..."</div>
+          <div class="vmeta"><span class="audio">♫ sunet original - Life Dental Spa</span><span>155s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">9 aug<span class="vfmt">Testimonial</span></span>
+            <span class="vstats"><b>725</b> views · 5 apr · 1 dist · 1 salv</span></div>
+          <div class="vcap">„🤍 Încrederea se construiește în timp. Domnul Apitulesei a venit pentru un detartraj și o plombă..."</div>
+          <div class="vmeta"><span class="audio">♫ sunet original</span><span>60s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">7 aug<span class="vfmt">Testimonial · long</span></span>
+            <span class="vstats"><b>644</b> views · 9 apr · 9 dist · 1 salv</span></div>
+          <div class="vcap">„Pacientul nostru a ajuns la Life Dental Spa Sibiu la recomandarea soției, cu un plan de tratament complex..."</div>
+          <div class="vmeta"><span class="audio">♫ original sound</span><span>159s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">4 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>623</b> views · 16 apr · 1 dist · 1 salv</span></div>
+          <div class="vcap">„✅ Tratamentul ortodontic cu alignere invizibile poate fi mai accesibil decât crezi (plată în rate)..."</div>
+          <div class="vmeta"><span class="audio">♫ sunet original</span><span>32s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">5 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>646</b> views · 6 apr · 4 dist</span></div>
+          <div class="vcap">„🔴 Ți-ai dorit vreodată un zâmbet mai alb, dar fără să arate artificial?..." (albire naturală)</div>
+          <div class="vmeta"><span class="audio">♫ sunet original</span><span>33s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">8 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>466</b> views · 7 apr · 2 salv</span></div>
+          <div class="vcap">„Îți dorești dinți drepți, dar nu vrei ca aparatul dentar să se observe?..." (aparat invizibil)</div>
+          <div class="vmeta"><span class="audio">♫ sunet original</span><span>42s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">3 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>364</b> views · 2 apr</span></div>
+          <div class="vcap">„Crezi că igienizarea dentară înseamnă doar un simplu detartraj?..."</div>
+          <div class="vmeta"><span class="audio">♫ sunet original</span><span>35s</span></div>
+        </div>
+        <div class="obs"><b>➜ Observații:</b> Rețeta lor e clară — <b>volum mare + un „hero clip" cu figură publică</b> care trage tot reach-ul. Fără Gabriela Cristea, media lor pe clip ar fi ~580 views, comparabilă cu a noastră. Lecția: o singură colaborare bine plasată bate 6 clipuri de rutină.</div>
+      </div>
+    </div>
+
+    <!-- DENT ESTET -->
+    <div class="card">
+      <div class="card-head">
+        <div><span class="brand">DENT ESTET</span> <span class="handle">@dentestetclinic</span></div>
+        <div class="meta">6.628 urmăritori · 47.3K aprecieri · 465 clipuri</div>
+      </div>
+      <div class="card-body">
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">7 aug<span class="vfmt">Talking-head · TV</span></span>
+            <span class="vstats"><b>1.008</b> views · 8 apr · 1 dist · 1 salv</span></div>
+          <div class="vcap">„Un implant dentar în zona estetică trebuie să se integreze firesc în zâmbet." — Dr. Adelin Radu la B1.ro</div>
+          <div class="vmeta"><span class="audio">♫ sunet original - DENT ESTET</span><span>50s</span><span>#CoroaneDentare #EsteticaDentara</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">6 aug<span class="vfmt">Testimonial</span></span>
+            <span class="vstats"><b>842</b> views · 12 apr</span></div>
+          <div class="vcap">„Am apreciat că alinierea dinților a corespuns cu simularea digitală." — Tiberiu, DENT ESTET 4 TEENS (Invisalign)</div>
+          <div class="vmeta"><span class="audio">♫ sunet original</span><span>99s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">6 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>338</b> views · 5 apr</span></div>
+          <div class="vcap">„Cât timp poate rămâne o coroană provizorie după tratamentul de canal?" — Dr. Raluca Irofte</div>
+          <div class="vmeta"><span class="audio">♫ original sound</span><span>60s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">5 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>280</b> views · 4 apr · 1 salv</span></div>
+          <div class="vcap">„Știai că tratamentul cariilor poate fi realizat și cu laserul dentar? (Waterlase)"</div>
+          <div class="vmeta"><span class="audio">♫ original sound</span><span>51s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">3 aug<span class="vfmt">Talking-head · TV</span></span>
+            <span class="vstats"><b>337</b> views · 6 apr · 1 dist · 1 salv</span></div>
+          <div class="vcap">„Ai observat aceste simptome?" — Dr. Anamaria Ghiurcă despre boala parodontală, la Prima TV</div>
+          <div class="vmeta"><span class="audio">♫ sunet original</span><span>43s</span></div>
+        </div>
+        <div class="obs"><b>➜ Observații:</b> Strategie „autoritate medicală" — reciclează apariții TV și pune medicii în față. Consistent și credibil, dar formatul e monoton și engagement-ul mic (avg ~7 aprecieri/clip). Nu experimentează cu trenduri.</div>
+      </div>
+    </div>
+
+    <!-- REGINA MARIA -->
+    <div class="card">
+      <div class="card-head">
+        <div><span class="brand">Regina Maria Dental</span> <span class="handle">@reginamariadentalclinics</span></div>
+        <div class="meta">5.517 urmăritori · 25.4K aprecieri · 459 clipuri</div>
+      </div>
+      <div class="card-body">
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">9 aug<span class="vfmt">Trend · Relatable</span></span>
+            <span class="vstats"><b>452</b> views · 15 apr · 3 dist · 1 com · 1 salv</span></div>
+          <div class="vcap">„Lucruri pe care nu ți le spune nimeni despre medicii pedodonți: vorbesc fluent «dinozaur», «prințesă» și «unicorn»..."</div>
+          <div class="vmeta"><span class="audio">♫ trend: „origineel geluid" (audio non-original)</span><span>19s</span></div>
+        </div>
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">5 aug<span class="vfmt">Testimonial · Sport</span></span>
+            <span class="vstats"><b>901</b> views · 7 apr · 1 com · 1 salv</span></div>
+          <div class="vcap">„Sporturile de contact îți testează limitele. Dantura nu ar trebui să fie una dintre ele." — Cosmin Manole, fundaș Stejarii</div>
+          <div class="vmeta"><span class="audio">♫ librărie: Carmen Habanera</span><span>29s</span></div>
+        </div>
+        <div class="obs"><b>➜ Observații:</b> Cel mai <b>bun engagement-rate din piață</b> la clipul de pedodonți (3.3% aprecieri/views), tocmai pentru că a folosit audio de trend + un format scurt și „uman". Singurul Tier 1 care nu se bazează exclusiv pe sunet original. De urmărit și de copiat mecanica.</div>
+      </div>
+    </div>
+
+    <!-- ELIDADENT -->
+    <div class="card">
+      <div class="card-head">
+        <div><span class="brand">Elidadent</span> <span class="handle">@elidadent</span></div>
+        <div class="meta">1.897 urmăritori · 13.1K aprecieri · 299 clipuri</div>
+      </div>
+      <div class="card-body">
+        <div class="vrow">
+          <div class="vhead"><span class="vdate">3 aug<span class="vfmt">Educațional</span></span>
+            <span class="vstats"><b>975</b> views · 11 apr</span></div>
+          <div class="vcap">„🦷 2 semne că ai putea avea nevoie de un tratament de canal. Durerea și sensibilitatea care persistă nu trebuie ignorate..."</div>
+          <div class="vmeta"><span class="audio">♫ sunet original - Elidadent</span><span>24s</span></div>
+        </div>
+        <div class="obs"><b>➜ Observații:</b> Un singur clip, dar eficient — hook tip „2 semne că...", 24s, direct la subiect. Cea mai bună rată views/urmăritor din Tier 1 (a atins ~51% din urmăritori cu un singur clip).</div>
+      </div>
+    </div>
+
+    <!-- DENTAL BLUE -->
+    <div class="card">
+      <div class="card-head">
+        <div><span class="brand">Dental Blue International</span> <span class="handle">@dentalbluechain</span></div>
+        <div class="meta">883 urmăritori · 2.758 aprecieri · 204 clipuri</div>
+      </div>
+      <div class="card-body">
+        <div class="obs" style="border-left-color:#c9c0b3;"><b>➜ Zero activitate în fereastră.</b> Ultimul clip publicat: 31 iulie 2026. Profil în pauză pe TikTok, în ciuda strategiei „educativ video-first" declarate. Oportunitate de share of voice pentru noi.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">TikTok pediatric (focus special)</div>
+    <div class="lead"><ul>
+      <li><b>DENT ESTET 4 KIDS nu are cont TikTok dedicat</b> — @dentestet4kids nu există. Conținutul pediatric al DENT ESTET rulează pe contul principal (ex. clipul „DENT ESTET 4 TEENS" cu Invisalign din 6 aug).</li>
+      <li><b>Dental Safari (noi) nu are încă un cont TikTok separat.</b> Conținutul de pedodonție ajunge pe @dr.ardeleanu.</li>
+      <li><b>Semnalul cel mai interesant vine din Tier 1</b>: postul de pedodonți al Regina Maria (trend audio, ton „relatable") a fost cel mai eficient clip din piață pe engagement. Formatul „ce nu știi despre medicii pedodonți" e ușor de replicat sub umbrela <b>Dental Safari</b>.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <div class="sec-title">Alerte Tier 2</div>
+    <div class="alert-box">
+      <div class="alert-row"><span class="dot on"></span><span class="an">Dent Priority</span><span>Cel mai activ Tier 2 — 5 clipuri în fereastră (ultimul 9 aug). 1.037 urmăritori. Mizează pe volum.</span><span class="tag active">activ</span></div>
+      <div class="alert-row"><span class="dot on"></span><span class="an">Clinica Dentalist</span><span>2 clipuri (ultimul 10 aug). <b>28.300 urmăritori / 74.9K aprecieri</b> — cea mai mare audiență din tot setul, brand personal Dr. Alexandra Mircea.</span><span class="tag active">activ</span></div>
+      <div class="alert-row"><span class="dot on"></span><span class="an">Edent Clinic</span><span>3 clipuri (ultimul 7 aug). <b>20.700 urmăritori / 157.2K aprecieri</b> — cel mai mare volum de aprecieri din toate conturile monitorizate.</span><span class="tag active">activ</span></div>
+      <div class="alert-row"><span class="dot on"></span><span class="an">Saviem Smile</span><span>3 clipuri (ultimul 7 aug). 2.167 urmăritori. Ritm constant de postare.</span><span class="tag active">activ</span></div>
+      <div class="alert-row"><span class="dot watch"></span><span class="an">Dentrust</span><span>1 clip (ultimul 4 aug). 3.609 urmăritori. Activitate redusă săptămâna asta.</span><span class="tag active">activ</span></div>
+      <div class="alert-row"><span class="dot off"></span><span class="an">As Dental</span><span>0 clipuri în fereastră (ultimul 1 aug, la limită). 441 urmăritori. Competitor direct Slobozia.</span><span class="tag idle">inactiv</span></div>
+      <div class="alert-row"><span class="dot off"></span><span class="an">JC Dent</span><span>Inactiv pe TikTok — ultimul clip 21 iunie. Competitor direct Slobozia.</span><span class="tag idle">inactiv</span></div>
+      <div class="alert-row"><span class="dot off"></span><span class="an">Dr. Malama</span><span>Cont dormant (@biancamalama) — ultimul clip 29 martie. 172 urmăritori.</span><span class="tag idle">inactiv</span></div>
+    </div>
+    <div class="obs" style="margin-top:14px;"><b>➜ De reținut:</b> două clinici mid-market (Dentalist, Edent) au construit audiențe TikTok de 5–10× mai mari decât brandurile premium naționale, prin conținut condus de un medic-personaj. E modelul „doctor creator" — merită analizat separat.</div>
+  </section>
+
+  <section>
+    <div class="sec-title">Trenduri audio detectate în piață</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>Ce audio s-a folosit</h4>
+        <div class="audio-item"><span class="abadge badge-orig">ORIGINAL</span> <b>Sunet original / brand</b> — dominant. Folosit de Life Dental Spa, DENT ESTET, Elidadent și noi. Sigur, dar fără boost de reach.</div>
+        <div class="audio-item"><span class="abadge badge-trend">TREND</span> <b>„origineel geluid" (Buurtzorg)</b> — folosit de Regina Maria la clipul de pedodonți. Audio non-original preluat ca trend.</div>
+        <div class="audio-item"><span class="abadge badge-lib">LIBRĂRIE</span> <b>Carmen Habanera</b> — muzică din librăria TikTok, folosită de Regina Maria la testimonialul sportiv.</div>
+      </div>
+      <div class="mini">
+        <h4>Ce merită testat de noi</h4>
+        <div class="audio-item">Piața dentară RO e <b>sub-optimizată pe audio</b> — aproape toți stau pe sunet original. Cine intră pe trenduri câștigă reach ușor.</div>
+        <div class="audio-item">Recomandare: alege <b>1–2 trenduri audio active</b> pe săptămână (verificate în „Sunete la modă" din TikTok) și montează pe ele un format scurt educațional sau „relatable".</div>
+        <div class="audio-item">Formatul „lucruri pe care nu ți le spune nimeni despre..." + trend audio a dat cel mai bun engagement — de replicat sub Dental Safari.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">Top 5 clipuri cross-brand (după vizualizări)</div>
+    <div class="top5">
+      <div class="t5"><div class="t5b"><span class="bn">Life Dental Spa</span> — Gabriela Cristea & Tavi Clonda (control fațete) · celebrity, 155s<div class="vmeta"><span class="audio">♫ sunet original</span></div></div><span class="v">12.800</span></div>
+      <div class="t5"><div class="t5b"><span class="bn">Dr. Ardeleanu (noi)</span> — „Periuța dură — cea mai frecventă greșeală" · educațional, 88s</div><span class="v">1.071</span></div>
+      <div class="t5"><div class="t5b"><span class="bn">DENT ESTET</span> — Implant estetic, Dr. Adelin Radu la B1.ro · talking-head TV, 50s</div><span class="v">1.008</span></div>
+      <div class="t5"><div class="t5b"><span class="bn">Elidadent</span> — „2 semne că ai nevoie de tratament de canal" · educațional, 24s</div><span class="v">975</span></div>
+      <div class="t5"><div class="t5b"><span class="bn">Regina Maria</span> — Sport de contact, testimonial Cosmin Manole · testimonial, 29s</div><span class="v">901</span></div>
+    </div>
+    <div class="obs" style="margin-top:14px;"><b>Pattern detectat:</b> hook-urile care performează au fie <b>o figură publică</b> (Life Dental Spa), fie o <b>întrebare/afirmație contraintuitivă în primele 3 secunde</b> (noi — „periuța dură nu curăță mai bine"; Elidadent — „2 semne că..."). Formatul „număr + simptom" (2 semne, 3 greșeli) e cel mai eficient la cost zero.</div>
+  </section>
+
+  <section>
+    <div class="sec-title">Frecvență de postare — ranking</div>
+    <div class="lead"><ul>
+      <li><b>1. Life Dental Spa — 7 clipuri/săpt.</b> (cel mai consistent Tier 1)</li>
+      <li><b>2. Dent Priority — 5 clipuri/săpt.</b> (Tier 2, campion la volum)</li>
+      <li><b>3. DENT ESTET — 5 clipuri/săpt.</b></li>
+      <li><b>4. Saviem Smile / Edent Clinic — 3 clipuri/săpt.</b></li>
+      <li><b>5–6. Dr. Ardeleanu (noi) / Regina Maria — 2 clipuri/săpt.</b></li>
+      <li>TikTok recompensează volumul. La 2 clipuri/săptămână suntem sub pragul la care algoritmul construiește momentum. <b>Recomandare: minim 4 clipuri/săptămână.</b></li>
+    </ul></div>
+  </section>
+
+  <section>
+    <div class="reco">
+      <h3>Ce facem noi săptămâna viitoare pe TikTok</h3>
+      <ol>
+        <li><b>Clip „hero" cu trend audio</b> — format „lucruri pe care nu ți le spune nimeni despre dentist / pedodonți", 15–20s, montat pe un sunet la modă activ. Copiem mecanica care a dat Regina Maria cel mai bun engagement. <i>Poate fi și primul clip Dental Safari.</i></li>
+        <li><b>Serie „număr + simptom"</b> — ex. „3 semne că ai nevoie de un implant" / „2 greșeli la periaj", 24–30s, sunet original, hook contraintuitiv în primele 3 secunde. Format dovedit (Elidadent, noi).</li>
+        <li><b>Refolosim clipul Slobozia</b> — expansiunea (7 cabinete noi) e un mesaj puternic; îl adaptăm ca „behind the scenes / tur clinică" pentru încă un clip.</li>
+        <li><b>Frecvență: minim 4 clipuri</b> săptămâna viitoare (vs. 2 acum). Batch de filmare cu medicii într-o singură zi pentru a acoperi volumul.</li>
+        <li><b>Testăm o colaborare</b> — lecția Life Dental Spa e clară: un singur clip cu o figură cunoscută (local sau național) bate 6 clipuri de rutină la reach.</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="footer">
+    <h4>DATE DE VERIFICARE</h4>
+    <ul>
+      <li>Status Claude in Chrome: <b>activ</b> (fără login TikTok — profilele publice s-au încărcat complet)</li>
+      <li>Surse: profiluri TikTok publice. Date extrase din structura oficială a paginii (stats, durată, audio, engagement) — nu estimări.</li>
+      <li>Metodă dată publicare: decodare timestamp din ID-ul video (snowflake TikTok), validată pe clipuri cunoscute.</li>
+      <li><b>Reclame TikTok: NEVERIFICATE în această ediție</b> (secțiune omisă la cererea ta). TikTok Commercial Content Library are oricum acoperire RO parțială.</li>
+      <li>Conturi inaccesibile: @dentestet4kids (nu există) · @dentalbluechain (fără activitate în fereastră).</li>
+      <li>Vizualizări/clip Tier 2 neextrase individual (doar frecvență + status, conform verificării rapide).</li>
+      <li>Perioadă analizată: 3–9 august 2026.</li>
+    </ul>
+    <span class="conf">Confidence: RIDICAT pe date organice · N/A pe reclame</span>
+    <p style="margin-top:12px;opacity:.7;">Generat: competitor-weekly-tiktok · Clinicile Dr. Ardeleanu</p>
+  </div>
+
+  <div class="din">DIN 2017</div>
+</div>
+</body>
+</html>

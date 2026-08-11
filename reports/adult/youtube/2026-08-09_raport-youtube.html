@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raport YouTube · 03–09.08.2026 · Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--burg:#7B1C16;--gold:#C9A227;--wheat:#F2DAB7;--cream:#F5EDE3;--olive:#B5BD5C;--ink:#222;--red:#FF0300;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:#e9e2d7;line-height:1.5;padding:24px;}
+.wrap{max-width:960px;margin:0 auto;background:var(--cream);border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.15);}
+.hero{background:var(--burg);color:#fff;padding:34px 40px 30px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(201,162,39,.12);}
+.hero img{height:44px;margin-bottom:20px;filter:brightness(0) invert(1);}
+.pill{display:inline-block;background:var(--wheat);color:var(--burg);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:34px;line-height:1.15;letter-spacing:-.5px;}
+.hero .sub{color:var(--gold);font-weight:500;font-size:16px;margin-top:6px;}
+.hero .win{margin-top:14px;font-size:13px;color:rgba(255,255,255,.75);font-weight:300;}
+.hero .win b{color:#fff;font-weight:500;}
+.sec{padding:30px 40px;}
+.sec h2{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--burg);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.sec h2::before{content:"";width:26px;height:3px;background:var(--gold);border-radius:2px;}
+.tldr{background:#fff;border-left:4px solid var(--gold);border-radius:10px;padding:20px 24px;}
+.tldr ul{list-style:none;}
+.tldr li{padding:7px 0 7px 26px;position:relative;font-size:14.5px;border-bottom:1px solid #f0e9dd;}
+.tldr li:last-child{border:none;}
+.tldr li::before{content:"▸";color:var(--burg);position:absolute;left:0;font-weight:700;}
+.tldr b{color:var(--burg);}
+table.vol{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:14px;}
+table.vol th{background:var(--burg);color:#fff;font-weight:600;font-size:11px;letter-spacing:.5px;text-transform:uppercase;padding:11px 10px;text-align:center;}
+table.vol th:nth-child(2){text-align:left;}
+table.vol td{padding:11px 10px;text-align:center;border-bottom:1px solid #f0e9dd;}
+table.vol td.brand{text-align:left;font-weight:600;}
+table.vol td.rank{color:#aaa;font-weight:700;width:34px;}
+table.vol td.tot{font-weight:700;}
+table.vol td.views{font-weight:700;color:var(--burg);}
+table.vol tr:nth-child(even):not(.us){background:#fbf7f0;}
+table.vol tr.us{background:var(--wheat);}
+table.vol tr.us td{border-bottom:2px solid var(--gold);}
+.note{display:block;font-size:11px;font-weight:400;color:#999;}
+.pill-us{background:var(--burg);color:#fff;font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;letter-spacing:1px;vertical-align:middle;}
+.card{background:#fff;border-radius:12px;padding:22px 24px;margin-bottom:18px;border:1px solid #eee2d0;}
+.card-us{border:2px solid var(--burg);box-shadow:0 4px 18px rgba(123,28,22,.1);}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:14px;border-bottom:1px solid #f0e9dd;margin-bottom:16px;flex-wrap:wrap;}
+.card-head h3{font-size:19px;color:var(--burg);font-weight:700;}
+.tag-us{background:var(--gold);color:#fff;font-size:9px;font-weight:700;padding:3px 8px;border-radius:10px;letter-spacing:1px;vertical-align:middle;}
+.chandle{font-size:12px;color:#8a7f70;text-decoration:none;}
+.chandle:hover{color:var(--burg);}
+.card-stats{display:flex;gap:18px;font-size:12px;color:#8a7f70;white-space:nowrap;}
+.card-stats b{color:var(--ink);font-size:15px;}
+.col2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.vcol-h{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--burg);text-transform:uppercase;margin-bottom:10px;}
+.vcol-h span{color:#b6a892;}
+.vitem{background:#fbf7f0;border-radius:8px;padding:10px 12px;margin-bottom:8px;}
+.vmeta{display:flex;gap:8px;align-items:center;font-size:11px;margin-bottom:4px;flex-wrap:wrap;}
+.vdate{background:var(--burg);color:#fff;padding:1px 7px;border-radius:6px;font-weight:600;}
+.vdur{background:#e7ddcb;color:#6b5d47;padding:1px 7px;border-radius:6px;font-weight:500;}
+.vviews{color:var(--gold);font-weight:700;}
+.vtitle{font-size:12.5px;line-height:1.35;color:var(--ink);}
+.vlink{margin-top:5px;}
+.vlink a{font-size:11px;color:var(--burg);text-decoration:none;font-weight:500;}
+.vlink a:hover{text-decoration:underline;}
+.vempty{font-size:12px;color:#b3a794;font-style:italic;padding:10px 4px;}
+.obs{margin-top:14px;background:var(--wheat);border-radius:8px;padding:12px 14px;font-size:13px;line-height:1.5;}
+.obs-l{display:block;font-weight:700;color:var(--burg);font-size:11px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px;}
+.exnote{background:#fff;border:1px dashed #c9b79a;border-radius:10px;padding:18px 22px;margin-bottom:16px;}
+.exnote h4{color:var(--burg);font-size:14px;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.exnote h4 .ic{background:var(--wheat);color:var(--burg);width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;}
+.exnote p{font-size:13px;line-height:1.6;color:#5c5346;}
+.exnote p b{color:var(--burg);}
+.silent{background:#fff;border-radius:10px;padding:16px 22px;font-size:13.5px;}
+.silent .sh{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--burg);text-transform:uppercase;margin-bottom:10px;}
+.silent ul{list-style:none;}
+.silent li{padding:6px 0;border-bottom:1px solid #f2ece1;color:#6b6153;}
+.silent li:last-child{border:none;}
+.silent b{color:var(--ink);}
+.nochan{margin-top:12px;font-size:12px;color:#9a8f7f;}
+table.ts{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:13.5px;}
+table.ts td{padding:11px 12px;border-bottom:1px solid #f0e9dd;}
+table.ts td.rk{width:34px;font-weight:800;color:var(--gold);font-size:18px;text-align:center;}
+table.ts td.tb{font-weight:600;color:var(--burg);white-space:nowrap;}
+table.ts td.tt{color:var(--ink);}
+table.ts td.tv{text-align:right;font-weight:700;color:var(--burg);white-space:nowrap;}
+table.ts tr:last-child td{border:none;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.panel{background:#fff;border-radius:10px;padding:18px 20px;}
+.panel h4{font-size:13px;color:var(--burg);margin-bottom:10px;font-weight:700;}
+.panel p,.panel li{font-size:13px;line-height:1.55;}
+.panel ul{list-style:none;}
+.panel li{padding:5px 0 5px 18px;position:relative;}
+.panel li::before{content:"•";color:var(--gold);position:absolute;left:2px;font-weight:700;}
+.act{background:var(--burg);color:#fff;border-radius:12px;padding:26px 30px;}
+.act h2{color:#fff;}
+.act h2::before{background:var(--gold);}
+.act ol{list-style:none;counter-reset:a;}
+.act li{counter-increment:a;padding:12px 0 12px 44px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;line-height:1.5;}
+.act li:last-child{border:none;}
+.act li::before{content:counter(a);position:absolute;left:0;top:11px;width:28px;height:28px;background:var(--gold);color:var(--burg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;}
+.act b{color:var(--gold);}
+.foot{background:#2a0e0b;color:rgba(255,255,255,.6);padding:22px 40px;font-size:11.5px;line-height:1.7;}
+.foot b{color:var(--wheat);}
+.foot .din{text-align:center;margin-top:12px;font-weight:300;letter-spacing:3px;color:var(--gold);font-size:12px;}
+@media(max-width:720px){.col2,.grid2{grid-template-columns:1fr;}.sec,.hero{padding-left:22px;padding-right:22px;}.hero h1{font-size:26px;}table.vol{font-size:12px;}table.vol td,table.vol th{padding:8px 5px;}}
+</style></head>
+<body><div class="wrap">
+
+<div class="hero">
+<img src="data:image/png;base64,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" alt="Dr. Ardeleanu Dental Clinics">
+<div class="pill">YouTube · Raport săptămânal · doar conținut</div>
+<h1>Radar YouTube competitori</h1>
+<div class="sub">Săptămâna 32 · 03–09 august 2026</div>
+<div class="win">Conținut organic (long-form · Shorts · Community) &nbsp;|&nbsp; comparație între <b>canalele de clinică</b> &nbsp;·&nbsp; partea de <b>reclame video exclusă</b> la cerere</div>
+</div>
+
+<div class="sec">
+<h2>Pe scurt</h2>
+<div class="tldr"><ul>
+<li><b>Suntem ultimii la views</b> dintre canalele de clinică active: cele 2 Shorts ale noastre au strâns 18 views în total.</li>
+<li><b>Shorts-urile domină</b> reach-ul; long-form-ul rămâne nișă — chiar și canalele mari fac sub 30 views/clip long-form.</li>
+<li><b>Life Dental Spa</b> = cea mai bună cadență: 7 Shorts, câte unul pe zi, format hook-întrebare.</li>
+<li><b>Colaborări cu figuri cunoscute</b> săptămâna asta: Life (Gabriela Cristea &amp; Tavi Clonda), Regina Maria (Echipa Națională de Rugby).</li>
+<li><b>Clinica Dentalist nu are cont de clinică pe YouTube</b> — a fost exclusă din comparație (vezi nota de mai jos).</li>
+</ul></div>
+</div>
+
+<div class="sec">
+<h2>Volume — postări noi organice</h2>
+<table class="vol">
+<thead><tr><th>#</th><th>Brand</th><th>Abonați</th><th>Long-form</th><th>Shorts</th><th>Total</th><th>Views săpt.</th></tr></thead>
+<tbody><tr><td class="rank">1</td><td class="brand">Life Dental Spa <span class="note">Tier 1</span></td>
+<td>2K</td><td>0</td><td>7</td><td class="tot">7</td><td class="views">1.302</td></tr><tr><td class="rank">2</td><td class="brand">Regina Maria Dental <span class="note">Tier 1</span></td>
+<td>9,32K</td><td>2</td><td>1</td><td class="tot">3</td><td class="views">460</td></tr><tr><td class="rank">3</td><td class="brand">DENT ESTET <span class="note">Tier 1</span></td>
+<td>1,33K</td><td>1</td><td>1</td><td class="tot">2</td><td class="views">91</td></tr><tr class="us"><td class="rank">4</td><td class="brand">Dr. Ardeleanu <span class="pill-us">NOI</span><span class="note">NOI</span></td>
+<td>921</td><td>0</td><td>2</td><td class="tot">2</td><td class="views">18</td></tr><tr><td class="rank">5</td><td class="brand">Elidadent <span class="note">Tier 1 · dormant</span></td>
+<td>1</td><td>0</td><td>0</td><td class="tot">0</td><td class="views">0</td></tr></tbody>
+</table>
+</div>
+
+<div class="sec">
+<h2>Conținut nou — detalii pe canale de clinică</h2>
+<div class="card card-us">
+<div class="card-head"><div><h3>Dr. Ardeleanu <span class="tag-us">CANALUL NOSTRU</span></h3>
+<a class="chandle" href="https://www.youtube.com/@dr.ardeleanu" target="_blank" rel="noopener">youtube.com/@dr.ardeleanu</a></div>
+<div class="card-stats"><span><b>921</b> abonați</span><span><b>379</b> video</span></div></div>
+<div class="col2">
+<div class="vcol"><div class="vcol-h">▶ LONG-FORM <span>(0)</span></div><div class="vempty">— niciun long-form în săptămână —</div></div>
+<div class="vcol"><div class="vcol-h">▪ SHORTS <span>(2)</span></div><div class="vitem"><div class="vmeta"><span class="vdate">06.08</span><span class="vviews">4 views</span></div><div class="vtitle">3 lucruri despre periuța de dinți</div><div class="vlink"><a href="https://www.youtube.com/shorts/EAano-1R4y0" target="_blank" rel="noopener">deschide ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">05.08</span><span class="vviews">14 views</span></div><div class="vtitle">Dr. Ardeleanu Slobozia – 7 cabinete moderne, toate specializările stomatologice sub același acoperiș</div><div class="vlink"><a href="https://www.youtube.com/shorts/owCmTzQsfyo" target="_blank" rel="noopener">deschide ↗</a></div></div></div></div>
+<div class="obs"><span class="obs-l">➜ Observații</span>Doar 2 Shorts, ambele cu tracțiune foarte mică (4 și 14 views). Ritm redus și zero long-form. Suntem ultimii la views dintre canalele de clinică active.</div></div><div class="card">
+<div class="card-head"><div><h3>DENT ESTET </h3>
+<a class="chandle" href="https://www.youtube.com/@ClinicaDENTESTET" target="_blank" rel="noopener">youtube.com/@ClinicaDENTESTET</a></div>
+<div class="card-stats"><span><b>1,33K</b> abonați</span><span><b>675</b> video</span></div></div>
+<div class="col2">
+<div class="vcol"><div class="vcol-h">▶ LONG-FORM <span>(1)</span></div><div class="vitem"><div class="vmeta"><span class="vdate">06.08</span><span class="vdur">1:40</span><span class="vviews">12 views</span></div><div class="vtitle">De la simulare 3D la un zâmbet perfect aliniat: Experiența lui Tiberiu cu alignerele Invisalign®</div><div class="vlink"><a href="https://www.youtube.com/watch?v=cKZ2lhjE-jE" target="_blank" rel="noopener">deschide ↗</a></div></div></div>
+<div class="vcol"><div class="vcol-h">▪ SHORTS <span>(1)</span></div><div class="vitem"><div class="vmeta"><span class="vdate">05.08</span><span class="vviews">79 views</span></div><div class="vtitle">Știai că tratamentul cariilor poate fi realizat și cu laserul dentar? #fyp</div><div class="vlink"><a href="https://www.youtube.com/shorts/8H7mMG2TyeQ" target="_blank" rel="noopener">deschide ↗</a></div></div></div></div>
+<div class="obs"><span class="obs-l">➜ Observații</span>Mix testimonial (Invisalign, caz real de pacient) + educațional scurt (laser). Volum mic, dar format premium orientat pe conversie.</div></div><div class="card">
+<div class="card-head"><div><h3>Regina Maria Dental </h3>
+<a class="chandle" href="https://www.youtube.com/@ReginaMariaDentalClinics" target="_blank" rel="noopener">youtube.com/@ReginaMariaDentalClinics</a></div>
+<div class="card-stats"><span><b>9,32K</b> abonați</span><span><b>1,3K</b> video</span></div></div>
+<div class="col2">
+<div class="vcol"><div class="vcol-h">▶ LONG-FORM <span>(2)</span></div><div class="vitem"><div class="vmeta"><span class="vdate">06.08</span><span class="vdur">1:45</span><span class="vviews">28 views</span></div><div class="vtitle">Reabilitare orală completă cu implanturi dentare | Un caz real din Pitești</div><div class="vlink"><a href="https://www.youtube.com/@ReginaMariaDentalClinics/videos" target="_blank" rel="noopener">pe canal ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">05.08</span><span class="vdur">3:34</span><span class="vviews">13 views</span></div><div class="vtitle">Echipa Națională de Rugby a României explică importanța gutierelor personalizate</div><div class="vlink"><a href="https://www.youtube.com/@ReginaMariaDentalClinics/videos" target="_blank" rel="noopener">pe canal ↗</a></div></div></div>
+<div class="vcol"><div class="vcol-h">▪ SHORTS <span>(1)</span></div><div class="vitem"><div class="vmeta"><span class="vdate">04.08</span><span class="vviews">419 views</span></div><div class="vtitle">Despre frica de intervenții chirurgicale, cu Dr. Ionuț Leahu</div><div class="vlink"><a href="https://www.youtube.com/@ReginaMariaDentalClinics/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div></div></div>
+<div class="obs"><span class="obs-l">➜ Observații</span>Cel mai mare canal ca abonați (9,3K). Strategie de autoritate: caz real de implant + colaborare cu Echipa Națională de Rugby. Short-ul cu Dr. Ionuț Leahu (419v) a fost cel mai performant Short din piața de clinici.</div></div><div class="card">
+<div class="card-head"><div><h3>Life Dental Spa </h3>
+<a class="chandle" href="https://www.youtube.com/@lifedentalspa-ro" target="_blank" rel="noopener">youtube.com/@lifedentalspa-ro</a></div>
+<div class="card-stats"><span><b>2K</b> abonați</span><span><b>773</b> video</span></div></div>
+<div class="col2">
+<div class="vcol"><div class="vcol-h">▶ LONG-FORM <span>(0)</span></div><div class="vempty">— niciun long-form în săptămână —</div></div>
+<div class="vcol"><div class="vcol-h">▪ SHORTS <span>(7)</span></div><div class="vitem"><div class="vmeta"><span class="vdate">09.08</span><span class="vviews">43 views</span></div><div class="vtitle">Îți sângerează gingiile atunci când te speli pe dinți?</div><div class="vlink"><a href="https://www.youtube.com/@lifedentalspa-ro/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">08.08</span><span class="vviews">370 views</span></div><div class="vtitle">Îți dorești dinți drepți, dar nu vrei ca aparatul dentar să se observe?</div><div class="vlink"><a href="https://www.youtube.com/@lifedentalspa-ro/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">07.08</span><span class="vviews">287 views</span></div><div class="vtitle">Întâlnire cu Gabriela Cristea și Tavi Clonda la Life Dental Spa!</div><div class="vlink"><a href="https://www.youtube.com/@lifedentalspa-ro/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">06.08</span><span class="vviews">132 views</span></div><div class="vtitle">Proteza dentară se mișcă atunci când mănânci sau vorbești?</div><div class="vlink"><a href="https://www.youtube.com/@lifedentalspa-ro/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">05.08</span><span class="vviews">199 views</span></div><div class="vtitle">Îți ascunzi zâmbetul în fotografii sau atunci când vorbești cu oamenii?</div><div class="vlink"><a href="https://www.youtube.com/@lifedentalspa-ro/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">04.08</span><span class="vviews">181 views</span></div><div class="vtitle">Crezi că fațetele dentare înseamnă un zâmbet artificial?</div><div class="vlink"><a href="https://www.youtube.com/@lifedentalspa-ro/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div><div class="vitem"><div class="vmeta"><span class="vdate">03.08</span><span class="vviews">90 views</span></div><div class="vtitle">Știi care este cel mai bun implant dentar din lume? 👉 Dintele natural</div><div class="vlink"><a href="https://www.youtube.com/@lifedentalspa-ro/shorts" target="_blank" rel="noopener">pe canal ↗</a></div></div></div></div>
+<div class="obs"><span class="obs-l">➜ Observații</span>Cel mai constant din piață: 7 Shorts, câte unul pe zi, format hook-întrebare care adresează direct o temere a pacientului. A folosit și un cârlig de notorietate (Gabriela Cristea &amp; Tavi Clonda). Model de cadență de invidiat.</div></div><div class="card">
+<div class="card-head"><div><h3>Elidadent </h3>
+<a class="chandle" href="https://www.youtube.com/@Elidadent" target="_blank" rel="noopener">youtube.com/@Elidadent</a></div>
+<div class="card-stats"><span><b>1</b> abonați</span><span><b>4</b> video</span></div></div>
+<div class="col2">
+<div class="vcol"><div class="vcol-h">▶ LONG-FORM <span>(0)</span></div><div class="vempty">— niciun long-form în săptămână —</div></div>
+<div class="vcol"><div class="vcol-h">▪ SHORTS <span>(0)</span></div><div class="vempty">— niciun Short în săptămână —</div></div></div>
+<div class="obs"><span class="obs-l">➜ Observații</span>Canal practic dormant: 1 abonat, 4 videoclipuri în total, nimic din octombrie 2025. Fără relevanță pe YouTube momentan.</div></div>
+</div>
+
+<div class="sec">
+<h2>Acoperire &amp; note</h2>
+<div class="exnote">
+<h4><span class="ic">!</span> Clinica Dentalist — fără cont de clinică pe YouTube</h4>
+<p>Clinica Dentalist <b>nu deține un canal YouTube de clinică</b>. Singura prezență pe YouTube este <b>conținut creat de owner pe un canal personal</b> (brand personal, cu o parte din clipuri non-dentare, de tip lifestyle/entertainment). Nefiind un canal de clinică și neavând conținut comparabil cu al celorlalți competitori, <b>a fost exclusă din analiza între clinici</b> pentru a nu distorsiona comparația de reach.</p>
+</div>
+<div class="silent">
+<div class="sh">Fără activitate în săptămână</div>
+<ul><li><b>Dentrust</b> — fără postări · ultima 14.07</li><li><b>Dent Priority</b> — fără postări · ultima 11.01</li><li><b>Edent Clinic</b> — fără postări · ultima 20.04</li><li><b>As Dental</b> — fără postări · ultima 05.04</li></ul>
+<div class="nochan"><b>Fără canal YouTube:</b> Dental Blue International · JC Dent · Dr. Malama · Ark Med · Saviem Smile. &nbsp;·&nbsp; <b>Tab Community:</b> neutilizat de niciun competitor verificat.</div>
+</div>
+</div>
+
+<div class="sec">
+<h2>Shorts — focus piață (canale de clinică)</h2>
+<table class="ts"><tbody><tr><td class="rk">1</td><td class="tb">Regina Maria Dental</td><td class="tt">Despre frica de intervenții chirurgicale, cu Dr. Ionuț Leahu</td><td class="tv">419</td></tr><tr><td class="rk">2</td><td class="tb">Life Dental Spa</td><td class="tt">Îți dorești dinți drepți, dar nu vrei ca aparatul să se observe?</td><td class="tv">370</td></tr><tr><td class="rk">3</td><td class="tb">Life Dental Spa</td><td class="tt">Întâlnire cu Gabriela Cristea și Tavi Clonda</td><td class="tv">287</td></tr><tr><td class="rk">4</td><td class="tb">Life Dental Spa</td><td class="tt">Îți ascunzi zâmbetul în fotografii sau când vorbești?</td><td class="tv">199</td></tr><tr><td class="rk">5</td><td class="tb">Life Dental Spa</td><td class="tt">Crezi că fațetele dentare înseamnă un zâmbet artificial?</td><td class="tv">181</td></tr></tbody></table>
+<p style="font-size:12.5px;color:#7a6f5f;margin-top:12px;line-height:1.55;">Pattern dominant: <b>hook direct în primul cadru</b> — o întrebare care atinge o temere a pacientului („Îți sângerează gingiile?", „Proteza se mișcă?"). Clipurile pur educaționale, fără cârlig emoțional, rămân sub 100 de views.</p>
+</div>
+
+<div class="sec">
+<h2>Analiză format &amp; tendințe</h2>
+<div class="grid2">
+<div class="panel"><h4>Formate folosite în săptămână</h4><ul>
+<li><b>Hook-întrebare (Shorts serie):</b> Life Dental Spa — 7 clipuri</li>
+<li><b>Testimonial / caz real:</b> Regina Maria (Pitești), DENT ESTET (Invisalign)</li>
+<li><b>Colaborare cu figuri cunoscute:</b> Life (Gabriela Cristea &amp; Tavi Clonda), Regina Maria (Rugby)</li>
+<li><b>Educațional-mit:</b> DENT ESTET (laser), Regina Maria (frica de chirurgie)</li>
+</ul></div>
+<div class="panel"><h4>Ce spune piața</h4><ul>
+<li><b>Shorts &gt; long-form</b> categoric ca reach: aproape tot engagement-ul vine din Shorts.</li>
+<li><b>Cadența zilnică</b> (Life) funcționează mai bine decât 1–2 clipuri „mari" pe săptămână.</li>
+<li><b>Notorietatea împrumutată</b> (celebrități, instituții) e o pârghie folosită de 2 clinici în aceeași săptămână.</li>
+<li><b>Long-form-ul</b> rămâne nișă: chiar și canale mari fac sub 30 views/clip long-form.</li>
+</ul></div>
+</div>
+</div>
+
+<div class="sec">
+<div class="act">
+<h2>Ce facem noi săptămâna următoare</h2>
+<ol>
+<li><b>Short de produs — hook-întrebare.</b> Copiem formatul Life: 1 Short/zi, deschis cu o întrebare-temere („Te sperie prețul unui implant?", „Îți scârțâie proteza?"). Durată 20–30s, subtitrare mare, primul cadru = întrebarea.</li>
+<li><b>Short „notorietate împrumutată".</b> Un medic recognoscibil din rețea sau un pacient-testimonial cu poveste puternică — replica pârghiei Regina Maria/Life pe scară locală (Slobozia, Giurgiu).</li>
+<li><b>1 long-form testimonial.</b> Caz real de reabilitare (before/after + Protocolul Dr. Ardeleanu „îți vezi zâmbetul înainte"), 2–3 min, ca DENT ESTET/Regina Maria — diferențiere pe protocolul digital.</li>
+<li><b>Serie tematică pe Protocolul Dr. Ardeleanu.</b> Transformăm cei 4 pași (Scanare 3D → Medic Arhitect → Randare AI → Co-Design) în 4 Shorts — conținut unic pe care competitorii nu-l pot copia.</li>
+</ol>
+</div>
+</div>
+
+<div class="foot">
+<b>Surse date:</b> RSS oficial YouTube per canal (date exacte + view-uri reale) și tab-urile Videos / Shorts, extrase prin browser autentificat. &nbsp;|&nbsp;
+<b>Status cheie API:</b> lipsește din competitors.json (placeholder) → rulare în mod fallback, fără YouTube Data API v3. &nbsp;|&nbsp;
+<b>Canale de clinică acoperite:</b> 9 (5 competitori fără canal; Clinica Dentalist exclusă — fără canal de clinică, doar conținut personal al owner-ului). &nbsp;|&nbsp;
+<b>Excluse la cerere:</b> reclamele video (Google Ads Transparency Center). &nbsp;|&nbsp;
+<b>Interval:</b> 03–09.08.2026. &nbsp;|&nbsp; <b>Confidence:</b> ridicat pe datare/view-uri (RSS oficial); mediu pe clasificarea Short vs long-form pe canalele fără ID captat.
+<div class="din">DIN 2017 · CLINICILE DR. ARDELEANU</div>
+</div>
+
+</div></body></html>
