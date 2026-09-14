@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ro"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram — Raport săptămânal complet · 24–30 aug 2026 · Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#7B1C16;--wheat:#F2DAB7;--cream:#F5EDE3;--olive:#B5BD5C;--amber:#C9A227;--yellow:#FBE483;--terra:#dd7e6b;--black:#222}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;color:var(--black);background:#efe7dc;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px}
+.masthead{background:var(--primary);color:#fff;border-radius:0 0 22px 22px;padding:30px 34px 34px;box-shadow:0 8px 30px rgba(123,28,22,.25)}
+.masthead .top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.masthead img{height:46px;filter:brightness(0) invert(1)}
+.pill{display:inline-block;background:var(--cream);color:var(--primary);font-weight:600;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px}
+.masthead h1{font-family:'Playfair Display',serif;font-weight:900;font-size:32px;margin-top:20px;line-height:1.12}
+.masthead .sub{color:var(--yellow);font-weight:500;font-size:16px;margin-top:6px}
+.masthead .range{color:#f3d9c7;font-size:13px;margin-top:10px}
+.toc{background:#fff;border-radius:12px;padding:14px 20px;margin-top:20px;box-shadow:0 3px 14px rgba(0,0,0,.05);font-size:13px;columns:2;column-gap:30px}
+.toc a{color:var(--primary);text-decoration:none;display:block;padding:3px 0;border-bottom:1px dashed #eadfce}
+section{margin-top:34px;scroll-margin-top:14px}
+h2.sec{font-weight:800;font-size:20px;color:var(--primary);display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--wheat)}
+h2.sec .ic{width:26px;height:26px;background:var(--primary);color:#fff;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 auto}
+.tldr{background:var(--cream);border-left:5px solid var(--amber);border-radius:12px;padding:18px 22px}
+.tldr ul{list-style:none}
+.tldr li{padding:7px 0 7px 26px;position:relative;font-size:14.5px;border-bottom:1px dashed #e2d4c0}
+.tldr li:last-child{border-bottom:none}
+.tldr li:before{content:"▸";position:absolute;left:4px;top:7px;color:var(--amber);font-weight:700}
+.tldr li b{color:var(--primary)}
+.warn{background:#fbf3e6;border:1px dashed var(--amber);border-radius:11px;padding:12px 16px;font-size:12.6px;color:#6b5836;margin-top:12px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.05);font-size:13.3px}
+th{background:var(--primary);color:#fff;font-weight:600;text-align:left;padding:10px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.3px}
+td{padding:9px 12px;border-bottom:1px solid #f0e7da}
+tbody tr:nth-child(even){background:var(--cream)}
+tr.us{background:var(--wheat)!important;font-weight:600}
+tr.us td:first-child{border-left:4px solid var(--primary)}
+.badge-us{background:var(--primary);color:#fff;font-size:10px;padding:2px 7px;border-radius:10px;margin-left:6px}
+.num{font-variant-numeric:tabular-nums}
+.mini{font-size:11.5px;color:#8a7c6a}
+.card{background:#fff;border-radius:14px;padding:20px 22px;box-shadow:0 3px 14px rgba(0,0,0,.05)}
+.top-posts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.top-posts,.grid2,.toc{grid-template-columns:1fr;columns:1} .masthead h1{font-size:25px}}
+.tp{background:#fff;border-radius:11px;padding:12px 15px;box-shadow:0 2px 10px rgba(0,0,0,.05);border-left:4px solid var(--amber);font-size:13px}
+.tp.usp{border-left-color:var(--primary);background:#fffdf6}
+.tp .eng{font-weight:700;color:var(--primary);font-size:15px}
+.tp .who{font-size:11.5px;color:#8a7c6a;text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+.bcard{background:#fff;border-radius:14px;box-shadow:0 3px 14px rgba(0,0,0,.06);overflow:hidden;border-top:4px solid var(--primary)}
+.bcard.usc{border-top-color:var(--amber);background:#fffdf6}
+.bcard .bhead{padding:13px 18px 9px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-bottom:1px solid #f0e7da}
+.bcard .bhead .nm{font-weight:700;color:var(--primary);font-size:15px}
+.bcard .bhead .fol{font-size:11px;color:#8a7c6a;white-space:nowrap;text-align:right}
+.bcard .bbody{padding:13px 18px 16px;font-size:13.1px}
+.bcard .lbl{font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;color:#9a8a76;font-weight:600;margin:9px 0 3px}
+.bcard .lbl:first-child{margin-top:0}
+.stat{display:inline-block;background:var(--cream);border-radius:7px;padding:3px 9px;margin:2px 4px 2px 0;font-size:12px;font-weight:600;color:var(--primary)}
+.obs{background:var(--cream);border-radius:9px;padding:10px 13px;margin-top:11px;font-size:12.8px}
+.obs b{color:var(--primary)}
+.pedo h2.sec{color:#6f7724;border-bottom-color:var(--olive)}
+.pedo h2.sec .ic{background:var(--olive)}
+.alerts li{background:#fff;border-radius:10px;padding:10px 15px;margin-bottom:8px;list-style:none;box-shadow:0 2px 8px rgba(0,0,0,.04);font-size:13px}
+.alerts li b{color:var(--primary)}
+.recs{counter-reset:r}
+.recs .r{background:#fff;border-radius:12px;padding:15px 18px 15px 54px;margin-bottom:12px;position:relative;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.recs .r:before{counter-increment:r;content:counter(r);position:absolute;left:15px;top:15px;width:26px;height:26px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.recs .r .rt{font-weight:700;color:var(--primary);font-size:14.5px}
+.recs .r .rd{font-size:13.3px;margin-top:3px}
+.foot{margin-top:40px;background:var(--primary);color:#fff;border-radius:16px;padding:24px 28px;font-size:12.6px}
+.foot h3{font-size:14px;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--yellow)}
+.foot ul{list-style:none;columns:2;column-gap:30px}
+.foot li{padding:4px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot .din{text-align:center;margin-top:18px;font-weight:300;letter-spacing:3px;color:#f3d9c7;font-size:12px}
+.conf{display:inline-block;background:var(--yellow);color:#5a4a0e;font-weight:700;padding:2px 10px;border-radius:10px}
+.src-ok{color:#cfe3b0}.src-part{color:#f3d9a0}
+</style></head><body><div class="wrap">
+
+<div class="masthead">
+  <div class="top"><img src="data:image/png;base64,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" alt="Dr. Ardeleanu"><span class="pill">Instagram · Raport săptămânal complet</span></div>
+  <h1>Intelligence competitiv — Instagram</h1>
+  <div class="sub">Doar organic · scală · postări &amp; engagement · reels · teme</div>
+  <div class="range">Interval: <b>luni 24 – duminică 30 august 2026</b> &nbsp;·&nbsp; 15 competitori adulți + 3 conturi pedo dedicate + noi &nbsp;·&nbsp; fiecare postare din interval deschisă individual</div>
+  <div class="toc">
+    <a href="#scurt">1 · Pe scurt</a>
+    <a href="#scala">2 · Scala (followers) + postări + engagement</a>
+    <a href="#top">3 · Top postări ale săptămânii</a>
+    <a href="#perpost">4 · Engagement mediu per postare</a>
+    <a href="#reels">5 · Reels — reach (vizualizări)</a>
+    <a href="#profile">6 · Profil cu profil — Tier 1 + noi</a>
+    <a href="#pedo">7 · Pedodonție</a>
+    <a href="#tier2">8 · Alerte Tier 2</a>
+    <a href="#trend">9 · Trenduri &amp; recomandări</a>
+  </div>
+</div>
+
+<section id="scurt">
+  <h2 class="sec"><span class="ic">i</span> Pe scurt</h2>
+  <div class="tldr"><ul>
+    <li><b>Pe Instagram, ierarhia din Facebook NU se aplică.</b> Dentalist (etichetat „Tier 2") e <b>#1 în piață cu 19.900 followers</b>, peste Regina Maria (13,5K) și Life (13K). Edent (7,1K), Dent Priority (5,7K), As Dental (4,66K) — toți „Tier 2" — ne depășesc ca audiență. Noi suntem #8.</li>
+    <li><b>La volum de postări, DENT ESTET domină net: 16 postări (~2/zi), ~675 likes</b> — dublu față de noi. Noi: 8 postări, ~290 likes — cadență sănătoasă, engagement bun/postare (~36).</li>
+    <li><b>Pe engagement PER POSTARE, „micii" ne bat:</b> Dentrust ~68 (cu 1,1K followers!), Dentalist ~58, DENT ESTET ~42, noi ~36. Iar <b>Life Dental Spa doar ~18/postare</b> deși are 13K followers — volum mare, reach slab.</li>
+    <li><b>Postările „oameni & cazuri" fac vârfurile — confirmat cu cifre:</b> aniversare Dr. Gavrizi (EDENT Kids) <b>175 likes/136 com</b>, caz implant Dr. Alexandra Mircea (Dentalist) <b>130</b>. La noi, reel „Ghid chirurgical" 72 și „La mulți ani Dr. Udrescu" 46/16c.</li>
+    <li><b>Dormanți pe IG în interval:</b> Dental Blue (0), Dr. Malama (0), Ark Med (0), Saviem (inactiv) — 4 concurenți absenți. Ferestre libere pe orașele noastre.</li>
+    <li><b>Dental Safari (noi): 1 postare, 6 likes, 26 followers</b> — cel mai clar caz de sub-utilizare, vs DE4KIDS (7/~186) și EDENT Kids (5/~218). Problema e prezența &amp; audiența, nu creativul.</li>
+    <li><b>Format câștigător al pieței:</b> reels talking-head cu medicul + reel-caz clinic povestit. Reels-urile noastre performează deja (72, 70 likes).</li>
+  </ul></div>
+  <div class="warn"><b>Corecții față de rapoartele intermediare:</b> reel-ul „Brăila, suntem tot mai aproape" (6.328 vizualizări, cel mai mare reach al nostru) e din <b>21 aug — în afara intervalului</b>. Iar la <b>Dr. Malama</b> și <b>Ark Med</b> concluzia „0 postări" e dedusă din tab-ul Reels + eșantion (grile dezordonate), nu dintr-o parcurgere exhaustivă — confidence mai mică pe aceste două.</div>
+</section>
+
+<section id="scala">
+  <h2 class="sec"><span class="ic">▤</span> Scala + postări + engagement (24–30 aug) — toți competitorii adulți</h2>
+  <table>
+    <thead><tr><th>#</th><th>Cont</th><th>Tier (FB)</th><th>Followers</th><th>Postări</th><th>Likes</th><th>Profil conținut</th></tr></thead>
+    <tbody><tr><td class='num'>1</td><td>Dentalist</td><td>Tier 2</td><td class='num'>19.900</td><td class='num'>5</td><td class='num'>~291</td><td class='mini'>Estetic/fațete/implant — IG-native (Dr. Alexandra Mircea)</td></tr>
+<tr><td class='num'>2</td><td>Regina Maria Dental</td><td>Tier 1</td><td class='num'>13.500</td><td class='num'>6</td><td class='num'>~128</td><td class='mini'>Reels educative + cazuri Fast&Fixed + eBook/TV</td></tr>
+<tr><td class='num'>3</td><td>Life Dental Spa</td><td>Tier 1</td><td class='num'>13.000</td><td class='num'>8</td><td class='num'>~148</td><td class='mini'>Video-first (~100% reels), talking-head/laser</td></tr>
+<tr><td class='num'>4</td><td>DENT ESTET</td><td>Tier 1</td><td class='num'>8.393</td><td class='num'>16</td><td class='num'>~675</td><td class='mini'>Reels talking-head medici + cazuri + colaborări</td></tr>
+<tr><td class='num'>5</td><td>Edent Clinic</td><td>Tier 2</td><td class='num'>7.146</td><td class='num'>4</td><td class='num'>~163</td><td class='mini'>Wellbeing/estetică (Buc+Tulcea)</td></tr>
+<tr><td class='num'>6</td><td>Dent Priority</td><td>Tier 2</td><td class='num'>5.707</td><td class='num'>7</td><td class='num'>~189</td><td class='mini'>Premium multi-oraș (educativ+kids+echipă)</td></tr>
+<tr><td class='num'>7</td><td>As Dental</td><td>Tier 2</td><td class='num'>4.664</td><td class='num'>3</td><td class='num'>~96</td><td class='mini'>Implantologie full-arch (Slobozia)</td></tr>
+<tr class="us"><td class='num'>8</td><td>Dr. Ardeleanu — NOI <span class="badge-us">NOI</span></td><td>—</td><td class='num'>4.441</td><td class='num'>8</td><td class='num'>~290</td><td class='mini'>Testimoniale + before/after + Dr. Virginia + podcast</td></tr>
+<tr><td class='num'>9</td><td>Dentrust</td><td>Tier 2</td><td class='num'>1.100</td><td class='num'>3</td><td class='num'>~205</td><td class='mini'>Reels-cazuri implantologie (Focșani)</td></tr>
+<tr><td class='num'>10</td><td>JC Dent</td><td>Tier 2</td><td class='num'>970</td><td class='num'>3</td><td class='num'>~107</td><td class='mini'>Comunitate/umor + urgențe (Slobozia)</td></tr>
+<tr><td class='num'>11</td><td>Dr. Malama</td><td>Tier 2</td><td class='num'>943</td><td class='num' style="color:#b1231b;font-weight:600">0</td><td class='num'>—</td><td class='mini'>0 postări IG în interval (ultima ~10 aug)</td></tr>
+<tr><td class='num'>12</td><td>Elidadent</td><td>Tier 1</td><td class='num'>488</td><td class='num'>5</td><td class='num'>~48</td><td class='mini'>Reels + parteneriat BT/eMAG (Târgoviște)</td></tr>
+<tr><td class='num'>13</td><td>Dental Blue</td><td>Tier 1</td><td class='num'>390</td><td class='num' style="color:#b1231b;font-weight:600">0</td><td class='num'>—</td><td class='mini'>0 postări IG în interval (ultima 21 aug)</td></tr>
+<tr><td class='num'>14</td><td>Ark Med</td><td>Tier 2</td><td class='num'>219</td><td class='num' style="color:#b1231b;font-weight:600">0</td><td class='num'>—</td><td class='mini'>0 postări IG în interval (ultima 2025)</td></tr>
+<tr><td class='num'>15</td><td>Saviem Smile</td><td>Tier 2</td><td class='num'>10</td><td class='num' style="color:#b1231b;font-weight:600">0</td><td class='num'>—</td><td class='mini'>Cont inactiv (0 postări total)</td></tr>
+</tbody>
+  </table>
+  <p class="mini" style="margin-top:8px">Sortat după followers (scala). „Tier" = clasificarea din sistemul de competitori (bazată pe Facebook) — inclusă ca să arate cât de diferit arată piața pe Instagram. „Postări" = postări cu dată în 24–30 aug (fiecare deschisă individual); „Likes" = suma like-urilor curente ale acelor postări.</p>
+</section>
+
+<section id="top">
+  <h2 class="sec"><span class="ic">★</span> Top postări ale săptămânii (după engagement)</h2>
+  <div class="top-posts">
+    <div class="tp"><span class="eng">175 likes · 136 com</span><div class="who">EDENT Kids · 24 aug</div>Aniversare Dr. Elena Gavrizi 🎂 (aniversările echipei = engagement uriaș via cross-post FB)</div>
+    <div class="tp"><span class="eng">130 likes</span><div class="who">Dentalist · 26 aug</div>Caz implant + adiție os (Dr. Alexandra Mircea) — carusel educativ premium</div>
+    <div class="tp usp"><span class="eng">72 likes · 8 com</span><div class="who">NOI · 25 aug</div>Reel „Ghid chirurgical / implant pterigoidian" — top-ul nostru</div>
+    <div class="tp usp"><span class="eng">70 likes · 5 com</span><div class="who">NOI · 24 aug</div>Reel „Dureri la stomatolog? Mit desființat"</div>
+    <div class="tp"><span class="eng">87 likes</span><div class="who">Edent Clinic · 29 aug</div>Reel de atmosferă „should feel this relaxing"</div>
+    <div class="tp"><span class="eng">81 likes</span><div class="who">DE4KIDS · 27 aug</div>Reel „Fluorizarea" (Dr. Radu Popovici)</div>
+    <div class="tp"><span class="eng">76 likes</span><div class="who">Life Dental Spa · 25 aug</div>Carusel „fren lingual" (colaborare @dramandahsohl)</div>
+    <div class="tp"><span class="eng">69 likes</span><div class="who">Dentalist · 24 aug</div>Reel „Fațete sau coroane — redflags" (Dr. Dana Marinescu)</div>
+    <div class="tp usp"><span class="eng">46 likes · 16 com</span><div class="who">NOI · 25 aug</div>„La mulți ani, Dr. Irina Udrescu" — cel mai comentat post al nostru</div>
+    <div class="tp"><span class="eng">57 likes</span><div class="who">Dent Priority · 28 aug</div>Sigilări dentare copii (Dent Priority Kids)</div>
+  </div>
+  <div class="obs"><b>Citim:</b> vârfurile pieței sunt fie <b>aniversări/oameni</b> (EDENT 175, noi Udrescu 46/16c), fie <b>cazuri clinice povestite</b> (Dentalist 130, Dentrust 129 pe 31 aug). Reels-urile noastre (72, 70) stau foarte bine — formatul e corect.</div>
+</section>
+
+<section id="perpost">
+  <h2 class="sec"><span class="ic">◧</span> Engagement mediu per postare — cine „bate" peste greutatea lui</h2>
+  <div class="card"><ul style="list-style:none;font-size:13.3px">
+    <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">Dentrust ~68/postare</b> (doar 1,1K followers) — cel mai eficient; reels-cazuri implantologie.</li>
+    <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">Dentalist ~58/postare</b> (19,9K) — estetică + brand de fondator.</li>
+    <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">EDENT Kids ~44</b> — dar umflat de 1 aniversare (175); fără ea ~11.</li>
+    <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">DENT ESTET ~42</b> · <b>NOI ~36</b> · Dentalist &amp; Dent Priority ~27.</li>
+    <li style="padding:5px 0"><b style="color:var(--primary)">Life Dental Spa ~18/postare</b> — cel mai slab raport engagement/follower (13K followers). Volum mare, reach mic.</li>
+  </ul></div>
+</section>
+
+<section id="reels">
+  <h2 class="sec"><span class="ic">▷</span> Reels — reach vizibil (vizualizări cumulate)</h2>
+  <div class="card">
+    <ul style="list-style:none;font-size:13.1px">
+      <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">Noi:</b> reels din interval 1,7K–2,4K vizualizări (TOȚI ZIC 2.279, POVESTEA 2.370, „3 greșeli" 1.729). <span class="mini">Reel-ul „Brăila" 6.328 e din 21 aug — în afara intervalului.</span></li>
+      <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">DENT ESTET:</b> reach foarte inegal — „Sensibilitatea dentară" (Dr. Dângeanu) <b>7.542</b> (max piață), dar altele 255–439. Hook-ul decide, nu formatul.</li>
+      <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">Regina Maria:</b> 0,9K–2,2K (igienizare 2.171, pedodonție 2.001). Folosesc și POV/trenduri.</li>
+      <li style="padding:5px 0"><b style="color:var(--primary)">Life Dental Spa:</b> volum mare de reels, dar reach modest 0,3K–1,7K, în ciuda celor 13K followers.</li>
+    </ul>
+    <div class="obs"><b>Notă:</b> Instagram afișează vizualizări <b>cumulate (lifetime)</b>, nu pe săptămână. Sunt utile ca ordine de mărime a reach-ului, nu ca metrică strict săptămânală.</div>
+  </div>
+</section>
+
+<section id="profile">
+  <h2 class="sec"><span class="ic">◫</span> Profil cu profil — Tier 1 + noi</h2>
+  <div class="grid2">
+    <div class="bcard usc">
+      <div class="bhead"><span class="nm">Dr. Ardeleanu — NOI</span><span class="fol">4.441 urm. · #8</span></div>
+      <div class="bbody">
+        <span class="stat">8 postări</span><span class="stat">~290 likes</span><span class="stat">~36/post</span>
+        <div class="lbl">Conținut</div>Before/after cazuri, reels testimonial &amp; educativ, Dr. Virginia (talking-head + podcast), CARE Forum. Cross-postare cu Facebook.
+        <div class="obs"><b>Observație:</b> mix sănătos și diferențiat (avem podcast + brand personal Dr. Virginia). Reels-urile sunt cel mai bun format al nostru (72, 70 likes). De împins ca ritm — 4 „Tier 2" ne depășesc ca audiență.</div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bhead"><span class="nm">DENT ESTET</span><span class="fol">8.393 urm. · #4</span></div>
+      <div class="bbody">
+        <span class="stat">16 postări</span><span class="stat">~675 likes</span><span class="stat">~42/post</span>
+        <div class="lbl">Conținut</div>Semnătură: reels talking-head editoriale (medic + card de titlu), „People of DENT ESTET", cazuri, Align Smile Wallet, GalvoSurge.
+        <div class="obs"><b>Observație:</b> mașina de conținut a pieței — ~2 postări/zi, cea mai înaltă producție. Un reel a atins 7,5K vizualizări.</div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bhead"><span class="nm">Regina Maria Dental</span><span class="fol">13.500 urm. · #2</span></div>
+      <div class="bbody">
+        <span class="stat">6 postări</span><span class="stat">~128 likes</span><span class="stat">~21/post</span>
+        <div class="lbl">Conținut</div>Reels educative (pedodonție, parodontoză, igienizare) + cazuri Fast&amp;Fixed; campania „caravană chirurgie septembrie". Highlights bogate (eBook, TV, Q&amp;A).
+        <div class="obs"><b>Observație:</b> cea mai matură structură de conținut. De notat: un comentator recurent (patagon3) reclamă clinica Suceava sub fiecare postare.</div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bhead"><span class="nm">Life Dental Spa</span><span class="fol">13.000 urm. · #3</span></div>
+      <div class="bbody">
+        <span class="stat">8 postări</span><span class="stat">~148 likes</span><span class="stat">~18/post</span>
+        <div class="lbl">Conținut</div>Video-first (~100% reels), talking-head educativ (biofilm, parodontoză BIOPARO, laser). Colaborare „fren lingual" 76 likes (top-ul lor).
+        <div class="obs"><b>Observație:</b> cel mai mare volum de reels, dar <b>cel mai slab engagement/follower</b>. Cantitate &gt; viralitate.</div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bhead"><span class="nm">Elidadent</span><span class="fol">488 urm. · #12</span></div>
+      <div class="bbody">
+        <span class="stat">5 postări</span><span class="stat">~48 likes</span>
+        <div class="lbl">Conținut</div>Reels + parteneriat BT/eMAG (voucher), cazuri Fast&amp;Fixed, umor. Reach mic.
+        <div class="obs"><b>Observație:</b> „Tier 1" pe FB, dar audiență IG minusculă. Fereastră pe Târgoviște.</div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bhead"><span class="nm">Dental Blue International</span><span class="fol">390 urm. · #13</span></div>
+      <div class="bbody">
+        <span class="stat" style="background:#fde0dd;color:#b1231b">0 postări în interval</span>
+        <div class="lbl">Status IG</div>Ultima postare 21 aug. Dormant pe Instagram săptămâna asta (activ pe Facebook). Talking-head educativ + evenimente comunitate (Zumba).
+        <div class="obs"><b>Observație:</b> prezență IG neglijabilă în ciuda etichetei Tier 1.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pedo" id="pedo">
+  <h2 class="sec"><span class="ic">🦷</span> Pedodonție — conturi Instagram dedicate</h2>
+  <table>
+    <thead><tr><th>Brand kids</th><th>Followers</th><th>Postări</th><th>Likes</th><th>Oraș</th><th>Profil</th></tr></thead>
+    <tbody><tr><td>DENT ESTET 4 KIDS</td><td class='num'>4.192</td><td class='num'>7</td><td class='num'>~186</td><td class='mini'>8 orașe</td><td class='mini'>Reels educative medici, Summer Smile Camp, Q&A, aniversări</td></tr>
+<tr><td>EDENT Kids</td><td class='num'>707</td><td class='num'>5</td><td class='num'>~218</td><td class='mini'>Tulcea</td><td class='mini'>Educativ (erupție/postură) + aniversări (Dr. Gavrizi 175/136c)</td></tr>
+<tr><td>Elidadent for KIDS</td><td class='num'>730</td><td class='num'>3</td><td class='num'>~21</td><td class='mini'>Târgoviște</td><td class='mini'>Jucăuș (Unboxing Squishy) + cazuri clinice</td></tr>
+<tr class="us"><td>Dental Safari <span class="badge-us">NOI</span></td><td class='num'>26</td><td class='num'>1</td><td class='num'>6</td><td class='mini'>Buc+rețea</td><td class='mini'>Mascote, back-to-school (aproape inactiv)</td></tr>
+</tbody>
+  </table>
+  <div class="obs" style="background:#f2f4e0"><b>Head-to-head Dental Safari:</b> 1 postare / 6 likes / 26 followers în interval, vs DE4KIDS (7/~186/4.192 followers) și EDENT Kids (5/~218). Conținutul nostru (mascote, back-to-school) e competitiv ca idee, dar contul e <b>practic nelansat</b>. Aniversările și cazurile clinice aduc engagement la concurență (EDENT Dr. Gavrizi 175/136c) — model ușor de copiat, dacă avem cadență. <b>Prioritatea #1: ritm + audiență, nu creativ.</b></div>
+</section>
+
+<section id="tier2">
+  <h2 class="sec"><span class="ic">!</span> Alerte Tier 2 (organic)</h2>
+  <ul class="alerts">
+    <li><b>Dentalist</b> (19,9K — #1 IG din piață): 5 postări, ~291 likes. Brand IG-native, estetic/Invisalign, Dr. Alexandra Mircea. Engagement mare (caz implant 130). <b>De reclasificat</b> — pe IG e liderul.</li>
+    <li><b>Dentrust</b> (Focșani, 1,1K): 3 postări, ~205 likes — <b>cel mai bun engagement/postare din piață (~68)</b> deși audiența e mică. Reels-cazuri implantologie foarte eficiente. Concurent direct Focșani.</li>
+    <li><b>Dent Priority</b> (Craiova, 5,7K): 7 postări, ~189 likes. Premium multi-oraș, are și conținut Kids. Ritm bun (~1/zi).</li>
+    <li><b>Edent Clinic</b> (Buc+Tulcea, 7,1K): 4 postări, ~163 likes. Wellbeing/estetică, reel de atmosferă 87 likes.</li>
+    <li><b>JC Dent</b> (Slobozia, 970): 3 postări, ~107 likes. Comunitate/umor + urgențe. Concurent direct Slobozia.</li>
+    <li><b>As Dental</b> (Slobozia, 4,66K): 3 postări, ~96 likes. Implantologie full-arch (photogrammetry), caption în engleză. Surprinzător de mare ca audiență.</li>
+    <li><b>Dr. Malama</b> (Slobozia, 943) · <b>Ark Med</b> (Călărași, 219) · <b>Saviem Smile</b> (Giurgiu, 10): <b>0 postări pe Instagram în interval.</b> Saviem e inactiv total; Dr. Malama și Ark Med — ultima activitate IG cu luni în urmă.</li>
+  </ul>
+  <div class="obs" style="background:#fbeeec"><b>Semnal geografic:</b> pe orașele noastre mici, concurența IG e slabă sau absentă — <b>Giurgiu</b> (Saviem inactiv), <b>Călărași</b> (Ark Med 0), parțial <b>Slobozia</b> (Dr. Malama 0, deși JC Dent și As Dental sunt activi). Teren liber pentru prezență constantă.</div>
+</section>
+
+<section id="trend">
+  <h2 class="sec"><span class="ic">≈</span> Trenduri &amp; ce facem săptămâna viitoare</h2>
+  <div class="card" style="margin-bottom:16px"><ul style="list-style:none;font-size:13.1px">
+    <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">Format dominant:</b> reels talking-head cu medicul (scrub + card de titlu) — DENT ESTET, Life, Regina Maria, Dentrust.</li>
+    <li style="padding:5px 0;border-bottom:1px dashed #eadfce"><b style="color:var(--primary)">Ce aduce engagement:</b> aniversări/oameni + cazuri clinice povestite pas cu pas.</li>
+    <li style="padding:5px 0"><b style="color:var(--primary)">Sezon:</b> back-to-school activ pe toate conturile pedo.</li>
+  </ul></div>
+  <div class="recs">
+    <div class="r"><div class="rt">Crește ritmul spre 10–12 postări/săpt.</div><div class="rd">Suntem la 8; DENT ESTET la 16. Nu trebuie să-i egalăm, dar 1–2/zi (reel-caz + educativ + oameni) ne ține competitivi. Reels-urile noastre deja performează.</div></div>
+    <div class="r"><div class="rt">Programează „oameni & aniversări"</div><div class="rd">Cel mai ieftin engagement din piață: EDENT 175/136c, noi Udrescu 46/16c. Calendar de aniversări/spotlight medici.</div></div>
+    <div class="r"><div class="rt">Format de preluat: reel-caz povestit</div><div class="rd">Dentrust (~68/postare, 1,1K followers) și Dentalist (130 pe un caz) arată că <b>cazul clinic narativ</b> bate postul de serviciu. Avem materialul (Protocol, before/after).</div></div>
+    <div class="r"><div class="rt">Tratează IG ca platformă separată de Facebook</div><div class="rd">Suntem #8, depășiți de 4 „Tier 2". Cross-postarea 1:1 nu ajunge — adaptează formate native (reels 9:16, audio trending).</div></div>
+    <div class="r"><div class="rt">Dental Safari: prioritate = ritm + audiență</div><div class="rd">1 postare/săpt. e prea puțin (vs 47× reach la DE4KIDS). Minimum 3–4/săpt. + cross-promo din contul-mamă (4,4K) + push local pe părinți. Conținutul e bun.</div></div>
+    <div class="r"><div class="rt">Atacă orașele unde concurența IG e absentă</div><div class="rd">Giurgiu (Saviem inactiv), Călărași (Ark Med 0), parțial Slobozia (Dr. Malama 0). Prezența noastră constantă are teren liber.</div></div>
+  </div>
+</section>
+
+<div class="foot">
+  <h3>Metodologie &amp; verificare</h3>
+  <ul>
+    <li>Acoperire: <b>15/15 adulți + 4 pedo + noi</b> — organic</li>
+    <li>Reclame: excluse (doar organic, la cererea ta)</li>
+    <li>Metodă: fiecare postare din interval <b>deschisă individual</b> (dată + likes + comentarii din DOM)</li>
+    <li>Fiabil: followers, număr postări, likes/comentarii per postare, teme</li>
+    <li>Datare: <span class="src-part">relativă</span> mapată pe 24–30 aug; postările „azi" (31 aug) excluse</li>
+    <li>Reels: vizualizări <span class="src-part">cumulate</span> (lifetime), nu săptămânale</li>
+    <li>Confidence redusă la <b>Dr. Malama, Ark Med</b> (0 postări dedus din reels+eșantion)</li>
+    <li>Sursă: <span class="src-ok">Instagram, Claude in Chrome, cont logat ✓</span></li>
+    <li>Confidence general: <span class="conf">HIGH</span> · Skill: <b>competitor-weekly-instagram</b></li>
+  </ul>
+  <div class="din">DIN 2017 · CLINICILE DENTARE DR. ARDELEANU · clinicileardeleanu.ro · 031 99 63</div>
+</div>
+
+</div></body></html>

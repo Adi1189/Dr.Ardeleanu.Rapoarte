@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport YouTube Săptămânal — 24-30 August 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand-primary: #7B1C16;
+    --brand-wheat: #F2DAB7;
+    --brand-cream: #F5EDE3;
+    --brand-olive: #B5BD5C;
+    --brand-amber-gold: #C9A227;
+    --brand-yellow: #FBE483;
+    --brand-terracotta: #dd7e6b;
+    --brand-alert: #FF0300;
+    --brand-black: #222222;
+    --brand-white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--brand-cream);
+    color: var(--brand-black);
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px 60px; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, #5c1611 100%);
+    color: var(--brand-white);
+    padding: 48px 24px 40px;
+    margin-bottom: 32px;
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; }
+  .hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--brand-yellow);
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 40px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .hero .period {
+    font-size: 17px;
+    color: var(--brand-amber-gold);
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--brand-white);
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .pill.alert { background: var(--brand-yellow); color: var(--brand-primary); border-color: var(--brand-yellow); font-weight: 700; }
+
+  /* SECTION */
+  section { margin-bottom: 40px; }
+  .section-tag {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand-primary);
+    background: var(--brand-wheat);
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--brand-primary);
+    margin: 0 0 16px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--brand-primary);
+    margin: 0 0 10px;
+  }
+  p { margin: 0 0 12px; font-size: 14.5px; }
+
+  /* SUMMARY BULLETS */
+  .summary-card {
+    background: var(--brand-white);
+    border-left: 5px solid var(--brand-primary);
+    border-radius: 8px;
+    padding: 22px 26px;
+    box-shadow: 0 2px 10px rgba(123,28,22,0.06);
+  }
+  .summary-card ul { margin: 0; padding-left: 20px; }
+  .summary-card li { margin-bottom: 10px; font-size: 14.5px; }
+  .summary-card li:last-child { margin-bottom: 0; }
+  .summary-card strong { color: var(--brand-primary); }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--brand-white);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 13.5px;
+    box-shadow: 0 2px 10px rgba(123,28,22,0.06);
+  }
+  thead th {
+    background: var(--brand-primary);
+    color: var(--brand-white);
+    font-weight: 600;
+    text-align: left;
+    padding: 11px 14px;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--brand-wheat);
+  }
+  tbody tr:nth-child(even) { background: #FBF6EE; }
+  tbody tr.highlight { background: var(--brand-wheat) !important; font-weight: 700; }
+  tbody tr.dim td { color: #999; font-style: italic; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .rank-badge {
+    display: inline-block;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--brand-olive);
+    color: white;
+    text-align: center;
+    line-height: 22px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .rank-badge.gold { background: var(--brand-amber-gold); }
+
+  /* FORMAT BARS */
+  .format-block { background: var(--brand-white); border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(123,28,22,0.06); }
+  .format-brand-name { font-weight: 700; font-size: 14.5px; margin-bottom: 10px; color: var(--brand-primary); }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 12.5px; }
+  .bar-label { width: 170px; flex-shrink: 0; color: #555; }
+  .bar-track { flex: 1; background: var(--brand-cream); border-radius: 4px; height: 16px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--brand-terracotta); border-radius: 4px; }
+  .bar-pct { width: 40px; text-align: right; font-weight: 600; color: var(--brand-primary); }
+
+  /* PROFILE CARDS */
+  .profile-card {
+    background: var(--brand-white);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(123,28,22,0.06);
+    border-top: 4px solid var(--brand-primary);
+  }
+  .profile-card.us { border-top-color: var(--brand-olive); background: #FCFEF6; }
+  .profile-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+  .profile-name { font-size: 18px; font-weight: 800; color: var(--brand-primary); }
+  .profile-handle { font-size: 12.5px; color: #888; font-weight: 400; }
+  .profile-stats { display: flex; gap: 18px; font-size: 12.5px; color: #555; flex-wrap: wrap; }
+  .profile-stats b { color: var(--brand-black); }
+  .subhead {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--brand-amber-gold);
+    margin: 16px 0 6px;
+  }
+  .subhead:first-of-type { margin-top: 4px; }
+  .video-item {
+    border-top: 1px solid var(--brand-cream);
+    padding: 12px 0;
+  }
+  .video-item:first-child { border-top: none; padding-top: 0; }
+  .video-meta-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; gap: 6px; }
+  .video-date { font-weight: 700; color: var(--brand-primary); font-size: 13px; }
+  .video-stats { font-size: 12px; color: #666; }
+  .video-caption { font-size: 13.5px; margin: 4px 0; }
+  .video-tags { font-size: 11.5px; color: var(--brand-amber-gold); margin-bottom: 4px; }
+  .video-link { font-size: 11px; }
+  .video-link a { color: var(--brand-primary); text-decoration: none; }
+  .video-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 13px; color: #999; font-style: italic; padding: 4px 0 0; }
+  .obs-box {
+    margin-top: 14px;
+    background: var(--brand-cream);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  .obs-box b { color: var(--brand-primary); }
+
+  .top-badge {
+    display: inline-block;
+    background: var(--brand-yellow);
+    color: var(--brand-primary);
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    text-transform: uppercase;
+  }
+
+  /* TIER2 ALERTS */
+  .tier2-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tier2-item { background: var(--brand-white); border-radius: 6px; padding: 12px 16px; font-size: 13px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+  .tier2-item b { color: var(--brand-primary); }
+  .tier2-item.na { color: #999; font-style: italic; }
+  .tier2-item.hot { border-left: 4px solid var(--brand-alert); }
+
+  /* TOP5 */
+  .top5-item { display: flex; align-items: center; gap: 14px; background: var(--brand-white); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(123,28,22,0.06); }
+  .top5-rank { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 26px; color: var(--brand-wheat); width: 34px; text-align: center; flex-shrink: 0; }
+  .top5-rank.gold { color: var(--brand-amber-gold); }
+  .top5-body { flex: 1; }
+  .top5-brand { font-weight: 700; font-size: 13.5px; color: var(--brand-primary); }
+  .top5-caption { font-size: 13px; color: #555; }
+  .top5-views { font-weight: 800; font-size: 15px; color: var(--brand-primary); white-space: nowrap; }
+
+  /* NEXT WEEK */
+  .action-list { list-style: none; margin: 0; padding: 0; counter-reset: action; }
+  .action-list li {
+    counter-increment: action;
+    background: var(--brand-white);
+    border-radius: 8px;
+    padding: 14px 18px 14px 52px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(123,28,22,0.06);
+  }
+  .action-list li::before {
+    content: counter(action);
+    position: absolute;
+    left: 14px; top: 50%;
+    transform: translateY(-50%);
+    width: 26px; height: 26px;
+    background: var(--brand-primary);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  /* FOOTER */
+  .footer-box {
+    background: var(--brand-primary);
+    color: var(--brand-white);
+    border-radius: 10px;
+    padding: 22px 26px;
+    font-size: 12.5px;
+  }
+  .footer-box h3 { color: var(--brand-yellow); margin-bottom: 12px; }
+  .footer-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px 24px; }
+  .footer-grid div { opacity: 0.92; }
+  .footer-grid b { color: var(--brand-yellow); }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 28px; }
+    .tier2-list { grid-template-columns: 1fr; }
+    table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Clinicile Dr. Ardeleanu · Intelligence Competitivă</div>
+    <h1>YouTube — Raport Săptămânal</h1>
+    <div class="period">Săptămâna 24 – 30 august 2026</div>
+    <div class="hero-meta">
+      <span class="pill">5 branduri Tier 1 + verificare Tier 2 (Long-form + Shorts + Postări)</span>
+      <span class="pill">16 conținuturi Tier 1 + 3 Tier 2 analizate</span>
+      <span class="pill alert">Raport PARȚIAL — fără YouTube Data API, fără reclame video (excluse la cerere)</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <p style="font-size:13.5px; color:#666; margin: 24px 0 0;">Acest raport acoperă activitatea organică YouTube (long-form, Shorts și Community) a Clinicilor Dr. Ardeleanu și a principalilor competitori din piața dentară din România, pentru intervalul <b>24-30 august 2026</b>. Reclamele video YouTube (Google Ads Transparency Center) au fost excluse din acest raport la cererea explicită a beneficiarului. Datorită indisponibilității cheii YouTube Data API v3, extragerea s-a făcut prin verificare manuală a interfeței publice YouTube — raportul este marcat ca <b>PARȚIAL</b> conform regulilor anti-halucinație ale skill-ului.</p>
+
+  <!-- PE SCURT -->
+  <section>
+    <span class="section-tag">Pe scurt</span>
+    <div class="summary-card">
+      <ul>
+        <li><strong>Life Dental Spa conduce clar la vizualizări</strong> — 4.312 views din doar 5 conținuturi (1 long-form + 4 Shorts), susținut de testimonialul cu Gabriela Cristea și Tavi Clonda (1.300 views) și un pachet de 4 Shorts educaționale foarte omogene ca performanță (699-885 views fiecare).</li>
+        <li><strong>Regina Maria Dental Clinics a avut cel mai viral Short individual al săptămânii</strong> — "Stomatologia pediatrică ❤️✌️🦷" cu 1.350 vizualizări, cel mai bun rezultat pe formatul Shorts din toată piața monitorizată.</li>
+        <li><strong>Noi (Dr. Ardeleanu) rămânem ultimii la vizualizări</strong> — doar 146 views totale din 4 conținuturi (2 long-form + 2 Shorts), deși volumul de postare e comparabil cu DENT ESTET. Cel mai bun video al nostru a strâns doar 75 views.</li>
+        <li><strong>Elidadent este complet inactiv pe YouTube</strong> — ultimul conținut postat acum aproximativ 10 luni; tab-ul de Community există, dar nu conține nicio postare.</li>
+        <li><strong>Alertă majoră Tier 2 — Clinica Dentalist (Dr. Alexandra Mircea):</strong> canal cu <strong>345.000 de abonați</strong> care a publicat în fereastra 24-30 august 2 Shorts și 1 poll, totalizând <strong>42.600 vizualizări — de 6 ori mai mult decât tot Tier 1 la un loc</strong> (7.085 views). Un singur Short al lor, "CÂND AI MERS ULTIMA DATĂ LA UN CONTROL STOMATOLOGIC?", a strâns 39.000 de vizualizări în 17 secunde de conținut.</li>
+        <li><strong>Postările (Community) sunt neexploatate de tot Tier 1, dar funcționează pentru cine le folosește</strong> — niciun brand Tier 1 nu a publicat vreo postare în fereastră, în timp ce Clinica Dentalist rulează poll-uri săptămânale care strâng constant 1.000-1.800 de voturi. Noi avem tab-ul activ, dar nefolosit din urmă cu 4 luni.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- VOLUME -->
+  <section>
+    <span class="section-tag">Volumele</span>
+    <h2>Activitate YouTube — 24-30 august</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th class="num">Long-form</th>
+          <th class="num">Shorts</th>
+          <th class="num">Community</th>
+          <th class="num">Total views săpt.</th>
+          <th class="num">Rang (views)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight">
+          <td>Dr. Ardeleanu (NOI)</td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num">0</td>
+          <td class="num">146</td>
+          <td class="num"><span class="rank-badge">4</span></td>
+        </tr>
+        <tr>
+          <td>Life Dental Spa</td>
+          <td class="num">1</td>
+          <td class="num">4</td>
+          <td class="num">0</td>
+          <td class="num">4.312</td>
+          <td class="num"><span class="rank-badge gold">1</span></td>
+        </tr>
+        <tr>
+          <td>Regina Maria Dental Clinics</td>
+          <td class="num">1</td>
+          <td class="num">4</td>
+          <td class="num">0</td>
+          <td class="num">2.251</td>
+          <td class="num"><span class="rank-badge gold">2</span></td>
+        </tr>
+        <tr>
+          <td>DENT ESTET</td>
+          <td class="num">0</td>
+          <td class="num">2</td>
+          <td class="num">0</td>
+          <td class="num">376</td>
+          <td class="num"><span class="rank-badge">3</span></td>
+        </tr>
+        <tr class="dim">
+          <td>Elidadent</td>
+          <td class="num">—</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num"><span class="rank-badge">5</span></td>
+        </tr>
+        <tr>
+          <td colspan="6" style="font-size:11.5px; color:#888; padding-top:6px; border-bottom:none;">— Tier 2 (verificare rapidă) —</td>
+        </tr>
+        <tr style="background:#FDF0EF !important; font-weight:600;">
+          <td>Clinica Dentalist (Dr. Alexandra Mircea) <span style="color:var(--brand-alert); font-size:11px;">▲ ALERTĂ</span></td>
+          <td class="num">0</td>
+          <td class="num">2</td>
+          <td class="num">1</td>
+          <td class="num">42.600</td>
+          <td class="num">—</td>
+        </tr>
+        <tr class="dim">
+          <td>Dentrust, Dent Priority, Edent Clinic, As Dental</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">—</td>
+          <td class="num">0</td>
+          <td class="num">—</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11.5px; color:#888; margin-top:8px;">Clinica Dentalist: cifrele sunt verificate video cu video în fereastra 24-30 aug (2 Shorts + 1 poll). Long-form-ul lor cel mai recent (23 aug, 79.000 views) cade cu o zi înaintea ferestrei, deci nu e contorizat. Dental Blue International nu are canal YouTube (verificat în competitors.json). Elidadent nu are tab separat de long-form — canalul conține exclusiv Shorts (4 în total, toate vechi de peste 10 luni). Coloana "Video Ads YouTube" a fost exclusă din acest raport la cererea explicită a beneficiarului.</p>
+  </section>
+
+  <!-- FORMATE -->
+  <section>
+    <span class="section-tag">Analiză format</span>
+    <h2>Ce tip de conținut a funcționat (Tier 1)</h2>
+
+    <div class="format-block">
+      <div class="format-brand-name">Dr. Ardeleanu (NOI)</div>
+      <div class="bar-row"><span class="bar-label">Educațional / caz clinic</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-pct">50%</span></div>
+      <div class="bar-row"><span class="bar-label">Testimonial pacient</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-pct">50%</span></div>
+    </div>
+
+    <div class="format-block">
+      <div class="format-brand-name">DENT ESTET</div>
+      <div class="bar-row"><span class="bar-label">Educațional / medic explică</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-pct">100%</span></div>
+    </div>
+
+    <div class="format-block">
+      <div class="format-brand-name">Regina Maria Dental Clinics</div>
+      <div class="bar-row"><span class="bar-label">Educațional / medic explică</span><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="bar-pct">80%</span></div>
+      <div class="bar-row"><span class="bar-label">Testimonial pacient</span><div class="bar-track"><div class="bar-fill" style="width:20%; background:var(--brand-amber-gold);"></div></div><span class="bar-pct">20%</span></div>
+    </div>
+
+    <div class="format-block">
+      <div class="format-brand-name">Life Dental Spa</div>
+      <div class="bar-row"><span class="bar-label">Educațional</span><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="bar-pct">60%</span></div>
+      <div class="bar-row"><span class="bar-label">Testimonial celebritate</span><div class="bar-track"><div class="bar-fill" style="width:20%; background:var(--brand-amber-gold);"></div></div><span class="bar-pct">20%</span></div>
+      <div class="bar-row"><span class="bar-label">Employer branding / echipă</span><div class="bar-track"><div class="bar-fill" style="width:20%; background:var(--brand-olive);"></div></div><span class="bar-pct">20%</span></div>
+    </div>
+
+    <div class="format-block">
+      <div class="format-brand-name">Elidadent</div>
+      <p style="margin:0; font-size:13px; color:#999; font-style:italic;">Fără conținut publicat în intervalul analizat.</p>
+    </div>
+
+    <p style="font-size:12px; color:#888;">Observație generală: formatul <b>educațional (medicul explică / mit vs. realitate)</b> domină categoria — DENT ESTET îl folosește exclusiv, iar Regina Maria și Life Dental Spa în proporție de 60-80%. Testimonialele rămân minoritare, dar generează cele mai mari vârfuri individuale de vizualizări (Gabriela Cristea/Tavi Clonda la Life Dental Spa, Stomatologia pediatrică la Regina Maria).</p>
+  </section>
+
+  <!-- PROFILE CARDS -->
+  <section>
+    <span class="section-tag">Conținut nou pe canal — detalii</span>
+    <h2>Activitate profil cu profil (Tier 1)</h2>
+
+    <!-- Dr Ardeleanu -->
+    <div class="profile-card us">
+      <div class="profile-header">
+        <div><div class="profile-name">Dr. Ardeleanu (NOI) <span class="profile-handle">youtube.com/@Dr.Ardeleanu</span></div></div>
+        <div class="profile-stats"><span>Abonați: <b>925</b></span><span>Total video-uri canal: <b>393</b></span></div>
+      </div>
+
+      <div class="subhead">Long-form (2 în săpt.)</div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">25 aug</span><span class="video-stats">59 views · 1 like · Durată 2:34</span></div>
+        <div class="video-caption">"4 IMPLANTURI + 2 SPECIALE DE CE" — caz clinic educațional despre implanturi pterigoidiene (6 implanturi: 4 convenționale + 2 pterigoidiene, posterior de sinusurile maxilare).</div>
+        <div class="video-tags">#ImplanturiDentare #ChirurgieDentara #Stomatologie</div>
+        <div class="video-link"><a href="https://www.youtube.com/watch?v=dHU88bC9_vo" target="_blank">youtube.com/watch?v=dHU88bC9_vo</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">24 aug</span><span class="video-stats">8 views · 0 like · Durată 1:52</span></div>
+        <div class="video-caption">"Scapă de frica de stomatolog!" — conținut educațional, demontează mitul durerii la stomatolog.</div>
+        <div class="video-link"><a href="https://www.youtube.com/watch?v=NUp0Pc3qlLE" target="_blank">youtube.com/watch?v=NUp0Pc3qlLE</a></div>
+      </div>
+
+      <div class="subhead">Shorts (2 în săpt.)</div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">28 aug</span><span class="video-stats">4 views</span></div>
+        <div class="video-caption">"O echipă extraordinară, de la început până la sfârșit!" | Povestea doamnei Dorina 🦷 — testimonial pacientă.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/98CVsdQ0bCA" target="_blank">youtube.com/shorts/98CVsdQ0bCA</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">26 aug</span><span class="video-stats">75 views</span></div>
+        <div class="video-caption">"Nu prea zâmbeam în ultima vreme. Acum, excelent!" — testimonial reabilitare orală.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/FTEi9mYX3kU" target="_blank">youtube.com/shorts/FTEi9mYX3kU</a></div>
+      </div>
+
+      <div class="subhead">Postări / Community (0 în săpt.)</div>
+      <p class="empty-note">Tab-ul <b>Postări este activ pe canalul nostru</b>, dar ultima postare datează de acum aproximativ 4 luni (un post care promova episodul despre tratamentul de canal cu Dr. Saer Khalil). Zero postări în fereastra analizată.</p>
+
+      <div class="obs-box"><b>Observații:</b> Volum de postare comparabil cu DENT ESTET (4 conținuturi), dar cel mai slab engagement din tot Tier 1 — niciun video nu a depășit 75 views. Mix echilibrat educațional/testimonial, dar fără niciun format "viral" sau hook puternic în titlu. Suntem singurul brand Tier 1 care are funcția Postări activată — și nu o folosim, deși competitorul Tier 2 cu cel mai mare canal din piață obține 1.000+ voturi per poll.</div>
+    </div>
+
+    <!-- Life Dental Spa -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div><div class="profile-name">Life Dental Spa <span class="profile-handle">youtube.com/@lifedentalspa-ro</span></div></div>
+        <div class="profile-stats"><span>Abonați: <b>2.000</b></span><span>Total video-uri canal: <b>787</b></span></div>
+      </div>
+
+      <div class="subhead">Long-form (1 în săpt.)</div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">28 aug</span><span class="video-stats"><b>1.300 views</b> · Durată 4:47 <span class="top-badge">Top performer</span></span></div>
+        <div class="video-caption">"Gabriela Cristea și Tavi Clonda, împreună cu întreaga familie, aleg Life Dental Spa" — testimonial video lung cu prezentatori TV cunoscuți, poveste de peste 5 ani ca pacienți fideli.</div>
+        <div class="video-link"><a href="https://www.youtube.com/watch?v=qTxG6MCPNPM" target="_blank">youtube.com/watch?v=qTxG6MCPNPM</a></div>
+      </div>
+
+      <div class="subhead">Shorts (4 în săpt.)</div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">29 aug</span><span class="video-stats">699 views</span></div>
+        <div class="video-caption">"Știai că una dintre cele mai răspândite afecțiuni cronice din lume este caria dentară?" — educațional.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/OvR4siwY1ZI" target="_blank">youtube.com/shorts/OvR4siwY1ZI</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">26 aug</span><span class="video-stats">714 views</span></div>
+        <div class="video-caption">"Ești însărcinată și ai amânat tratamentul unei carii de teamă să nu afecteze sarcina?" — educațional.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/bWnfeMgIZYY" target="_blank">youtube.com/shorts/bWnfeMgIZYY</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">25 aug</span><span class="video-stats">714 views</span></div>
+        <div class="video-caption">"🔴 Folosești apă de gură ca să scapi de gingiile inflamate?" — educațional.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/HcwiVII50z4" target="_blank">youtube.com/shorts/HcwiVII50z4</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">24 aug</span><span class="video-stats">885 views</span></div>
+        <div class="video-caption">"Credem că un mediu de lucru sănătos se construiește prin colaborare, respect și susținere" — employer branding / cultură echipă.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/dzCJfzbSGgU" target="_blank">youtube.com/shorts/dzCJfzbSGgU</a></div>
+      </div>
+
+      <div class="subhead">Community</div>
+      <p class="empty-note">Tab de Community indisponibil pentru acest canal.</p>
+
+      <div class="obs-box"><b>Observații:</b> Lider clar de vizualizări săptămâna asta (4.312 views totale). Cele 4 Shorts au performanță remarcabil de omogenă (699-885 views), semn al unui format consistent și predictibil, iar long-form-ul cu testimonial de celebritate a adus un vârf clar peste medie. Singurul brand Tier 1 care a folosit conținut de employer branding săptămâna asta.</div>
+    </div>
+
+    <!-- Regina Maria -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div><div class="profile-name">Regina Maria Dental Clinics <span class="profile-handle">youtube.com/@ReginaMariaDentalClinics</span></div></div>
+        <div class="profile-stats"><span>Abonați: <b>9.330</b></span><span>Total video-uri canal: <b>1.300</b></span></div>
+      </div>
+
+      <div class="subhead">Long-form (1 în săpt.)</div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">28 aug</span><span class="video-stats">82 views · 1 like · Durată 1:45</span></div>
+        <div class="video-caption">"Reabilitare orală completă cu Dr. Diana Andrei | Implanturi, coroane și fațete" — caz clinic complet, plan de tratament personalizat.</div>
+        <div class="video-tags">#reabilitareorala #zambet #protetica</div>
+        <div class="video-link"><a href="https://www.youtube.com/watch?v=o8WYJdtWiOU" target="_blank">youtube.com/watch?v=o8WYJdtWiOU</a></div>
+      </div>
+
+      <div class="subhead">Shorts (4 în săpt.)</div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">28 aug</span><span class="video-stats">188 views</span></div>
+        <div class="video-caption">"Ți s-a spus că nu poți avea implanturi dentare? Iată ce spun specialiștii:" — educațional, demontare mit.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/cYs4E7E1o50" target="_blank">youtube.com/shorts/cYs4E7E1o50</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">27 aug</span><span class="video-stats">137 views</span></div>
+        <div class="video-caption">"Ce se întâmplă, de fapt, în timpul unei igienizări profesionale? 🤔" — educațional.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/_DNS5EmXPPw" target="_blank">youtube.com/shorts/_DNS5EmXPPw</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">26 aug</span><span class="video-stats">494 views</span></div>
+        <div class="video-caption">"Despre tratamentul parodontal, cu Dr. Diana Popescu 🦷" — medicul explică, educațional.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/0jLKnguK3yc" target="_blank">youtube.com/shorts/0jLKnguK3yc</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">25 aug</span><span class="video-stats"><b>1.350 views</b> <span class="top-badge">Top Short săptămâna</span></span></div>
+        <div class="video-caption">"Stomatologia pediatrică ❤️✌️🦷" — conținut brand/pedodonție, cel mai performant Short din toată piața monitorizată.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/LH63x7yM-3A" target="_blank">youtube.com/shorts/LH63x7yM-3A</a></div>
+      </div>
+
+      <div class="subhead">Community</div>
+      <p class="empty-note">Tab de Community indisponibil pentru acest canal.</p>
+
+      <div class="obs-box"><b>Observații:</b> Al doilea cel mai activ brand ca volum (5 conținuturi, egal cu Life Dental Spa) și cu cel mai bun rezultat individual pe Shorts din piață (1.350 views la "Stomatologia pediatrică"). Notă metodologică: un Short suplimentar postat "acum 2 ore" (în afara ferestrei 24-30 aug, deci exclus din acest raport) și unul mai vechi de 11 zile au fost identificate pe canal dar nu au fost incluse în calculele de mai sus.</div>
+    </div>
+
+    <!-- DENT ESTET -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div><div class="profile-name">DENT ESTET <span class="profile-handle">youtube.com/@ClinicaDENTESTET</span></div></div>
+        <div class="profile-stats"><span>Abonați: <b>1.340</b></span><span>Total video-uri canal: <b>694</b></span></div>
+      </div>
+
+      <div class="subhead">Long-form (0 în săpt.)</div>
+      <p class="empty-note">Niciun long-form nou; ultimul a fost publicat acum 13 zile (18 aug), în afara ferestrei analizate.</p>
+
+      <div class="subhead">Shorts (2 în săpt.)</div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">26 aug</span><span class="video-stats">43 views</span></div>
+        <div class="video-caption">"Avantajele alignerelor dentare | Dr. Iana Dilă Luță #fyp" — medicul explică, educațional.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/36b_-VDRqkY" target="_blank">youtube.com/shorts/36b_-VDRqkY</a></div>
+      </div>
+      <div class="video-item">
+        <div class="video-meta-row"><span class="video-date">24 aug</span><span class="video-stats">333 views</span></div>
+        <div class="video-caption">"Ai făcut un tratament de canal? Când este necesară o coroană dentară | DENT ESTET Sibiu" — educațional.</div>
+        <div class="video-link"><a href="https://www.youtube.com/shorts/B767aks-z54" target="_blank">youtube.com/shorts/B767aks-z54</a></div>
+      </div>
+
+      <div class="subhead">Community</div>
+      <p class="empty-note">Tab de Community inexistent pentru acest canal (nu apare în navigarea profilului).</p>
+
+      <div class="obs-box"><b>Observații:</b> Fără long-form nou săptămâna asta — singurul brand Tier 1 fără conținut de format lung în interval. Cele 2 Shorts sunt educaționale, cu semnătură locală de clinică (Sibiu), pattern folosit constant de brand.</div>
+    </div>
+
+    <!-- Elidadent -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div><div class="profile-name">Elidadent <span class="profile-handle">youtube.com/@Elidadent</span></div></div>
+        <div class="profile-stats"><span>Abonați: <b>1</b></span><span>Total video-uri canal: <b>4</b></span></div>
+      </div>
+      <p class="empty-note">Canal complet inactiv în intervalul 24-30 august. Cele 4 video-uri existente pe canal (toate Shorts) sunt vechi — cel mai recent a fost publicat acum aproximativ 10 luni. Nu există tab separat de long-form (canalul are doar Shorts și Community).</p>
+      <div class="subhead">Community</div>
+      <p class="empty-note">Tab de Community activ, dar fără nicio postare vizibilă.</p>
+      <div class="obs-box"><b>Observații:</b> Cel mai slab brand Tier 1 pe YouTube — practic un canal abandonat, cu un singur abonat și zero activitate recentă. Nu reprezintă o amenințare competitivă pe acest canal momentan.</div>
+    </div>
+  </section>
+
+  <!-- SHORTS FOCUS -->
+  <section>
+    <span class="section-tag">Shorts — focus</span>
+    <h2>Cele mai performante 5 Shorts din piață</h2>
+
+    <div class="top5-item">
+      <div class="top5-rank gold">1</div>
+      <div class="top5-body">
+        <div class="top5-brand">Regina Maria · 25 aug</div>
+        <div class="top5-caption">"Stomatologia pediatrică ❤️✌️🦷" — <a href="https://www.youtube.com/shorts/LH63x7yM-3A" target="_blank">link</a></div>
+      </div>
+      <div class="top5-views">1.350</div>
+    </div>
+    <div class="top5-item">
+      <div class="top5-rank gold">2</div>
+      <div class="top5-body">
+        <div class="top5-brand">Life Dental Spa · 24 aug</div>
+        <div class="top5-caption">"Credem că un mediu de lucru sănătos se construiește prin colaborare, respect și susținere" — <a href="https://www.youtube.com/shorts/dzCJfzbSGgU" target="_blank">link</a></div>
+      </div>
+      <div class="top5-views">885</div>
+    </div>
+    <div class="top5-item">
+      <div class="top5-rank">3</div>
+      <div class="top5-body">
+        <div class="top5-brand">Life Dental Spa · 26 aug</div>
+        <div class="top5-caption">"Ești însărcinată și ai amânat tratamentul unei carii de teamă să nu afecteze sarcina?" — <a href="https://www.youtube.com/shorts/bWnfeMgIZYY" target="_blank">link</a></div>
+      </div>
+      <div class="top5-views">714</div>
+    </div>
+    <div class="top5-item">
+      <div class="top5-rank">4</div>
+      <div class="top5-body">
+        <div class="top5-brand">Life Dental Spa · 25 aug</div>
+        <div class="top5-caption">"🔴 Folosești apă de gură ca să scapi de gingiile inflamate?" — <a href="https://www.youtube.com/shorts/HcwiVII50z4" target="_blank">link</a></div>
+      </div>
+      <div class="top5-views">714</div>
+    </div>
+    <div class="top5-item">
+      <div class="top5-rank">5</div>
+      <div class="top5-body">
+        <div class="top5-brand">Life Dental Spa · 29 aug</div>
+        <div class="top5-caption">"Știai că una dintre cele mai răspândite afecțiuni cronice din lume este caria dentară?" — <a href="https://www.youtube.com/shorts/OvR4siwY1ZI" target="_blank">link</a></div>
+      </div>
+      <div class="top5-views">699</div>
+    </div>
+
+    <p style="font-size:13px; margin-top:10px; background:#FDF0EF; border-left:4px solid var(--brand-alert); padding:12px 14px; border-radius:6px;"><b>Context obligatoriu:</b> clasamentul de mai sus acoperă doar Tier 1. Dacă includem Tier 2, primul loc e luat detașat de <b>Clinica Dentalist</b> cu Short-ul "CÂND AI MERS ULTIMA DATĂ LA UN CONTROL STOMATOLOGIC?" (25 aug) — <b>39.000 de vizualizări</b>, adică de 29 de ori mai mult decât cel mai bun Short din Tier 1 și de peste 5 ori mai mult decât toate cele 16 conținuturi Tier 1 la un loc.</p>
+
+    <p style="font-size:13px; margin-top:10px;"><b>Pattern observat:</b> Top 5 e dominat de Life Dental Spa (4 din 5 locuri) — Shorts scurte, educaționale, cu întrebare directă în titlu ("Știai că...", "Folosești..."). Singurul intrus în top este Regina Maria, cu un Short de brand/pedodonție care a depășit toate Shorts-urile pur educaționale din piață. Niciun brand nu a folosit exclusiv format "trend" — toate Shorts-urile analizate sunt conținut propriu, filmat în clinică.</p>
+  </section>
+
+  <!-- ALERTE TIER 2 -->
+  <section>
+    <span class="section-tag">Alerte Tier 2</span>
+    <h2>Ce am observat la verificarea rapidă</h2>
+    <div class="tier2-list">
+      <div class="tier2-item hot" style="grid-column: 1 / -1;"><b>Clinica Dentalist (Dr. Alexandra Mircea) — 345.000 abonați, 2.300 video-uri.</b> Canal de scară complet diferită față de restul pieței dentare (de 37 de ori mai mulți abonați decât Regina Maria, liderul nostru Tier 1). <b>Activitate confirmată în fereastra 24-30 august:</b>
+        <div style="margin-top:8px;">
+          • <b>25 aug</b> — Short "CÂND AI MERS ULTIMA DATĂ LA UN CONTROL STOMATOLOGIC?" — <b>39.000 views</b>, 532 aprecieri, durată 0:17 — <a href="https://www.youtube.com/shorts/rUzP3bQFA-I" target="_blank">link</a><br>
+          • <b>28 aug</b> — Short "PUZZLE STOMATOLOGIC 🦷🧩" — 3.600 views, 82 aprecieri, durată 0:09 — <a href="https://www.youtube.com/shorts/9RnJgWC2ubY" target="_blank">link</a><br>
+          • <b>29 aug</b> — Poll în Postări: "Dacă rutina ta ar fi un personaj, ar fi...😁🪥" — <b>1.000 de voturi</b>, 45 aprecieri, 11 comentarii (4 variante de răspuns) — <a href="https://www.youtube.com/@DrAlexandraMircea/posts" target="_blank">link</a>
+        </div>
+        <div style="margin-top:8px;">Total 42.600 vizualizări în fereastră — de 6 ori mai mult decât tot Tier 1 la un loc. Formatul lor dominant este Short-ul foarte scurt (9-31 secunde), cu titlu-întrebare scris integral cu majuscule și fără descriere. Rulează și poll-uri săptămânale constante (1.000-1.800 voturi fiecare). <b>Recomandare fermă: mutarea în Tier 1 pentru monitorizare YouTube completă.</b></div></div>
+      <div class="tier2-item na"><b>Dentrust:</b> fără activitate în interval — ultimul long-form acum 1 lună, ultimul Short acum peste 1 lună.</div>
+      <div class="tier2-item na"><b>Dent Priority:</b> fără activitate în interval — ultimul long-form acum 7 luni, cel mai recent Short verificat acum 1 an.</div>
+      <div class="tier2-item na"><b>Edent Clinic:</b> fără activitate în interval — ultimul long-form acum 6 luni, cel mai recent Short verificat acum 4 luni.</div>
+      <div class="tier2-item na"><b>As Dental Clinic Slobozia:</b> fără activitate în interval — cel mai recent Short verificat, acum 4 luni.</div>
+    </div>
+  </section>
+
+  <!-- TENDINTE -->
+  <section>
+    <span class="section-tag">Tendințe YouTube în piață</span>
+    <h2>Ce arată datele săptămânii</h2>
+    <div class="summary-card">
+      <ul>
+        <li><b>Categoria dominantă:</b> conținut educațional ("medicul explică", mituri demontate, sfaturi de igienă) — prezent la toate cele 4 brand-uri active, în proporție de 50-100% din conținutul lor.</li>
+        <li><b>Lungime medie:</b> long-form-urile publicate au fost scurte pentru format (1:45 - 2:34), cu excepția testimonialului Life Dental Spa (4:47) — cel mai lung conținut din săptămână și totodată cel mai vizionat long-form.</li>
+        <li><b>Frecvență de postare:</b> Regina Maria și Life Dental Spa au postat cel mai des (5 conținuturi/săptămână fiecare), urmate de Dr. Ardeleanu (4) și DENT ESTET (2). Elidadent nu a postat deloc.</li>
+        <li><b>Sezonalitate:</b> fără semnale clare de sezonalitate (sfârșit de august) — volumul de postare pare stabil comparativ cu ritmul obișnuit al fiecărui canal.</li>
+        <li><b>Postările (Community) — neexploatate în Tier 1, dar eficiente în afara lui:</b> Regina Maria, Life Dental Spa și DENT ESTET nu au deloc funcția activată; noi o avem activă, dar nefolosită din urmă cu 4 luni. În schimb, Clinica Dentalist rulează poll-uri săptămânale care strâng 1.000-1.800 de voturi fiecare — format cu cost de producție aproape zero și engagement mult peste orice video din Tier 1.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EFICIENTA -->
+  <section>
+    <span class="section-tag">Eficiență vs. audiență</span>
+    <h2>Vizualizări raportate la numărul de abonați</h2>
+    <p>Volumul brut de vizualizări favorizează brandurile cu baze mari de abonați (Regina Maria, 9.330 abonați). Un indicator mai relevant pentru „cât de bine activează un brand propria audiență” este raportul dintre vizualizările săptămânii și numărul total de abonați ai canalului:</p>
+    <table>
+      <thead>
+        <tr><th>Brand</th><th class="num">Abonați</th><th class="num">Views săpt.</th><th class="num">Views / abonat</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Life Dental Spa</td>
+          <td class="num">2.000</td>
+          <td class="num">4.312</td>
+          <td class="num"><b>2,16</b></td>
+        </tr>
+        <tr class="highlight">
+          <td>Dr. Ardeleanu (NOI)</td>
+          <td class="num">925</td>
+          <td class="num">146</td>
+          <td class="num">0,16</td>
+        </tr>
+        <tr>
+          <td>DENT ESTET</td>
+          <td class="num">1.340</td>
+          <td class="num">376</td>
+          <td class="num">0,28</td>
+        </tr>
+        <tr>
+          <td>Regina Maria Dental Clinics</td>
+          <td class="num">9.330</td>
+          <td class="num">2.251</td>
+          <td class="num">0,24</td>
+        </tr>
+        <tr class="dim">
+          <td>Elidadent</td>
+          <td class="num">1</td>
+          <td class="num">0</td>
+          <td class="num">0,00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12.5px; color:#888; margin-top:8px;">Life Dental Spa iese în evidență clar: deși are cea mai mică bază de abonați dintre brandurile active (2.000), a generat de peste 9 ori mai multe vizualizări per abonat decât Regina Maria și de peste 13 ori mai multe decât noi — semn că reușește să depășească propria audiență organică și să ajungă la public nou prin recomandările algoritmului YouTube (probabil susținut de testimonialul cu Gabriela Cristea/Tavi Clonda). Noi rămânem cel mai slab brand activ la acest indicator, cu doar 0,16 vizualizări per abonat.</p>
+  </section>
+
+  <!-- CE FACEM -->
+  <section>
+    <span class="section-tag">Plan de acțiune</span>
+    <h2>Ce facem noi săptămâna următoare pe YouTube</h2>
+    <ul class="action-list">
+      <li><b>Short de produs:</b> testăm un format "Știai că...?" scurt (15-25s), educațional, pe modelul Life Dental Spa — brandul cu cea mai consistentă performanță pe acest tip de conținut (699-885 views constant).</li>
+      <li><b>Long-form:</b> un testimonial video de 3-5 minute cu un pacient cu poveste memorabilă (pe modelul Life Dental Spa x Gabriela Cristea/Tavi Clonda) — format lung, dar cu potențial de reach mult peste media noastră actuală de sub 100 views/video.</li>
+      <li><b>Postare / poll în tab-ul Postări:</b> tab-ul e deja activ pe canalul nostru, dar nefolosit din urmă cu 4 luni. Publicăm un poll simplu, pe modelul validat de Clinica Dentalist (întrebare scurtă despre o rutină dentară + 3-4 variante de răspuns) — formatul lor strânge constant 1.000-1.800 de voturi, cu cost de producție zero. Niciun competitor Tier 1 nu are măcar funcția activată, deci e un avantaj pe care îl deținem deja și nu îl folosim.</li>
+      <li><b>Conținut pediatric/brand:</b> testăm un Short de tip "brand awareness" pe zona de pedodonție (ex. Dental Safari), inspirat de rezultatul foarte bun al Regina Maria cu "Stomatologia pediatrică" (1.350 views, cel mai bun Short din piață).</li>
+      <li><b>Monitorizare extinsă:</b> propunem includerea canalului Dr. Alexandra Mircea / Clinica Dentalist în lista Tier 1 pentru YouTube, dată fiind scara sa (345K abonați) mult peste orice alt competitor monitorizat.</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <section>
+    <div class="footer-box">
+      <h3>Date de verificare</h3>
+      <div class="footer-grid">
+        <div><b>Sursă date:</b> YouTube Data API v3 — indisponibil (cheie lipsă/placeholder în competitors.json)</div>
+        <div><b>Metodă folosită:</b> scraping public via Claude in Chrome (fără login) — status raport: <b>PARȚIAL</b></div>
+        <div><b>Canale acoperite:</b> 5/5 Tier 1 (Dr. Ardeleanu, DENT ESTET, Regina Maria, Life Dental Spa, Elidadent) — Dental Blue International exclus, fără canal YouTube</div>
+        <div><b>Tier 2:</b> Clinica Dentalist verificat video cu video (activitate confirmată în fereastră); Dentrust, Dent Priority, Edent Clinic, As Dental verificate prin cel mai recent conținut de pe fiecare tab — toate inactive de 1-12 luni</div>
+        <div><b>Reclame video YouTube (Ads Transparency Center):</b> neanalizate — excluse explicit la cererea beneficiarului</div>
+        <div><b>Postări / Community:</b> verificat pentru toate canalele Tier 1 + Clinica Dentalist. Atenție metodologică: URL-ul <code>/community</code> returnează fals-negativ ("Comunitatea nu este disponibilă") chiar și pe canale cu postări active — verificarea corectă se face pe <code>/posts</code>. Rezultat după recontrol: Dr. Ardeleanu are tab activ (ultima postare acum ~4 luni), Clinica Dentalist postează poll-uri săptămânal, iar Regina Maria / Life Dental Spa / DENT ESTET nu au funcția activată.</div>
+        <div><b>Limitare metodologică:</b> datele de vizualizări/dată provin din UI public YouTube (nu din API), citite direct din pagina fiecărui video; duratele exacte nu au fost verificate pentru toate Shorts-urile</div>
+        <div><b>Confidence level:</b> Ridicat — toate cifrele Tier 1 și cele ale Clinica Dentalist sunt verificate individual, pe pagina fiecărui video</div>
+        <div><b>Notă de versiune:</b> raport actualizat după o a doua trecere de verificare — au fost adăugate datele confirmate pentru Clinica Dentalist și corectată concluzia despre Postări/Community (verificare inițială greșită pe <code>/community</code>)</div>
+        <div><b>Generat:</b> competitor-weekly-youtube v1.0 · 31 august 2026</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
