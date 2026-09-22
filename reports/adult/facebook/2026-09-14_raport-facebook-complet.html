@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Facebook — Raport săptămânal complet · Tier 1 + Tier 2 · 14–20 sept 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --burgundy:#7B1C16;
+    --burgundy-dark:#5c1510;
+    --gold:#C9A227;
+    --yellow:#FBE483;
+    --wheat:#F2DAB7;
+    --cream:#F5EDE3;
+    --alert:#c0392b;
+    --text:#222222;
+    --white:#FFFFFF;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--cream); color:var(--text);
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 60px;}
+  header.top{
+    background:var(--burgundy); color:var(--white);
+    padding:36px 20px 28px; text-align:center;
+    border-bottom:6px solid var(--gold);
+  }
+  header.top img{height:42px;margin-bottom:12px;}
+  header.top .brand{font-weight:700;letter-spacing:1px;font-size:14px;opacity:.9;text-transform:uppercase;}
+  header.top h1{font-size:clamp(22px,4.5vw,28px);margin:10px 0 4px;font-weight:800;}
+  header.top .sub{color:var(--yellow);font-weight:600;font-size:15px;}
+  .pill-row{display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:5px 14px;font-size:12px;letter-spacing:.5px;}
+  section{margin-top:34px;}
+  h2.section-title{
+    font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--burgundy);
+    border-bottom:2px solid var(--wheat); padding-bottom:8px; margin-bottom:16px;font-weight:700;
+  }
+  h3.sub-title{
+    font-size:14px;color:var(--burgundy-dark);font-weight:700;margin:22px 0 12px;
+    display:flex;align-items:center;gap:8px;
+  }
+  h3.sub-title .tag{background:var(--wheat);color:var(--burgundy-dark);font-size:10px;padding:2px 9px;border-radius:999px;letter-spacing:.5px;text-transform:uppercase;}
+  h3.sub-title .tag.t2{background:var(--gold);color:var(--white);}
+  .card{background:var(--white);border-radius:12px;padding:22px 24px;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+  ul.bullets{margin:0;padding-left:20px;}
+  ul.bullets li{margin-bottom:8px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+  th{background:var(--burgundy);color:var(--white);text-align:left;padding:10px 12px;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;}
+  td{padding:9px 12px;border-bottom:1px solid var(--wheat);}
+  tr.us td{background:var(--wheat);font-weight:700;}
+  tr.t1-row td{background:rgba(123,28,22,.03);}
+  .tier-lbl{font-size:10px;font-weight:700;letter-spacing:.5px;padding:2px 7px;border-radius:6px;}
+  .tier-lbl.t1{background:var(--burgundy);color:var(--white);}
+  .tier-lbl.t2{background:var(--gold);color:var(--white);}
+  .tier-lbl.us{background:var(--yellow);color:var(--burgundy-dark);}
+  .badge{display:inline-block;color:var(--white);font-size:10px;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+  .badge.ok{background:#2e7d32;}
+  .badge.partial{background:var(--gold);color:#402f00;}
+  .badge.zero{background:#999;}
+  .brand-card{
+    background:var(--white); border-radius:14px; margin-bottom:20px; overflow:hidden;
+    border:1px solid var(--wheat); box-shadow:0 2px 10px rgba(0,0,0,.05);
+  }
+  .brand-card.us{border:2px solid var(--burgundy);}
+  .brand-card.viral{border:2px solid var(--gold);}
+  .brand-card .head{
+    background:var(--wheat); padding:12px 20px; font-weight:700; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;
+  }
+  .brand-card.us .head{background:var(--burgundy);color:var(--white);}
+  .brand-card .head .loc{font-weight:400;font-size:11.5px;color:#7a6a52;}
+  .brand-card.us .head .loc{color:#f0d9d6;}
+  .brand-card .body{padding:18px 20px;}
+  .post-line{padding:9px 0;border-bottom:1px dashed var(--wheat);font-size:13.5px;}
+  .post-line:last-child{border-bottom:none;}
+  .meta{color:#888;font-size:12px;}
+  .eng{color:var(--burgundy);font-weight:600;font-size:13px;}
+  .obs{background:var(--cream);border-left:4px solid var(--gold);padding:10px 14px;margin-top:12px;font-size:13.5px;border-radius:0 8px 8px 0;}
+  .ads-box{background:#fff8e6;border-left:4px solid var(--gold);padding:10px 14px;margin-top:10px;font-size:13.5px;border-radius:0 8px 8px 0;}
+  .noads-box{background:var(--cream);padding:8px 14px;margin-top:10px;font-size:12.5px;border-radius:8px;color:#8a7a5f;font-style:italic;}
+  .none-box{background:var(--cream);border-radius:8px;padding:14px 18px;font-size:14px;color:#666;}
+  .rec{background:var(--white);border-radius:10px;padding:16px 20px;margin-bottom:10px;border-left:4px solid var(--burgundy);}
+  .rec b{color:var(--burgundy);}
+  footer.verif{
+    margin-top:40px;background:#1A1A1A;color:#ddd;border-radius:12px;padding:22px 26px;font-size:13px;
+  }
+  footer.verif h3{color:var(--gold);margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:1px;}
+  footer.verif h4{color:var(--yellow);margin:14px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.5px;}
+  footer.verif ul{padding-left:18px;margin:8px 0;}
+  .din2017{text-align:center;margin-top:26px;color:var(--burgundy);opacity:.7;font-size:12px;letter-spacing:2px;}
+  .confidence{display:inline-block;padding:3px 10px;border-radius:8px;font-weight:700;font-size:11px;}
+  .conf-high{background:#c8e6c9;color:#1b5e20;}
+  .conf-med{background:#ffe0b2;color:#7a4a00;}
+  a{color:var(--burgundy);}
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream:#1c1a17; --white:#262320; --text:#ece6dd; --wheat:#3a3128;
+    }
+    body{background:var(--cream);}
+    .ads-box{background:#332a12;color:#ece6dd;}
+    .noads-box{color:#b5aa9c;}
+    .none-box{color:#b5aa9c;}
+    tr.t1-row td{background:rgba(123,28,22,.12);}
+  }
+  :root[data-theme="dark"]{
+    --cream:#1c1a17; --white:#262320; --text:#ece6dd; --wheat:#3a3128;
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <img src="data:image/png;base64,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" alt="Dr. Ardeleanu">
+  <div class="brand">Clinicile Dr. Ardeleanu · Intelligence</div>
+  <h1>FACEBOOK — RAPORT SĂPTĂMÂNAL COMPLET</h1>
+  <div class="sub">14 – 20 septembrie 2026 · Săpt. 38 · Tier 1 + Tier 2</div>
+  <div class="pill-row">
+    <div class="pill">15 branduri scanate (+ noi)</div>
+    <div class="pill">Tier 1: organic + Meta Ads Library</div>
+    <div class="pill">Tier 2: doar organic</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2 class="section-title">▶ Pe scurt — toată piața</h2>
+  <div class="card">
+    <ul class="bullets">
+      <li><b>Noi</b> conducem piața ca volum organic alături de <b>DENT ESTET</b> (13 vs. 15 postări, practic zilnic). Restul pieței, Tier 1 și Tier 2 la un loc, nu se apropie de acest ritm.</li>
+      <li><b>As Dental Slobozia (Tier 2)</b> a avut cel mai viral conținut organic din tot raportul: un reel myth-busting despre implanturi cu <b>57 distribuiri</b> — mai mult decât orice postare Tier 1, inclusiv a noastră — și asta fără nicio reclamă plătită găsită în spate.</li>
+      <li><b>Life Dental Spa (Tier 1)</b> rămâne liderul de Ads din toată piața cu <b>~100 reclame active</b>, dar <b>Dent Priority (Tier 2)</b> îi calcă pe urme cu <b>~59</b> — s-a dovedit de fapt o rețea mică multi-oraș (Craiova, Târgu Jiu, Slatina, Caracal), nu o clinică izolată.</li>
+      <li><b>Nou, la scanarea Meta Ads pentru Tier 2:</b> Dentrust (~24 reclame, toate video-uri evergreen cu cazuri clinice) și Clinica Dentalist (~37, aproape toate variante A/B ale unui singur video lansat azi) au bugete de Ads mult peste ce ne-am fi așteptat de la branduri Tier 2. Saviem Smile, Dr. Malama, Ark Med și As Dental Slobozia par să nu aibă nicio reclamă activă.</li>
+      <li>Doar două branduri au avut apariții media/presă săptămâna asta: <b>DENT ESTET</b> (Medikatv) și <b>Dent Priority</b> (G4Food.ro) — canal încă subexploatat de restul competiției.</li>
+      <li><b>Ark Med (Tier 2, Călărași)</b> a fost complet inactiv, atât organic cât și pe Ads, în timp ce <b>Dental Blue International (Tier 1)</b> arată semnale de extindere spre Constanța printr-o reclamă activă — două mișcări opuse de urmărit.</li>
+      <li><b>Elidadent</b> — corectat la reverificare — nu are nicio reclamă activă în Meta Ads Library, dar organic e mult mai activ decât s-a crezut inițial: <b>6 postări</b> (nu 1), la egalitate cu Life Dental Spa, cu cel mai bun tie-in de conținut "trending" din tot raportul (Bianca de la Insula Iubirii, 13 distribuiri).</li>
+      <li><b>EDENT Clinic</b> e singurul brand din tot Tier 2 cu un preț explicit în reclamă: Pachet START EDENT la <b>250 Lei</b>.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">▶ Volume — toată piața, 14–20 sept</h2>
+  <table>
+    <tr>
+      <th>Brand</th>
+      <th>Tier</th>
+      <th>Postări organic</th>
+      <th>Reclame Meta active</th>
+      <th>Top engagement organic</th>
+    </tr>
+    <tr class="us">
+      <td>Dr. Ardeleanu (NOI)</td>
+      <td><span class="tier-lbl us">NOI</span></td>
+      <td>13</td>
+      <td>~51</td>
+      <td>69 like / 6 com / 5 share</td>
+    </tr>
+    <tr class="t1-row">
+      <td>DENT ESTET</td>
+      <td><span class="tier-lbl t1">T1</span></td>
+      <td>15</td>
+      <td>~33</td>
+      <td>33 like / 2 share</td>
+    </tr>
+    <tr class="t1-row">
+      <td>Regina Maria Dental</td>
+      <td><span class="tier-lbl t1">T1</span></td>
+      <td>7</td>
+      <td>~73</td>
+      <td>14 like</td>
+    </tr>
+    <tr class="t1-row">
+      <td>Life Dental Spa</td>
+      <td><span class="tier-lbl t1">T1</span></td>
+      <td>6</td>
+      <td><b>~100</b> (cel mai mare volum)</td>
+      <td>9 like</td>
+    </tr>
+    <tr class="t1-row">
+      <td>Elidadent</td>
+      <td><span class="tier-lbl t1">T1</span></td>
+      <td>6</td>
+      <td>0</td>
+      <td>29 like / <b>13 share</b> 🔥</td>
+    </tr>
+    <tr>
+      <td>Dent Priority</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>3</td>
+      <td><b>~59</b> (rețea Craiova/Tg. Jiu/Slatina/Caracal)</td>
+      <td>16 like / 2 share + apariție media</td>
+    </tr>
+    <tr>
+      <td>Saviem Smile</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>3</td>
+      <td>0</td>
+      <td>30 distribuiri (video)</td>
+    </tr>
+    <tr>
+      <td>JC Dent</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>2</td>
+      <td>3</td>
+      <td>27 like / 4 share</td>
+    </tr>
+    <tr>
+      <td>Dentrust</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>2</td>
+      <td><b>~24</b></td>
+      <td>35 like / 6 share</td>
+    </tr>
+    <tr>
+      <td>Clinica Dentalist</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>2</td>
+      <td><b>~37</b></td>
+      <td>5 like</td>
+    </tr>
+    <tr>
+      <td>As Dental Slobozia</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>2</td>
+      <td>0 <span class="meta">(căutare neconcludentă)</span></td>
+      <td>12 like / <b>57 share</b> 🔥</td>
+    </tr>
+    <tr class="t1-row">
+      <td>Dental Blue International</td>
+      <td><span class="tier-lbl t1">T1</span></td>
+      <td>1</td>
+      <td>~10</td>
+      <td>14 like / 29 share</td>
+    </tr>
+    <tr>
+      <td>Dr. Malama</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>1</td>
+      <td>0</td>
+      <td>155 like</td>
+    </tr>
+    <tr>
+      <td>EDENT Clinic</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>1</td>
+      <td><b>~16</b></td>
+      <td>9 like</td>
+    </tr>
+    <tr>
+      <td>Ark Med</td>
+      <td><span class="tier-lbl t2">T2</span></td>
+      <td>0</td>
+      <td>0</td>
+      <td>—</td>
+    </tr>
+  </table>
+  <p style="font-size:12px;color:#888;margin-top:8px;">Reclamele Meta Ads Library au fost verificate acum și pentru Tier 2 (inițial excluse din scop). <b>Actualizare 21 sept:</b> DENT ESTET și Elidadent au fost reverificate direct pe Facebook — Elidadent avea de fapt 6 postări (nu 1), iar DENT ESTET a ajuns la 15 (nu 13); detalii pe status de confirmare în cardurile de mai jos. Căutarea Ads pentru "As Dental" a returnat prea multe rezultate irelevante pentru a fi concludentă (vezi cardul brandului).</p>
+</section>
+
+<section>
+  <h2 class="section-title">▶ Dr. Ardeleanu (NOI) — activitate completă</h2>
+  <div class="brand-card us">
+    <div class="head"><span>CLINICILE DR. ARDELEANU · facebook.com/Dr.Ardeleanu</span><span class="badge">13 postări</span></div>
+    <div class="body">
+      <div class="post-line"><b>20 sept</b> — Video "O zi care ne-a coplesit..." (CARE Forum, training intern) — <span class="eng">63 like · 3 com · 3 share</span></div>
+      <div class="post-line"><b>20 sept</b> — "CARE Forum a fost mai mult decât ne așteptam" (album foto) — <span class="eng">49 like · 2 com · 8 share</span></div>
+      <div class="post-line"><b>20 sept</b> — "CARE Forum continuă, cu energie..." (album foto) — <span class="eng">69 like · 6 com · 5 share</span></div>
+      <div class="post-line"><b>19 sept</b> — Video educativ "Tu știi ce e un articulator dentar?" — <span class="eng">24 like · 2 com</span></div>
+      <div class="post-line"><b>19 sept</b> — Caz "Mă simt ca și cum am renăscut" (before/after) — <span class="eng">8 like · 9 share</span></div>
+      <div class="post-line"><b>18 sept</b> — Video umor/promo "Nu a văzut-o venind" — <span class="eng">22 reacții · 2 com</span></div>
+      <div class="post-line"><b>17 sept</b> — Video educativ "Decizia de odontectomie la pacienții tineri" — <span class="eng">20 like · 1 com · 6 share</span></div>
+      <div class="post-line"><b>16 sept</b> — Video educativ despre tartrul dentar — <span class="eng">26 like</span></div>
+      <div class="post-line"><b>16 sept</b> — "Următorul nivel al unei clinici..." (apariție revista Modent) — <span class="eng">16 like · 2 com · 5 share</span></div>
+      <div class="post-line"><b>16 sept</b> — "O simplă consultație poate însemna o șansă la viață" — <span class="eng">20 like · 2 com · 2 share</span></div>
+      <div class="post-line"><b>15 sept</b> — Video educativ "Prevenție ieftină sau urgență scumpă?" — <span class="eng">20 like · 1 com · 3 share</span></div>
+      <div class="post-line"><b>15 sept</b> — Poză de copertă actualizată (echipa) — <span class="eng">30+ like</span></div>
+      <div class="post-line"><b>15 sept</b> — Video umor despre recenzii pe Google — <span class="eng">17 like</span></div>
+      <div class="post-line"><b>14 sept</b> — <i>fără nicio postare (gol confirmat)</i></div>
+      <div class="ads-box">🎯 <b>~51 reclame active</b> · ex: "Reducem prețul, nu calitatea" — plombe adulți -30%</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">▶ Tier 1 — activitate pagină cu pagină</h2>
+
+  <div class="brand-card">
+    <div class="head"><span>DENT ESTET</span><span class="badge partial">14+ postări · 20-16 sept</span></div>
+    <div class="body">
+      <div class="post-line"><b>20 sept</b> — Marketing clinici + video Ionela Morgun — <span class="eng">18 like · 2 share</span></div>
+      <div class="post-line"><b>19 sept</b> — "People of DENT ESTET" — interviu Dr. Alexandru Georgescu — <span class="eng">11 like</span></div>
+      <div class="post-line"><b>19 sept</b> — Nominalizare Craiova Business Gala 2026 — <span class="eng">16-18 like · 4 share</span></div>
+      <div class="post-line"><b>19 sept</b> — Video prezentare cabinet — <span class="eng">18 like · 1 com</span></div>
+      <div class="post-line"><b>18 sept</b> — "Știi cum arată zâmbetul pe care ți-l dorești?" — <span class="eng">6 like · 1 share</span></div>
+      <div class="post-line"><b>18 sept</b> — "Când putem atașa o restaurare fixă după implant?" — <span class="eng">33 like · 2 share</span></div>
+      <div class="post-line"><b>18 sept</b> — <i>Nou găsit la reverificare:</i> articol de blog "AI în protetica dentară: precizie și tratamente personalizate" — <span class="eng">engagement neconfirmat</span></div>
+      <div class="post-line"><b>17 sept</b> — Articol tehnologie digitală / lucrări protetice — <span class="eng">11 like</span></div>
+      <div class="post-line"><b>17 sept</b> — Testimoniale pacienți (Manuela Tet, Ioan Mihai) — <span class="eng">4 like</span></div>
+      <div class="post-line"><b>17 sept</b> — Caz "DENT ESTET 4 Teens" — Andrei, 10 ani — <span class="eng">16 like · 1 share</span></div>
+      <div class="post-line"><b>17 sept</b> — "Precizia înseamnă să intervenim exact acolo unde e nevoie" — <span class="eng">13 like · 1 share</span></div>
+      <div class="post-line"><b>17 sept</b> — Colaborare cu Andrei Nourescu — <span class="eng">20 like · 1 com · 2 share</span></div>
+      <div class="post-line"><b>16 sept</b> — "Beauty captured in your smile" — fațete premium — <span class="eng">21 like · 1 com · 3 share</span></div>
+      <div class="post-line"><b>16 sept</b> — LIVE Medikatv — Dr. Ionela Dumitru — <span class="eng">11 like · 1 share</span></div>
+      <div class="ads-box">🎯 <b>~33 reclame active</b> · ex: Implant + coroană -200€; video Dr. Andreea Rădeanu (fațete vs. coroane)</div>
+      <div class="obs">➜ <b>Reverificat 21 sept:</b> am confirmat din nou toate postările 16-20 sept și am mai găsit un articol de blog pe 18 sept care lipsea prima dată (deci minim 14, nu 13, postări). Blocajul tehnic care oprește încărcarea feed-ului chiar după postarea din 16 sept s-a reprodus identic la reverificare, inclusiv cu tab nou, reload și așteptări de 8-10 secunde — 14-15 septembrie rămân neconfirmate din motive tehnice, nu din lipsă de activitate.</div>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="head"><span>REGINA MARIA DENTAL CLINICS</span><span class="badge ok">7 postări · complet</span></div>
+    <div class="body">
+      <div class="post-line"><b>20 sept</b> — "Copilul nu mănâncă bomboane, dar are carii?" (pedo, pagina-mamă) — <span class="eng">1 like</span></div>
+      <div class="post-line"><b>20 sept</b> — "Teamwork" (video echipă) — <span class="eng">14 like</span></div>
+      <div class="post-line"><b>18 sept</b> — "Tratamentul parodontal doare?" (Dr. Diana Popescu) — <span class="eng">7 like · 1 com</span></div>
+      <div class="post-line"><b>18 sept</b> — "Copilul respiră pe gură... sforăie" (Pitești) — <span class="eng">12 like</span></div>
+      <div class="post-line"><b>17 sept</b> — "Echipa de chirurgie" — roadshow Ploiești, Sibiu — <span class="eng">11 like · 3 share</span></div>
+      <div class="post-line"><b>17 sept</b> — "Un implant nu înseamnă doar înlocuirea unui dinte" (Iași) — <span class="eng">9 like · 1 share</span></div>
+      <div class="post-line"><b>16 sept</b> — Chirurgie cervicofacială (share Dr. Faur Cosmin-Ioan) — <span class="eng">4 like</span></div>
+      <div class="ads-box">🎯 <b>~73 reclame active</b> · ex: "Dinți ficși în 24H" reabilitare completă; parteneriat Oral-B România; "Ai amânat suficient problema dinților lipsă" (implantologie)</div>
+      <div class="obs">➜ Singura strategie de tip rețea națională cu medici circulanți — semnal de coordonare la nivel de brand, nu clinici locale izolate.</div>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="head"><span>LIFE DENTAL SPA</span><span class="badge ok">6 postări · complet</span></div>
+    <div class="body">
+      <div class="post-line"><b>20 sept</b> — "Îți ascunzi zâmbetul în fotografii...?" — <span class="eng">3 like · 1 com · 1 share</span></div>
+      <div class="post-line"><b>19 sept</b> — "Kituri de albire cumpărate de pe internet" — <span class="eng">4 like</span></div>
+      <div class="post-line"><b>18 sept</b> — "Știai că o carie poate evolua fără să doară?" — <span class="eng">7 like</span></div>
+      <div class="post-line"><b>16 sept</b> — "Ai primit recomandarea pentru extracție/implant...?" — <span class="eng">8 like · 1 share</span></div>
+      <div class="post-line"><b>15 sept</b> — "Ortho & Kids" — spațiu sigur pentru adulți și copii — <span class="eng">9 like</span></div>
+      <div class="post-line"><b>14 sept</b> — "Sănătatea gingiilor nu privește doar cavitatea orală" — <span class="eng">9 like</span></div>
+      <div class="ads-box">🎯 <b>~100 reclame active — cel mai mare volum din toată piața</b> · ex: protocol laser propriu "BIOPARO" pentru boală parodontală; simulare digitală a noului zâmbet înainte de tratament</div>
+      <div class="obs">➜ Contrast strategic clar: engagement organic modest (3-9 like/postare) dar cel mai agresiv buget de reclame din piață. Investiția lor e aproape integral paid, nu organică.</div>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="head"><span>DENTAL BLUE INTERNATIONAL</span><span class="badge ok">1 postare · gol dovedit</span></div>
+    <div class="body">
+      <div class="post-line"><b>19 sept</b> — "Îți lipsesc 5 sau mai mulți dinți? Noi avem soluția potrivită!" — <span class="eng">14 like · <b>29 share</b></span></div>
+      <div class="post-line"><span class="meta">Confirmat: următoarea postare mai veche e din 10 septembrie (eveniment pedodonție) — deci o singură postare reală în toată fereastra 14-20 sept.</span></div>
+      <div class="ads-box">🎯 <b>~10 reclame active</b> · ex: "Ai ezitat să începi tratamentul..."; reclamă nouă (din 15 sept) cu programare explicită în <b>Constanța</b> — posibil semnal de extindere geografică</div>
+      <div class="obs">➜ Cel mai mare share-count organic din tot Tier 1 (29), deși cu o singură postare. Semnalul de expansiune spre Constanța merită urmărit.</div>
+    </div>
+  </div>
+
+  <div class="brand-card viral">
+    <div class="head"><span>ELIDADENT</span><span class="badge ok">6 postări · complet (reverificat 21 sept)</span></div>
+    <div class="body">
+      <div class="post-line"><b>18 sept</b> — "Ce înseamnă o adiție de os și ce recomandă medicul după această procedură?" #elidadent #aditieos #chirurgie — <span class="eng">18 like · 10 share</span></div>
+      <div class="post-line"><b>16 sept</b> — "Toată lumea are aceeași curiozitate: Bianca de la Insula Iubirii și-a făcut albire dentară?" (tie-in cu emisiunea Antena) — <span class="eng">29 like · <b>13 share</b> 🔥</span></div>
+      <div class="post-line"><b>16 sept</b> — "Igienizare profesională EMS" — <span class="eng">20 like · 10 share</span></div>
+      <div class="post-line"><b>~15-16 sept</b> — Teaser "ÎN CURÂND" (#insulaiubirii #ispită) — <span class="eng">3 like</span></div>
+      <div class="post-line"><b>15 sept</b> — "Astăzi, Elidadent for Kids împlinește 3 ani!" (aniversare) — <span class="eng">8 like · 1 com</span></div>
+      <div class="post-line"><b>14 sept, 16:10</b> — "Ce recomandă medicul după o intervenție Fast & Fixed?" #bredent — <span class="eng">11 like · 10 share</span></div>
+      <div class="ads-box">🎯 <b>0 reclame active</b> — singurul brand din Tier 1 fără nicio prezență în Meta Ads Library. Se bazează exclusiv pe organic.</div>
+      <div class="obs">➜ <b>Corecție majoră la reverificare (21 sept):</b> raportul inițial găsise o singură postare (18 sept) din cauza aceluiași tip de blocaj tehnic la încărcarea feed-ului. Extras direct din codul paginii (text complet, chiar și cu randarea vizuală blocată), am confirmat de fapt <b>6 postări</b> — Elidadent e la egalitate cu Life Dental Spa ca volum și are cel mai bun raport distribuiri/postare din tot Tier 1: tie-in-ul cu Bianca de la Insula Iubirii (emisiune Antena) a adus 13 distribuiri, o tactică de conținut "trending" pe care niciun alt brand din raport nu a folosit-o săptămâna asta.</div>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h2 class="section-title">▶ Tier 2 — activitate pagină cu pagină <span style="text-transform:none;font-weight:400;color:#8a7a5f;">(organic + Meta Ads, scanate acum)</span></h2>
+
+  <div class="brand-card">
+    <div class="head"><span>JC DENT <span class="loc">Slobozia</span></span><span class="badge ok">2 postări</span></div>
+    <div class="body">
+      <div class="post-line"><b>18 sept</b> — Testimonial video cu un pacient copil: "Nicio recenzie din lume nu se compară cu zâmbetul ăsta de la finalul consultației!" — <span class="eng">27 like · 4 share</span></div>
+      <div class="post-line"><b>14 sept</b> — Educațional: "Ce se întâmplă de fapt după prima ta consultație la JCDent?"</div>
+      <div class="ads-box">🎯 <b>3 reclame active</b> · toate lansate azi, 21 sept · 2 variante video "implant + dinte provizoriu în aceeași zi" + un pachet de prevenție "Back to Work" pentru adulți</div>
+      <div class="obs">➜ Aceeași combinație testimonial-pediatric + educațional ca și săptămânile trecute — Slobozia este piață directă cu noi. Campania de reclame tocmai a pornit azi, deci abia urmează să capete tracțiune.</div>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="head"><span>DR. MALAMA <span class="loc">Slobozia</span></span><span class="badge ok">1 postare</span></div>
+    <div class="body">
+      <div class="post-line"><b>19 sept</b> — Aniversarea clinicii — video de celebrare la cabinet, cu flori și echipă — <span class="eng">155 like · 16 com · 1 share</span></div>
+      <div class="ads-box">🎯 <b>0 reclame active</b> — la fel ca și organic, se bazează exclusiv pe momentul aniversar, fără susținere plătită.</div>
+      <div class="obs">➜ Cel mai mare volum de engagement pe o singură postare din tot raportul (Tier 1 + Tier 2) — momentele de brand/aniversare performează puternic organic.</div>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="head"><span>ARK MED <span class="loc">Călărași</span></span><span class="badge zero">0 postări</span></div>
+    <div class="body">
+      <div class="none-box">Fără activitate în perioada 14–20 septembrie. Ultima postare vizibilă e din 7 septembrie (anunț de angajare asistentă stomatologie).</div>
+      <div class="ads-box">🎯 <b>0 reclame active</b> — inactiv și pe partea plătită, nu doar organic.</div>
+      <div class="obs">➜ Pagină inactivă de peste două săptămâni — operată ca profil personal, nu ca Page de business, ceea ce le limitează și reach-ul organic.</div>
+    </div>
+  </div>
+
+  <div class="brand-card viral">
+    <div class="head"><span>DENTRUST <span class="loc">Focșani</span></span><span class="badge ok">2 postări</span></div>
+    <div class="body">
+      <div class="post-line"><b>18 sept</b> — Reel testimonial: "Primul implant, inserat acum 14 ani. Și este în continuare stabil..." — <span class="eng">35 like · 6 share</span></div>
+      <div class="post-line"><b>15 sept</b> — Reel testimonial: "Am reînvățat să zâmbesc" — <span class="eng">20 like · 5 share</span></div>
+      <div class="ads-box">🎯 <b>~24 reclame active</b> — toate din iulie-august 2026, video-uri lungi (1-3 min) cu cazuri clinice complexe (implanturi multiple, All-on-4, adiție osoasă); niciun preț afișat explicit</div>
+      <div class="obs">➜ Strategie video-first constantă, cu accent pe rezultate pe termen lung — format ușor de replicat cu pacienți fideli. Volumul de reclame (~24, toate evergreen) arată un buget de Ads mult peste ce ne-am aștepta de la un brand Tier 2.</div>
+    </div>
+  </div>
+
+  <div class="brand-card viral">
+    <div class="head"><span>SAVIEM SMILE <span class="loc">Giurgiu</span></span><span class="badge ok">3 postări</span></div>
+    <div class="body">
+      <div class="post-line"><b>19 sept</b> — Educațional: "Ce înseamnă obturația termoplastică și de ce este standardul de aur în endodonție?"</div>
+      <div class="post-line"><b>~17 sept</b> — Promo comunitate: "Grup Privat de WhatsApp — Locuri libere de ultim moment" — <span class="eng">4 like · 1 share</span></div>
+      <div class="post-line"><b>16 sept</b> — Video educațional despre regenerarea osului alveolar / tratament de canal — <span class="eng">30 share</span></div>
+      <div class="ads-box">🎯 <b>0 reclame active</b> — mizează exclusiv pe organic și pe comunitatea de WhatsApp.</div>
+      <div class="obs">➜ Singurul competitor Tier 2 care construiește activ o comunitate privată pe WhatsApp direct din Facebook — tactică de retenție/programări demnă de testat.</div>
+    </div>
+  </div>
+
+  <div class="brand-card viral">
+    <div class="head"><span>CLINICA DENTALIST <span class="loc">București</span></span><span class="badge ok">2 postări</span></div>
+    <div class="body">
+      <div class="post-line"><b>17 sept</b> — Ședință foto de echipă (medici în ținută orange) + "Dincolo de tratamente și rezultate, construim relații bazate pe încredere" — <span class="eng">4 like</span></div>
+      <div class="post-line"><b>14 sept</b> — Educațional: "Când alegi între fațete și albire, contează ceea ce îți dorești să schimbi" — <span class="eng">5 like</span></div>
+      <div class="ads-box">🎯 <b>~37 reclame active</b> — aproape toate variante A/B ale aceluiași video, "Prima vizită la dentist începe cu o conversație", lansate azi (21 sept); plus 4 reclame mai vechi (mai 2026) de recrutare asistenți</div>
+      <div class="obs">➜ Mixează branding de echipă cu conținut umoristic/relatable ("POV: Dentists on a daily basis") — ton mai tânăr, orientat spre reels stil TikTok. Pe partea plătită, testează masiv (~30+ variante) o singură reclamă video lansată chiar azi — semn de test agresiv de creative, nu de buget mare susținut.</div>
+    </div>
+  </div>
+
+  <div class="brand-card viral">
+    <div class="head"><span>DENT PRIORITY <span class="loc">Craiova</span></span><span class="badge ok">3 postări</span></div>
+    <div class="body">
+      <div class="post-line"><b>20 sept</b> — Mesaj aniversar pentru un medic din echipă (Dr. Elyass Bădină)</div>
+      <div class="post-line"><b>19 sept</b> — <b>Plasare media:</b> Dr. Elyass Bădină a discutat cu jurnaliștii de la <b>G4Food.ro</b> despre efectul zahărului și alimentelor acide asupra dinților</div>
+      <div class="post-line"><b>17 sept</b> — Video cu recenzii de pacienți: "Ce îi face pe pacienții noștri să ne aleagă de fiecare dată?" — <span class="eng">16 like · 2 share</span></div>
+      <div class="ads-box">🎯 <b>~59 reclame active — cel mai mare volum din tot Tier 2</b> · rețea multi-oraș (Craiova, Târgu Jiu, Slatina, Caracal) cu reclame dedicate pe oraș pentru implantologie digitală, ortodonție și pedodonție</div>
+      <div class="obs">➜ Alături de DENT ESTET × Medikatv, singurul câștig de presă/PR din tot raportul săptămâna asta. Pe Ads, Dent Priority se dovedește de fapt o rețea mică multi-oraș, nu o clinică unică — cel mai mare volum de reclame din tot Tier 2, comparabil cu Tier 1.</div>
+    </div>
+  </div>
+
+  <div class="brand-card viral">
+    <div class="head"><span>EDENT CLINIC <span class="loc">București</span></span><span class="badge ok">1 postare</span></div>
+    <div class="body">
+      <div class="post-line"><b>16 sept</b> — Video lifestyle în engleză: "Kinda chic to go to a technologically advanced clinic" — <span class="eng">9 like</span></div>
+      <div class="ads-box">🎯 <b>~16 reclame active</b> · preț explicit — Pachet START EDENT <b>250 Lei</b> (consultație + igienizare completă), plus pachete Back to School pentru copii (Louis Blanc și Tulcea)</div>
+      <div class="obs">➜ O singură postare organică în toată săptămâna — cel mai scăzut volum alături de Dr. Malama — dar pe Ads e activ și concret: singurul brand din tot Tier 2 cu un preț exact afișat în reclamă.</div>
+    </div>
+  </div>
+
+  <div class="brand-card viral">
+    <div class="head"><span>AS DENTAL SLOBOZIA <span class="loc">Slobozia</span></span><span class="badge ok">2 postări</span></div>
+    <div class="body">
+      <div class="post-line"><b>18 sept</b> — Reel myth-busting: "Nu ai suficient os pentru un implant dentar?" — medicul răspunde direct la cameră — <span class="eng">12 like · <b>57 share</b> 🔥</span></div>
+      <div class="post-line"><b>16 sept</b> — Reel myth-busting: "Ești prea bătrân pentru un implant dentar?" — <span class="eng">82 like · 42 com · 5 share</span></div>
+      <div class="ads-box">🎯 <b>0 reclame active</b> — căutarea în Meta Ads Library pentru "As Dental" a fost prea generică (peste 50.000 rezultate, majoritatea irelevante); nu am găsit nicio reclamă atribuibilă clar clinicii din Slobozia.</div>
+      <div class="obs">➜ Cel mai bun raport distribuiri/vizualizare din tot raportul — 57 distribuiri e un semnal puternic de format care merită testat și de noi, în Slobozia sau la nivel de rețea. Pare să se bazeze exclusiv pe organic.</div>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h2 class="section-title">▶ Teme recurente pe toată piața</h2>
+  <div class="card">
+    <ul class="bullets">
+      <li><b>Reels FAQ / myth-busting</b> cu medicul la cameră — As Dental și Saviem Smile (Tier 2) — format ieftin, engagement peste medie, inclusiv cel mai viral post din tot raportul.</li>
+      <li><b>Testimoniale de pacienți pe termen lung</b> — Dentrust, JC Dent (Tier 2), DENT ESTET și noi (Tier 1/noi) — construiesc încredere fără buget de producție mare.</li>
+      <li><b>Apariții media/presă</b> — DENT ESTET (Medikatv) și Dent Priority (G4Food.ro) — doar 2 din 15 branduri; canal cu loc de creștere pentru oricine intră primul mai agresiv.</li>
+      <li><b>Momente de brand/echipă</b> — aniversări (Dr. Malama, Dent Priority), ședințe foto (Dentalist), roadshow-uri (Regina Maria) — conținut de relaționare, nu de conversie directă.</li>
+      <li><b>Reclamele plătite rămân concentrate la Tier 1</b> — Life Dental Spa (~100 active) domină clar bugetul de Ads din toată piața; niciun brand Tier 2 nu a fost verificat pe acest canal în această ediție.</li>
+      <li><b>Conținut "trending"/pop-cultură</b> — Elidadent a legat o postare de un subiect viral local (Bianca de la Insula Iubirii, emisiune Antena) și a obținut cel mai bun raport distribuiri/postare din Tier 1 — singurul brand din tot raportul care a folosit această tactică.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">▶ Ce facem noi săptămâna următoare</h2>
+  <div class="rec"><b>1. Ritmul nostru e deja la nivelul pieței</b> (13 postări, egal cu DENT ESTET) — următorul pas e diversificarea formatelor: testăm un reel myth-busting cu medicul la cameră (As Dental, 57 distribuiri) sau un format tip "roadshow" (Regina Maria).</div>
+  <div class="rec"><b>2. Explorăm o plasare media locală</b>, după modelul Dent Priority × G4Food.ro sau DENT ESTET × Medikatv — doar 2 din 15 branduri au avut apariții media săptămâna asta, deci e un canal încă subexploatat.</div>
+  <div class="rec"><b>3. De verificat:</b> dacă avem un protocol propriu comparabil cu "BIOPARO" (Life Dental Spa) pentru tratamente parodontale — ei investesc masiv în reclame pe exact acest unghi.</div>
+  <div class="rec"><b>4. De monitorizat două semnale opuse în piețele adiacente:</b> reclama Dental Blue cu programare în Constanța (posibilă extindere) și inactivitatea totală a Ark Med în Călărași (competitor care pierde teren).</div>
+  <div class="rec"><b>5. Prioritizăm conținut pentru Slobozia:</b> JC Dent, Dr. Malama și As Dental sunt toate active acolo — rămâne cea mai fierbinte piață Tier 2 de apărat săptămâna asta.</div>
+  <div class="rec"><b>6. Testăm un tie-in cu un subiect trending local</b> (emisiune TV, eveniment cultural) — Elidadent a obținut cele mai multe distribuiri din tot Tier 1 legând o postare de Insula Iubirii; e un format ieftin, ușor de replicat, cu potențial de reach organic peste medie.</div>
+  <div class="rec"><b>7. De verificat structura Dent Priority:</b> ~59 de reclame active pe mai multe orașe (Craiova, Târgu Jiu, Slatina, Caracal) arată o rețea în expansiune, nu o clinică izolată — merită să înțelegem dacă ne apropie de piețele noastre.</div>
+</section>
+
+<footer class="verif">
+  <h3>Footer — Date de verificare</h3>
+  <h4>Tier 1</h4>
+  <ul>
+    <li>Brand-uri scanate: <b>6/6</b> (organic + Meta Ads Library)</li>
+    <li>Confirmate <b>complet</b>: Dr. Ardeleanu, Regina Maria, Life Dental Spa, Dental Blue, <b>Elidadent (reverificat 21 sept — corectat de la 1 la 6 postări)</b></li>
+    <li>Parțial confirmat: DENT ESTET — reverificat 21 sept, blocaj tehnic la încărcarea feed-ului reprodus identic (tab nou, reload, așteptări 8-10s); 14-15 sept rămân neconfirmate, dar am găsit o postare suplimentară pe 18 sept care lipsea inițial</li>
+    <li>Sursă reclame: Meta Ads Library (oficial Meta) ✓</li>
+    <li>Sursă organic: Claude in Chrome, cont logat ✓ — pentru Elidadent, extragerea directă a textului paginii a confirmat postările chiar și cu randarea vizuală blocată</li>
+    <li>Confidence level: <span class="confidence conf-high">RIDICAT</span> pe 5 din 6 branduri; <span class="confidence conf-med">MEDIU</span> doar pe DENT ESTET (limitare tehnică, nu de proces)</li>
+  </ul>
+  <h4>Tier 2</h4>
+  <ul>
+    <li>Brand-uri scanate: <b>9/9</b> — confirmate complet, organic + Meta Ads Library</li>
+    <li>Reclame Meta Ads Library: scanate acum pentru toate cele 9 branduri (inițial excluse din scop, adăugate ulterior)</li>
+    <li>Fără reclame active găsite: Saviem Smile, Dr. Malama, Ark Med</li>
+    <li>Căutare neconcludentă (termen prea generic, rezultate majoritar irelevante): As Dental Slobozia</li>
+    <li>Sursă organic: Claude in Chrome, cont logat ✓</li>
+    <li>Sursă reclame: Meta Ads Library (oficial Meta) ✓</li>
+    <li>Confidence level: <span class="confidence conf-high">RIDICAT</span> pe organic și pe brandurile cu reclame confirmate clar; <span class="confidence conf-med">MEDIU</span> doar pe As Dental Slobozia (Ads)</li>
+  </ul>
+  <ul>
+    <li style="margin-top:8px;">Raport unificat din raportul Tier 1 (compilat manual) și raportul Tier 2 (generat de skill-ul competitor-weekly-facebook v1.0), 21 sept 2026 · DENT ESTET și Elidadent reverificate ulterior, în aceeași zi</li>
+  </ul>
+</footer>
+
+<div class="din2017">DIN 2017</div>
+
+</div>
+</body>
+</html>
