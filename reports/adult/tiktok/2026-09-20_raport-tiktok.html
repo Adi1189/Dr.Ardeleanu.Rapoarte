@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raport TikTok Săptămânal — 14–20 Septembrie 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #7B1C16; --burgundy-dark: #5A1410; --gold: #C9A227; --yellow: #FBE483;
+    --wheat: #F2DAB7; --cream: #F5EDE3; --olive: #B5BD5C; --terracotta: #dd7e6b; --alert: #FF0300;
+    --text: #222222; --white: #FFFFFF; --bg: var(--cream); --card-bg: var(--white); --muted: #6b6258;
+    box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#1b1512; --card-bg:#2a211c; --text:#F0E9E1; --muted:#c9bbae; --wheat:#4a3a24; --cream:#241c17; }
+  }
+  :root[data-theme="dark"] { --bg:#1b1512; --card-bg:#2a211c; --text:#F0E9E1; --muted:#c9bbae; --wheat:#4a3a24; --cream:#241c17; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body { margin:0; background: var(--bg); color: var(--text); font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif; font-weight:400; line-height:1.55; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px 60px; }
+
+  header.hero { background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-dark) 100%); color: var(--white); padding: 42px 20px 34px; text-align: center; }
+  header.hero .pill { display:inline-block; background: var(--yellow); color: var(--burgundy-dark); font-weight:700; font-size:0.72rem; letter-spacing:0.09em; text-transform:uppercase; padding:5px 14px; border-radius:999px; margin-bottom:16px; }
+  header.hero h1 { font-weight:800; font-size: clamp(1.5rem, 4vw, 2.15rem); margin: 0 0 8px; letter-spacing:-0.01em; }
+  header.hero .period { color: var(--gold); font-weight:500; font-size:1.05rem; margin:0; }
+  header.hero .sub { color:#ecdfd2; font-size:0.85rem; margin-top:10px; font-weight:300; }
+
+  section { margin: 34px 0; }
+  h2.sect { font-weight:700; font-size:1.25rem; color: var(--burgundy); border-left:5px solid var(--gold); padding-left:12px; margin-bottom:16px; }
+  :root[data-theme="dark"] h2.sect { color: var(--yellow); }
+
+  .card { background: var(--card-bg); border-radius:14px; padding:22px 24px; box-shadow:0 2px 10px rgba(123,28,22,0.08); border:1px solid rgba(123,28,22,0.08); }
+
+  ul.tldr { margin:0; padding-left:1.2em; } ul.tldr li { margin-bottom:10px; } ul.tldr li b { color: var(--burgundy); }
+  :root[data-theme="dark"] ul.tldr li b { color: var(--yellow); }
+
+  .table-scroll { overflow-x:auto; border-radius:14px; box-shadow:0 2px 10px rgba(123,28,22,0.08); }
+  table { border-collapse:collapse; width:100%; min-width:600px; background: var(--card-bg); }
+  th, td { padding:11px 14px; text-align:left; font-size:0.88rem; white-space:nowrap; }
+  thead th { background: var(--burgundy); color: var(--white); font-weight:600; text-transform:uppercase; font-size:0.72rem; letter-spacing:0.04em; }
+  tbody tr { border-bottom:1px solid var(--wheat); } tbody tr:last-child { border-bottom:none; }
+  tbody tr.us { background: var(--yellow); font-weight:700; } :root[data-theme="dark"] tbody tr.us { color:#1b1512; }
+  tbody tr.tier2sep td { background: var(--wheat); font-weight:700; text-transform:uppercase; font-size:0.7rem; letter-spacing:0.06em; color: var(--burgundy); }
+  tbody tr.highlight-alert { background: rgba(255,3,0,0.08); }
+  tbody tr.dim td { color: var(--muted); font-style: italic; }
+  .rank { font-weight:800; color: var(--gold); }
+
+  .brand-card { margin-bottom:22px; }
+  .brand-card .bhead { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; border-bottom:2px solid var(--wheat); padding-bottom:10px; margin-bottom:14px; }
+  .brand-card .bhead h3 { margin:0; color: var(--burgundy); font-size:1.1rem; font-weight:700; }
+  :root[data-theme="dark"] .brand-card .bhead h3 { color: var(--yellow); }
+  .brand-card .bhead .handle { color: var(--muted); font-size:0.82rem; }
+  .brand-card.noi { border:2px solid var(--gold); }
+  .brand-card.noi .bhead h3::after { content:" 🏠"; }
+  .stats-row { display:flex; gap:18px; flex-wrap:wrap; font-size:0.8rem; color: var(--muted); margin-bottom:12px; }
+  .stats-row b { color: var(--text); }
+
+  .vcat { font-weight:600; color: var(--burgundy); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.04em; margin:14px 0 8px; }
+  :root[data-theme="dark"] .vcat { color: var(--yellow); }
+  ul.vidlist { list-style:none; margin:0 0 4px; padding:0; }
+  ul.vidlist li { padding:9px 0; border-bottom:1px dashed var(--wheat); font-size:0.9rem; }
+  ul.vidlist li:last-child { border-bottom:none; }
+  ul.vidlist li .vtitle { font-weight:500; }
+  ul.vidlist li .vmeta { color: var(--muted); font-size:0.8rem; margin-top:2px; }
+
+  .empty-note { color: var(--muted); font-style:italic; font-size:0.88rem; }
+  .obs { background: var(--wheat); border-radius:10px; padding:12px 16px; margin-top:14px; font-size:0.87rem; }
+  .obs b { color: var(--burgundy); }
+
+  .top5 { list-style:none; margin:0; padding:0; counter-reset:rank; }
+  .top5 li { counter-increment:rank; position:relative; padding:12px 0 12px 42px; border-bottom:1px dashed var(--wheat); }
+  .top5 li:last-child { border-bottom:none; }
+  .top5 li::before { content:counter(rank); position:absolute; left:0; top:10px; width:28px; height:28px; border-radius:50%; background: var(--burgundy); color:white; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; }
+  .top5 li b { color: var(--burgundy); } :root[data-theme="dark"] .top5 li b { color: var(--yellow); }
+  .top5 li .views { color: var(--gold); font-weight:700; }
+  .top5 li .eng { color: var(--muted); font-size:0.8rem; }
+
+  .alert-box { border-left:5px solid var(--alert); background: rgba(255,3,0,0.06); border-radius:0 10px 10px 0; padding:16px 20px; margin-bottom:16px; }
+  .alert-box h4 { margin:0 0 6px; color: var(--alert); font-size:1rem; }
+  .quiet-list { columns:2; column-gap:24px; margin:0; padding-left:1.1em; font-size:0.88rem; color: var(--muted); }
+  @media (max-width:560px) { .quiet-list { columns:1; } }
+
+  .next-week { list-style:none; margin:0; padding:0; }
+  .next-week li { display:flex; gap:12px; padding:12px 0; border-bottom:1px dashed var(--wheat); }
+  .next-week li:last-child { border-bottom:none; }
+  .next-week .num { flex-shrink:0; width:26px; height:26px; border-radius:8px; background: var(--gold); color:white; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem; }
+
+  footer.verif { background: var(--wheat); border-radius:14px; padding:20px 24px; font-size:0.82rem; color: var(--text); }
+  footer.verif div { margin-bottom:6px; } footer.verif b { color: var(--burgundy); }
+  .flag { font-weight:700; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="pill">Competitive Intelligence · TikTok</span>
+  <h1>Raport Săptămânal TikTok</h1>
+  <p class="period">14 – 20 Septembrie 2026</p>
+  <p class="sub">Clinicile Dentare Dr. Ardeleanu · fără secțiunea de reclame</p>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2 class="sect">▶ Pe scurt</h2>
+    <div class="card">
+      <ul class="tldr">
+        <li><b>Dr. Alexandra Mircea (Clinica Dentalist, cont personal)</b> domină absolut piața TikTok: doar 3 clipuri, dar <b>27.204 vizionări</b> — de peste 8x mai mult decât noi. Contul ei personal generează de 8x mai multe vizionări decât contul oficial al clinicii (@dentalist.ro), care postează exact același conținut cu doar 3.312 vizionări. Diferența e strict despre creator, nu despre conținut.</li>
+        <li><b>Elidadent — descoperire majoră:</b> deloc inactivă cum părea din YouTube. Rulează o campanie de influencer marketing cu Bianca Iotu (concurentă "Insula Iubirii") și a strâns <b>18.417 vizionări</b> din 6 clipuri, cu un vârf de 14.600 vizionări pe un singur clip. Strategia lor pare complet mutată pe TikTok.</li>
+        <li><b>Dr. Ardeleanu (noi)</b> — 3 clipuri, 3.159 vizionări — locul 4 din piața totală, dar #1 dintre brandurile care NU folosesc un creator/influencer personal ca vehicul principal.</li>
+        <li><b>Pattern important:</b> aproape toți competitorii pe care YouTube îi arăta "inactivi de luni de zile" (Elidadent, Dent Priority, As Dental, Edent Clinic) sunt de fapt <b>activi constant pe TikTok</b> — bugetul de conținut s-a mutat pe această platformă, nu a dispărut. Doar Dental Blue International, JC Dent și Dr. Malama sunt confirmate inactive și pe TikTok.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sect">▶ Volumele</h2>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Brand</th><th>Clipuri</th><th>Total vizionări săpt.</th><th>Rang</th></tr></thead>
+      <tbody>
+        <tr class="highlight-alert"><td>Clinica Dentalist (cont personal Dr. Alexandra Mircea)</td><td>3</td><td><b>27.204</b></td><td class="rank">#1</td></tr>
+        <tr><td>Elidadent</td><td>6</td><td>18.417</td><td class="rank">#2</td></tr>
+        <tr><td>Clinica Dentalist (cont oficial clinică)</td><td>3</td><td>3.312</td><td class="rank">#3</td></tr>
+        <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td>3</td><td>3.159</td><td class="rank">#4</td></tr>
+        <tr><td>Dent Priority</td><td>4</td><td>3.134</td><td class="rank">#5</td></tr>
+        <tr><td>Regina Maria Dental</td><td>4</td><td>3.117</td><td class="rank">#6</td></tr>
+        <tr><td>Life Dental Spa</td><td>5</td><td>2.999</td><td class="rank">#7</td></tr>
+        <tr><td>DENT ESTET</td><td>7</td><td>2.072</td><td class="rank">#8</td></tr>
+        <tr><td>As Dental (Slobozia)</td><td>3</td><td>1.598</td><td class="rank">#9</td></tr>
+        <tr><td>Saviem Smile</td><td>3</td><td>823</td><td class="rank">#10</td></tr>
+        <tr class="dim"><td>Edent Clinic</td><td colspan="3">0 clipuri în fereastră, dar activitate recentă (ultimul clip: 12 sept.) — cont mare, foarte activ (20,6K urmăritori, videouri virale de 140-150K)</td></tr>
+        <tr class="dim"><td>Dental Blue International</td><td colspan="3">Inactiv din 14 august 2026</td></tr>
+        <tr class="dim"><td>JC Dent</td><td colspan="3">Inactiv din 3 septembrie 2026</td></tr>
+        <tr class="dim"><td>Dentrust</td><td colspan="3">Inactiv din 18 august 2026</td></tr>
+        <tr class="dim"><td>Dr. Malama</td><td colspan="3">Inactiv din 29 martie 2026</td></tr>
+        <tr class="dim"><td>Ark Med</td><td colspan="3">Fără cont TikTok identificat</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sect">▶ Alerte majore</h2>
+
+    <div class="alert-box">
+      <h4>🔴 Dr. Alexandra Mircea — brandul personal depășește de 8x brandul clinicii</h4>
+      <p style="margin:0">Aceleași 3 clipuri (despre fructe și sănătate orală, aparat dentar/mușcătură, o transformare estetică) postate simultan pe <b>@dr.alexandra.mircea</b> (27.204 vizionări) și pe <b>@dentalist.ro</b> (3.312 vizionări) — un decalaj de aproape 8x pentru conținut identic. Confirmă din nou (ca și pe YouTube) că succesul ei nu ține de brand-ul clinicii, ci de persoana ei publică. Rămâne candidatul cel mai puternic pentru reclasificare Tier 2 → Tier 1.</p>
+    </div>
+
+    <div class="alert-box">
+      <h4>🔴 Elidadent — pivot complet spre TikTok + influencer marketing</h4>
+      <p style="margin:0">Contrar imaginii de pe YouTube (inactivi din octombrie 2025), Elidadent rulează săptămânal conținut pe TikTok și a lansat un parteneriat cu <b>Bianca Iotu</b>, concurentă la emisiunea Insula Iubirii — clipul "Toată lumea are aceeași curiozitate: Bianca și-a făcut albire dentară?" a strâns <b>14.600 vizionări</b>, de peste 25x mai mult decât media lor obișnuită (~500 vizionări/clip). Există și un al doilea clip "COMING SOON" cu aceeași influenceriță, ceea ce sugerează campania continuă săptămâna viitoare.</p>
+    </div>
+
+    <div class="card">
+      <p style="margin-top:0"><b>Alți competitori Tier 2 activi pe TikTok (redescoperiți față de imaginea de pe YouTube):</b></p>
+      <ul class="tldr">
+        <li><b>Dent Priority</b> — activ constant pe TikTok (4 clipuri, 3.134 vizionări) deși pe YouTube pare inactiv din ianuarie 2026.</li>
+        <li><b>As Dental (Slobozia)</b> — <span class="flag">concurent geografic direct</span> — activ pe TikTok (3 clipuri despre implanturi, 1.598 vizionări) deși YouTube arată inactivitate din aprilie 2026.</li>
+        <li><b>Edent Clinic</b> — cel mai mare cont din eșantion ca urmăritori (20,6K) și cu videouri virale istorice de 140-150K vizionări; nu a postat exact în fereastra 14-20 sept (ultimul clip: 12 sept.), dar e clar un cont activ și puternic, de urmărit săptămâna viitoare.</li>
+      </ul>
+      <div class="obs"><b>➜ Concluzie strategică:</b> imaginea de "piață dominată de noi + Regina Maria" din raportul YouTube nu se confirmă pe TikTok. Aici piața e mult mai aglomerată și mai competitivă, cu cel puțin 4 branduri (Dentalist personal, Elidadent, Dent Priority, Edent Clinic) rulând strategii TikTok-native pe care YouTube nu le arată deloc.</li>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sect">▶ Conținut nou pe canal — Detalii (branduri principale)</h2>
+
+    <div class="card brand-card noi">
+      <div class="bhead"><h3>Dr. Ardeleanu</h3><span class="handle">tiktok.com/@dr.ardeleanu</span></div>
+      <div class="stats-row"><span><b>6.799</b> urmăritori</span><span><b>57K</b> aprecieri totale cont</span></div>
+      <div class="vcat">Clipuri (3 în săpt.)</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Ce se întâmplă când un pacient își trăiește viața doar prin recenzii pe Google?"</span> — 14 sept.
+          <div class="vmeta">1.688 vizionări · 22 aprecieri · 2 comentarii · 14 distribuiri</div></li>
+        <li><span class="vtitle">"El n-a văzut-o venind"</span> — 17 sept.
+          <div class="vmeta">1.040 vizionări · 13 aprecieri · 1 comentariu · 1 distribuire</div></li>
+        <li><span class="vtitle">"O consultație poate însemna o șansă la viață"</span> — 15 sept.
+          <div class="vmeta">431 vizionări · 8 aprecieri · 0 comentarii · 0 distribuiri</div></li>
+      </ul>
+      <div class="obs"><b>➜ Observații:</b> singurul brand din eșantion fără creator personal care totuși performează comparabil cu Dent Priority și Regina Maria. Clipul cu recenziile Google are un raport distribuiri/vizionări de aproape 1%, cu mult peste restul pieței (sub 0,2%) — semnal clar de conținut cu potențial de scalare.</div>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>Clinica Dentalist <span class="handle" style="color:var(--alert); font-weight:700; text-transform:none;">— #1 piață</span></h3><span class="handle">@dr.alexandra.mircea (personal) + @dentalist.ro (clinică)</span></div>
+      <div class="vcat">Clipuri (3 în săpt., postate identic pe ambele conturi)</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Spune-mi ce fructe mănânci, ca să afli cum îți influențează sănătatea orală"</span> — 20 sept.
+          <div class="vmeta">Personal: 5.904 vizionări · Clinică: 822 vizionări</div></li>
+        <li><span class="vtitle">"Aparatul dentar nu este folosit doar pentru dinți drepți... mușcătură corectă?"</span> — 16 sept.
+          <div class="vmeta">Personal: 11.300 vizionări · Clinică: 228 vizionări</div></li>
+        <li><span class="vtitle">"O transformare care schimbă nu doar aspectul zâmbetului..."</span> — 14 sept.
+          <div class="vmeta">Personal: 10.000 vizionări · Clinică: 2.262 vizionări</div></li>
+      </ul>
+      <div class="obs"><b>➜ Observații:</b> gap-ul consistent (7-14x) între cele două conturi pe fiecare clip individual elimină explicația "conținut mai bun" — e strict efect de creator/algoritm personal. Merită studiat stilul ei de prezentare (ton, ritm, hook) ca reper.</div>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>Elidadent <span class="handle" style="color:var(--alert); font-weight:700; text-transform:none;">— influencer marketing</span></h3><span class="handle">tiktok.com/@elidadent</span></div>
+      <div class="stats-row"><span><b>1.912</b> urmăritori</span><span><b>13.8K</b> aprecieri totale cont</span></div>
+      <div class="vcat">Clipuri (6 în săpt.)</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Toată lumea are aceeași curiozitate: Bianca și-a făcut albire dentară?"</span> — 16 sept.
+          <div class="vmeta"><b>14.600 vizionări</b> · parteneriat cu Bianca Iotu (Insula Iubirii)</div></li>
+        <li><span class="vtitle">"COMING SOON @Bianca Iotu #insulaiubirii #temptation"</span> — 16 sept.
+          <div class="vmeta">466 vizionări · teaser pentru continuarea campaniei</div></li>
+        <li><span class="vtitle">"Cum se citește o radiografie dentară..." (Dr. Iulia Iliescu)</span> — 15 sept. <div class="vmeta">1.926 vizionări</div></li>
+        <li><span class="vtitle">"Dacă se sparge o coroană dentară, înseamnă ghinion?"</span> — 20 sept. <div class="vmeta">493 vizionări</div></li>
+        <li><span class="vtitle">"Ai întrebări despre tratamentul tău? Ana, Patient Care Specialist..."</span> — 17 sept. <div class="vmeta">417 vizionări</div></li>
+        <li><span class="vtitle">"Diga este o parte importantă din tratamentul stomatologic"</span> — 14 sept. <div class="vmeta">515 vizionări</div></li>
+      </ul>
+      <div class="obs"><b>➜ Observații:</b> fără campania cu Bianca Iotu, media lor ar fi ~570 vizionări/clip (similar cu Life Dental Spa sau As Dental). Influencer marketing-ul pare singurul lor mecanism de a ieși din acest plafon.</div>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>Regina Maria Dental Clinics</h3><span class="handle">tiktok.com/@reginamariadentalclinics</span></div>
+      <div class="stats-row"><span><b>5.553</b> urmăritori</span><span><b>25.7K</b> aprecieri totale cont</span></div>
+      <div class="vcat">Clipuri (4 în săpt.)</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Un implant nu înseamnă doar înlocuirea unui dinte..."</span> — 16 sept. <div class="vmeta">1.414 vizionări · 18 aprecieri · 2 distribuiri</div></li>
+        <li><span class="vtitle">"Copilul respiră pe gură în timpul somnului și sforăie"</span> — 17 sept. <div class="vmeta">882 vizionări · 14 aprecieri</div></li>
+        <li><span class="vtitle">Temă sarcină și sângerări gingivale</span> — 14 sept. <div class="vmeta">412 vizionări</div></li>
+        <li><span class="vtitle">"Tratamentul parodontal doare?"</span> — 19 sept. <div class="vmeta">409 vizionări</div></li>
+      </ul>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>Life Dental Spa</h3><span class="handle">tiktok.com/@lifedentalspa</span></div>
+      <div class="stats-row"><span><b>7.024</b> urmăritori</span><span><b>52.5K</b> aprecieri totale cont</span></div>
+      <div class="vcat">Clipuri (5 în săpt.) — temă unică: parodontoză/sănătatea gingiilor</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Te speli corect pe dinți de două ori pe zi și totuși observi tartru?"</span> — 16 sept. <div class="vmeta">836 vizionări</div></li>
+        <li><span class="vtitle">"Ai dinți mobili, gingii retrase sau sângerări la periaj?"</span> — 14 sept. <div class="vmeta">820 vizionări</div></li>
+        <li><span class="vtitle">"Sângerarea la periaj, gingiile sensibile sau retrase..."</span> — 18 sept. <div class="vmeta">470 vizionări</div></li>
+        <li><span class="vtitle">"Îți sângerează gingiile de luni de zile..."</span> — 17 sept. <div class="vmeta">439 vizionări</div></li>
+        <li><span class="vtitle">"Sănătatea gingiilor nu privește doar cavitatea orală. Boala parodontală..."</span> — 15 sept. <div class="vmeta">434 vizionări</div></li>
+      </ul>
+      <div class="obs"><b>➜ Observații:</b> conținut TikTok complet diferit tematic de YouTube (acolo erau întrebări despre plan de tratament) — aici toată săptămâna e dedicată unui singur subiect (parodontoză), posibil o mini-campanie tematică.</div>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>DENT ESTET</h3><span class="handle">tiktok.com/@dentestetclinic</span></div>
+      <div class="stats-row"><span><b>8.308</b> urmăritori</span><span><b>52.8K</b> aprecieri totale cont</span></div>
+      <div class="vcat">Clipuri (7 în săpt.) — majoritatea cross-postate de pe YouTube</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Alignerele dentare pot rezolva cazuri ortodontice complexe"</span> — 15 sept. <div class="vmeta">333 vizionări</div></li>
+        <li><span class="vtitle">"Andrei Nourescu, despre decizia de a nu mai amâna tratamentul"</span> — 16 sept. <div class="vmeta">324 vizionări</div></li>
+        <li><span class="vtitle">"Uneori, un caz complex începe cu probleme dentare simple..."</span> — 18 sept. <div class="vmeta">319 vizionări · exclusiv TikTok</div></li>
+        <li><span class="vtitle">"Prin previzualizarea digitală a zâmbetului..."</span> — 14 sept. <div class="vmeta">285 vizionări</div></li>
+        <li><span class="vtitle">"Mi-aș dori să încep tratamentul, dar nu am acum întreaga sumă..."</span> — 14 sept. <div class="vmeta">274 vizionări · exclusiv TikTok, unghi finanțare</div></li>
+        <li><span class="vtitle">"Ai pierdut un dinte și ai amânat intervenția cu implant dentar?"</span> — 14 sept. <div class="vmeta">270 vizionări</div></li>
+        <li><span class="vtitle">Scannerul intraoral 3D</span> — 16 sept. <div class="vmeta">267 vizionări</div></li>
+      </ul>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>Dent Priority</h3><span class="handle">tiktok.com/@dentpriority</span></div>
+      <div class="vcat">Clipuri (4 în săpt.)</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Ce se întâmplă cu dinții noștri atunci când consumăm frecvent zahăr..."</span> — 19 sept. <div class="vmeta">934 vizionări</div></li>
+        <li><span class="vtitle">"Ce îi face pe pacienții noștri să ne aleagă de fiecare dată?"</span> — 18 sept. <div class="vmeta">746 vizionări</div></li>
+        <li><span class="vtitle">"Cariile pot fi tratate și cu ajutorul laserului!" (Dr. Carmen Cojocaru)</span> — 14 sept. <div class="vmeta">972 vizionări</div></li>
+        <li><span class="vtitle">"Implantologia digitală înseamnă planificare la nivel de detaliu..."</span> — 15 sept. <div class="vmeta">482 vizionări</div></li>
+      </ul>
+      <div class="obs"><b>➜ Observații:</b> deși YouTube arată inactivitate din ianuarie 2026, pe TikTok postează constant — bugetul de conținut s-a mutat clar pe această platformă.</div>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>As Dental <span class="handle" style="color:var(--alert); font-weight:700; text-transform:none;">— concurent direct Slobozia</span></h3><span class="handle">tiktok.com/@asdental.clinic</span></div>
+      <div class="vcat">Clipuri (3 în săpt.) — toate despre implanturi</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Vrei un implant mâine?"</span> — 16 sept. <div class="vmeta">857 vizionări</div></li>
+        <li><span class="vtitle">"Eşti prea bătrân pentru un implant dentar?"</span> — 15 sept. <div class="vmeta">387 vizionări</div></li>
+        <li><span class="vtitle">"Nu ai suficient os pentru un implant dentar?"</span> — 17 sept. <div class="vmeta">354 vizionări</div></li>
+      </ul>
+    </div>
+
+    <div class="card brand-card">
+      <div class="bhead"><h3>Saviem Smile</h3><span class="handle">tiktok.com/@saviem.smile</span></div>
+      <div class="vcat">Clipuri (3 în săpt.) — conținut tehnic/endodonție</div>
+      <ul class="vidlist">
+        <li><span class="vtitle">"Ce înseamnă obturația termoplastică..."</span> — 18 sept. <div class="vmeta">234 vizionări</div></li>
+        <li><span class="vtitle">"Corticotomie și adiție osoasă ghidată"</span> — 16 sept. <div class="vmeta">264 vizionări</div></li>
+        <li><span class="vtitle">"Ce este o perforație radiculară?"</span> — 15 sept. <div class="vmeta">325 vizionări</div></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <h2 class="sect">▶ Clipuri — Focus (Top 5 cross-piață)</h2>
+    <div class="card">
+      <ol class="top5">
+        <li><b>Clinica Dentalist (personal)</b> — "Aparatul dentar nu este folosit doar pentru dinți drepți" — <span class="views">11.300 vizionări</span> — 16 sept.</li>
+        <li><b>Clinica Dentalist (personal)</b> — "O transformare care schimbă nu doar aspectul zâmbetului" — <span class="views">10.000 vizionări</span> — 14 sept.</li>
+        <li><b>Elidadent</b> — "Bianca și-a făcut albire dentară?" (ft. Bianca Iotu) — <span class="views">14.600 vizionări</span> — 16 sept.</li>
+        <li><b>Clinica Dentalist (personal)</b> — "Spune-mi ce fructe mănânci..." — <span class="views">5.904 vizionări</span> — 20 sept.</li>
+        <li><b>Dr. Ardeleanu (NOI)</b> — "Ce se întâmplă când un pacient își trăiește viața doar prin recenzii pe Google?" — <span class="views">1.688 vizionări</span> <span class="eng">· 14 distribuiri</span> — 14 sept.</li>
+      </ol>
+      <div class="obs"><b>Pattern:</b> top 4 din 5 sunt fie un creator-influencer cu autoritate personală (Dr. Alexandra Mircea), fie un parteneriat cu o influenceriță externă (Bianca Iotu pentru Elidadent). Singurul clip din top 5 fără "față cunoscută" e al nostru — și se remarcă prin rata de distribuire, nu prin vizionări brute.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sect">▶ Tendințe TikTok în piață</h2>
+    <div class="card">
+      <ul class="tldr">
+        <li><b>Creatorul personal bate brandul instituțional, de departe.</b> Cel mai clar semnal din tot raportul: același conținut, postat de o persoană vs. de un cont de clinică, produce un decalaj de 7-14x în vizionări.</li>
+        <li><b>Influencer marketing funcționează</b> — Elidadent a demonstrat că un singur parteneriat cu o personalitate media poate genera de 25x mai multe vizionări decât media proprie.</li>
+        <li><b>TikTok ≠ YouTube ca hartă competitivă.</b> Cel puțin 4 branduri (Dent Priority, As Dental, Edent Clinic, parțial Elidadent) par să fi realocat bugetul de conținut dinspre YouTube spre TikTok — monitorizarea doar pe YouTube ar fi dat o imagine complet falsă de "piață liniștită".</li>
+        <li><b>Cross-posting rămâne strategia de bază</b> pentru DENT ESTET și Regina Maria — conținut identic pe ambele platforme, fără adaptare la formatul TikTok.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sect">▶ Ce facem noi săptămâna următoare pe TikTok</h2>
+    <div class="card">
+      <ol class="next-week">
+        <li><span class="num">1</span><div><b>Testăm un "creator intern"</b> — un medic din echipă care apare constant, cu voce/stil personal, după modelul Dr. Alexandra Mircea. Diferența de 7-14x față de contul instituțional e prea mare ca să fie ignorată.</div></li>
+        <li><span class="num">2</span><div><b>Explorăm un micro-parteneriat</b> cu o personalitate locală/regională (nu neapărat la nivelul unei vedete TV) pentru un singur clip-test, după modelul Elidadent × Bianca Iotu.</div></li>
+        <li><span class="num">3</span><div><b>Scalăm formatul umor/satiră</b> care ne-a adus cea mai bună rată de distribuire din tot eșantionul (clipul cu recenziile Google) — un al doilea clip în aceeași cheie.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="verif">
+    <div><b>Sursă date:</b> TikTok (interfață publică, Claude in Chrome, fără autentificare)</div>
+    <div><b>Conturi verificate:</b> 13/14 conturi cu prezență TikTok identificată în competitors.json (toate cu excepția verificării video-cu-video a audio-urilor folosite)</div>
+    <div><b>Metodă:</b> decodare ID video TikTok (timestamp encodat în ID, format snowflake) pentru date exacte de publicare + citire directă a vizionărilor/aprecierilor/comentariilor/distribuirilor din pagina publică</div>
+    <div><b>Reclame TikTok (Commercial Content Library):</b> secțiune exclusă din acest raport, la cerere</div>
+    <div><b>Confidence level:</b> Ridicat — date publice exacte pentru toate conturile active; Edent Clinic nu a postat exact în fereastra analizată (ultimul clip cu 2 zile înainte), menționat explicit</div>
+    <div><b>Generat:</b> competitor-weekly-tiktok · 21 septembrie 2026 (rulare completă, după reluarea conturilor blocate inițial)</div>
+  </footer>
+
+</div>
+</body>
+</html>

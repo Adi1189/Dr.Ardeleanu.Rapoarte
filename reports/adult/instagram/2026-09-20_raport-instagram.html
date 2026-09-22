@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raport Instagram Săptămânal · 7-13 sep 2026 · Dr. Ardeleanu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand-primary:     #7B1C16;
+    --brand-wheat:       #F2DAB7;
+    --brand-cream:       #F5EDE3;
+    --brand-olive:       #B5BD5C;
+    --brand-amber-gold:  #C9A227;
+    --brand-yellow:      #FBE483;
+    --brand-terracotta:  #dd7e6b;
+    --brand-alert:       #FF0300;
+    --brand-black:       #222222;
+    --brand-white:       #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Poppins', sans-serif; background: var(--brand-cream); color: var(--brand-black); margin: 0; padding: 0; line-height: 1.55; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px 60px; }
+
+  header.hero { background: var(--brand-primary); color: var(--brand-white); padding: 40px 24px 32px; text-align: center; margin-bottom: 8px; }
+  header.hero .eyebrow { font-weight: 500; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; color: var(--brand-amber-gold); margin-bottom: 10px; }
+  header.hero h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 34px; margin: 0 0 8px; }
+  header.hero .sub { font-weight: 400; font-size: 15px; opacity: 0.9; }
+  header.hero .datebox { display: inline-block; margin-top: 18px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; padding: 6px 18px; font-size: 13px; font-weight: 500; color: var(--brand-yellow); }
+
+  .notice { background: #fff8f0; border: 1.5px solid var(--brand-terracotta); border-radius: 10px; padding: 16px 20px; margin: 24px 0; font-size: 14px; }
+  .notice strong { color: var(--brand-primary); }
+  .notice.ok { background: #f2f7ea; border-color: var(--brand-olive); }
+  .notice.alert { background: #fbebeb; border-color: var(--brand-alert); }
+
+  section { margin: 36px 0; }
+  h2.section-title { font-weight: 700; font-size: 20px; color: var(--brand-primary); border-bottom: 3px solid var(--brand-wheat); padding-bottom: 10px; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  h2.section-title .arrow { color: var(--brand-amber-gold); }
+
+  ul.bullets { padding-left: 20px; margin: 0; }
+  ul.bullets li { margin-bottom: 8px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--brand-white); border-radius: 8px; overflow: hidden; font-size: 13.5px; }
+  th { background: var(--brand-primary); color: var(--brand-white); font-weight: 600; text-align: left; padding: 10px 12px; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--brand-wheat); vertical-align: top; }
+  tr.us td { background: var(--brand-wheat); font-weight: 600; }
+  tr.standout td { background: #fdf3d9; }
+  tr:last-child td { border-bottom: none; }
+  .badge-noi { background: var(--brand-primary); color: var(--brand-white); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-left: 6px; letter-spacing: 0.5px; }
+  .badge-hot { background: var(--brand-alert); color: var(--brand-white); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-left: 6px; letter-spacing: 0.5px; }
+  .badge-down { background: #999; color: var(--brand-white); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-left: 6px; letter-spacing: 0.5px; }
+
+  .card { background: var(--brand-white); border: 1px solid var(--brand-wheat); border-radius: 12px; padding: 20px 22px; margin-bottom: 18px; }
+  .card.us { border: 2px solid var(--brand-primary); background: #fffaf4; }
+  .card.standout { border: 2px solid var(--brand-amber-gold); background: #fffdf5; }
+  .card h3 { margin: 0 0 4px; color: var(--brand-primary); font-size: 17px; font-weight: 700; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .card .meta { font-size: 12px; color: #777; margin-bottom: 12px; }
+  .subhead { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--brand-amber-gold); margin: 14px 0 6px; }
+  .post-item { border-left: 3px solid var(--brand-olive); padding: 8px 14px; margin: 8px 0; background: var(--brand-cream); border-radius: 0 6px 6px 0; font-size: 13.5px; }
+  .post-item.reel { border-left-color: var(--brand-amber-gold); }
+  .post-item .eng { color: var(--brand-primary); font-weight: 700; font-size: 12.5px; }
+  .post-item .date { color: #888; font-size: 11.5px; }
+  .observ { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--brand-wheat); font-size: 13.5px; }
+  .observ strong { color: var(--brand-primary); }
+
+  .inaccesibil { background: #fbebeb; border: 1px dashed var(--brand-alert); color: #8a1c1c; padding: 10px 14px; border-radius: 8px; font-size: 13px; margin: 10px 0; }
+
+  .tier2-list { list-style: none; padding: 0; margin: 0; }
+  .tier2-list li { padding: 10px 14px; border-bottom: 1px solid var(--brand-wheat); font-size: 13.5px; background: var(--brand-white); }
+  .tier2-list li:first-child { border-radius: 8px 8px 0 0; }
+  .tier2-list li:last-child { border-bottom: none; border-radius: 0 0 8px 8px; }
+  .tier2-list .name { font-weight: 700; color: var(--brand-primary); display:block; margin-bottom:2px; }
+
+  ol.recs { padding-left: 20px; }
+  ol.recs li { margin-bottom: 14px; }
+  ol.recs strong { color: var(--brand-primary); }
+
+  footer.report-footer { background: var(--brand-white); border: 1px solid var(--brand-wheat); border-radius: 10px; padding: 20px 24px; font-size: 13px; color: #444; }
+  footer.report-footer h4 { color: var(--brand-primary); margin: 0 0 10px; font-size: 14px; }
+  footer.report-footer ul { margin: 0; padding-left: 18px; }
+  footer.report-footer li { margin-bottom: 5px; }
+  .confidence { display: inline-block; background: var(--brand-yellow); color: var(--brand-primary); font-weight: 700; padding: 3px 10px; border-radius: 6px; font-size: 12px; }
+  .footer-bottom { text-align: center; margin-top: 28px; font-size: 12px; color: #999; font-weight: 300; letter-spacing: 1px; }
+  .kids-table th { background: var(--brand-olive); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">Clinicile Dr. Ardeleanu · Inteligență Competitivă</div>
+  <h1>Instagram — Raport Săptămânal</h1>
+  <div class="sub">Săptămâna 37 · Luni – Duminică · doar conținut organic (fără reclame)</div>
+  <div class="datebox">7 – 13 septembrie 2026</div>
+</header>
+
+<div class="wrap">
+
+  <div class="notice alert">
+    <strong>⚠️ Descoperire importantă:</strong> <strong>Dental Safari (contul nostru de pedodonție) nu a publicat nicio postare nouă</strong> în toată fereastra 7-13 septembrie — cele mai recente 2 Reels rămân cele din săptămâna trecută. E primul "content drought" complet identificat pentru un cont propriu, pe orice platformă analizată până acum, în timp ce toți cei 3 competitori pedo direcți (DENT ESTET 4 KIDS, Elidadent for KIDS, EDENT Kids) au postat consecvent.
+  </div>
+
+  <div class="notice ok">
+    <strong>✅ Metodologie:</strong> extras cu Claude in Chrome, cont logat. Date exacte pentru postările foto (din text alternativ), confirmate individual pentru Reels prin elementul &lt;time&gt; al fiecărei postări de graniță. Engagement (aprecieri/comentarii) verificat pe eșantion, nu exhaustiv. Reclame Instagram excluse intenționat, la cerere.
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="arrow">▶</span> PE SCURT</h2>
+    <ul class="bullets">
+      <li><strong>Dental Safari (noi) — zero postări noi</strong> în toată săptămâna — cea mai importantă alertă a acestui raport.</li>
+      <li><strong>Dr. Ardeleanu (noi)</strong> a fost activ pe partea de brand principal — 2 testimoniale noi (Florin 46 ani, altul) plus conținut colab cu conturi personale de medici (Dr. Andreea Mircea, Erika Ionescu) pentru promovarea CARE Forum.</li>
+      <li><strong>DENT ESTET</strong> a cross-postat testimonialul Maia Morgenstern și pe Instagram — consistent cu Facebook și YouTube.</li>
+      <li><strong>Regina Maria</strong> a avut o apariție TV nouă (@vorbeste_lumea_oficial), conținut exclusiv Instagram, nemenționat pe alte platforme.</li>
+      <li><strong>Life Dental Spa</strong> — 8 Reels, toate stil "hook de frică" (🔴), fără niciun conținut de celebritate (spre deosebire de perioadele anterioare cu Gabriela Cristea).</li>
+      <li><strong>Dental Blue International</strong> — a treia săptămână consecutivă cu <strong>zero postări</strong> — peste 3 săptămâni de inactivitate completă.</li>
+      <li><strong>As Dental (Slobozia)</strong> — postare de la contul personal al Dr. Silviu Alexandroaie (12 sept) — aceeași celebrare de echipă găsită pe Facebook cu 82 reacții.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="arrow">▶</span> VOLUMELE</h2>
+    <table>
+      <tr><th>Brand</th><th>Postări în fereastră</th><th>Tendință vs. săpt. trecută</th></tr>
+      <tr class="us"><td>Dr. Ardeleanu (NOI)</td><td>~8</td><td>≈ similar</td></tr>
+      <tr class="standout"><td>DENT ESTET</td><td>~10</td><td>↓ ușor de la ~19</td></tr>
+      <tr><td>Regina Maria Dental Clinics</td><td>7</td><td>↑ de la ~6</td></tr>
+      <tr><td>Life Dental Spa</td><td>8 (toate Reels)</td><td>≈ similar (era ~9)</td></tr>
+      <tr><td>Elidadent</td><td>5</td><td>≈ similar</td></tr>
+      <tr><td>Dental Blue International</td><td><strong>0</strong></td><td>↓ neschimbat, a 3-a săpt.</td></tr>
+      <tr><td colspan="3" style="background:var(--brand-cream); font-weight:600; color:var(--brand-primary);">— Pedodonție —</td></tr>
+      <tr><td>DENT ESTET 4 KIDS</td><td>7</td><td>↓ de la ~9</td></tr>
+      <tr><td>Elidadent for KIDS</td><td>7</td><td>↑ de la ~4</td></tr>
+      <tr><td>EDENT Kids</td><td>4-5</td><td>≈ similar</td></tr>
+      <tr class="standout"><td>Dental Safari (NOI)</td><td><strong>0</strong> <span class="badge-hot">ALERTĂ</span></td><td><span class="badge-down">↓ de la 2</span></td></tr>
+      <tr><td colspan="3" style="background:var(--brand-cream); font-weight:600; color:var(--brand-primary);">— Tier 2 —</td></tr>
+      <tr><td>Dentrust</td><td>3 (toate Reels)</td><td>—</td></tr>
+      <tr><td>Dent Priority</td><td>7</td><td>—</td></tr>
+      <tr><td>Clinica Dentalist (cont brand)</td><td>5</td><td>—</td></tr>
+      <tr><td>As Dental</td><td>4</td><td>—</td></tr>
+      <tr><td>JC Dent</td><td>3</td><td>—</td></tr>
+      <tr><td>Edent Clinic (parent)</td><td>3</td><td>—</td></tr>
+      <tr><td>Dr. Malama, Ark Med</td><td colspan="2">0 — dormante, neschimbat</td></tr>
+      <tr><td>Saviem Smile</td><td colspan="2">0 — cont fără nicio postare, confirmat din nou</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="arrow">▶</span> ACTIVITATE PROFIL CU PROFIL (Tier 1)</h2>
+
+    <div class="card us">
+      <h3>Clinicile Dr. Ardeleanu <span class="badge-noi">NOI</span></h3>
+      <div class="post-item reel eng"><span class="eng">11 sept, confirmat</span> — Testimonial: "Mă simt foarte bine, mai ales că am dantură nouă!" — Florin, 46 ani · <span class="eng">13 aprecieri</span></div>
+      <div class="post-item reel"><span class="date">9 sept, confirmat</span> — "Te-ai săturat de proteza mobilă care se mișcă?" (cross-postat YT/TikTok)</div>
+      <div class="post-item reel"><span class="date">~8-10 sept</span> — "Foarte ușor! Neașteptat de ușor." — alt testimonial pacient</div>
+      <div class="post-item reel"><span class="date">9 sept</span> — Foto brand</div>
+      <div class="post-item">"Când obiectivele sunt clare, mesajul ajunge repede" — umor intern (cross-postat)</div>
+      <div class="post-item reel">Colab cu <strong>@erikaiionescu</strong> (medic/vorbitor) — reminder CARE Forum 19 septembrie</div>
+      <div class="post-item reel">Colab cu <strong>@drandreeamircea</strong> pe testimonialul Florin</div>
+      <div class="observ"><strong>➜ Observații:</strong> strategie de colaborare cu conturile personale ale medicilor proprii (tag-uri reciproce) — extinde reach-ul organic dincolo de urmăritorii paginii principale. Volum de 2 testimoniale noi într-o săptămână e peste medie pentru acest cont.</div>
+    </div>
+
+    <div class="card">
+      <h3>DENT ESTET</h3>
+      <div class="meta">~10 postări (poze zilnice confirmate: 10, 12, 13 sept + bonus 14 sept)</div>
+      <div class="post-item reel">"Aici sunt înțeleasă, sunt ascultată" — <strong>Maia Morgenstern</strong> (cross-postat cu Facebook/YouTube)</div>
+      <div class="post-item reel">"All-on-4 poate fi o soluție pentru pacienți..." — conținut nou</div>
+      <div class="post-item reel">"Mi-aș dori să încep tratamentul, dar nu am acum întreaga sumă" — plată în rate (cross-postat cu reclama Craiova)</div>
+      <div class="post-item reel">MODJAW ortodontic (2 variante, cross-postat cu YouTube)</div>
+      <div class="post-item">Poze zilnice: 10, 12, 13, 14 sept</div>
+      <div class="observ"><strong>➜ Observații:</strong> aliniere completă între Instagram, Facebook și YouTube pentru campania Maia Morgenstern și mesajele de plată în rate — strategie de conținut unificată cross-canal, spre deosebire de alte branduri care segmentează mesajul pe platformă.</div>
+    </div>
+
+    <div class="card">
+      <h3>Regina Maria Dental Clinics</h3>
+      <div class="post-item reel eng"><span class="eng">13 sept, confirmat</span> — "În sarcină, hormonii te fac mai sensibilă la placa bacteriană" (Dr. Ali Ande, Constanța)</div>
+      <div class="post-item reel eng"><span class="eng">9 sept, confirmat</span> — "Cum știi dacă ai gingivită sau boală parodontală" (Dr. Malina Niculae)</div>
+      <div class="post-item reel"><span class="date">~10-11 sept</span> — "Ani de zile, pacientul nostru nu a mai putut mânca normal"</div>
+      <div class="post-item reel"><span class="badge-hot">EXCLUSIV INSTAGRAM</span> "Cum construiești o relație sănătoasă cu dentistul"</div>
+      <div class="post-item reel eng"><span class="eng">7 sept, confirmat</span> — Foto brand (boundary săptămână)</div>
+      <div class="post-item reel"><strong>"La @vorbeste_lumea_oficial, am vorbit despre..."</strong> — apariție TV, conținut nou</div>
+      <div class="observ"><strong>➜ Observații:</strong> apariția TV la o emisiune cunoscută (Vorbește Lumea) e un tip de conținut nou, nemaivăzut pe alte platforme ale acestui brand — semnal de investiție în PR/earned media tradițională, nu doar social media.</div>
+    </div>
+
+    <div class="card">
+      <h3>Life Dental Spa</h3>
+      <div class="meta">8 Reels, toate în stilul de hook cu 🔴 — fără celebrități această săptămână</div>
+      <div class="post-item reel eng"><span class="eng">7 sept, confirmat</span> — "Te speli corect pe dinți de două ori pe zi și totuși observi tartru?"</div>
+      <div class="post-item reel eng"><span class="eng">8 sept, confirmat</span> — "Prima vizită a copilului la dentist poate influența..."</div>
+      <div class="post-item reel">+ 6 Reels suplimentare, teme: frica de dentist, gingii sângerânde, amânarea tratamentului</div>
+      <div class="observ"><strong>➜ Observații:</strong> volum de conținut consistent (8 Reels), dar fără pilonul de celebritate care a generat cel mai mare reach în săptămânile anterioare — confirmă din nou (a treia platformă, după YouTube și TikTok) că acest brand depinde puternic de conținutul cu personalități pentru vârfuri de reach.</div>
+    </div>
+
+    <div class="card">
+      <h3>Elidadent</h3>
+      <div class="post-item eng"><span class="eng">11 sept, confirmat</span> — Foto brand</div>
+      <div class="post-item reel">"Diga este o parte importantă din tratament" — conținut educațional nou</div>
+      <div class="post-item eng"><span class="eng">9 sept, confirmat</span> — Foto brand</div>
+      <div class="post-item reel">"La finalul zilei când întrebi sacul de gunoi..." — umor de echipă</div>
+      <div class="post-item eng"><span class="eng">7 sept, confirmat</span> — Foto brand (boundary)</div>
+      <div class="observ"><strong>➜ Observații:</strong> mix echilibrat educațional + umor de echipă, consistent cu tonul mai jucăuș observat și în rapoartele anterioare pentru acest brand.</div>
+    </div>
+
+    <div class="card">
+      <h3>Dental Blue International <span class="badge-hot">INACTIV — A 3-A SĂPTĂMÂNĂ</span></h3>
+      <div class="inaccesibil">Zero postări noi. Ultima postare rămâne din 21 august — peste 3 săptămâni de inactivitate completă pe Instagram, confirmat identic în toate cele 3 verificări consecutive.</div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="arrow">▶</span> SECȚIUNE PEDODONȚIE</h2>
+
+    <div class="card us" style="border-color: var(--brand-alert);">
+      <h3>Dental Safari by Dr. Ardeleanu <span class="badge-noi">NOI</span> <span class="badge-hot">ALERTĂ — ZERO CONȚINUT</span></h3>
+      <div class="inaccesibil">
+        <strong>Nicio postare nouă în toată fereastra 7-13 septembrie.</strong> Ultimele 2 Reels rămân cele din săptămâna trecută (confirmate anterior: 1 din 7 septembrie, 1 din intervalul 31 aug-6 sep). Ultima postare de tip foto/carusel a fost pe 24 august — aproape 3 săptămâni fără conținut de acest tip.
+      </div>
+      <div class="observ"><strong>➜ Observații:</strong> singurul cont, propriu sau al competitorilor, cu content drought complet identificat pe orice platformă în cele 2 săptămâni analizate până acum. Toți cei 3 competitori pedo direcți au postat consecvent în aceeași fereastră.</div>
+    </div>
+
+    <div class="card">
+      <h3>DENT ESTET 4 KIDS</h3>
+      <div class="post-item eng"><span class="eng">11 sept, confirmat</span> — Foto</div>
+      <div class="post-item reel">"Ai observat pete albe, mate, pe dinții copilului?" — conținut nou</div>
+      <div class="post-item eng"><span class="eng">10 sept, confirmat</span> — Foto</div>
+      <div class="post-item reel">"Auzi copilul scrâșnind din dinți noaptea?" — conținut nou (bruxism copii)</div>
+      <div class="post-item reel">"Cât trebuie să așteptăm după masă înainte să..." (cross-postat YT, @MedikaTV)</div>
+      <div class="post-item eng"><span class="eng">7 sept, confirmat</span> — Foto (boundary)</div>
+      <div class="observ"><strong>➜ Observații:</strong> scădere ușoară de volum (7 vs. ~9 săptămâna trecută), dar rămâne cel mai activ cont pedo din piață.</div>
+    </div>
+
+    <div class="card">
+      <h3>Elidadent for KIDS</h3>
+      <div class="post-item eng"><span class="eng">13 sept, confirmat</span> — Foto</div>
+      <div class="post-item eng"><span class="eng">11 sept, confirmat</span> — Foto</div>
+      <div class="post-item reel">"Prima vizită la dentist contează mai mult decât crezi"</div>
+      <div class="post-item eng"><span class="eng">9 sept, confirmat</span> — Foto</div>
+      <div class="post-item reel">"Așteptarea a luat sfârșit! Am deschis pachetul..." — unboxing nou</div>
+      <div class="post-item eng"><span class="eng">7 sept, confirmat</span> — Foto (boundary)</div>
+      <div class="observ"><strong>➜ Observații:</strong> creștere de volum față de săptămâna trecută (7 vs. 4) — cel mai mare avans relativ dintre toate conturile pedo verificate.</div>
+    </div>
+
+    <div class="card">
+      <h3>EDENT Kids (Tulcea)</h3>
+      <div class="post-item eng"><span class="eng">12 sept, confirmat</span> — Foto</div>
+      <div class="post-item eng"><span class="eng">11 sept, confirmat</span> — Foto</div>
+      <div class="post-item eng"><span class="eng">9 sept, confirmat</span> — Foto</div>
+      <div class="post-item eng"><span class="eng">8 sept, confirmat</span> — Foto</div>
+      <div class="observ"><strong>➜ Observații:</strong> cea mai consecventă cadență de postare din tot eșantionul pedo — o postare la aproape fiecare 1-2 zile, toate confirmate cu dată exactă.</div>
+    </div>
+
+    <div class="observ" style="background:white; border:2px solid var(--brand-alert); border-radius:10px; padding:16px 20px;">
+      <strong>➜ Comparație directă:</strong> toți cei 3 competitori pedo au postat între 4 și 7 ori săptămâna asta. Dental Safari (noi) a postat de <strong>0 ori</strong>. Acesta e cel mai clar semnal de decalaj competitiv identificat în oricare dintre rapoartele făcute până acum pentru acest cont.
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="arrow">▶</span> ALERTE TIER 2</h2>
+    <ul class="tier2-list">
+      <li><span class="name">Dentrust (Focșani)</span> 3 Reels noi (12 sept confirmat) — cont 100% Reels, ca și săptămânile anterioare. Activ pe Instagram deși dormant pe YouTube/TikTok.</li>
+      <li><span class="name">Dent Priority (Craiova + regional)</span> 7 postări — inclusiv conținutul "Cariile pot fi tratate cu laserul" (Dr. Carmen Cojocaru), cross-confirmat și pe Facebook (13 reacții acolo).</li>
+      <li><span class="name">Clinica Dentalist (cont brand)</span> 5 postări, separat de canalul personal viral al Dr. Alexandra Mircea. Include conținut "Sunteți curioși ce au răspuns medicii noștri" — Q&A intern.</li>
+      <li><span class="name">As Dental (Slobozia)</span> 4 postări, inclusiv distribuire de la contul personal al Dr. Silviu Alexandroaie (12 sept) — aceeași celebrare de echipă cu 82 reacții pe Facebook.</li>
+      <li><span class="name">JC Dent (Slobozia)</span> 3 postări, inclusiv "2, 3 sau chiar 4 medici pentru un singur..." — conținut nou despre echipă multidisciplinară.</li>
+      <li><span class="name">Edent Clinic (parent)</span> 3 postări, inclusiv pachetul Back to School (570 lei) reconfirmat activ și conținut "Cristina a depășit condiția unui zâmbet..." — testimonial nou.</li>
+      <li><span class="name">Dr. Malama</span> <span style="color:#8a1c1c;">0 postări — dormant din ~10 august, neschimbat.</span></li>
+      <li><span class="name">Ark Med</span> <span style="color:#8a1c1c;">0 postări — dormant din 30 octombrie 2025, neschimbat.</span></li>
+      <li><span class="name">Saviem Smile</span> <span style="color:#8a1c1c;">Confirmat din nou: cont cu 0 postări totale (11 urmăritori acum, +1 față de ultima verificare) — nicio investiție pe Instagram.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="arrow">▶</span> TRENDURI INSTAGRAM ÎN PIAȚĂ</h2>
+    <ul class="bullets">
+      <li><strong>Colaborările cu conturi personale de medici</strong> apar la mai multe branduri (Dr. Ardeleanu cu Erika Ionescu și Dr. Andreea Mircea; DENT ESTET consistent cu medicii ei numiți) — o tactică de extindere organică a reach-ului, folosind rețelele personale ale echipei medicale.</li>
+      <li><strong>Apariții TV/media tradițională</strong> apar ca sursă de conținut la Regina Maria (Vorbește Lumea) — completează pattern-ul deja văzut la DENT ESTET (@MedikaTV) — earned media amplificat pe social.</li>
+      <li><strong>Dependența de celebrități se confirmă a treia platformă consecutiv</strong> la Life Dental Spa — fără conținut cu personalități, volumul rămâne, dar lipsește vârful de reach din săptămânile cu Gabriela Cristea.</li>
+      <li><strong>EDENT Kids are cea mai bună consecvență de postare</strong> din tot eșantionul pedo — aproape zilnic, cu date confirmate exact.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="arrow">▶</span> CE FACEM NOI SĂPTĂMÂNA URMĂTOARE PE INSTAGRAM</h2>
+    <ol class="recs">
+      <li><strong>Prioritate maximă — Dental Safari:</strong> zero conținut într-o săptămână întreagă, în timp ce toți competitorii pedo au postat consecvent, e o lipsă care merită adresată imediat — chiar și 2-3 postări simple ar restabili prezența minimă așteptată.</li>
+      <li><strong>Colaborări de extins:</strong> tactica de tag-uri reciproce cu conturile personale ale medicilor (deja folosită de noi cu Dr. Andreea Mircea și Erika Ionescu) pare eficientă — merită formalizată ca practică standard pentru fiecare testimonial nou.</li>
+      <li><strong>Earned media de explorat:</strong> Regina Maria arată valoarea unei apariții TV/media tradițională ca sursă de conținut social — merită verificat dacă există oportunități similare (presă locală, emisiuni regionale) pentru rețeaua noastră.</li>
+    </ol>
+  </section>
+
+  <footer class="report-footer">
+    <h4>FOOTER — DATE DE VERIFICARE</h4>
+    <ul>
+      <li>Status Claude in Chrome: activ, cont logat ✓ — funcțional pe tot parcursul extragerii</li>
+      <li>Conturi verificate: 19/19 identificate (5 Tier 1 + 1 client + 4 conturi pedo + 9 Tier 2)</li>
+      <li>Corecție handle: Edent Clinic Instagram e "@edentclinic", nu "@edentclinic.ro" (eroare inițială corectată în timpul verificării)</li>
+      <li>Postări cu dată exactă confirmată: majoritatea postărilor foto (text alternativ) + boundary-uri Reels verificate individual prin elementul de timp</li>
+      <li>Reclame Instagram: excluse intenționat din acest raport, la cerere</li>
+      <li><strong>Confidence level: <span class="confidence">RIDICAT pe date/conținut · MEDIU pe engagement exhaustiv</span></strong></li>
+      <li>Generat de skill: competitor-weekly-instagram v1.0 (rulare fără secțiunea de reclame, la cerere)</li>
+    </ul>
+    <div class="footer-bottom">CLINICILE DENTARE DR. ARDELEANU · DIN 2017</div>
+  </footer>
+
+</div>
+</body>
+</html>
