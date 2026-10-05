@@ -3,6 +3,8 @@
     { "id": "market-moves", "folder": "market-moves", "name": "Market Moves", "cadence": "monthly" },
     { "id": "google-ads",   "folder": "google-ads",   "name": "Google Ads",   "cadence": "monthly" },
     { "id": "linkedin",     "folder": "linkedin",     "name": "LinkedIn",     "cadence": "monthly" },
+    { "id": "geo",          "folder": "geo",          "name": "GEO · vizibilitate AI",     "cadence": "monthly" },
+    { "id": "seo",          "folder": "seo",          "name": "SEO · vizibilitate Google", "cadence": "monthly" },
     { "id": "facebook",     "folder": "facebook",     "name": "Facebook",     "cadence": "weekly" },
     { "id": "instagram",    "folder": "instagram",    "name": "Instagram",    "cadence": "weekly" },
     { "id": "tiktok",       "folder": "tiktok",       "name": "TikTok",       "cadence": "weekly" },
