@@ -97,8 +97,9 @@ window.__REPORTS__ = [{"c":"google-ads","y":2026,"mo":5,"w":null,"title":"Google
     var a = mon.getUTCDate(), b = sun.getUTCDate(), ma = MON[mon.getUTCMonth()+1], mb = MON[sun.getUTCMonth()+1];
     return ma===mb ? a+"–"+b+" "+ma : a+" "+ma+" – "+b+" "+mb;
   }
-  /* Saptamana fiecarui raport = din data de inceput din numele fisierului (YYYY-MM-DD_...) */
+  /* Saptamana fiecarui raport: wy/wk din manifest (citite din raport); fallback = data din numele fisierului */
   REPORTS.forEach(function(r){
+    if(r.wy && r.wk){ r._y = r.wy; r._w = r.wk; return; }
     var m = (r.path||"").match(/\/(\d{4})-(\d{2})-(\d{2})_/);
     var d = m ? [+m[1],+m[2],+m[3]] : [r.y, r.mo, r.w ? [1,8,15,22][r.w-1] : 15];
     var iw = isoWeek(d[0],d[1],d[2]);
